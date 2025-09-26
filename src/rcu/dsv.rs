@@ -5,7 +5,7 @@ pub type W = crate::W<DSV_SPEC>;
 #[doc = "Field `DSLPVS` reader - Deep-sleep mode voltage select"]
 pub type DSLPVS_R = crate::FieldReader;
 #[doc = "Field `DSLPVS` writer - Deep-sleep mode voltage select"]
-pub type DSLPVS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DSLPVS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - Deep-sleep mode voltage select"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bits 0:1 - Deep-sleep mode voltage select"]
     #[inline(always)]
     #[must_use]
-    pub fn dslpvs(&mut self) -> DSLPVS_W<DSV_SPEC, 0> {
-        DSLPVS_W::new(self)
+    pub fn dslpvs(&mut self) -> DSLPVS_W<DSV_SPEC> {
+        DSLPVS_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for DSV_SPEC {
 impl crate::Readable for DSV_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dsv::W`](W) writer structure"]
 impl crate::Writable for DSV_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DSV to value 0"]
 impl crate::Resettable for DSV_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

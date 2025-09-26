@@ -25,5 +25,5 @@ impl crate::RegisterSpec for HFINFR_SPEC {
 impl crate::Readable for HFINFR_SPEC {}
 #[doc = "`reset()` method sets HFINFR to value 0xbb80_0000"]
 impl crate::Resettable for HFINFR_SPEC {
-    const RESET_VALUE: Self::Ux = 0xbb80_0000;
+    const RESET_VALUE: u32 = 0xbb80_0000;
 }

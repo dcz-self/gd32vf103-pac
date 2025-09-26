@@ -32,5 +32,5 @@ impl crate::RegisterSpec for CLICINFO_SPEC {
 impl crate::Readable for CLICINFO_SPEC {}
 #[doc = "`reset()` method sets CLICINFO to value 0"]
 impl crate::Resettable for CLICINFO_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

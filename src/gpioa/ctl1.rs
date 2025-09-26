@@ -5,67 +5,67 @@ pub type W = crate::W<CTL1_SPEC>;
 #[doc = "Field `MD8` reader - Port x mode bits (x = 8)"]
 pub type MD8_R = crate::FieldReader;
 #[doc = "Field `MD8` writer - Port x mode bits (x = 8)"]
-pub type MD8_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MD8_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CTL8` reader - Port x configuration bits (x = 8)"]
 pub type CTL8_R = crate::FieldReader;
 #[doc = "Field `CTL8` writer - Port x configuration bits (x = 8)"]
-pub type CTL8_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CTL8_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `MD9` reader - Port x mode bits (x = 9)"]
 pub type MD9_R = crate::FieldReader;
 #[doc = "Field `MD9` writer - Port x mode bits (x = 9)"]
-pub type MD9_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MD9_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CTL9` reader - Port x configuration bits (x = 9)"]
 pub type CTL9_R = crate::FieldReader;
 #[doc = "Field `CTL9` writer - Port x configuration bits (x = 9)"]
-pub type CTL9_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CTL9_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `MD10` reader - Port x mode bits (x = 10 )"]
 pub type MD10_R = crate::FieldReader;
 #[doc = "Field `MD10` writer - Port x mode bits (x = 10 )"]
-pub type MD10_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MD10_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CTL10` reader - Port x configuration bits (x = 10)"]
 pub type CTL10_R = crate::FieldReader;
 #[doc = "Field `CTL10` writer - Port x configuration bits (x = 10)"]
-pub type CTL10_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CTL10_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `MD11` reader - Port x mode bits (x = 11 )"]
 pub type MD11_R = crate::FieldReader;
 #[doc = "Field `MD11` writer - Port x mode bits (x = 11 )"]
-pub type MD11_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MD11_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CTL11` reader - Port x configuration bits (x = 11)"]
 pub type CTL11_R = crate::FieldReader;
 #[doc = "Field `CTL11` writer - Port x configuration bits (x = 11)"]
-pub type CTL11_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CTL11_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `MD12` reader - Port x mode bits (x = 12)"]
 pub type MD12_R = crate::FieldReader;
 #[doc = "Field `MD12` writer - Port x mode bits (x = 12)"]
-pub type MD12_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MD12_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CTL12` reader - Port x configuration bits (x = 12)"]
 pub type CTL12_R = crate::FieldReader;
 #[doc = "Field `CTL12` writer - Port x configuration bits (x = 12)"]
-pub type CTL12_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CTL12_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `MD13` reader - Port x mode bits (x = 13)"]
 pub type MD13_R = crate::FieldReader;
 #[doc = "Field `MD13` writer - Port x mode bits (x = 13)"]
-pub type MD13_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MD13_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CTL13` reader - Port x configuration bits (x = 13)"]
 pub type CTL13_R = crate::FieldReader;
 #[doc = "Field `CTL13` writer - Port x configuration bits (x = 13)"]
-pub type CTL13_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CTL13_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `MD14` reader - Port x mode bits (x = 14)"]
 pub type MD14_R = crate::FieldReader;
 #[doc = "Field `MD14` writer - Port x mode bits (x = 14)"]
-pub type MD14_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MD14_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CTL14` reader - Port x configuration bits (x = 14)"]
 pub type CTL14_R = crate::FieldReader;
 #[doc = "Field `CTL14` writer - Port x configuration bits (x = 14)"]
-pub type CTL14_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CTL14_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `MD15` reader - Port x mode bits (x = 15)"]
 pub type MD15_R = crate::FieldReader;
 #[doc = "Field `MD15` writer - Port x mode bits (x = 15)"]
-pub type MD15_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MD15_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CTL15` reader - Port x configuration bits (x = 15)"]
 pub type CTL15_R = crate::FieldReader;
 #[doc = "Field `CTL15` writer - Port x configuration bits (x = 15)"]
-pub type CTL15_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CTL15_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - Port x mode bits (x = 8)"]
     #[inline(always)]
@@ -152,98 +152,98 @@ impl W {
     #[doc = "Bits 0:1 - Port x mode bits (x = 8)"]
     #[inline(always)]
     #[must_use]
-    pub fn md8(&mut self) -> MD8_W<CTL1_SPEC, 0> {
-        MD8_W::new(self)
+    pub fn md8(&mut self) -> MD8_W<CTL1_SPEC> {
+        MD8_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Port x configuration bits (x = 8)"]
     #[inline(always)]
     #[must_use]
-    pub fn ctl8(&mut self) -> CTL8_W<CTL1_SPEC, 2> {
-        CTL8_W::new(self)
+    pub fn ctl8(&mut self) -> CTL8_W<CTL1_SPEC> {
+        CTL8_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - Port x mode bits (x = 9)"]
     #[inline(always)]
     #[must_use]
-    pub fn md9(&mut self) -> MD9_W<CTL1_SPEC, 4> {
-        MD9_W::new(self)
+    pub fn md9(&mut self) -> MD9_W<CTL1_SPEC> {
+        MD9_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - Port x configuration bits (x = 9)"]
     #[inline(always)]
     #[must_use]
-    pub fn ctl9(&mut self) -> CTL9_W<CTL1_SPEC, 6> {
-        CTL9_W::new(self)
+    pub fn ctl9(&mut self) -> CTL9_W<CTL1_SPEC> {
+        CTL9_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - Port x mode bits (x = 10 )"]
     #[inline(always)]
     #[must_use]
-    pub fn md10(&mut self) -> MD10_W<CTL1_SPEC, 8> {
-        MD10_W::new(self)
+    pub fn md10(&mut self) -> MD10_W<CTL1_SPEC> {
+        MD10_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - Port x configuration bits (x = 10)"]
     #[inline(always)]
     #[must_use]
-    pub fn ctl10(&mut self) -> CTL10_W<CTL1_SPEC, 10> {
-        CTL10_W::new(self)
+    pub fn ctl10(&mut self) -> CTL10_W<CTL1_SPEC> {
+        CTL10_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - Port x mode bits (x = 11 )"]
     #[inline(always)]
     #[must_use]
-    pub fn md11(&mut self) -> MD11_W<CTL1_SPEC, 12> {
-        MD11_W::new(self)
+    pub fn md11(&mut self) -> MD11_W<CTL1_SPEC> {
+        MD11_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - Port x configuration bits (x = 11)"]
     #[inline(always)]
     #[must_use]
-    pub fn ctl11(&mut self) -> CTL11_W<CTL1_SPEC, 14> {
-        CTL11_W::new(self)
+    pub fn ctl11(&mut self) -> CTL11_W<CTL1_SPEC> {
+        CTL11_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - Port x mode bits (x = 12)"]
     #[inline(always)]
     #[must_use]
-    pub fn md12(&mut self) -> MD12_W<CTL1_SPEC, 16> {
-        MD12_W::new(self)
+    pub fn md12(&mut self) -> MD12_W<CTL1_SPEC> {
+        MD12_W::new(self, 16)
     }
     #[doc = "Bits 18:19 - Port x configuration bits (x = 12)"]
     #[inline(always)]
     #[must_use]
-    pub fn ctl12(&mut self) -> CTL12_W<CTL1_SPEC, 18> {
-        CTL12_W::new(self)
+    pub fn ctl12(&mut self) -> CTL12_W<CTL1_SPEC> {
+        CTL12_W::new(self, 18)
     }
     #[doc = "Bits 20:21 - Port x mode bits (x = 13)"]
     #[inline(always)]
     #[must_use]
-    pub fn md13(&mut self) -> MD13_W<CTL1_SPEC, 20> {
-        MD13_W::new(self)
+    pub fn md13(&mut self) -> MD13_W<CTL1_SPEC> {
+        MD13_W::new(self, 20)
     }
     #[doc = "Bits 22:23 - Port x configuration bits (x = 13)"]
     #[inline(always)]
     #[must_use]
-    pub fn ctl13(&mut self) -> CTL13_W<CTL1_SPEC, 22> {
-        CTL13_W::new(self)
+    pub fn ctl13(&mut self) -> CTL13_W<CTL1_SPEC> {
+        CTL13_W::new(self, 22)
     }
     #[doc = "Bits 24:25 - Port x mode bits (x = 14)"]
     #[inline(always)]
     #[must_use]
-    pub fn md14(&mut self) -> MD14_W<CTL1_SPEC, 24> {
-        MD14_W::new(self)
+    pub fn md14(&mut self) -> MD14_W<CTL1_SPEC> {
+        MD14_W::new(self, 24)
     }
     #[doc = "Bits 26:27 - Port x configuration bits (x = 14)"]
     #[inline(always)]
     #[must_use]
-    pub fn ctl14(&mut self) -> CTL14_W<CTL1_SPEC, 26> {
-        CTL14_W::new(self)
+    pub fn ctl14(&mut self) -> CTL14_W<CTL1_SPEC> {
+        CTL14_W::new(self, 26)
     }
     #[doc = "Bits 28:29 - Port x mode bits (x = 15)"]
     #[inline(always)]
     #[must_use]
-    pub fn md15(&mut self) -> MD15_W<CTL1_SPEC, 28> {
-        MD15_W::new(self)
+    pub fn md15(&mut self) -> MD15_W<CTL1_SPEC> {
+        MD15_W::new(self, 28)
     }
     #[doc = "Bits 30:31 - Port x configuration bits (x = 15)"]
     #[inline(always)]
     #[must_use]
-    pub fn ctl15(&mut self) -> CTL15_W<CTL1_SPEC, 30> {
-        CTL15_W::new(self)
+    pub fn ctl15(&mut self) -> CTL15_W<CTL1_SPEC> {
+        CTL15_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -265,10 +265,10 @@ impl crate::RegisterSpec for CTL1_SPEC {
 impl crate::Readable for CTL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctl1::W`](W) writer structure"]
 impl crate::Writable for CTL1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTL1 to value 0x4444_4444"]
 impl crate::Resettable for CTL1_SPEC {
-    const RESET_VALUE: Self::Ux = 0x4444_4444;
+    const RESET_VALUE: u32 = 0x4444_4444;
 }

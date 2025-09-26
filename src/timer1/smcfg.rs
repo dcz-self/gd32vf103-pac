@@ -5,31 +5,31 @@ pub type W = crate::W<SMCFG_SPEC>;
 #[doc = "Field `SMC` reader - Slave mode control"]
 pub type SMC_R = crate::FieldReader;
 #[doc = "Field `SMC` writer - Slave mode control"]
-pub type SMC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SMC_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TRGS` reader - Trigger selection"]
 pub type TRGS_R = crate::FieldReader;
 #[doc = "Field `TRGS` writer - Trigger selection"]
-pub type TRGS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TRGS_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `MSM` reader - Master-slave mode"]
 pub type MSM_R = crate::BitReader;
 #[doc = "Field `MSM` writer - Master-slave mode"]
-pub type MSM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MSM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ETFC` reader - External trigger filter control"]
 pub type ETFC_R = crate::FieldReader;
 #[doc = "Field `ETFC` writer - External trigger filter control"]
-pub type ETFC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type ETFC_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `ETPSC` reader - External trigger prescaler"]
 pub type ETPSC_R = crate::FieldReader;
 #[doc = "Field `ETPSC` writer - External trigger prescaler"]
-pub type ETPSC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ETPSC_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SMC1` reader - Part of SMC for enable External clock mode1"]
 pub type SMC1_R = crate::BitReader;
 #[doc = "Field `SMC1` writer - Part of SMC for enable External clock mode1"]
-pub type SMC1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SMC1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ETP` reader - External trigger polarity"]
 pub type ETP_R = crate::BitReader;
 #[doc = "Field `ETP` writer - External trigger polarity"]
-pub type ETP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ETP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - Slave mode control"]
     #[inline(always)]
@@ -71,44 +71,44 @@ impl W {
     #[doc = "Bits 0:2 - Slave mode control"]
     #[inline(always)]
     #[must_use]
-    pub fn smc(&mut self) -> SMC_W<SMCFG_SPEC, 0> {
-        SMC_W::new(self)
+    pub fn smc(&mut self) -> SMC_W<SMCFG_SPEC> {
+        SMC_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - Trigger selection"]
     #[inline(always)]
     #[must_use]
-    pub fn trgs(&mut self) -> TRGS_W<SMCFG_SPEC, 4> {
-        TRGS_W::new(self)
+    pub fn trgs(&mut self) -> TRGS_W<SMCFG_SPEC> {
+        TRGS_W::new(self, 4)
     }
     #[doc = "Bit 7 - Master-slave mode"]
     #[inline(always)]
     #[must_use]
-    pub fn msm(&mut self) -> MSM_W<SMCFG_SPEC, 7> {
-        MSM_W::new(self)
+    pub fn msm(&mut self) -> MSM_W<SMCFG_SPEC> {
+        MSM_W::new(self, 7)
     }
     #[doc = "Bits 8:11 - External trigger filter control"]
     #[inline(always)]
     #[must_use]
-    pub fn etfc(&mut self) -> ETFC_W<SMCFG_SPEC, 8> {
-        ETFC_W::new(self)
+    pub fn etfc(&mut self) -> ETFC_W<SMCFG_SPEC> {
+        ETFC_W::new(self, 8)
     }
     #[doc = "Bits 12:13 - External trigger prescaler"]
     #[inline(always)]
     #[must_use]
-    pub fn etpsc(&mut self) -> ETPSC_W<SMCFG_SPEC, 12> {
-        ETPSC_W::new(self)
+    pub fn etpsc(&mut self) -> ETPSC_W<SMCFG_SPEC> {
+        ETPSC_W::new(self, 12)
     }
     #[doc = "Bit 14 - Part of SMC for enable External clock mode1"]
     #[inline(always)]
     #[must_use]
-    pub fn smc1(&mut self) -> SMC1_W<SMCFG_SPEC, 14> {
-        SMC1_W::new(self)
+    pub fn smc1(&mut self) -> SMC1_W<SMCFG_SPEC> {
+        SMC1_W::new(self, 14)
     }
     #[doc = "Bit 15 - External trigger polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn etp(&mut self) -> ETP_W<SMCFG_SPEC, 15> {
-        ETP_W::new(self)
+    pub fn etp(&mut self) -> ETP_W<SMCFG_SPEC> {
+        ETP_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -130,10 +130,10 @@ impl crate::RegisterSpec for SMCFG_SPEC {
 impl crate::Readable for SMCFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`smcfg::W`](W) writer structure"]
 impl crate::Writable for SMCFG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets SMCFG to value 0"]
 impl crate::Resettable for SMCFG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

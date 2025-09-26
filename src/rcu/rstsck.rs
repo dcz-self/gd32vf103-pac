@@ -5,13 +5,13 @@ pub type W = crate::W<RSTSCK_SPEC>;
 #[doc = "Field `IRC40KEN` reader - IRC40K enable"]
 pub type IRC40KEN_R = crate::BitReader;
 #[doc = "Field `IRC40KEN` writer - IRC40K enable"]
-pub type IRC40KEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IRC40KEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IRC40KSTB` reader - IRC40K stabilization"]
 pub type IRC40KSTB_R = crate::BitReader;
 #[doc = "Field `RSTFC` reader - Reset flag clear"]
 pub type RSTFC_R = crate::BitReader;
 #[doc = "Field `RSTFC` writer - Reset flag clear"]
-pub type RSTFC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RSTFC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPRSTF` reader - External PIN reset flag"]
 pub type EPRSTF_R = crate::BitReader;
 #[doc = "Field `PORRSTF` reader - Power reset flag"]
@@ -75,14 +75,14 @@ impl W {
     #[doc = "Bit 0 - IRC40K enable"]
     #[inline(always)]
     #[must_use]
-    pub fn irc40ken(&mut self) -> IRC40KEN_W<RSTSCK_SPEC, 0> {
-        IRC40KEN_W::new(self)
+    pub fn irc40ken(&mut self) -> IRC40KEN_W<RSTSCK_SPEC> {
+        IRC40KEN_W::new(self, 0)
     }
     #[doc = "Bit 24 - Reset flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn rstfc(&mut self) -> RSTFC_W<RSTSCK_SPEC, 24> {
-        RSTFC_W::new(self)
+    pub fn rstfc(&mut self) -> RSTFC_W<RSTSCK_SPEC> {
+        RSTFC_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -104,10 +104,10 @@ impl crate::RegisterSpec for RSTSCK_SPEC {
 impl crate::Readable for RSTSCK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rstsck::W`](W) writer structure"]
 impl crate::Writable for RSTSCK_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RSTSCK to value 0x0c00_0000"]
 impl crate::Resettable for RSTSCK_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0c00_0000;
+    const RESET_VALUE: u32 = 0x0c00_0000;
 }

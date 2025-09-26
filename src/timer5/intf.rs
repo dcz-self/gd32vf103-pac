@@ -5,7 +5,7 @@ pub type W = crate::W<INTF_SPEC>;
 #[doc = "Field `UPIF` reader - Update interrupt flag"]
 pub type UPIF_R = crate::BitReader;
 #[doc = "Field `UPIF` writer - Update interrupt flag"]
-pub type UPIF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UPIF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Update interrupt flag"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bit 0 - Update interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn upif(&mut self) -> UPIF_W<INTF_SPEC, 0> {
-        UPIF_W::new(self)
+    pub fn upif(&mut self) -> UPIF_W<INTF_SPEC> {
+        UPIF_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for INTF_SPEC {
 impl crate::Readable for INTF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`intf::W`](W) writer structure"]
 impl crate::Writable for INTF_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets INTF to value 0"]
 impl crate::Resettable for INTF_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

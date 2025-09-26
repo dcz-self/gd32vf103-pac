@@ -5,7 +5,7 @@ pub type W = crate::W<PCF1_SPEC>;
 #[doc = "Field `EXMC_NADV` reader - EXMC_NADV connect/disconnect"]
 pub type EXMC_NADV_R = crate::BitReader;
 #[doc = "Field `EXMC_NADV` writer - EXMC_NADV connect/disconnect"]
-pub type EXMC_NADV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXMC_NADV_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 10 - EXMC_NADV connect/disconnect"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bit 10 - EXMC_NADV connect/disconnect"]
     #[inline(always)]
     #[must_use]
-    pub fn exmc_nadv(&mut self) -> EXMC_NADV_W<PCF1_SPEC, 10> {
-        EXMC_NADV_W::new(self)
+    pub fn exmc_nadv(&mut self) -> EXMC_NADV_W<PCF1_SPEC> {
+        EXMC_NADV_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for PCF1_SPEC {
 impl crate::Readable for PCF1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pcf1::W`](W) writer structure"]
 impl crate::Writable for PCF1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PCF1 to value 0"]
 impl crate::Resettable for PCF1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

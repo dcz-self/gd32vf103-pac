@@ -5,43 +5,43 @@ pub type W = crate::W<CHCTL1_OUTPUT_SPEC>;
 #[doc = "Field `CH2MS` reader - Channel 2 I/O mode selection"]
 pub type CH2MS_R = crate::FieldReader;
 #[doc = "Field `CH2MS` writer - Channel 2 I/O mode selection"]
-pub type CH2MS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CH2MS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CH2COMFEN` reader - Channel 2 output compare fast enable"]
 pub type CH2COMFEN_R = crate::BitReader;
 #[doc = "Field `CH2COMFEN` writer - Channel 2 output compare fast enable"]
-pub type CH2COMFEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH2COMFEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH2COMSEN` reader - Channel 2 compare output shadow enable"]
 pub type CH2COMSEN_R = crate::BitReader;
 #[doc = "Field `CH2COMSEN` writer - Channel 2 compare output shadow enable"]
-pub type CH2COMSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH2COMSEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH2COMCTL` reader - Channel 2 compare output control"]
 pub type CH2COMCTL_R = crate::FieldReader;
 #[doc = "Field `CH2COMCTL` writer - Channel 2 compare output control"]
-pub type CH2COMCTL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CH2COMCTL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CH2COMCEN` reader - Channel 2 output compare clear enable"]
 pub type CH2COMCEN_R = crate::BitReader;
 #[doc = "Field `CH2COMCEN` writer - Channel 2 output compare clear enable"]
-pub type CH2COMCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH2COMCEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH3MS` reader - Channel 3 mode selection"]
 pub type CH3MS_R = crate::FieldReader;
 #[doc = "Field `CH3MS` writer - Channel 3 mode selection"]
-pub type CH3MS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CH3MS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CH3COMFEN` reader - Channel 3 output compare fast enable"]
 pub type CH3COMFEN_R = crate::BitReader;
 #[doc = "Field `CH3COMFEN` writer - Channel 3 output compare fast enable"]
-pub type CH3COMFEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH3COMFEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH3COMSEN` reader - Channel 3 output compare shadow enable"]
 pub type CH3COMSEN_R = crate::BitReader;
 #[doc = "Field `CH3COMSEN` writer - Channel 3 output compare shadow enable"]
-pub type CH3COMSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH3COMSEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH3COMCTL` reader - Channel 3 compare output control"]
 pub type CH3COMCTL_R = crate::FieldReader;
 #[doc = "Field `CH3COMCTL` writer - Channel 3 compare output control"]
-pub type CH3COMCTL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CH3COMCTL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CH3COMCEN` reader - Channel 3 output compare clear enable"]
 pub type CH3COMCEN_R = crate::BitReader;
 #[doc = "Field `CH3COMCEN` writer - Channel 3 output compare clear enable"]
-pub type CH3COMCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH3COMCEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - Channel 2 I/O mode selection"]
     #[inline(always)]
@@ -98,62 +98,62 @@ impl W {
     #[doc = "Bits 0:1 - Channel 2 I/O mode selection"]
     #[inline(always)]
     #[must_use]
-    pub fn ch2ms(&mut self) -> CH2MS_W<CHCTL1_OUTPUT_SPEC, 0> {
-        CH2MS_W::new(self)
+    pub fn ch2ms(&mut self) -> CH2MS_W<CHCTL1_OUTPUT_SPEC> {
+        CH2MS_W::new(self, 0)
     }
     #[doc = "Bit 2 - Channel 2 output compare fast enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch2comfen(&mut self) -> CH2COMFEN_W<CHCTL1_OUTPUT_SPEC, 2> {
-        CH2COMFEN_W::new(self)
+    pub fn ch2comfen(&mut self) -> CH2COMFEN_W<CHCTL1_OUTPUT_SPEC> {
+        CH2COMFEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Channel 2 compare output shadow enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch2comsen(&mut self) -> CH2COMSEN_W<CHCTL1_OUTPUT_SPEC, 3> {
-        CH2COMSEN_W::new(self)
+    pub fn ch2comsen(&mut self) -> CH2COMSEN_W<CHCTL1_OUTPUT_SPEC> {
+        CH2COMSEN_W::new(self, 3)
     }
     #[doc = "Bits 4:6 - Channel 2 compare output control"]
     #[inline(always)]
     #[must_use]
-    pub fn ch2comctl(&mut self) -> CH2COMCTL_W<CHCTL1_OUTPUT_SPEC, 4> {
-        CH2COMCTL_W::new(self)
+    pub fn ch2comctl(&mut self) -> CH2COMCTL_W<CHCTL1_OUTPUT_SPEC> {
+        CH2COMCTL_W::new(self, 4)
     }
     #[doc = "Bit 7 - Channel 2 output compare clear enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch2comcen(&mut self) -> CH2COMCEN_W<CHCTL1_OUTPUT_SPEC, 7> {
-        CH2COMCEN_W::new(self)
+    pub fn ch2comcen(&mut self) -> CH2COMCEN_W<CHCTL1_OUTPUT_SPEC> {
+        CH2COMCEN_W::new(self, 7)
     }
     #[doc = "Bits 8:9 - Channel 3 mode selection"]
     #[inline(always)]
     #[must_use]
-    pub fn ch3ms(&mut self) -> CH3MS_W<CHCTL1_OUTPUT_SPEC, 8> {
-        CH3MS_W::new(self)
+    pub fn ch3ms(&mut self) -> CH3MS_W<CHCTL1_OUTPUT_SPEC> {
+        CH3MS_W::new(self, 8)
     }
     #[doc = "Bit 10 - Channel 3 output compare fast enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch3comfen(&mut self) -> CH3COMFEN_W<CHCTL1_OUTPUT_SPEC, 10> {
-        CH3COMFEN_W::new(self)
+    pub fn ch3comfen(&mut self) -> CH3COMFEN_W<CHCTL1_OUTPUT_SPEC> {
+        CH3COMFEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Channel 3 output compare shadow enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch3comsen(&mut self) -> CH3COMSEN_W<CHCTL1_OUTPUT_SPEC, 11> {
-        CH3COMSEN_W::new(self)
+    pub fn ch3comsen(&mut self) -> CH3COMSEN_W<CHCTL1_OUTPUT_SPEC> {
+        CH3COMSEN_W::new(self, 11)
     }
     #[doc = "Bits 12:14 - Channel 3 compare output control"]
     #[inline(always)]
     #[must_use]
-    pub fn ch3comctl(&mut self) -> CH3COMCTL_W<CHCTL1_OUTPUT_SPEC, 12> {
-        CH3COMCTL_W::new(self)
+    pub fn ch3comctl(&mut self) -> CH3COMCTL_W<CHCTL1_OUTPUT_SPEC> {
+        CH3COMCTL_W::new(self, 12)
     }
     #[doc = "Bit 15 - Channel 3 output compare clear enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch3comcen(&mut self) -> CH3COMCEN_W<CHCTL1_OUTPUT_SPEC, 15> {
-        CH3COMCEN_W::new(self)
+    pub fn ch3comcen(&mut self) -> CH3COMCEN_W<CHCTL1_OUTPUT_SPEC> {
+        CH3COMCEN_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -175,10 +175,10 @@ impl crate::RegisterSpec for CHCTL1_OUTPUT_SPEC {
 impl crate::Readable for CHCTL1_OUTPUT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`chctl1_output::W`](W) writer structure"]
 impl crate::Writable for CHCTL1_OUTPUT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets CHCTL1_Output to value 0"]
 impl crate::Resettable for CHCTL1_OUTPUT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

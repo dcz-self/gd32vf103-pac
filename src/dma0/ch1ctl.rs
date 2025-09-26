@@ -5,51 +5,51 @@ pub type W = crate::W<CH1CTL_SPEC>;
 #[doc = "Field `CHEN` reader - Channel enable"]
 pub type CHEN_R = crate::BitReader;
 #[doc = "Field `CHEN` writer - Channel enable"]
-pub type CHEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CHEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FTFIE` reader - Enable bit for channel full transfer finish interrupt"]
 pub type FTFIE_R = crate::BitReader;
 #[doc = "Field `FTFIE` writer - Enable bit for channel full transfer finish interrupt"]
-pub type FTFIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FTFIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HTFIE` reader - Enable bit for channel half transfer finish interrupt"]
 pub type HTFIE_R = crate::BitReader;
 #[doc = "Field `HTFIE` writer - Enable bit for channel half transfer finish interrupt"]
-pub type HTFIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HTFIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERRIE` reader - Enable bit for channel error interrupt"]
 pub type ERRIE_R = crate::BitReader;
 #[doc = "Field `ERRIE` writer - Enable bit for channel error interrupt"]
-pub type ERRIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERRIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIR` reader - Transfer direction"]
 pub type DIR_R = crate::BitReader;
 #[doc = "Field `DIR` writer - Transfer direction"]
-pub type DIR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DIR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMEN` reader - Circular mode enable"]
 pub type CMEN_R = crate::BitReader;
 #[doc = "Field `CMEN` writer - Circular mode enable"]
-pub type CMEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PNAGA` reader - Next address generation algorithm of peripheral"]
 pub type PNAGA_R = crate::BitReader;
 #[doc = "Field `PNAGA` writer - Next address generation algorithm of peripheral"]
-pub type PNAGA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PNAGA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MNAGA` reader - Next address generation algorithm of memory"]
 pub type MNAGA_R = crate::BitReader;
 #[doc = "Field `MNAGA` writer - Next address generation algorithm of memory"]
-pub type MNAGA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MNAGA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PWIDTH` reader - Transfer data size of peripheral"]
 pub type PWIDTH_R = crate::FieldReader;
 #[doc = "Field `PWIDTH` writer - Transfer data size of peripheral"]
-pub type PWIDTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PWIDTH_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `MWIDTH` reader - Transfer data size of memory"]
 pub type MWIDTH_R = crate::FieldReader;
 #[doc = "Field `MWIDTH` writer - Transfer data size of memory"]
-pub type MWIDTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MWIDTH_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PRIO` reader - Priority level"]
 pub type PRIO_R = crate::FieldReader;
 #[doc = "Field `PRIO` writer - Priority level"]
-pub type PRIO_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PRIO_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `M2M` reader - Memory to Memory Mode"]
 pub type M2M_R = crate::BitReader;
 #[doc = "Field `M2M` writer - Memory to Memory Mode"]
-pub type M2M_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type M2M_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Channel enable"]
     #[inline(always)]
@@ -116,74 +116,74 @@ impl W {
     #[doc = "Bit 0 - Channel enable"]
     #[inline(always)]
     #[must_use]
-    pub fn chen(&mut self) -> CHEN_W<CH1CTL_SPEC, 0> {
-        CHEN_W::new(self)
+    pub fn chen(&mut self) -> CHEN_W<CH1CTL_SPEC> {
+        CHEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable bit for channel full transfer finish interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn ftfie(&mut self) -> FTFIE_W<CH1CTL_SPEC, 1> {
-        FTFIE_W::new(self)
+    pub fn ftfie(&mut self) -> FTFIE_W<CH1CTL_SPEC> {
+        FTFIE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Enable bit for channel half transfer finish interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn htfie(&mut self) -> HTFIE_W<CH1CTL_SPEC, 2> {
-        HTFIE_W::new(self)
+    pub fn htfie(&mut self) -> HTFIE_W<CH1CTL_SPEC> {
+        HTFIE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Enable bit for channel error interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn errie(&mut self) -> ERRIE_W<CH1CTL_SPEC, 3> {
-        ERRIE_W::new(self)
+    pub fn errie(&mut self) -> ERRIE_W<CH1CTL_SPEC> {
+        ERRIE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Transfer direction"]
     #[inline(always)]
     #[must_use]
-    pub fn dir(&mut self) -> DIR_W<CH1CTL_SPEC, 4> {
-        DIR_W::new(self)
+    pub fn dir(&mut self) -> DIR_W<CH1CTL_SPEC> {
+        DIR_W::new(self, 4)
     }
     #[doc = "Bit 5 - Circular mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn cmen(&mut self) -> CMEN_W<CH1CTL_SPEC, 5> {
-        CMEN_W::new(self)
+    pub fn cmen(&mut self) -> CMEN_W<CH1CTL_SPEC> {
+        CMEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Next address generation algorithm of peripheral"]
     #[inline(always)]
     #[must_use]
-    pub fn pnaga(&mut self) -> PNAGA_W<CH1CTL_SPEC, 6> {
-        PNAGA_W::new(self)
+    pub fn pnaga(&mut self) -> PNAGA_W<CH1CTL_SPEC> {
+        PNAGA_W::new(self, 6)
     }
     #[doc = "Bit 7 - Next address generation algorithm of memory"]
     #[inline(always)]
     #[must_use]
-    pub fn mnaga(&mut self) -> MNAGA_W<CH1CTL_SPEC, 7> {
-        MNAGA_W::new(self)
+    pub fn mnaga(&mut self) -> MNAGA_W<CH1CTL_SPEC> {
+        MNAGA_W::new(self, 7)
     }
     #[doc = "Bits 8:9 - Transfer data size of peripheral"]
     #[inline(always)]
     #[must_use]
-    pub fn pwidth(&mut self) -> PWIDTH_W<CH1CTL_SPEC, 8> {
-        PWIDTH_W::new(self)
+    pub fn pwidth(&mut self) -> PWIDTH_W<CH1CTL_SPEC> {
+        PWIDTH_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - Transfer data size of memory"]
     #[inline(always)]
     #[must_use]
-    pub fn mwidth(&mut self) -> MWIDTH_W<CH1CTL_SPEC, 10> {
-        MWIDTH_W::new(self)
+    pub fn mwidth(&mut self) -> MWIDTH_W<CH1CTL_SPEC> {
+        MWIDTH_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - Priority level"]
     #[inline(always)]
     #[must_use]
-    pub fn prio(&mut self) -> PRIO_W<CH1CTL_SPEC, 12> {
-        PRIO_W::new(self)
+    pub fn prio(&mut self) -> PRIO_W<CH1CTL_SPEC> {
+        PRIO_W::new(self, 12)
     }
     #[doc = "Bit 14 - Memory to Memory Mode"]
     #[inline(always)]
     #[must_use]
-    pub fn m2m(&mut self) -> M2M_W<CH1CTL_SPEC, 14> {
-        M2M_W::new(self)
+    pub fn m2m(&mut self) -> M2M_W<CH1CTL_SPEC> {
+        M2M_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -205,10 +205,10 @@ impl crate::RegisterSpec for CH1CTL_SPEC {
 impl crate::Readable for CH1CTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ch1ctl::W`](W) writer structure"]
 impl crate::Writable for CH1CTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CH1CTL to value 0"]
 impl crate::Resettable for CH1CTL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

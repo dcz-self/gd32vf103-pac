@@ -1,46 +1,128 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
+    stat: STAT,
+    ctl0: CTL0,
+    ctl1: CTL1,
+    sampt0: SAMPT0,
+    sampt1: SAMPT1,
+    ioff0: IOFF0,
+    ioff1: IOFF1,
+    ioff2: IOFF2,
+    ioff3: IOFF3,
+    wdht: WDHT,
+    wdlt: WDLT,
+    rsq0: RSQ0,
+    rsq1: RSQ1,
+    rsq2: RSQ2,
+    isq: ISQ,
+    idata0: IDATA0,
+    idata1: IDATA1,
+    idata2: IDATA2,
+    idata3: IDATA3,
+    rdata: RDATA,
+}
+impl RegisterBlock {
     #[doc = "0x00 - status register"]
-    pub stat: STAT,
+    #[inline(always)]
+    pub const fn stat(&self) -> &STAT {
+        &self.stat
+    }
     #[doc = "0x04 - control register 0"]
-    pub ctl0: CTL0,
+    #[inline(always)]
+    pub const fn ctl0(&self) -> &CTL0 {
+        &self.ctl0
+    }
     #[doc = "0x08 - control register 1"]
-    pub ctl1: CTL1,
+    #[inline(always)]
+    pub const fn ctl1(&self) -> &CTL1 {
+        &self.ctl1
+    }
     #[doc = "0x0c - Sample time register 0"]
-    pub sampt0: SAMPT0,
+    #[inline(always)]
+    pub const fn sampt0(&self) -> &SAMPT0 {
+        &self.sampt0
+    }
     #[doc = "0x10 - Sample time register 1"]
-    pub sampt1: SAMPT1,
+    #[inline(always)]
+    pub const fn sampt1(&self) -> &SAMPT1 {
+        &self.sampt1
+    }
     #[doc = "0x14 - Inserted channel data offset register 0"]
-    pub ioff0: IOFF0,
+    #[inline(always)]
+    pub const fn ioff0(&self) -> &IOFF0 {
+        &self.ioff0
+    }
     #[doc = "0x18 - Inserted channel data offset register 1"]
-    pub ioff1: IOFF1,
+    #[inline(always)]
+    pub const fn ioff1(&self) -> &IOFF1 {
+        &self.ioff1
+    }
     #[doc = "0x1c - Inserted channel data offset register 2"]
-    pub ioff2: IOFF2,
+    #[inline(always)]
+    pub const fn ioff2(&self) -> &IOFF2 {
+        &self.ioff2
+    }
     #[doc = "0x20 - Inserted channel data offset register 3"]
-    pub ioff3: IOFF3,
+    #[inline(always)]
+    pub const fn ioff3(&self) -> &IOFF3 {
+        &self.ioff3
+    }
     #[doc = "0x24 - watchdog higher threshold register"]
-    pub wdht: WDHT,
+    #[inline(always)]
+    pub const fn wdht(&self) -> &WDHT {
+        &self.wdht
+    }
     #[doc = "0x28 - watchdog lower threshold register"]
-    pub wdlt: WDLT,
+    #[inline(always)]
+    pub const fn wdlt(&self) -> &WDLT {
+        &self.wdlt
+    }
     #[doc = "0x2c - regular sequence register 0"]
-    pub rsq0: RSQ0,
+    #[inline(always)]
+    pub const fn rsq0(&self) -> &RSQ0 {
+        &self.rsq0
+    }
     #[doc = "0x30 - regular sequence register 1"]
-    pub rsq1: RSQ1,
+    #[inline(always)]
+    pub const fn rsq1(&self) -> &RSQ1 {
+        &self.rsq1
+    }
     #[doc = "0x34 - regular sequence register 2"]
-    pub rsq2: RSQ2,
+    #[inline(always)]
+    pub const fn rsq2(&self) -> &RSQ2 {
+        &self.rsq2
+    }
     #[doc = "0x38 - Inserted sequence register"]
-    pub isq: ISQ,
+    #[inline(always)]
+    pub const fn isq(&self) -> &ISQ {
+        &self.isq
+    }
     #[doc = "0x3c - Inserted data register 0"]
-    pub idata0: IDATA0,
+    #[inline(always)]
+    pub const fn idata0(&self) -> &IDATA0 {
+        &self.idata0
+    }
     #[doc = "0x40 - Inserted data register 1"]
-    pub idata1: IDATA1,
+    #[inline(always)]
+    pub const fn idata1(&self) -> &IDATA1 {
+        &self.idata1
+    }
     #[doc = "0x44 - Inserted data register 2"]
-    pub idata2: IDATA2,
+    #[inline(always)]
+    pub const fn idata2(&self) -> &IDATA2 {
+        &self.idata2
+    }
     #[doc = "0x48 - Inserted data register 3"]
-    pub idata3: IDATA3,
+    #[inline(always)]
+    pub const fn idata3(&self) -> &IDATA3 {
+        &self.idata3
+    }
     #[doc = "0x4c - regular data register"]
-    pub rdata: RDATA,
+    #[inline(always)]
+    pub const fn rdata(&self) -> &RDATA {
+        &self.rdata
+    }
 }
 #[doc = "STAT (rw) register accessor: status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`stat::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`stat::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@stat`]
 module"]

@@ -5,7 +5,7 @@ pub type W = crate::W<WDLT_SPEC>;
 #[doc = "Field `WDLT` reader - Analog watchdog lower threshold"]
 pub type WDLT_R = crate::FieldReader<u16>;
 #[doc = "Field `WDLT` writer - Analog watchdog lower threshold"]
-pub type WDLT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type WDLT_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 impl R {
     #[doc = "Bits 0:11 - Analog watchdog lower threshold"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bits 0:11 - Analog watchdog lower threshold"]
     #[inline(always)]
     #[must_use]
-    pub fn wdlt(&mut self) -> WDLT_W<WDLT_SPEC, 0> {
-        WDLT_W::new(self)
+    pub fn wdlt(&mut self) -> WDLT_W<WDLT_SPEC> {
+        WDLT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for WDLT_SPEC {
 impl crate::Readable for WDLT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`wdlt::W`](W) writer structure"]
 impl crate::Writable for WDLT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets WDLT to value 0"]
 impl crate::Resettable for WDLT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

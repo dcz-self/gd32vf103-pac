@@ -5,15 +5,15 @@ pub type W = crate::W<DIEP2LEN_SPEC>;
 #[doc = "Field `TLEN` reader - Transfer length"]
 pub type TLEN_R = crate::FieldReader<u32>;
 #[doc = "Field `TLEN` writer - Transfer length"]
-pub type TLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 19, O, u32>;
+pub type TLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 19, u32>;
 #[doc = "Field `PCNT` reader - Packet count"]
 pub type PCNT_R = crate::FieldReader<u16>;
 #[doc = "Field `PCNT` writer - Packet count"]
-pub type PCNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type PCNT_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `MCPF` reader - Multi packet count per frame"]
 pub type MCPF_R = crate::FieldReader;
 #[doc = "Field `MCPF` writer - Multi packet count per frame"]
-pub type MCPF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MCPF_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:18 - Transfer length"]
     #[inline(always)]
@@ -35,20 +35,20 @@ impl W {
     #[doc = "Bits 0:18 - Transfer length"]
     #[inline(always)]
     #[must_use]
-    pub fn tlen(&mut self) -> TLEN_W<DIEP2LEN_SPEC, 0> {
-        TLEN_W::new(self)
+    pub fn tlen(&mut self) -> TLEN_W<DIEP2LEN_SPEC> {
+        TLEN_W::new(self, 0)
     }
     #[doc = "Bits 19:28 - Packet count"]
     #[inline(always)]
     #[must_use]
-    pub fn pcnt(&mut self) -> PCNT_W<DIEP2LEN_SPEC, 19> {
-        PCNT_W::new(self)
+    pub fn pcnt(&mut self) -> PCNT_W<DIEP2LEN_SPEC> {
+        PCNT_W::new(self, 19)
     }
     #[doc = "Bits 29:30 - Multi packet count per frame"]
     #[inline(always)]
     #[must_use]
-    pub fn mcpf(&mut self) -> MCPF_W<DIEP2LEN_SPEC, 29> {
-        MCPF_W::new(self)
+    pub fn mcpf(&mut self) -> MCPF_W<DIEP2LEN_SPEC> {
+        MCPF_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -70,10 +70,10 @@ impl crate::RegisterSpec for DIEP2LEN_SPEC {
 impl crate::Readable for DIEP2LEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`diep2len::W`](W) writer structure"]
 impl crate::Writable for DIEP2LEN_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIEP2LEN to value 0"]
 impl crate::Resettable for DIEP2LEN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

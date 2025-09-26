@@ -1,20 +1,50 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
+    ctl0: CTL0,
+    ctl1: CTL1,
+    istat: ISTAT,
+    octl: OCTL,
+    bop: BOP,
+    bc: BC,
+    lock: LOCK,
+}
+impl RegisterBlock {
     #[doc = "0x00 - port control register 0"]
-    pub ctl0: CTL0,
+    #[inline(always)]
+    pub const fn ctl0(&self) -> &CTL0 {
+        &self.ctl0
+    }
     #[doc = "0x04 - port control register 1"]
-    pub ctl1: CTL1,
+    #[inline(always)]
+    pub const fn ctl1(&self) -> &CTL1 {
+        &self.ctl1
+    }
     #[doc = "0x08 - Port input status register"]
-    pub istat: ISTAT,
+    #[inline(always)]
+    pub const fn istat(&self) -> &ISTAT {
+        &self.istat
+    }
     #[doc = "0x0c - Port output control register"]
-    pub octl: OCTL,
+    #[inline(always)]
+    pub const fn octl(&self) -> &OCTL {
+        &self.octl
+    }
     #[doc = "0x10 - Port bit operate register"]
-    pub bop: BOP,
+    #[inline(always)]
+    pub const fn bop(&self) -> &BOP {
+        &self.bop
+    }
     #[doc = "0x14 - Port bit clear register"]
-    pub bc: BC,
+    #[inline(always)]
+    pub const fn bc(&self) -> &BC {
+        &self.bc
+    }
     #[doc = "0x18 - GPIO port configuration lock register"]
-    pub lock: LOCK,
+    #[inline(always)]
+    pub const fn lock(&self) -> &LOCK {
+        &self.lock
+    }
 }
 #[doc = "CTL0 (rw) register accessor: port control register 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctl0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctl0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctl0`]
 module"]

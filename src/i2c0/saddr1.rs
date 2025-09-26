@@ -5,11 +5,11 @@ pub type W = crate::W<SADDR1_SPEC>;
 #[doc = "Field `DUADEN` reader - Dual-Address mode switch"]
 pub type DUADEN_R = crate::BitReader;
 #[doc = "Field `DUADEN` writer - Dual-Address mode switch"]
-pub type DUADEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DUADEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADDRESS2` reader - Second I2C address for the slave in Dual-Address mode"]
 pub type ADDRESS2_R = crate::FieldReader;
 #[doc = "Field `ADDRESS2` writer - Second I2C address for the slave in Dual-Address mode"]
-pub type ADDRESS2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type ADDRESS2_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
     #[doc = "Bit 0 - Dual-Address mode switch"]
     #[inline(always)]
@@ -26,14 +26,14 @@ impl W {
     #[doc = "Bit 0 - Dual-Address mode switch"]
     #[inline(always)]
     #[must_use]
-    pub fn duaden(&mut self) -> DUADEN_W<SADDR1_SPEC, 0> {
-        DUADEN_W::new(self)
+    pub fn duaden(&mut self) -> DUADEN_W<SADDR1_SPEC> {
+        DUADEN_W::new(self, 0)
     }
     #[doc = "Bits 1:7 - Second I2C address for the slave in Dual-Address mode"]
     #[inline(always)]
     #[must_use]
-    pub fn address2(&mut self) -> ADDRESS2_W<SADDR1_SPEC, 1> {
-        ADDRESS2_W::new(self)
+    pub fn address2(&mut self) -> ADDRESS2_W<SADDR1_SPEC> {
+        ADDRESS2_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -55,10 +55,10 @@ impl crate::RegisterSpec for SADDR1_SPEC {
 impl crate::Readable for SADDR1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`saddr1::W`](W) writer structure"]
 impl crate::Writable for SADDR1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets SADDR1 to value 0"]
 impl crate::Resettable for SADDR1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

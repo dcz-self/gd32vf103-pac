@@ -1,19 +1,45 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - Timer value (lower half)"]
-    pub mtime_lo: MTIME_LO,
-    #[doc = "0x04 - Timer value (upper half)"]
-    pub mtime_hi: MTIME_HI,
-    #[doc = "0x08 - Timer comparison value (lower half)"]
-    pub mtimecmp_lo: MTIMECMP_LO,
-    #[doc = "0x0c - Timer comparison value (upper half)"]
-    pub mtimecmp_hi: MTIMECMP_HI,
+    mtime_lo: MTIME_LO,
+    mtime_hi: MTIME_HI,
+    mtimecmp_lo: MTIMECMP_LO,
+    mtimecmp_hi: MTIMECMP_HI,
     _reserved4: [u8; 0x0fe8],
+    mstop: MSTOP,
+    msip: MSIP,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - Timer value (lower half)"]
+    #[inline(always)]
+    pub const fn mtime_lo(&self) -> &MTIME_LO {
+        &self.mtime_lo
+    }
+    #[doc = "0x04 - Timer value (upper half)"]
+    #[inline(always)]
+    pub const fn mtime_hi(&self) -> &MTIME_HI {
+        &self.mtime_hi
+    }
+    #[doc = "0x08 - Timer comparison value (lower half)"]
+    #[inline(always)]
+    pub const fn mtimecmp_lo(&self) -> &MTIMECMP_LO {
+        &self.mtimecmp_lo
+    }
+    #[doc = "0x0c - Timer comparison value (upper half)"]
+    #[inline(always)]
+    pub const fn mtimecmp_hi(&self) -> &MTIMECMP_HI {
+        &self.mtimecmp_hi
+    }
     #[doc = "0xff8 - Timer control register"]
-    pub mstop: MSTOP,
+    #[inline(always)]
+    pub const fn mstop(&self) -> &MSTOP {
+        &self.mstop
+    }
     #[doc = "0xffc - Software interrupt register"]
-    pub msip: MSIP,
+    #[inline(always)]
+    pub const fn msip(&self) -> &MSIP {
+        &self.msip
+    }
 }
 #[doc = "mtime_lo (rw) register accessor: Timer value (lower half)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mtime_lo::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mtime_lo::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mtime_lo`]
 module"]

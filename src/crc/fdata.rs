@@ -5,7 +5,7 @@ pub type W = crate::W<FDATA_SPEC>;
 #[doc = "Field `FDATA` reader - Free Data Register bits"]
 pub type FDATA_R = crate::FieldReader;
 #[doc = "Field `FDATA` writer - Free Data Register bits"]
-pub type FDATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type FDATA_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Free Data Register bits"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bits 0:7 - Free Data Register bits"]
     #[inline(always)]
     #[must_use]
-    pub fn fdata(&mut self) -> FDATA_W<FDATA_SPEC, 0> {
-        FDATA_W::new(self)
+    pub fn fdata(&mut self) -> FDATA_W<FDATA_SPEC> {
+        FDATA_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for FDATA_SPEC {
 impl crate::Readable for FDATA_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fdata::W`](W) writer structure"]
 impl crate::Writable for FDATA_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FDATA to value 0"]
 impl crate::Resettable for FDATA_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

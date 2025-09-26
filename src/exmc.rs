@@ -1,12 +1,26 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
+    snctl0: SNCTL0,
+    sntcfg0: SNTCFG0,
+    snctl1: SNCTL1,
+}
+impl RegisterBlock {
     #[doc = "0x00 - SRAM/NOR flash control register 0"]
-    pub snctl0: SNCTL0,
+    #[inline(always)]
+    pub const fn snctl0(&self) -> &SNCTL0 {
+        &self.snctl0
+    }
     #[doc = "0x04 - SRAM/NOR flash timing configuration register 0"]
-    pub sntcfg0: SNTCFG0,
+    #[inline(always)]
+    pub const fn sntcfg0(&self) -> &SNTCFG0 {
+        &self.sntcfg0
+    }
     #[doc = "0x08 - SRAM/NOR flash control register 1"]
-    pub snctl1: SNCTL1,
+    #[inline(always)]
+    pub const fn snctl1(&self) -> &SNCTL1 {
+        &self.snctl1
+    }
 }
 #[doc = "SNCTL0 (rw) register accessor: SRAM/NOR flash control register 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`snctl0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`snctl0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@snctl0`]
 module"]

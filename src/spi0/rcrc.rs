@@ -18,5 +18,5 @@ impl crate::RegisterSpec for RCRC_SPEC {
 impl crate::Readable for RCRC_SPEC {}
 #[doc = "`reset()` method sets RCRC to value 0"]
 impl crate::Resettable for RCRC_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

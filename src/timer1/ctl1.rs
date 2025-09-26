@@ -5,15 +5,15 @@ pub type W = crate::W<CTL1_SPEC>;
 #[doc = "Field `DMAS` reader - DMA request source selection"]
 pub type DMAS_R = crate::BitReader;
 #[doc = "Field `DMAS` writer - DMA request source selection"]
-pub type DMAS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMAS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MMC` reader - Master mode control"]
 pub type MMC_R = crate::FieldReader;
 #[doc = "Field `MMC` writer - Master mode control"]
-pub type MMC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type MMC_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TI0S` reader - Channel 0 trigger input selection"]
 pub type TI0S_R = crate::BitReader;
 #[doc = "Field `TI0S` writer - Channel 0 trigger input selection"]
-pub type TI0S_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TI0S_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 3 - DMA request source selection"]
     #[inline(always)]
@@ -35,20 +35,20 @@ impl W {
     #[doc = "Bit 3 - DMA request source selection"]
     #[inline(always)]
     #[must_use]
-    pub fn dmas(&mut self) -> DMAS_W<CTL1_SPEC, 3> {
-        DMAS_W::new(self)
+    pub fn dmas(&mut self) -> DMAS_W<CTL1_SPEC> {
+        DMAS_W::new(self, 3)
     }
     #[doc = "Bits 4:6 - Master mode control"]
     #[inline(always)]
     #[must_use]
-    pub fn mmc(&mut self) -> MMC_W<CTL1_SPEC, 4> {
-        MMC_W::new(self)
+    pub fn mmc(&mut self) -> MMC_W<CTL1_SPEC> {
+        MMC_W::new(self, 4)
     }
     #[doc = "Bit 7 - Channel 0 trigger input selection"]
     #[inline(always)]
     #[must_use]
-    pub fn ti0s(&mut self) -> TI0S_W<CTL1_SPEC, 7> {
-        TI0S_W::new(self)
+    pub fn ti0s(&mut self) -> TI0S_W<CTL1_SPEC> {
+        TI0S_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -70,10 +70,10 @@ impl crate::RegisterSpec for CTL1_SPEC {
 impl crate::Readable for CTL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctl1::W`](W) writer structure"]
 impl crate::Writable for CTL1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets CTL1 to value 0"]
 impl crate::Resettable for CTL1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

@@ -5,59 +5,59 @@ pub type W = crate::W<INTEN_SPEC>;
 #[doc = "Field `TMEIE` reader - Transmit mailbox empty interrupt enable"]
 pub type TMEIE_R = crate::BitReader;
 #[doc = "Field `TMEIE` writer - Transmit mailbox empty interrupt enable"]
-pub type TMEIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMEIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RFNEIE0` reader - Receive FIFO0 not empty interrupt enable"]
 pub type RFNEIE0_R = crate::BitReader;
 #[doc = "Field `RFNEIE0` writer - Receive FIFO0 not empty interrupt enable"]
-pub type RFNEIE0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RFNEIE0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RFFIE0` reader - Receive FIFO0 full interrupt enable"]
 pub type RFFIE0_R = crate::BitReader;
 #[doc = "Field `RFFIE0` writer - Receive FIFO0 full interrupt enable"]
-pub type RFFIE0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RFFIE0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RFOIE0` reader - Receive FIFO0 overfull interrupt enable"]
 pub type RFOIE0_R = crate::BitReader;
 #[doc = "Field `RFOIE0` writer - Receive FIFO0 overfull interrupt enable"]
-pub type RFOIE0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RFOIE0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RFNEIE1` reader - Receive FIFO1 not empty interrupt enable"]
 pub type RFNEIE1_R = crate::BitReader;
 #[doc = "Field `RFNEIE1` writer - Receive FIFO1 not empty interrupt enable"]
-pub type RFNEIE1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RFNEIE1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RFFIE1` reader - Receive FIFO1 full interrupt enable"]
 pub type RFFIE1_R = crate::BitReader;
 #[doc = "Field `RFFIE1` writer - Receive FIFO1 full interrupt enable"]
-pub type RFFIE1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RFFIE1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RFOIE1` reader - Receive FIFO1 overfull interrupt enable"]
 pub type RFOIE1_R = crate::BitReader;
 #[doc = "Field `RFOIE1` writer - Receive FIFO1 overfull interrupt enable"]
-pub type RFOIE1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RFOIE1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WERRIE` reader - Warning error interrupt enable"]
 pub type WERRIE_R = crate::BitReader;
 #[doc = "Field `WERRIE` writer - Warning error interrupt enable"]
-pub type WERRIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WERRIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PERRIE` reader - Passive error interrupt enable"]
 pub type PERRIE_R = crate::BitReader;
 #[doc = "Field `PERRIE` writer - Passive error interrupt enable"]
-pub type PERRIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PERRIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BOIE` reader - Bus-off interrupt enable"]
 pub type BOIE_R = crate::BitReader;
 #[doc = "Field `BOIE` writer - Bus-off interrupt enable"]
-pub type BOIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BOIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERRNIE` reader - Error number interrupt enable"]
 pub type ERRNIE_R = crate::BitReader;
 #[doc = "Field `ERRNIE` writer - Error number interrupt enable"]
-pub type ERRNIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERRNIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERRIE` reader - Error interrupt enable"]
 pub type ERRIE_R = crate::BitReader;
 #[doc = "Field `ERRIE` writer - Error interrupt enable"]
-pub type ERRIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERRIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WIE` reader - Wakeup interrupt enable"]
 pub type WIE_R = crate::BitReader;
 #[doc = "Field `WIE` writer - Wakeup interrupt enable"]
-pub type WIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLPWIE` reader - Sleep working interrupt enable"]
 pub type SLPWIE_R = crate::BitReader;
 #[doc = "Field `SLPWIE` writer - Sleep working interrupt enable"]
-pub type SLPWIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLPWIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Transmit mailbox empty interrupt enable"]
     #[inline(always)]
@@ -134,86 +134,86 @@ impl W {
     #[doc = "Bit 0 - Transmit mailbox empty interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tmeie(&mut self) -> TMEIE_W<INTEN_SPEC, 0> {
-        TMEIE_W::new(self)
+    pub fn tmeie(&mut self) -> TMEIE_W<INTEN_SPEC> {
+        TMEIE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Receive FIFO0 not empty interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rfneie0(&mut self) -> RFNEIE0_W<INTEN_SPEC, 1> {
-        RFNEIE0_W::new(self)
+    pub fn rfneie0(&mut self) -> RFNEIE0_W<INTEN_SPEC> {
+        RFNEIE0_W::new(self, 1)
     }
     #[doc = "Bit 2 - Receive FIFO0 full interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rffie0(&mut self) -> RFFIE0_W<INTEN_SPEC, 2> {
-        RFFIE0_W::new(self)
+    pub fn rffie0(&mut self) -> RFFIE0_W<INTEN_SPEC> {
+        RFFIE0_W::new(self, 2)
     }
     #[doc = "Bit 3 - Receive FIFO0 overfull interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rfoie0(&mut self) -> RFOIE0_W<INTEN_SPEC, 3> {
-        RFOIE0_W::new(self)
+    pub fn rfoie0(&mut self) -> RFOIE0_W<INTEN_SPEC> {
+        RFOIE0_W::new(self, 3)
     }
     #[doc = "Bit 4 - Receive FIFO1 not empty interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rfneie1(&mut self) -> RFNEIE1_W<INTEN_SPEC, 4> {
-        RFNEIE1_W::new(self)
+    pub fn rfneie1(&mut self) -> RFNEIE1_W<INTEN_SPEC> {
+        RFNEIE1_W::new(self, 4)
     }
     #[doc = "Bit 5 - Receive FIFO1 full interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rffie1(&mut self) -> RFFIE1_W<INTEN_SPEC, 5> {
-        RFFIE1_W::new(self)
+    pub fn rffie1(&mut self) -> RFFIE1_W<INTEN_SPEC> {
+        RFFIE1_W::new(self, 5)
     }
     #[doc = "Bit 6 - Receive FIFO1 overfull interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rfoie1(&mut self) -> RFOIE1_W<INTEN_SPEC, 6> {
-        RFOIE1_W::new(self)
+    pub fn rfoie1(&mut self) -> RFOIE1_W<INTEN_SPEC> {
+        RFOIE1_W::new(self, 6)
     }
     #[doc = "Bit 8 - Warning error interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn werrie(&mut self) -> WERRIE_W<INTEN_SPEC, 8> {
-        WERRIE_W::new(self)
+    pub fn werrie(&mut self) -> WERRIE_W<INTEN_SPEC> {
+        WERRIE_W::new(self, 8)
     }
     #[doc = "Bit 9 - Passive error interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn perrie(&mut self) -> PERRIE_W<INTEN_SPEC, 9> {
-        PERRIE_W::new(self)
+    pub fn perrie(&mut self) -> PERRIE_W<INTEN_SPEC> {
+        PERRIE_W::new(self, 9)
     }
     #[doc = "Bit 10 - Bus-off interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn boie(&mut self) -> BOIE_W<INTEN_SPEC, 10> {
-        BOIE_W::new(self)
+    pub fn boie(&mut self) -> BOIE_W<INTEN_SPEC> {
+        BOIE_W::new(self, 10)
     }
     #[doc = "Bit 11 - Error number interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn errnie(&mut self) -> ERRNIE_W<INTEN_SPEC, 11> {
-        ERRNIE_W::new(self)
+    pub fn errnie(&mut self) -> ERRNIE_W<INTEN_SPEC> {
+        ERRNIE_W::new(self, 11)
     }
     #[doc = "Bit 15 - Error interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn errie(&mut self) -> ERRIE_W<INTEN_SPEC, 15> {
-        ERRIE_W::new(self)
+    pub fn errie(&mut self) -> ERRIE_W<INTEN_SPEC> {
+        ERRIE_W::new(self, 15)
     }
     #[doc = "Bit 16 - Wakeup interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn wie(&mut self) -> WIE_W<INTEN_SPEC, 16> {
-        WIE_W::new(self)
+    pub fn wie(&mut self) -> WIE_W<INTEN_SPEC> {
+        WIE_W::new(self, 16)
     }
     #[doc = "Bit 17 - Sleep working interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn slpwie(&mut self) -> SLPWIE_W<INTEN_SPEC, 17> {
-        SLPWIE_W::new(self)
+    pub fn slpwie(&mut self) -> SLPWIE_W<INTEN_SPEC> {
+        SLPWIE_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -235,10 +235,10 @@ impl crate::RegisterSpec for INTEN_SPEC {
 impl crate::Readable for INTEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`inten::W`](W) writer structure"]
 impl crate::Writable for INTEN_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INTEN to value 0"]
 impl crate::Resettable for INTEN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

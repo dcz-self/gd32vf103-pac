@@ -5,19 +5,19 @@ pub type W = crate::W<OCTL_SPEC>;
 #[doc = "Field `RCCV` reader - RTC clock calibration value"]
 pub type RCCV_R = crate::FieldReader;
 #[doc = "Field `RCCV` writer - RTC clock calibration value"]
-pub type RCCV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type RCCV_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `COEN` reader - RTC clock calibration output enable"]
 pub type COEN_R = crate::BitReader;
 #[doc = "Field `COEN` writer - RTC clock calibration output enable"]
-pub type COEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type COEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ASOEN` reader - RTC alarm or second signal output enable"]
 pub type ASOEN_R = crate::BitReader;
 #[doc = "Field `ASOEN` writer - RTC alarm or second signal output enable"]
-pub type ASOEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ASOEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ROSEL` reader - RTC output selection"]
 pub type ROSEL_R = crate::BitReader;
 #[doc = "Field `ROSEL` writer - RTC output selection"]
-pub type ROSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ROSEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:6 - RTC clock calibration value"]
     #[inline(always)]
@@ -44,26 +44,26 @@ impl W {
     #[doc = "Bits 0:6 - RTC clock calibration value"]
     #[inline(always)]
     #[must_use]
-    pub fn rccv(&mut self) -> RCCV_W<OCTL_SPEC, 0> {
-        RCCV_W::new(self)
+    pub fn rccv(&mut self) -> RCCV_W<OCTL_SPEC> {
+        RCCV_W::new(self, 0)
     }
     #[doc = "Bit 7 - RTC clock calibration output enable"]
     #[inline(always)]
     #[must_use]
-    pub fn coen(&mut self) -> COEN_W<OCTL_SPEC, 7> {
-        COEN_W::new(self)
+    pub fn coen(&mut self) -> COEN_W<OCTL_SPEC> {
+        COEN_W::new(self, 7)
     }
     #[doc = "Bit 8 - RTC alarm or second signal output enable"]
     #[inline(always)]
     #[must_use]
-    pub fn asoen(&mut self) -> ASOEN_W<OCTL_SPEC, 8> {
-        ASOEN_W::new(self)
+    pub fn asoen(&mut self) -> ASOEN_W<OCTL_SPEC> {
+        ASOEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - RTC output selection"]
     #[inline(always)]
     #[must_use]
-    pub fn rosel(&mut self) -> ROSEL_W<OCTL_SPEC, 9> {
-        ROSEL_W::new(self)
+    pub fn rosel(&mut self) -> ROSEL_W<OCTL_SPEC> {
+        ROSEL_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -85,10 +85,10 @@ impl crate::RegisterSpec for OCTL_SPEC {
 impl crate::Readable for OCTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`octl::W`](W) writer structure"]
 impl crate::Writable for OCTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets OCTL to value 0"]
 impl crate::Resettable for OCTL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

@@ -1,10 +1,20 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
+    id: ID,
+    ctl: CTL,
+}
+impl RegisterBlock {
     #[doc = "0x00 - ID code register"]
-    pub id: ID,
+    #[inline(always)]
+    pub const fn id(&self) -> &ID {
+        &self.id
+    }
     #[doc = "0x04 - Control register 0"]
-    pub ctl: CTL,
+    #[inline(always)]
+    pub const fn ctl(&self) -> &CTL {
+        &self.ctl
+    }
 }
 #[doc = "ID (r) register accessor: ID code register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`id::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@id`]
 module"]

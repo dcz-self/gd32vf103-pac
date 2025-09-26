@@ -5,35 +5,35 @@ pub type W = crate::W<I2SCTL_SPEC>;
 #[doc = "Field `CHLEN` reader - Channel length (number of bits per audio channel)"]
 pub type CHLEN_R = crate::BitReader;
 #[doc = "Field `CHLEN` writer - Channel length (number of bits per audio channel)"]
-pub type CHLEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CHLEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTLEN` reader - Data length"]
 pub type DTLEN_R = crate::FieldReader;
 #[doc = "Field `DTLEN` writer - Data length"]
-pub type DTLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DTLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CKPL` reader - Idle state clock polarity"]
 pub type CKPL_R = crate::BitReader;
 #[doc = "Field `CKPL` writer - Idle state clock polarity"]
-pub type CKPL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CKPL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2SSTD` reader - I2S standard selection"]
 pub type I2SSTD_R = crate::FieldReader;
 #[doc = "Field `I2SSTD` writer - I2S standard selection"]
-pub type I2SSTD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type I2SSTD_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PCMSMOD` reader - PCM frame synchronization mode"]
 pub type PCMSMOD_R = crate::BitReader;
 #[doc = "Field `PCMSMOD` writer - PCM frame synchronization mode"]
-pub type PCMSMOD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCMSMOD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2SOPMOD` reader - I2S operation mode"]
 pub type I2SOPMOD_R = crate::FieldReader;
 #[doc = "Field `I2SOPMOD` writer - I2S operation mode"]
-pub type I2SOPMOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type I2SOPMOD_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `I2SEN` reader - I2S Enable"]
 pub type I2SEN_R = crate::BitReader;
 #[doc = "Field `I2SEN` writer - I2S Enable"]
-pub type I2SEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2SEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2SSEL` reader - I2S mode selection"]
 pub type I2SSEL_R = crate::BitReader;
 #[doc = "Field `I2SSEL` writer - I2S mode selection"]
-pub type I2SSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2SSEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Channel length (number of bits per audio channel)"]
     #[inline(always)]
@@ -80,50 +80,50 @@ impl W {
     #[doc = "Bit 0 - Channel length (number of bits per audio channel)"]
     #[inline(always)]
     #[must_use]
-    pub fn chlen(&mut self) -> CHLEN_W<I2SCTL_SPEC, 0> {
-        CHLEN_W::new(self)
+    pub fn chlen(&mut self) -> CHLEN_W<I2SCTL_SPEC> {
+        CHLEN_W::new(self, 0)
     }
     #[doc = "Bits 1:2 - Data length"]
     #[inline(always)]
     #[must_use]
-    pub fn dtlen(&mut self) -> DTLEN_W<I2SCTL_SPEC, 1> {
-        DTLEN_W::new(self)
+    pub fn dtlen(&mut self) -> DTLEN_W<I2SCTL_SPEC> {
+        DTLEN_W::new(self, 1)
     }
     #[doc = "Bit 3 - Idle state clock polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn ckpl(&mut self) -> CKPL_W<I2SCTL_SPEC, 3> {
-        CKPL_W::new(self)
+    pub fn ckpl(&mut self) -> CKPL_W<I2SCTL_SPEC> {
+        CKPL_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - I2S standard selection"]
     #[inline(always)]
     #[must_use]
-    pub fn i2sstd(&mut self) -> I2SSTD_W<I2SCTL_SPEC, 4> {
-        I2SSTD_W::new(self)
+    pub fn i2sstd(&mut self) -> I2SSTD_W<I2SCTL_SPEC> {
+        I2SSTD_W::new(self, 4)
     }
     #[doc = "Bit 7 - PCM frame synchronization mode"]
     #[inline(always)]
     #[must_use]
-    pub fn pcmsmod(&mut self) -> PCMSMOD_W<I2SCTL_SPEC, 7> {
-        PCMSMOD_W::new(self)
+    pub fn pcmsmod(&mut self) -> PCMSMOD_W<I2SCTL_SPEC> {
+        PCMSMOD_W::new(self, 7)
     }
     #[doc = "Bits 8:9 - I2S operation mode"]
     #[inline(always)]
     #[must_use]
-    pub fn i2sopmod(&mut self) -> I2SOPMOD_W<I2SCTL_SPEC, 8> {
-        I2SOPMOD_W::new(self)
+    pub fn i2sopmod(&mut self) -> I2SOPMOD_W<I2SCTL_SPEC> {
+        I2SOPMOD_W::new(self, 8)
     }
     #[doc = "Bit 10 - I2S Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn i2sen(&mut self) -> I2SEN_W<I2SCTL_SPEC, 10> {
-        I2SEN_W::new(self)
+    pub fn i2sen(&mut self) -> I2SEN_W<I2SCTL_SPEC> {
+        I2SEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - I2S mode selection"]
     #[inline(always)]
     #[must_use]
-    pub fn i2ssel(&mut self) -> I2SSEL_W<I2SCTL_SPEC, 11> {
-        I2SSEL_W::new(self)
+    pub fn i2ssel(&mut self) -> I2SSEL_W<I2SCTL_SPEC> {
+        I2SSEL_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -145,10 +145,10 @@ impl crate::RegisterSpec for I2SCTL_SPEC {
 impl crate::Readable for I2SCTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`i2sctl::W`](W) writer structure"]
 impl crate::Writable for I2SCTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets I2SCTL to value 0"]
 impl crate::Resettable for I2SCTL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

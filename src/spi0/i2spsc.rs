@@ -5,15 +5,15 @@ pub type W = crate::W<I2SPSC_SPEC>;
 #[doc = "Field `DIV` reader - Dividing factor for the prescaler"]
 pub type DIV_R = crate::FieldReader;
 #[doc = "Field `DIV` writer - Dividing factor for the prescaler"]
-pub type DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `OF` reader - Odd factor for the prescaler"]
 pub type OF_R = crate::BitReader;
 #[doc = "Field `OF` writer - Odd factor for the prescaler"]
-pub type OF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MCKOEN` reader - I2S_MCK output enable"]
 pub type MCKOEN_R = crate::BitReader;
 #[doc = "Field `MCKOEN` writer - I2S_MCK output enable"]
-pub type MCKOEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MCKOEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - Dividing factor for the prescaler"]
     #[inline(always)]
@@ -35,20 +35,20 @@ impl W {
     #[doc = "Bits 0:7 - Dividing factor for the prescaler"]
     #[inline(always)]
     #[must_use]
-    pub fn div(&mut self) -> DIV_W<I2SPSC_SPEC, 0> {
-        DIV_W::new(self)
+    pub fn div(&mut self) -> DIV_W<I2SPSC_SPEC> {
+        DIV_W::new(self, 0)
     }
     #[doc = "Bit 8 - Odd factor for the prescaler"]
     #[inline(always)]
     #[must_use]
-    pub fn of(&mut self) -> OF_W<I2SPSC_SPEC, 8> {
-        OF_W::new(self)
+    pub fn of(&mut self) -> OF_W<I2SPSC_SPEC> {
+        OF_W::new(self, 8)
     }
     #[doc = "Bit 9 - I2S_MCK output enable"]
     #[inline(always)]
     #[must_use]
-    pub fn mckoen(&mut self) -> MCKOEN_W<I2SPSC_SPEC, 9> {
-        MCKOEN_W::new(self)
+    pub fn mckoen(&mut self) -> MCKOEN_W<I2SPSC_SPEC> {
+        MCKOEN_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -70,10 +70,10 @@ impl crate::RegisterSpec for I2SPSC_SPEC {
 impl crate::Readable for I2SPSC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`i2spsc::W`](W) writer structure"]
 impl crate::Writable for I2SPSC_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets I2SPSC to value 0x02"]
 impl crate::Resettable for I2SPSC_SPEC {
-    const RESET_VALUE: Self::Ux = 0x02;
+    const RESET_VALUE: u16 = 0x02;
 }

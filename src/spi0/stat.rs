@@ -13,7 +13,7 @@ pub type TXURERR_R = crate::BitReader;
 #[doc = "Field `CRCERR` reader - SPI CRC Error Bit"]
 pub type CRCERR_R = crate::BitReader;
 #[doc = "Field `CRCERR` writer - SPI CRC Error Bit"]
-pub type CRCERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRCERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CONFERR` reader - SPI Configuration error"]
 pub type CONFERR_R = crate::BitReader;
 #[doc = "Field `RXORERR` reader - Reception Overrun Error Bit"]
@@ -73,8 +73,8 @@ impl W {
     #[doc = "Bit 4 - SPI CRC Error Bit"]
     #[inline(always)]
     #[must_use]
-    pub fn crcerr(&mut self) -> CRCERR_W<STAT_SPEC, 4> {
-        CRCERR_W::new(self)
+    pub fn crcerr(&mut self) -> CRCERR_W<STAT_SPEC> {
+        CRCERR_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -96,10 +96,10 @@ impl crate::RegisterSpec for STAT_SPEC {
 impl crate::Readable for STAT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`stat::W`](W) writer structure"]
 impl crate::Writable for STAT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets STAT to value 0x02"]
 impl crate::Resettable for STAT_SPEC {
-    const RESET_VALUE: Self::Ux = 0x02;
+    const RESET_VALUE: u16 = 0x02;
 }

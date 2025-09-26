@@ -5,67 +5,67 @@ pub type W = crate::W<OCTL_SPEC>;
 #[doc = "Field `OCTL0` reader - Port output control"]
 pub type OCTL0_R = crate::BitReader;
 #[doc = "Field `OCTL0` writer - Port output control"]
-pub type OCTL0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OCTL0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OCTL1` reader - Port output control"]
 pub type OCTL1_R = crate::BitReader;
 #[doc = "Field `OCTL1` writer - Port output control"]
-pub type OCTL1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OCTL1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OCTL2` reader - Port output control"]
 pub type OCTL2_R = crate::BitReader;
 #[doc = "Field `OCTL2` writer - Port output control"]
-pub type OCTL2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OCTL2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OCTL3` reader - Port output control"]
 pub type OCTL3_R = crate::BitReader;
 #[doc = "Field `OCTL3` writer - Port output control"]
-pub type OCTL3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OCTL3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OCTL4` reader - Port output control"]
 pub type OCTL4_R = crate::BitReader;
 #[doc = "Field `OCTL4` writer - Port output control"]
-pub type OCTL4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OCTL4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OCTL5` reader - Port output control"]
 pub type OCTL5_R = crate::BitReader;
 #[doc = "Field `OCTL5` writer - Port output control"]
-pub type OCTL5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OCTL5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OCTL6` reader - Port output control"]
 pub type OCTL6_R = crate::BitReader;
 #[doc = "Field `OCTL6` writer - Port output control"]
-pub type OCTL6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OCTL6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OCTL7` reader - Port output control"]
 pub type OCTL7_R = crate::BitReader;
 #[doc = "Field `OCTL7` writer - Port output control"]
-pub type OCTL7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OCTL7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OCTL8` reader - Port output control"]
 pub type OCTL8_R = crate::BitReader;
 #[doc = "Field `OCTL8` writer - Port output control"]
-pub type OCTL8_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OCTL8_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OCTL9` reader - Port output control"]
 pub type OCTL9_R = crate::BitReader;
 #[doc = "Field `OCTL9` writer - Port output control"]
-pub type OCTL9_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OCTL9_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OCTL10` reader - Port output control"]
 pub type OCTL10_R = crate::BitReader;
 #[doc = "Field `OCTL10` writer - Port output control"]
-pub type OCTL10_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OCTL10_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OCTL11` reader - Port output control"]
 pub type OCTL11_R = crate::BitReader;
 #[doc = "Field `OCTL11` writer - Port output control"]
-pub type OCTL11_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OCTL11_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OCTL12` reader - Port output control"]
 pub type OCTL12_R = crate::BitReader;
 #[doc = "Field `OCTL12` writer - Port output control"]
-pub type OCTL12_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OCTL12_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OCTL13` reader - Port output control"]
 pub type OCTL13_R = crate::BitReader;
 #[doc = "Field `OCTL13` writer - Port output control"]
-pub type OCTL13_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OCTL13_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OCTL14` reader - Port output control"]
 pub type OCTL14_R = crate::BitReader;
 #[doc = "Field `OCTL14` writer - Port output control"]
-pub type OCTL14_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OCTL14_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OCTL15` reader - Port output control"]
 pub type OCTL15_R = crate::BitReader;
 #[doc = "Field `OCTL15` writer - Port output control"]
-pub type OCTL15_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OCTL15_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Port output control"]
     #[inline(always)]
@@ -152,98 +152,98 @@ impl W {
     #[doc = "Bit 0 - Port output control"]
     #[inline(always)]
     #[must_use]
-    pub fn octl0(&mut self) -> OCTL0_W<OCTL_SPEC, 0> {
-        OCTL0_W::new(self)
+    pub fn octl0(&mut self) -> OCTL0_W<OCTL_SPEC> {
+        OCTL0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Port output control"]
     #[inline(always)]
     #[must_use]
-    pub fn octl1(&mut self) -> OCTL1_W<OCTL_SPEC, 1> {
-        OCTL1_W::new(self)
+    pub fn octl1(&mut self) -> OCTL1_W<OCTL_SPEC> {
+        OCTL1_W::new(self, 1)
     }
     #[doc = "Bit 2 - Port output control"]
     #[inline(always)]
     #[must_use]
-    pub fn octl2(&mut self) -> OCTL2_W<OCTL_SPEC, 2> {
-        OCTL2_W::new(self)
+    pub fn octl2(&mut self) -> OCTL2_W<OCTL_SPEC> {
+        OCTL2_W::new(self, 2)
     }
     #[doc = "Bit 3 - Port output control"]
     #[inline(always)]
     #[must_use]
-    pub fn octl3(&mut self) -> OCTL3_W<OCTL_SPEC, 3> {
-        OCTL3_W::new(self)
+    pub fn octl3(&mut self) -> OCTL3_W<OCTL_SPEC> {
+        OCTL3_W::new(self, 3)
     }
     #[doc = "Bit 4 - Port output control"]
     #[inline(always)]
     #[must_use]
-    pub fn octl4(&mut self) -> OCTL4_W<OCTL_SPEC, 4> {
-        OCTL4_W::new(self)
+    pub fn octl4(&mut self) -> OCTL4_W<OCTL_SPEC> {
+        OCTL4_W::new(self, 4)
     }
     #[doc = "Bit 5 - Port output control"]
     #[inline(always)]
     #[must_use]
-    pub fn octl5(&mut self) -> OCTL5_W<OCTL_SPEC, 5> {
-        OCTL5_W::new(self)
+    pub fn octl5(&mut self) -> OCTL5_W<OCTL_SPEC> {
+        OCTL5_W::new(self, 5)
     }
     #[doc = "Bit 6 - Port output control"]
     #[inline(always)]
     #[must_use]
-    pub fn octl6(&mut self) -> OCTL6_W<OCTL_SPEC, 6> {
-        OCTL6_W::new(self)
+    pub fn octl6(&mut self) -> OCTL6_W<OCTL_SPEC> {
+        OCTL6_W::new(self, 6)
     }
     #[doc = "Bit 7 - Port output control"]
     #[inline(always)]
     #[must_use]
-    pub fn octl7(&mut self) -> OCTL7_W<OCTL_SPEC, 7> {
-        OCTL7_W::new(self)
+    pub fn octl7(&mut self) -> OCTL7_W<OCTL_SPEC> {
+        OCTL7_W::new(self, 7)
     }
     #[doc = "Bit 8 - Port output control"]
     #[inline(always)]
     #[must_use]
-    pub fn octl8(&mut self) -> OCTL8_W<OCTL_SPEC, 8> {
-        OCTL8_W::new(self)
+    pub fn octl8(&mut self) -> OCTL8_W<OCTL_SPEC> {
+        OCTL8_W::new(self, 8)
     }
     #[doc = "Bit 9 - Port output control"]
     #[inline(always)]
     #[must_use]
-    pub fn octl9(&mut self) -> OCTL9_W<OCTL_SPEC, 9> {
-        OCTL9_W::new(self)
+    pub fn octl9(&mut self) -> OCTL9_W<OCTL_SPEC> {
+        OCTL9_W::new(self, 9)
     }
     #[doc = "Bit 10 - Port output control"]
     #[inline(always)]
     #[must_use]
-    pub fn octl10(&mut self) -> OCTL10_W<OCTL_SPEC, 10> {
-        OCTL10_W::new(self)
+    pub fn octl10(&mut self) -> OCTL10_W<OCTL_SPEC> {
+        OCTL10_W::new(self, 10)
     }
     #[doc = "Bit 11 - Port output control"]
     #[inline(always)]
     #[must_use]
-    pub fn octl11(&mut self) -> OCTL11_W<OCTL_SPEC, 11> {
-        OCTL11_W::new(self)
+    pub fn octl11(&mut self) -> OCTL11_W<OCTL_SPEC> {
+        OCTL11_W::new(self, 11)
     }
     #[doc = "Bit 12 - Port output control"]
     #[inline(always)]
     #[must_use]
-    pub fn octl12(&mut self) -> OCTL12_W<OCTL_SPEC, 12> {
-        OCTL12_W::new(self)
+    pub fn octl12(&mut self) -> OCTL12_W<OCTL_SPEC> {
+        OCTL12_W::new(self, 12)
     }
     #[doc = "Bit 13 - Port output control"]
     #[inline(always)]
     #[must_use]
-    pub fn octl13(&mut self) -> OCTL13_W<OCTL_SPEC, 13> {
-        OCTL13_W::new(self)
+    pub fn octl13(&mut self) -> OCTL13_W<OCTL_SPEC> {
+        OCTL13_W::new(self, 13)
     }
     #[doc = "Bit 14 - Port output control"]
     #[inline(always)]
     #[must_use]
-    pub fn octl14(&mut self) -> OCTL14_W<OCTL_SPEC, 14> {
-        OCTL14_W::new(self)
+    pub fn octl14(&mut self) -> OCTL14_W<OCTL_SPEC> {
+        OCTL14_W::new(self, 14)
     }
     #[doc = "Bit 15 - Port output control"]
     #[inline(always)]
     #[must_use]
-    pub fn octl15(&mut self) -> OCTL15_W<OCTL_SPEC, 15> {
-        OCTL15_W::new(self)
+    pub fn octl15(&mut self) -> OCTL15_W<OCTL_SPEC> {
+        OCTL15_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -265,10 +265,10 @@ impl crate::RegisterSpec for OCTL_SPEC {
 impl crate::Readable for OCTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`octl::W`](W) writer structure"]
 impl crate::Writable for OCTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets OCTL to value 0"]
 impl crate::Resettable for OCTL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

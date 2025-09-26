@@ -9,15 +9,15 @@ pub type SLPWS_R = crate::BitReader;
 #[doc = "Field `ERRIF` reader - Error interrupt flag"]
 pub type ERRIF_R = crate::BitReader;
 #[doc = "Field `ERRIF` writer - Error interrupt flag"]
-pub type ERRIF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERRIF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WUIF` reader - Status change interrupt flag of wakeup from sleep working mode"]
 pub type WUIF_R = crate::BitReader;
 #[doc = "Field `WUIF` writer - Status change interrupt flag of wakeup from sleep working mode"]
-pub type WUIF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WUIF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLPIF` reader - Status change interrupt flag of sleep working mode entering"]
 pub type SLPIF_R = crate::BitReader;
 #[doc = "Field `SLPIF` writer - Status change interrupt flag of sleep working mode entering"]
-pub type SLPIF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLPIF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TS` reader - Transmitting state"]
 pub type TS_R = crate::BitReader;
 #[doc = "Field `RS` reader - Receiving state"]
@@ -77,20 +77,20 @@ impl W {
     #[doc = "Bit 2 - Error interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn errif(&mut self) -> ERRIF_W<STAT_SPEC, 2> {
-        ERRIF_W::new(self)
+    pub fn errif(&mut self) -> ERRIF_W<STAT_SPEC> {
+        ERRIF_W::new(self, 2)
     }
     #[doc = "Bit 3 - Status change interrupt flag of wakeup from sleep working mode"]
     #[inline(always)]
     #[must_use]
-    pub fn wuif(&mut self) -> WUIF_W<STAT_SPEC, 3> {
-        WUIF_W::new(self)
+    pub fn wuif(&mut self) -> WUIF_W<STAT_SPEC> {
+        WUIF_W::new(self, 3)
     }
     #[doc = "Bit 4 - Status change interrupt flag of sleep working mode entering"]
     #[inline(always)]
     #[must_use]
-    pub fn slpif(&mut self) -> SLPIF_W<STAT_SPEC, 4> {
-        SLPIF_W::new(self)
+    pub fn slpif(&mut self) -> SLPIF_W<STAT_SPEC> {
+        SLPIF_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -112,10 +112,10 @@ impl crate::RegisterSpec for STAT_SPEC {
 impl crate::Readable for STAT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`stat::W`](W) writer structure"]
 impl crate::Writable for STAT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STAT to value 0x0c02"]
 impl crate::Resettable for STAT_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0c02;
+    const RESET_VALUE: u32 = 0x0c02;
 }

@@ -5,7 +5,7 @@ pub type W = crate::W<HFT_SPEC>;
 #[doc = "Field `FRI` reader - Frame interval"]
 pub type FRI_R = crate::FieldReader<u16>;
 #[doc = "Field `FRI` writer - Frame interval"]
-pub type FRI_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type FRI_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Frame interval"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bits 0:15 - Frame interval"]
     #[inline(always)]
     #[must_use]
-    pub fn fri(&mut self) -> FRI_W<HFT_SPEC, 0> {
-        FRI_W::new(self)
+    pub fn fri(&mut self) -> FRI_W<HFT_SPEC> {
+        FRI_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for HFT_SPEC {
 impl crate::Readable for HFT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hft::W`](W) writer structure"]
 impl crate::Writable for HFT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HFT to value 0xbb80"]
 impl crate::Resettable for HFT_SPEC {
-    const RESET_VALUE: Self::Ux = 0xbb80;
+    const RESET_VALUE: u32 = 0xbb80;
 }

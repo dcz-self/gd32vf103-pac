@@ -1,20 +1,50 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
+    stat: STAT,
+    data: DATA,
+    baud: BAUD,
+    ctl0: CTL0,
+    ctl1: CTL1,
+    ctl2: CTL2,
+    gp: GP,
+}
+impl RegisterBlock {
     #[doc = "0x00 - Status register"]
-    pub stat: STAT,
+    #[inline(always)]
+    pub const fn stat(&self) -> &STAT {
+        &self.stat
+    }
     #[doc = "0x04 - Data register"]
-    pub data: DATA,
+    #[inline(always)]
+    pub const fn data(&self) -> &DATA {
+        &self.data
+    }
     #[doc = "0x08 - Baud rate register"]
-    pub baud: BAUD,
+    #[inline(always)]
+    pub const fn baud(&self) -> &BAUD {
+        &self.baud
+    }
     #[doc = "0x0c - Control register 0"]
-    pub ctl0: CTL0,
+    #[inline(always)]
+    pub const fn ctl0(&self) -> &CTL0 {
+        &self.ctl0
+    }
     #[doc = "0x10 - Control register 1"]
-    pub ctl1: CTL1,
+    #[inline(always)]
+    pub const fn ctl1(&self) -> &CTL1 {
+        &self.ctl1
+    }
     #[doc = "0x14 - Control register 2"]
-    pub ctl2: CTL2,
+    #[inline(always)]
+    pub const fn ctl2(&self) -> &CTL2 {
+        &self.ctl2
+    }
     #[doc = "0x18 - Guard time and prescaler register"]
-    pub gp: GP,
+    #[inline(always)]
+    pub const fn gp(&self) -> &GP {
+        &self.gp
+    }
 }
 #[doc = "STAT (rw) register accessor: Status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`stat::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`stat::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@stat`]
 module"]

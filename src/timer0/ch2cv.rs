@@ -5,7 +5,7 @@ pub type W = crate::W<CH2CV_SPEC>;
 #[doc = "Field `CH2VAL` reader - Capture or compare value of channel 2"]
 pub type CH2VAL_R = crate::FieldReader<u16>;
 #[doc = "Field `CH2VAL` writer - Capture or compare value of channel 2"]
-pub type CH2VAL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type CH2VAL_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Capture or compare value of channel 2"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bits 0:15 - Capture or compare value of channel 2"]
     #[inline(always)]
     #[must_use]
-    pub fn ch2val(&mut self) -> CH2VAL_W<CH2CV_SPEC, 0> {
-        CH2VAL_W::new(self)
+    pub fn ch2val(&mut self) -> CH2VAL_W<CH2CV_SPEC> {
+        CH2VAL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for CH2CV_SPEC {
 impl crate::Readable for CH2CV_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ch2cv::W`](W) writer structure"]
 impl crate::Writable for CH2CV_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets CH2CV to value 0"]
 impl crate::Resettable for CH2CV_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

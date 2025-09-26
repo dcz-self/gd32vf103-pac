@@ -5,11 +5,11 @@ pub type W = crate::W<CTL_SPEC>;
 #[doc = "Field `CNT` reader - 7-bit counter"]
 pub type CNT_R = crate::FieldReader;
 #[doc = "Field `CNT` writer - 7-bit counter"]
-pub type CNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type CNT_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `WDGTEN` reader - Activation bit"]
 pub type WDGTEN_R = crate::BitReader;
 #[doc = "Field `WDGTEN` writer - Activation bit"]
-pub type WDGTEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDGTEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:6 - 7-bit counter"]
     #[inline(always)]
@@ -26,14 +26,14 @@ impl W {
     #[doc = "Bits 0:6 - 7-bit counter"]
     #[inline(always)]
     #[must_use]
-    pub fn cnt(&mut self) -> CNT_W<CTL_SPEC, 0> {
-        CNT_W::new(self)
+    pub fn cnt(&mut self) -> CNT_W<CTL_SPEC> {
+        CNT_W::new(self, 0)
     }
     #[doc = "Bit 7 - Activation bit"]
     #[inline(always)]
     #[must_use]
-    pub fn wdgten(&mut self) -> WDGTEN_W<CTL_SPEC, 7> {
-        WDGTEN_W::new(self)
+    pub fn wdgten(&mut self) -> WDGTEN_W<CTL_SPEC> {
+        WDGTEN_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -55,10 +55,10 @@ impl crate::RegisterSpec for CTL_SPEC {
 impl crate::Readable for CTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctl::W`](W) writer structure"]
 impl crate::Writable for CTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTL to value 0x7f"]
 impl crate::Resettable for CTL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x7f;
+    const RESET_VALUE: u32 = 0x7f;
 }

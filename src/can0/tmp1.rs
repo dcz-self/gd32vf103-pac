@@ -5,15 +5,15 @@ pub type W = crate::W<TMP1_SPEC>;
 #[doc = "Field `DLENC` reader - Data length code"]
 pub type DLENC_R = crate::FieldReader;
 #[doc = "Field `DLENC` writer - Data length code"]
-pub type DLENC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type DLENC_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TSEN` reader - Time stamp enable"]
 pub type TSEN_R = crate::BitReader;
 #[doc = "Field `TSEN` writer - Time stamp enable"]
-pub type TSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TS` reader - Time stamp"]
 pub type TS_R = crate::FieldReader<u16>;
 #[doc = "Field `TS` writer - Time stamp"]
-pub type TS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type TS_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:3 - Data length code"]
     #[inline(always)]
@@ -35,20 +35,20 @@ impl W {
     #[doc = "Bits 0:3 - Data length code"]
     #[inline(always)]
     #[must_use]
-    pub fn dlenc(&mut self) -> DLENC_W<TMP1_SPEC, 0> {
-        DLENC_W::new(self)
+    pub fn dlenc(&mut self) -> DLENC_W<TMP1_SPEC> {
+        DLENC_W::new(self, 0)
     }
     #[doc = "Bit 8 - Time stamp enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tsen(&mut self) -> TSEN_W<TMP1_SPEC, 8> {
-        TSEN_W::new(self)
+    pub fn tsen(&mut self) -> TSEN_W<TMP1_SPEC> {
+        TSEN_W::new(self, 8)
     }
     #[doc = "Bits 16:31 - Time stamp"]
     #[inline(always)]
     #[must_use]
-    pub fn ts(&mut self) -> TS_W<TMP1_SPEC, 16> {
-        TS_W::new(self)
+    pub fn ts(&mut self) -> TS_W<TMP1_SPEC> {
+        TS_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -70,10 +70,10 @@ impl crate::RegisterSpec for TMP1_SPEC {
 impl crate::Readable for TMP1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tmp1::W`](W) writer structure"]
 impl crate::Writable for TMP1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TMP1 to value 0"]
 impl crate::Resettable for TMP1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

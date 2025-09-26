@@ -1,12 +1,26 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
+    data: DATA,
+    fdata: FDATA,
+    ctl: CTL,
+}
+impl RegisterBlock {
     #[doc = "0x00 - Data register"]
-    pub data: DATA,
+    #[inline(always)]
+    pub const fn data(&self) -> &DATA {
+        &self.data
+    }
     #[doc = "0x04 - Free data register"]
-    pub fdata: FDATA,
+    #[inline(always)]
+    pub const fn fdata(&self) -> &FDATA {
+        &self.fdata
+    }
     #[doc = "0x08 - Control register"]
-    pub ctl: CTL,
+    #[inline(always)]
+    pub const fn ctl(&self) -> &CTL {
+        &self.ctl
+    }
 }
 #[doc = "DATA (rw) register accessor: Data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`data::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`data::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data`]
 module"]

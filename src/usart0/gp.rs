@@ -5,11 +5,11 @@ pub type W = crate::W<GP_SPEC>;
 #[doc = "Field `PSC` reader - Prescaler value"]
 pub type PSC_R = crate::FieldReader;
 #[doc = "Field `PSC` writer - Prescaler value"]
-pub type PSC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type PSC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `GUAT` reader - Guard time value in Smartcard mode"]
 pub type GUAT_R = crate::FieldReader;
 #[doc = "Field `GUAT` writer - Guard time value in Smartcard mode"]
-pub type GUAT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type GUAT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Prescaler value"]
     #[inline(always)]
@@ -26,14 +26,14 @@ impl W {
     #[doc = "Bits 0:7 - Prescaler value"]
     #[inline(always)]
     #[must_use]
-    pub fn psc(&mut self) -> PSC_W<GP_SPEC, 0> {
-        PSC_W::new(self)
+    pub fn psc(&mut self) -> PSC_W<GP_SPEC> {
+        PSC_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Guard time value in Smartcard mode"]
     #[inline(always)]
     #[must_use]
-    pub fn guat(&mut self) -> GUAT_W<GP_SPEC, 8> {
-        GUAT_W::new(self)
+    pub fn guat(&mut self) -> GUAT_W<GP_SPEC> {
+        GUAT_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -55,10 +55,10 @@ impl crate::RegisterSpec for GP_SPEC {
 impl crate::Readable for GP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gp::W`](W) writer structure"]
 impl crate::Writable for GP_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GP to value 0"]
 impl crate::Resettable for GP_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

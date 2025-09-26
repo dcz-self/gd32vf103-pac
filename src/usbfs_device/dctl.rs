@@ -5,27 +5,27 @@ pub type W = crate::W<DCTL_SPEC>;
 #[doc = "Field `RWKUP` reader - Remote wakeup"]
 pub type RWKUP_R = crate::BitReader;
 #[doc = "Field `RWKUP` writer - Remote wakeup"]
-pub type RWKUP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RWKUP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SD` reader - Soft disconnect"]
 pub type SD_R = crate::BitReader;
 #[doc = "Field `SD` writer - Soft disconnect"]
-pub type SD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GINS` reader - Global IN NAK status"]
 pub type GINS_R = crate::BitReader;
 #[doc = "Field `GONS` reader - Global OUT NAK status"]
 pub type GONS_R = crate::BitReader;
 #[doc = "Field `SGINAK` writer - Set global IN NAK"]
-pub type SGINAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SGINAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CGINAK` writer - Clear global IN NAK"]
-pub type CGINAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CGINAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SGONAK` writer - Set global OUT NAK"]
-pub type SGONAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SGONAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CGONAK` writer - Clear global OUT NAK"]
-pub type CGONAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CGONAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `POIF` reader - Power-on initialization flag"]
 pub type POIF_R = crate::BitReader;
 #[doc = "Field `POIF` writer - Power-on initialization flag"]
-pub type POIF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type POIF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Remote wakeup"]
     #[inline(always)]
@@ -57,44 +57,44 @@ impl W {
     #[doc = "Bit 0 - Remote wakeup"]
     #[inline(always)]
     #[must_use]
-    pub fn rwkup(&mut self) -> RWKUP_W<DCTL_SPEC, 0> {
-        RWKUP_W::new(self)
+    pub fn rwkup(&mut self) -> RWKUP_W<DCTL_SPEC> {
+        RWKUP_W::new(self, 0)
     }
     #[doc = "Bit 1 - Soft disconnect"]
     #[inline(always)]
     #[must_use]
-    pub fn sd(&mut self) -> SD_W<DCTL_SPEC, 1> {
-        SD_W::new(self)
+    pub fn sd(&mut self) -> SD_W<DCTL_SPEC> {
+        SD_W::new(self, 1)
     }
     #[doc = "Bit 7 - Set global IN NAK"]
     #[inline(always)]
     #[must_use]
-    pub fn sginak(&mut self) -> SGINAK_W<DCTL_SPEC, 7> {
-        SGINAK_W::new(self)
+    pub fn sginak(&mut self) -> SGINAK_W<DCTL_SPEC> {
+        SGINAK_W::new(self, 7)
     }
     #[doc = "Bit 8 - Clear global IN NAK"]
     #[inline(always)]
     #[must_use]
-    pub fn cginak(&mut self) -> CGINAK_W<DCTL_SPEC, 8> {
-        CGINAK_W::new(self)
+    pub fn cginak(&mut self) -> CGINAK_W<DCTL_SPEC> {
+        CGINAK_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set global OUT NAK"]
     #[inline(always)]
     #[must_use]
-    pub fn sgonak(&mut self) -> SGONAK_W<DCTL_SPEC, 9> {
-        SGONAK_W::new(self)
+    pub fn sgonak(&mut self) -> SGONAK_W<DCTL_SPEC> {
+        SGONAK_W::new(self, 9)
     }
     #[doc = "Bit 10 - Clear global OUT NAK"]
     #[inline(always)]
     #[must_use]
-    pub fn cgonak(&mut self) -> CGONAK_W<DCTL_SPEC, 10> {
-        CGONAK_W::new(self)
+    pub fn cgonak(&mut self) -> CGONAK_W<DCTL_SPEC> {
+        CGONAK_W::new(self, 10)
     }
     #[doc = "Bit 11 - Power-on initialization flag"]
     #[inline(always)]
     #[must_use]
-    pub fn poif(&mut self) -> POIF_W<DCTL_SPEC, 11> {
-        POIF_W::new(self)
+    pub fn poif(&mut self) -> POIF_W<DCTL_SPEC> {
+        POIF_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -116,10 +116,10 @@ impl crate::RegisterSpec for DCTL_SPEC {
 impl crate::Readable for DCTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dctl::W`](W) writer structure"]
 impl crate::Writable for DCTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DCTL to value 0"]
 impl crate::Resettable for DCTL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

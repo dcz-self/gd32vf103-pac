@@ -2,140 +2,322 @@
 #[repr(C)]
 pub struct RegisterBlock {
     _reserved0: [u8; 0x04],
-    #[doc = "0x04 - Backup data register 0"]
-    pub data0: DATA0,
+    data0: DATA0,
     _reserved1: [u8; 0x02],
-    #[doc = "0x08 - Backup data register 1"]
-    pub data1: DATA1,
+    data1: DATA1,
     _reserved2: [u8; 0x02],
-    #[doc = "0x0c - Backup data register 2"]
-    pub data2: DATA2,
+    data2: DATA2,
     _reserved3: [u8; 0x02],
-    #[doc = "0x10 - Backup data register 3"]
-    pub data3: DATA3,
+    data3: DATA3,
     _reserved4: [u8; 0x02],
-    #[doc = "0x14 - Backup data register 4"]
-    pub data4: DATA4,
+    data4: DATA4,
     _reserved5: [u8; 0x02],
-    #[doc = "0x18 - Backup data register 5"]
-    pub data5: DATA5,
+    data5: DATA5,
     _reserved6: [u8; 0x02],
-    #[doc = "0x1c - Backup data register 6"]
-    pub data6: DATA6,
+    data6: DATA6,
     _reserved7: [u8; 0x02],
-    #[doc = "0x20 - Backup data register 7"]
-    pub data7: DATA7,
+    data7: DATA7,
     _reserved8: [u8; 0x02],
-    #[doc = "0x24 - Backup data register 8"]
-    pub data8: DATA8,
+    data8: DATA8,
     _reserved9: [u8; 0x02],
-    #[doc = "0x28 - Backup data register 9"]
-    pub data9: DATA9,
+    data9: DATA9,
     _reserved10: [u8; 0x02],
-    #[doc = "0x2c - RTC signal output control register"]
-    pub octl: OCTL,
+    octl: OCTL,
     _reserved11: [u8; 0x02],
-    #[doc = "0x30 - Tamper pin control register"]
-    pub tpctl: TPCTL,
+    tpctl: TPCTL,
     _reserved12: [u8; 0x02],
-    #[doc = "0x34 - Tamper control and status register"]
-    pub tpcs: TPCS,
+    tpcs: TPCS,
     _reserved13: [u8; 0x0a],
-    #[doc = "0x40 - Backup data register 10"]
-    pub data10: DATA10,
+    data10: DATA10,
     _reserved14: [u8; 0x02],
-    #[doc = "0x44 - Backup data register 11"]
-    pub data11: DATA11,
+    data11: DATA11,
     _reserved15: [u8; 0x02],
-    #[doc = "0x48 - Backup data register 12"]
-    pub data12: DATA12,
+    data12: DATA12,
     _reserved16: [u8; 0x02],
-    #[doc = "0x4c - Backup data register 13"]
-    pub data13: DATA13,
+    data13: DATA13,
     _reserved17: [u8; 0x02],
-    #[doc = "0x50 - Backup data register 14"]
-    pub data14: DATA14,
+    data14: DATA14,
     _reserved18: [u8; 0x02],
-    #[doc = "0x54 - Backup data register 15"]
-    pub data15: DATA15,
+    data15: DATA15,
     _reserved19: [u8; 0x02],
-    #[doc = "0x58 - Backup data register 16"]
-    pub data16: DATA16,
+    data16: DATA16,
     _reserved20: [u8; 0x02],
-    #[doc = "0x5c - Backup data register 17"]
-    pub data17: DATA17,
+    data17: DATA17,
     _reserved21: [u8; 0x02],
-    #[doc = "0x60 - Backup data register 18"]
-    pub data18: DATA18,
+    data18: DATA18,
     _reserved22: [u8; 0x02],
-    #[doc = "0x64 - Backup data register 19"]
-    pub data19: DATA19,
+    data19: DATA19,
     _reserved23: [u8; 0x02],
-    #[doc = "0x68 - Backup data register 20"]
-    pub data20: DATA20,
+    data20: DATA20,
     _reserved24: [u8; 0x02],
-    #[doc = "0x6c - Backup data register 21"]
-    pub data21: DATA21,
+    data21: DATA21,
     _reserved25: [u8; 0x02],
-    #[doc = "0x70 - Backup data register 22"]
-    pub data22: DATA22,
+    data22: DATA22,
     _reserved26: [u8; 0x02],
-    #[doc = "0x74 - Backup data register 23"]
-    pub data23: DATA23,
+    data23: DATA23,
     _reserved27: [u8; 0x02],
-    #[doc = "0x78 - Backup data register 24"]
-    pub data24: DATA24,
+    data24: DATA24,
     _reserved28: [u8; 0x02],
-    #[doc = "0x7c - Backup data register 25"]
-    pub data25: DATA25,
+    data25: DATA25,
     _reserved29: [u8; 0x02],
-    #[doc = "0x80 - Backup data register 26"]
-    pub data26: DATA26,
+    data26: DATA26,
     _reserved30: [u8; 0x02],
-    #[doc = "0x84 - Backup data register 27"]
-    pub data27: DATA27,
+    data27: DATA27,
     _reserved31: [u8; 0x02],
-    #[doc = "0x88 - Backup data register 28"]
-    pub data28: DATA28,
+    data28: DATA28,
     _reserved32: [u8; 0x02],
-    #[doc = "0x8c - Backup data register 29"]
-    pub data29: DATA29,
+    data29: DATA29,
     _reserved33: [u8; 0x02],
-    #[doc = "0x90 - Backup data register 30"]
-    pub data30: DATA30,
+    data30: DATA30,
     _reserved34: [u8; 0x02],
-    #[doc = "0x94 - Backup data register 31"]
-    pub data31: DATA31,
+    data31: DATA31,
     _reserved35: [u8; 0x02],
-    #[doc = "0x98 - Backup data register 32"]
-    pub data32: DATA32,
+    data32: DATA32,
     _reserved36: [u8; 0x02],
-    #[doc = "0x9c - Backup data register 33"]
-    pub data33: DATA33,
+    data33: DATA33,
     _reserved37: [u8; 0x02],
-    #[doc = "0xa0 - Backup data register 34"]
-    pub data34: DATA34,
+    data34: DATA34,
     _reserved38: [u8; 0x02],
-    #[doc = "0xa4 - Backup data register 35"]
-    pub data35: DATA35,
+    data35: DATA35,
     _reserved39: [u8; 0x02],
-    #[doc = "0xa8 - Backup data register 36"]
-    pub data36: DATA36,
+    data36: DATA36,
     _reserved40: [u8; 0x02],
-    #[doc = "0xac - Backup data register 37"]
-    pub data37: DATA37,
+    data37: DATA37,
     _reserved41: [u8; 0x02],
-    #[doc = "0xb0 - Backup data register 38"]
-    pub data38: DATA38,
+    data38: DATA38,
     _reserved42: [u8; 0x02],
-    #[doc = "0xb4 - Backup data register 39"]
-    pub data39: DATA39,
+    data39: DATA39,
     _reserved43: [u8; 0x02],
-    #[doc = "0xb8 - Backup data register 40"]
-    pub data40: DATA40,
+    data40: DATA40,
     _reserved44: [u8; 0x02],
+    data41: DATA41,
+}
+impl RegisterBlock {
+    #[doc = "0x04 - Backup data register 0"]
+    #[inline(always)]
+    pub const fn data0(&self) -> &DATA0 {
+        &self.data0
+    }
+    #[doc = "0x08 - Backup data register 1"]
+    #[inline(always)]
+    pub const fn data1(&self) -> &DATA1 {
+        &self.data1
+    }
+    #[doc = "0x0c - Backup data register 2"]
+    #[inline(always)]
+    pub const fn data2(&self) -> &DATA2 {
+        &self.data2
+    }
+    #[doc = "0x10 - Backup data register 3"]
+    #[inline(always)]
+    pub const fn data3(&self) -> &DATA3 {
+        &self.data3
+    }
+    #[doc = "0x14 - Backup data register 4"]
+    #[inline(always)]
+    pub const fn data4(&self) -> &DATA4 {
+        &self.data4
+    }
+    #[doc = "0x18 - Backup data register 5"]
+    #[inline(always)]
+    pub const fn data5(&self) -> &DATA5 {
+        &self.data5
+    }
+    #[doc = "0x1c - Backup data register 6"]
+    #[inline(always)]
+    pub const fn data6(&self) -> &DATA6 {
+        &self.data6
+    }
+    #[doc = "0x20 - Backup data register 7"]
+    #[inline(always)]
+    pub const fn data7(&self) -> &DATA7 {
+        &self.data7
+    }
+    #[doc = "0x24 - Backup data register 8"]
+    #[inline(always)]
+    pub const fn data8(&self) -> &DATA8 {
+        &self.data8
+    }
+    #[doc = "0x28 - Backup data register 9"]
+    #[inline(always)]
+    pub const fn data9(&self) -> &DATA9 {
+        &self.data9
+    }
+    #[doc = "0x2c - RTC signal output control register"]
+    #[inline(always)]
+    pub const fn octl(&self) -> &OCTL {
+        &self.octl
+    }
+    #[doc = "0x30 - Tamper pin control register"]
+    #[inline(always)]
+    pub const fn tpctl(&self) -> &TPCTL {
+        &self.tpctl
+    }
+    #[doc = "0x34 - Tamper control and status register"]
+    #[inline(always)]
+    pub const fn tpcs(&self) -> &TPCS {
+        &self.tpcs
+    }
+    #[doc = "0x40 - Backup data register 10"]
+    #[inline(always)]
+    pub const fn data10(&self) -> &DATA10 {
+        &self.data10
+    }
+    #[doc = "0x44 - Backup data register 11"]
+    #[inline(always)]
+    pub const fn data11(&self) -> &DATA11 {
+        &self.data11
+    }
+    #[doc = "0x48 - Backup data register 12"]
+    #[inline(always)]
+    pub const fn data12(&self) -> &DATA12 {
+        &self.data12
+    }
+    #[doc = "0x4c - Backup data register 13"]
+    #[inline(always)]
+    pub const fn data13(&self) -> &DATA13 {
+        &self.data13
+    }
+    #[doc = "0x50 - Backup data register 14"]
+    #[inline(always)]
+    pub const fn data14(&self) -> &DATA14 {
+        &self.data14
+    }
+    #[doc = "0x54 - Backup data register 15"]
+    #[inline(always)]
+    pub const fn data15(&self) -> &DATA15 {
+        &self.data15
+    }
+    #[doc = "0x58 - Backup data register 16"]
+    #[inline(always)]
+    pub const fn data16(&self) -> &DATA16 {
+        &self.data16
+    }
+    #[doc = "0x5c - Backup data register 17"]
+    #[inline(always)]
+    pub const fn data17(&self) -> &DATA17 {
+        &self.data17
+    }
+    #[doc = "0x60 - Backup data register 18"]
+    #[inline(always)]
+    pub const fn data18(&self) -> &DATA18 {
+        &self.data18
+    }
+    #[doc = "0x64 - Backup data register 19"]
+    #[inline(always)]
+    pub const fn data19(&self) -> &DATA19 {
+        &self.data19
+    }
+    #[doc = "0x68 - Backup data register 20"]
+    #[inline(always)]
+    pub const fn data20(&self) -> &DATA20 {
+        &self.data20
+    }
+    #[doc = "0x6c - Backup data register 21"]
+    #[inline(always)]
+    pub const fn data21(&self) -> &DATA21 {
+        &self.data21
+    }
+    #[doc = "0x70 - Backup data register 22"]
+    #[inline(always)]
+    pub const fn data22(&self) -> &DATA22 {
+        &self.data22
+    }
+    #[doc = "0x74 - Backup data register 23"]
+    #[inline(always)]
+    pub const fn data23(&self) -> &DATA23 {
+        &self.data23
+    }
+    #[doc = "0x78 - Backup data register 24"]
+    #[inline(always)]
+    pub const fn data24(&self) -> &DATA24 {
+        &self.data24
+    }
+    #[doc = "0x7c - Backup data register 25"]
+    #[inline(always)]
+    pub const fn data25(&self) -> &DATA25 {
+        &self.data25
+    }
+    #[doc = "0x80 - Backup data register 26"]
+    #[inline(always)]
+    pub const fn data26(&self) -> &DATA26 {
+        &self.data26
+    }
+    #[doc = "0x84 - Backup data register 27"]
+    #[inline(always)]
+    pub const fn data27(&self) -> &DATA27 {
+        &self.data27
+    }
+    #[doc = "0x88 - Backup data register 28"]
+    #[inline(always)]
+    pub const fn data28(&self) -> &DATA28 {
+        &self.data28
+    }
+    #[doc = "0x8c - Backup data register 29"]
+    #[inline(always)]
+    pub const fn data29(&self) -> &DATA29 {
+        &self.data29
+    }
+    #[doc = "0x90 - Backup data register 30"]
+    #[inline(always)]
+    pub const fn data30(&self) -> &DATA30 {
+        &self.data30
+    }
+    #[doc = "0x94 - Backup data register 31"]
+    #[inline(always)]
+    pub const fn data31(&self) -> &DATA31 {
+        &self.data31
+    }
+    #[doc = "0x98 - Backup data register 32"]
+    #[inline(always)]
+    pub const fn data32(&self) -> &DATA32 {
+        &self.data32
+    }
+    #[doc = "0x9c - Backup data register 33"]
+    #[inline(always)]
+    pub const fn data33(&self) -> &DATA33 {
+        &self.data33
+    }
+    #[doc = "0xa0 - Backup data register 34"]
+    #[inline(always)]
+    pub const fn data34(&self) -> &DATA34 {
+        &self.data34
+    }
+    #[doc = "0xa4 - Backup data register 35"]
+    #[inline(always)]
+    pub const fn data35(&self) -> &DATA35 {
+        &self.data35
+    }
+    #[doc = "0xa8 - Backup data register 36"]
+    #[inline(always)]
+    pub const fn data36(&self) -> &DATA36 {
+        &self.data36
+    }
+    #[doc = "0xac - Backup data register 37"]
+    #[inline(always)]
+    pub const fn data37(&self) -> &DATA37 {
+        &self.data37
+    }
+    #[doc = "0xb0 - Backup data register 38"]
+    #[inline(always)]
+    pub const fn data38(&self) -> &DATA38 {
+        &self.data38
+    }
+    #[doc = "0xb4 - Backup data register 39"]
+    #[inline(always)]
+    pub const fn data39(&self) -> &DATA39 {
+        &self.data39
+    }
+    #[doc = "0xb8 - Backup data register 40"]
+    #[inline(always)]
+    pub const fn data40(&self) -> &DATA40 {
+        &self.data40
+    }
     #[doc = "0xbc - Backup data register 41"]
-    pub data41: DATA41,
+    #[inline(always)]
+    pub const fn data41(&self) -> &DATA41 {
+        &self.data41
+    }
 }
 #[doc = "DATA0 (rw) register accessor: Backup data register 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`data0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`data0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data0`]
 module"]

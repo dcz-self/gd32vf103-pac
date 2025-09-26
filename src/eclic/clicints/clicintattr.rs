@@ -5,11 +5,11 @@ pub type W = crate::W<CLICINTATTR_SPEC>;
 #[doc = "Field `SHV` reader - SHV"]
 pub type SHV_R = crate::BitReader;
 #[doc = "Field `SHV` writer - SHV"]
-pub type SHV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SHV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRIG` reader - TRIG"]
 pub type TRIG_R = crate::FieldReader;
 #[doc = "Field `TRIG` writer - TRIG"]
-pub type TRIG_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TRIG_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0 - SHV"]
     #[inline(always)]
@@ -26,14 +26,14 @@ impl W {
     #[doc = "Bit 0 - SHV"]
     #[inline(always)]
     #[must_use]
-    pub fn shv(&mut self) -> SHV_W<CLICINTATTR_SPEC, 0> {
-        SHV_W::new(self)
+    pub fn shv(&mut self) -> SHV_W<CLICINTATTR_SPEC> {
+        SHV_W::new(self, 0)
     }
     #[doc = "Bits 1:2 - TRIG"]
     #[inline(always)]
     #[must_use]
-    pub fn trig(&mut self) -> TRIG_W<CLICINTATTR_SPEC, 1> {
-        TRIG_W::new(self)
+    pub fn trig(&mut self) -> TRIG_W<CLICINTATTR_SPEC> {
+        TRIG_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -55,10 +55,10 @@ impl crate::RegisterSpec for CLICINTATTR_SPEC {
 impl crate::Readable for CLICINTATTR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clicintattr::W`](W) writer structure"]
 impl crate::Writable for CLICINTATTR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }
 #[doc = "`reset()` method sets CLICINTATTR to value 0"]
 impl crate::Resettable for CLICINTATTR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u8 = 0;
 }

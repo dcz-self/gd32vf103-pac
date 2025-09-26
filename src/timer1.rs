@@ -1,78 +1,142 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - control register 0"]
-    pub ctl0: CTL0,
+    ctl0: CTL0,
     _reserved1: [u8; 0x02],
-    #[doc = "0x04 - control register 1"]
-    pub ctl1: CTL1,
+    ctl1: CTL1,
     _reserved2: [u8; 0x02],
-    #[doc = "0x08 - slave mode control register"]
-    pub smcfg: SMCFG,
+    smcfg: SMCFG,
     _reserved3: [u8; 0x02],
-    #[doc = "0x0c - DMA/Interrupt enable register"]
-    pub dmainten: DMAINTEN,
+    dmainten: DMAINTEN,
     _reserved4: [u8; 0x02],
-    #[doc = "0x10 - interrupt flag register"]
-    pub intf: INTF,
+    intf: INTF,
     _reserved5: [u8; 0x02],
-    #[doc = "0x14 - event generation register"]
-    pub swevg: SWEVG,
+    swevg: SWEVG,
     _reserved6: [u8; 0x02],
     _reserved_6_chctl0: [u8; 0x02],
     _reserved7: [u8; 0x02],
     _reserved_7_chctl1: [u8; 0x02],
     _reserved8: [u8; 0x02],
-    #[doc = "0x20 - Channel control register 2"]
-    pub chctl2: CHCTL2,
+    chctl2: CHCTL2,
     _reserved9: [u8; 0x02],
-    #[doc = "0x24 - Counter register"]
-    pub cnt: CNT,
+    cnt: CNT,
     _reserved10: [u8; 0x02],
-    #[doc = "0x28 - Prescaler register"]
-    pub psc: PSC,
+    psc: PSC,
     _reserved11: [u8; 0x02],
-    #[doc = "0x2c - Counter auto reload register"]
-    pub car: CAR,
+    car: CAR,
     _reserved12: [u8; 0x06],
-    #[doc = "0x34 - Channel 0 capture/compare value register"]
-    pub ch0cv: CH0CV,
+    ch0cv: CH0CV,
     _reserved13: [u8; 0x02],
-    #[doc = "0x38 - Channel 1 capture/compare value register"]
-    pub ch1cv: CH1CV,
+    ch1cv: CH1CV,
     _reserved14: [u8; 0x02],
-    #[doc = "0x3c - Channel 2 capture/compare value register"]
-    pub ch2cv: CH2CV,
+    ch2cv: CH2CV,
     _reserved15: [u8; 0x02],
-    #[doc = "0x40 - Channel 3 capture/compare value register"]
-    pub ch3cv: CH3CV,
+    ch3cv: CH3CV,
     _reserved16: [u8; 0x06],
-    #[doc = "0x48 - DMA configuration register"]
-    pub dmacfg: DMACFG,
+    dmacfg: DMACFG,
     _reserved17: [u8; 0x02],
-    #[doc = "0x4c - DMA transfer buffer register"]
-    pub dmatb: DMATB,
+    dmatb: DMATB,
 }
 impl RegisterBlock {
+    #[doc = "0x00 - control register 0"]
+    #[inline(always)]
+    pub const fn ctl0(&self) -> &CTL0 {
+        &self.ctl0
+    }
+    #[doc = "0x04 - control register 1"]
+    #[inline(always)]
+    pub const fn ctl1(&self) -> &CTL1 {
+        &self.ctl1
+    }
+    #[doc = "0x08 - slave mode control register"]
+    #[inline(always)]
+    pub const fn smcfg(&self) -> &SMCFG {
+        &self.smcfg
+    }
+    #[doc = "0x0c - DMA/Interrupt enable register"]
+    #[inline(always)]
+    pub const fn dmainten(&self) -> &DMAINTEN {
+        &self.dmainten
+    }
+    #[doc = "0x10 - interrupt flag register"]
+    #[inline(always)]
+    pub const fn intf(&self) -> &INTF {
+        &self.intf
+    }
+    #[doc = "0x14 - event generation register"]
+    #[inline(always)]
+    pub const fn swevg(&self) -> &SWEVG {
+        &self.swevg
+    }
     #[doc = "0x18 - Channel control register 0 (input mode)"]
     #[inline(always)]
     pub const fn chctl0_input(&self) -> &CHCTL0_INPUT {
-        unsafe { &*(self as *const Self).cast::<u8>().add(24usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(24).cast() }
     }
     #[doc = "0x18 - Channel control register 0 (output mode)"]
     #[inline(always)]
     pub const fn chctl0_output(&self) -> &CHCTL0_OUTPUT {
-        unsafe { &*(self as *const Self).cast::<u8>().add(24usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(24).cast() }
     }
     #[doc = "0x1c - Channel control register 1 (input mode)"]
     #[inline(always)]
     pub const fn chctl1_input(&self) -> &CHCTL1_INPUT {
-        unsafe { &*(self as *const Self).cast::<u8>().add(28usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(28).cast() }
     }
     #[doc = "0x1c - Channel control register 1 (output mode)"]
     #[inline(always)]
     pub const fn chctl1_output(&self) -> &CHCTL1_OUTPUT {
-        unsafe { &*(self as *const Self).cast::<u8>().add(28usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(28).cast() }
+    }
+    #[doc = "0x20 - Channel control register 2"]
+    #[inline(always)]
+    pub const fn chctl2(&self) -> &CHCTL2 {
+        &self.chctl2
+    }
+    #[doc = "0x24 - Counter register"]
+    #[inline(always)]
+    pub const fn cnt(&self) -> &CNT {
+        &self.cnt
+    }
+    #[doc = "0x28 - Prescaler register"]
+    #[inline(always)]
+    pub const fn psc(&self) -> &PSC {
+        &self.psc
+    }
+    #[doc = "0x2c - Counter auto reload register"]
+    #[inline(always)]
+    pub const fn car(&self) -> &CAR {
+        &self.car
+    }
+    #[doc = "0x34 - Channel 0 capture/compare value register"]
+    #[inline(always)]
+    pub const fn ch0cv(&self) -> &CH0CV {
+        &self.ch0cv
+    }
+    #[doc = "0x38 - Channel 1 capture/compare value register"]
+    #[inline(always)]
+    pub const fn ch1cv(&self) -> &CH1CV {
+        &self.ch1cv
+    }
+    #[doc = "0x3c - Channel 2 capture/compare value register"]
+    #[inline(always)]
+    pub const fn ch2cv(&self) -> &CH2CV {
+        &self.ch2cv
+    }
+    #[doc = "0x40 - Channel 3 capture/compare value register"]
+    #[inline(always)]
+    pub const fn ch3cv(&self) -> &CH3CV {
+        &self.ch3cv
+    }
+    #[doc = "0x48 - DMA configuration register"]
+    #[inline(always)]
+    pub const fn dmacfg(&self) -> &DMACFG {
+        &self.dmacfg
+    }
+    #[doc = "0x4c - DMA transfer buffer register"]
+    #[inline(always)]
+    pub const fn dmatb(&self) -> &DMATB {
+        &self.dmatb
     }
 }
 #[doc = "CTL0 (rw) register accessor: control register 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctl0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctl0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctl0`]

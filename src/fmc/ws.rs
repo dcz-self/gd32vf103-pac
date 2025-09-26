@@ -5,7 +5,7 @@ pub type W = crate::W<WS_SPEC>;
 #[doc = "Field `WSCNT` reader - wait state counter register"]
 pub type WSCNT_R = crate::FieldReader;
 #[doc = "Field `WSCNT` writer - wait state counter register"]
-pub type WSCNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type WSCNT_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2 - wait state counter register"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bits 0:2 - wait state counter register"]
     #[inline(always)]
     #[must_use]
-    pub fn wscnt(&mut self) -> WSCNT_W<WS_SPEC, 0> {
-        WSCNT_W::new(self)
+    pub fn wscnt(&mut self) -> WSCNT_W<WS_SPEC> {
+        WSCNT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for WS_SPEC {
 impl crate::Readable for WS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ws::W`](W) writer structure"]
 impl crate::Writable for WS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets WS to value 0"]
 impl crate::Resettable for WS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -5,25 +5,25 @@ pub type W = crate::W<BDCTL_SPEC>;
 #[doc = "Field `LXTALEN` reader - LXTAL enable"]
 pub type LXTALEN_R = crate::BitReader;
 #[doc = "Field `LXTALEN` writer - LXTAL enable"]
-pub type LXTALEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LXTALEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LXTALSTB` reader - External low-speed oscillator stabilization"]
 pub type LXTALSTB_R = crate::BitReader;
 #[doc = "Field `LXTALBPS` reader - LXTAL bypass mode enable"]
 pub type LXTALBPS_R = crate::BitReader;
 #[doc = "Field `LXTALBPS` writer - LXTAL bypass mode enable"]
-pub type LXTALBPS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LXTALBPS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RTCSRC` reader - RTC clock entry selection"]
 pub type RTCSRC_R = crate::FieldReader;
 #[doc = "Field `RTCSRC` writer - RTC clock entry selection"]
-pub type RTCSRC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RTCSRC_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RTCEN` reader - RTC clock enable"]
 pub type RTCEN_R = crate::BitReader;
 #[doc = "Field `RTCEN` writer - RTC clock enable"]
-pub type RTCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTCEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BKPRST` reader - Backup domain reset"]
 pub type BKPRST_R = crate::BitReader;
 #[doc = "Field `BKPRST` writer - Backup domain reset"]
-pub type BKPRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BKPRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - LXTAL enable"]
     #[inline(always)]
@@ -60,32 +60,32 @@ impl W {
     #[doc = "Bit 0 - LXTAL enable"]
     #[inline(always)]
     #[must_use]
-    pub fn lxtalen(&mut self) -> LXTALEN_W<BDCTL_SPEC, 0> {
-        LXTALEN_W::new(self)
+    pub fn lxtalen(&mut self) -> LXTALEN_W<BDCTL_SPEC> {
+        LXTALEN_W::new(self, 0)
     }
     #[doc = "Bit 2 - LXTAL bypass mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn lxtalbps(&mut self) -> LXTALBPS_W<BDCTL_SPEC, 2> {
-        LXTALBPS_W::new(self)
+    pub fn lxtalbps(&mut self) -> LXTALBPS_W<BDCTL_SPEC> {
+        LXTALBPS_W::new(self, 2)
     }
     #[doc = "Bits 8:9 - RTC clock entry selection"]
     #[inline(always)]
     #[must_use]
-    pub fn rtcsrc(&mut self) -> RTCSRC_W<BDCTL_SPEC, 8> {
-        RTCSRC_W::new(self)
+    pub fn rtcsrc(&mut self) -> RTCSRC_W<BDCTL_SPEC> {
+        RTCSRC_W::new(self, 8)
     }
     #[doc = "Bit 15 - RTC clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rtcen(&mut self) -> RTCEN_W<BDCTL_SPEC, 15> {
-        RTCEN_W::new(self)
+    pub fn rtcen(&mut self) -> RTCEN_W<BDCTL_SPEC> {
+        RTCEN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Backup domain reset"]
     #[inline(always)]
     #[must_use]
-    pub fn bkprst(&mut self) -> BKPRST_W<BDCTL_SPEC, 16> {
-        BKPRST_W::new(self)
+    pub fn bkprst(&mut self) -> BKPRST_W<BDCTL_SPEC> {
+        BKPRST_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -107,10 +107,10 @@ impl crate::RegisterSpec for BDCTL_SPEC {
 impl crate::Readable for BDCTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bdctl::W`](W) writer structure"]
 impl crate::Writable for BDCTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BDCTL to value 0x18"]
 impl crate::Resettable for BDCTL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x18;
+    const RESET_VALUE: u32 = 0x18;
 }

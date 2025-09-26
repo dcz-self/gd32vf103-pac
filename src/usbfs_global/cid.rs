@@ -5,7 +5,7 @@ pub type W = crate::W<CID_SPEC>;
 #[doc = "Field `CID` reader - Core ID"]
 pub type CID_R = crate::FieldReader<u32>;
 #[doc = "Field `CID` writer - Core ID"]
-pub type CID_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type CID_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Core ID"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bits 0:31 - Core ID"]
     #[inline(always)]
     #[must_use]
-    pub fn cid(&mut self) -> CID_W<CID_SPEC, 0> {
-        CID_W::new(self)
+    pub fn cid(&mut self) -> CID_W<CID_SPEC> {
+        CID_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for CID_SPEC {
 impl crate::Readable for CID_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cid::W`](W) writer structure"]
 impl crate::Writable for CID_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CID to value 0x1000"]
 impl crate::Resettable for CID_SPEC {
-    const RESET_VALUE: Self::Ux = 0x1000;
+    const RESET_VALUE: u32 = 0x1000;
 }

@@ -5,27 +5,27 @@ pub type W = crate::W<GUSBCS_SPEC>;
 #[doc = "Field `TOC` reader - Timeout calibration"]
 pub type TOC_R = crate::FieldReader;
 #[doc = "Field `TOC` writer - Timeout calibration"]
-pub type TOC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TOC_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SRPCEN` reader - SRP capability enable"]
 pub type SRPCEN_R = crate::BitReader;
 #[doc = "Field `SRPCEN` writer - SRP capability enable"]
-pub type SRPCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SRPCEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HNPCEN` reader - HNP capability enable"]
 pub type HNPCEN_R = crate::BitReader;
 #[doc = "Field `HNPCEN` writer - HNP capability enable"]
-pub type HNPCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HNPCEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UTT` reader - USB turnaround time"]
 pub type UTT_R = crate::FieldReader;
 #[doc = "Field `UTT` writer - USB turnaround time"]
-pub type UTT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type UTT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `FHM` reader - Force host mode"]
 pub type FHM_R = crate::BitReader;
 #[doc = "Field `FHM` writer - Force host mode"]
-pub type FHM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FHM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FDM` reader - Force device mode"]
 pub type FDM_R = crate::BitReader;
 #[doc = "Field `FDM` writer - Force device mode"]
-pub type FDM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FDM_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - Timeout calibration"]
     #[inline(always)]
@@ -62,38 +62,38 @@ impl W {
     #[doc = "Bits 0:2 - Timeout calibration"]
     #[inline(always)]
     #[must_use]
-    pub fn toc(&mut self) -> TOC_W<GUSBCS_SPEC, 0> {
-        TOC_W::new(self)
+    pub fn toc(&mut self) -> TOC_W<GUSBCS_SPEC> {
+        TOC_W::new(self, 0)
     }
     #[doc = "Bit 8 - SRP capability enable"]
     #[inline(always)]
     #[must_use]
-    pub fn srpcen(&mut self) -> SRPCEN_W<GUSBCS_SPEC, 8> {
-        SRPCEN_W::new(self)
+    pub fn srpcen(&mut self) -> SRPCEN_W<GUSBCS_SPEC> {
+        SRPCEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - HNP capability enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hnpcen(&mut self) -> HNPCEN_W<GUSBCS_SPEC, 9> {
-        HNPCEN_W::new(self)
+    pub fn hnpcen(&mut self) -> HNPCEN_W<GUSBCS_SPEC> {
+        HNPCEN_W::new(self, 9)
     }
     #[doc = "Bits 10:13 - USB turnaround time"]
     #[inline(always)]
     #[must_use]
-    pub fn utt(&mut self) -> UTT_W<GUSBCS_SPEC, 10> {
-        UTT_W::new(self)
+    pub fn utt(&mut self) -> UTT_W<GUSBCS_SPEC> {
+        UTT_W::new(self, 10)
     }
     #[doc = "Bit 29 - Force host mode"]
     #[inline(always)]
     #[must_use]
-    pub fn fhm(&mut self) -> FHM_W<GUSBCS_SPEC, 29> {
-        FHM_W::new(self)
+    pub fn fhm(&mut self) -> FHM_W<GUSBCS_SPEC> {
+        FHM_W::new(self, 29)
     }
     #[doc = "Bit 30 - Force device mode"]
     #[inline(always)]
     #[must_use]
-    pub fn fdm(&mut self) -> FDM_W<GUSBCS_SPEC, 30> {
-        FDM_W::new(self)
+    pub fn fdm(&mut self) -> FDM_W<GUSBCS_SPEC> {
+        FDM_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -115,10 +115,10 @@ impl crate::RegisterSpec for GUSBCS_SPEC {
 impl crate::Readable for GUSBCS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gusbcs::W`](W) writer structure"]
 impl crate::Writable for GUSBCS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GUSBCS to value 0x0a80"]
 impl crate::Resettable for GUSBCS_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0a80;
+    const RESET_VALUE: u32 = 0x0a80;
 }

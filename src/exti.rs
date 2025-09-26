@@ -1,18 +1,44 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
+    inten: INTEN,
+    even: EVEN,
+    rten: RTEN,
+    ften: FTEN,
+    swiev: SWIEV,
+    pd: PD,
+}
+impl RegisterBlock {
     #[doc = "0x00 - Interrupt enable register (EXTI_INTEN)"]
-    pub inten: INTEN,
+    #[inline(always)]
+    pub const fn inten(&self) -> &INTEN {
+        &self.inten
+    }
     #[doc = "0x04 - Event enable register (EXTI_EVEN)"]
-    pub even: EVEN,
+    #[inline(always)]
+    pub const fn even(&self) -> &EVEN {
+        &self.even
+    }
     #[doc = "0x08 - Rising Edge Trigger Enable register (EXTI_RTEN)"]
-    pub rten: RTEN,
+    #[inline(always)]
+    pub const fn rten(&self) -> &RTEN {
+        &self.rten
+    }
     #[doc = "0x0c - Falling Egde Trigger Enable register (EXTI_FTEN)"]
-    pub ften: FTEN,
+    #[inline(always)]
+    pub const fn ften(&self) -> &FTEN {
+        &self.ften
+    }
     #[doc = "0x10 - Software interrupt event register (EXTI_SWIEV)"]
-    pub swiev: SWIEV,
+    #[inline(always)]
+    pub const fn swiev(&self) -> &SWIEV {
+        &self.swiev
+    }
     #[doc = "0x14 - Pending register (EXTI_PD)"]
-    pub pd: PD,
+    #[inline(always)]
+    pub const fn pd(&self) -> &PD {
+        &self.pd
+    }
 }
 #[doc = "INTEN (rw) register accessor: Interrupt enable register (EXTI_INTEN)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`inten::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`inten::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inten`]
 module"]

@@ -1,32 +1,70 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - control register 0"]
-    pub ctl0: CTL0,
+    ctl0: CTL0,
     _reserved1: [u8; 0x02],
-    #[doc = "0x04 - control register 1"]
-    pub ctl1: CTL1,
+    ctl1: CTL1,
     _reserved2: [u8; 0x02],
-    #[doc = "0x08 - status register"]
-    pub stat: STAT,
+    stat: STAT,
     _reserved3: [u8; 0x02],
-    #[doc = "0x0c - data register"]
-    pub data: DATA,
+    data: DATA,
     _reserved4: [u8; 0x02],
-    #[doc = "0x10 - CRC polynomial register"]
-    pub crcpoly: CRCPOLY,
+    crcpoly: CRCPOLY,
     _reserved5: [u8; 0x02],
-    #[doc = "0x14 - RX CRC register"]
-    pub rcrc: RCRC,
+    rcrc: RCRC,
     _reserved6: [u8; 0x02],
-    #[doc = "0x18 - TX CRC register"]
-    pub tcrc: TCRC,
+    tcrc: TCRC,
     _reserved7: [u8; 0x02],
-    #[doc = "0x1c - I2S control register"]
-    pub i2sctl: I2SCTL,
+    i2sctl: I2SCTL,
     _reserved8: [u8; 0x02],
+    i2spsc: I2SPSC,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - control register 0"]
+    #[inline(always)]
+    pub const fn ctl0(&self) -> &CTL0 {
+        &self.ctl0
+    }
+    #[doc = "0x04 - control register 1"]
+    #[inline(always)]
+    pub const fn ctl1(&self) -> &CTL1 {
+        &self.ctl1
+    }
+    #[doc = "0x08 - status register"]
+    #[inline(always)]
+    pub const fn stat(&self) -> &STAT {
+        &self.stat
+    }
+    #[doc = "0x0c - data register"]
+    #[inline(always)]
+    pub const fn data(&self) -> &DATA {
+        &self.data
+    }
+    #[doc = "0x10 - CRC polynomial register"]
+    #[inline(always)]
+    pub const fn crcpoly(&self) -> &CRCPOLY {
+        &self.crcpoly
+    }
+    #[doc = "0x14 - RX CRC register"]
+    #[inline(always)]
+    pub const fn rcrc(&self) -> &RCRC {
+        &self.rcrc
+    }
+    #[doc = "0x18 - TX CRC register"]
+    #[inline(always)]
+    pub const fn tcrc(&self) -> &TCRC {
+        &self.tcrc
+    }
+    #[doc = "0x1c - I2S control register"]
+    #[inline(always)]
+    pub const fn i2sctl(&self) -> &I2SCTL {
+        &self.i2sctl
+    }
     #[doc = "0x20 - I2S prescaler register"]
-    pub i2spsc: I2SPSC,
+    #[inline(always)]
+    pub const fn i2spsc(&self) -> &I2SPSC {
+        &self.i2spsc
+    }
 }
 #[doc = "CTL0 (rw) register accessor: control register 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctl0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctl0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctl0`]
 module"]

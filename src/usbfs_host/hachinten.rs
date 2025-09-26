@@ -5,7 +5,7 @@ pub type W = crate::W<HACHINTEN_SPEC>;
 #[doc = "Field `CINTEN` reader - Channel interrupt enable"]
 pub type CINTEN_R = crate::FieldReader;
 #[doc = "Field `CINTEN` writer - Channel interrupt enable"]
-pub type CINTEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CINTEN_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Channel interrupt enable"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bits 0:7 - Channel interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn cinten(&mut self) -> CINTEN_W<HACHINTEN_SPEC, 0> {
-        CINTEN_W::new(self)
+    pub fn cinten(&mut self) -> CINTEN_W<HACHINTEN_SPEC> {
+        CINTEN_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for HACHINTEN_SPEC {
 impl crate::Readable for HACHINTEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hachinten::W`](W) writer structure"]
 impl crate::Writable for HACHINTEN_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HACHINTEN to value 0"]
 impl crate::Resettable for HACHINTEN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

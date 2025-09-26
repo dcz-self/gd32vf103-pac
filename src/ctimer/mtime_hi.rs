@@ -9,7 +9,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<MTIME_HI_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -33,10 +33,10 @@ impl crate::RegisterSpec for MTIME_HI_SPEC {
 impl crate::Readable for MTIME_HI_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mtime_hi::W`](W) writer structure"]
 impl crate::Writable for MTIME_HI_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets mtime_hi to value 0"]
 impl crate::Resettable for MTIME_HI_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

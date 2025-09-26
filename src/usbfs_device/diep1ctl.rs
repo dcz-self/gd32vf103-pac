@@ -5,11 +5,11 @@ pub type W = crate::W<DIEP1CTL_SPEC>;
 #[doc = "Field `MPL` reader - maximum packet length"]
 pub type MPL_R = crate::FieldReader<u16>;
 #[doc = "Field `MPL` writer - maximum packet length"]
-pub type MPL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type MPL_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `EPACT` reader - Endpoint active"]
 pub type EPACT_R = crate::BitReader;
 #[doc = "Field `EPACT` writer - Endpoint active"]
-pub type EPACT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPACT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EOFRM_DPID` reader - EOFRM/DPID"]
 pub type EOFRM_DPID_R = crate::BitReader;
 #[doc = "Field `NAKS` reader - NAK status"]
@@ -17,31 +17,31 @@ pub type NAKS_R = crate::BitReader;
 #[doc = "Field `EPTYPE` reader - Endpoint type"]
 pub type EPTYPE_R = crate::FieldReader;
 #[doc = "Field `EPTYPE` writer - Endpoint type"]
-pub type EPTYPE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type EPTYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `STALL` reader - STALL handshake"]
 pub type STALL_R = crate::BitReader;
 #[doc = "Field `STALL` writer - STALL handshake"]
-pub type STALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXFNUM` reader - Tx FIFO number"]
 pub type TXFNUM_R = crate::FieldReader;
 #[doc = "Field `TXFNUM` writer - Tx FIFO number"]
-pub type TXFNUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TXFNUM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CNAK` writer - Clear NAK"]
-pub type CNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CNAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SNAK` writer - Set NAK"]
-pub type SNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SNAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SD0PID_SEVENFRM` writer - SD0PID/SEVNFRM"]
-pub type SD0PID_SEVENFRM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SD0PID_SEVENFRM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SD1PID_SODDFRM` writer - Set DATA1 PID/Set odd frame"]
-pub type SD1PID_SODDFRM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SD1PID_SODDFRM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPD` reader - Endpoint disable"]
 pub type EPD_R = crate::BitReader;
 #[doc = "Field `EPD` writer - Endpoint disable"]
-pub type EPD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPEN` reader - Endpoint enable"]
 pub type EPEN_R = crate::BitReader;
 #[doc = "Field `EPEN` writer - Endpoint enable"]
-pub type EPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:10 - maximum packet length"]
     #[inline(always)]
@@ -93,68 +93,68 @@ impl W {
     #[doc = "Bits 0:10 - maximum packet length"]
     #[inline(always)]
     #[must_use]
-    pub fn mpl(&mut self) -> MPL_W<DIEP1CTL_SPEC, 0> {
-        MPL_W::new(self)
+    pub fn mpl(&mut self) -> MPL_W<DIEP1CTL_SPEC> {
+        MPL_W::new(self, 0)
     }
     #[doc = "Bit 15 - Endpoint active"]
     #[inline(always)]
     #[must_use]
-    pub fn epact(&mut self) -> EPACT_W<DIEP1CTL_SPEC, 15> {
-        EPACT_W::new(self)
+    pub fn epact(&mut self) -> EPACT_W<DIEP1CTL_SPEC> {
+        EPACT_W::new(self, 15)
     }
     #[doc = "Bits 18:19 - Endpoint type"]
     #[inline(always)]
     #[must_use]
-    pub fn eptype(&mut self) -> EPTYPE_W<DIEP1CTL_SPEC, 18> {
-        EPTYPE_W::new(self)
+    pub fn eptype(&mut self) -> EPTYPE_W<DIEP1CTL_SPEC> {
+        EPTYPE_W::new(self, 18)
     }
     #[doc = "Bit 21 - STALL handshake"]
     #[inline(always)]
     #[must_use]
-    pub fn stall(&mut self) -> STALL_W<DIEP1CTL_SPEC, 21> {
-        STALL_W::new(self)
+    pub fn stall(&mut self) -> STALL_W<DIEP1CTL_SPEC> {
+        STALL_W::new(self, 21)
     }
     #[doc = "Bits 22:25 - Tx FIFO number"]
     #[inline(always)]
     #[must_use]
-    pub fn txfnum(&mut self) -> TXFNUM_W<DIEP1CTL_SPEC, 22> {
-        TXFNUM_W::new(self)
+    pub fn txfnum(&mut self) -> TXFNUM_W<DIEP1CTL_SPEC> {
+        TXFNUM_W::new(self, 22)
     }
     #[doc = "Bit 26 - Clear NAK"]
     #[inline(always)]
     #[must_use]
-    pub fn cnak(&mut self) -> CNAK_W<DIEP1CTL_SPEC, 26> {
-        CNAK_W::new(self)
+    pub fn cnak(&mut self) -> CNAK_W<DIEP1CTL_SPEC> {
+        CNAK_W::new(self, 26)
     }
     #[doc = "Bit 27 - Set NAK"]
     #[inline(always)]
     #[must_use]
-    pub fn snak(&mut self) -> SNAK_W<DIEP1CTL_SPEC, 27> {
-        SNAK_W::new(self)
+    pub fn snak(&mut self) -> SNAK_W<DIEP1CTL_SPEC> {
+        SNAK_W::new(self, 27)
     }
     #[doc = "Bit 28 - SD0PID/SEVNFRM"]
     #[inline(always)]
     #[must_use]
-    pub fn sd0pid_sevenfrm(&mut self) -> SD0PID_SEVENFRM_W<DIEP1CTL_SPEC, 28> {
-        SD0PID_SEVENFRM_W::new(self)
+    pub fn sd0pid_sevenfrm(&mut self) -> SD0PID_SEVENFRM_W<DIEP1CTL_SPEC> {
+        SD0PID_SEVENFRM_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set DATA1 PID/Set odd frame"]
     #[inline(always)]
     #[must_use]
-    pub fn sd1pid_soddfrm(&mut self) -> SD1PID_SODDFRM_W<DIEP1CTL_SPEC, 29> {
-        SD1PID_SODDFRM_W::new(self)
+    pub fn sd1pid_soddfrm(&mut self) -> SD1PID_SODDFRM_W<DIEP1CTL_SPEC> {
+        SD1PID_SODDFRM_W::new(self, 29)
     }
     #[doc = "Bit 30 - Endpoint disable"]
     #[inline(always)]
     #[must_use]
-    pub fn epd(&mut self) -> EPD_W<DIEP1CTL_SPEC, 30> {
-        EPD_W::new(self)
+    pub fn epd(&mut self) -> EPD_W<DIEP1CTL_SPEC> {
+        EPD_W::new(self, 30)
     }
     #[doc = "Bit 31 - Endpoint enable"]
     #[inline(always)]
     #[must_use]
-    pub fn epen(&mut self) -> EPEN_W<DIEP1CTL_SPEC, 31> {
-        EPEN_W::new(self)
+    pub fn epen(&mut self) -> EPEN_W<DIEP1CTL_SPEC> {
+        EPEN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -176,10 +176,10 @@ impl crate::RegisterSpec for DIEP1CTL_SPEC {
 impl crate::Readable for DIEP1CTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`diep1ctl::W`](W) writer structure"]
 impl crate::Writable for DIEP1CTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIEP1CTL to value 0"]
 impl crate::Resettable for DIEP1CTL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

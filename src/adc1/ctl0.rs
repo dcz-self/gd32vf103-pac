@@ -5,51 +5,51 @@ pub type W = crate::W<CTL0_SPEC>;
 #[doc = "Field `WDCHSEL` reader - Analog watchdog channel select"]
 pub type WDCHSEL_R = crate::FieldReader;
 #[doc = "Field `WDCHSEL` writer - Analog watchdog channel select"]
-pub type WDCHSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type WDCHSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `EOCIE` reader - Interrupt enable for EOC"]
 pub type EOCIE_R = crate::BitReader;
 #[doc = "Field `EOCIE` writer - Interrupt enable for EOC"]
-pub type EOCIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EOCIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDEIE` reader - Interrupt enable for WDE"]
 pub type WDEIE_R = crate::BitReader;
 #[doc = "Field `WDEIE` writer - Interrupt enable for WDE"]
-pub type WDEIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDEIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EOICIE` reader - Interrupt enable for EOIC"]
 pub type EOICIE_R = crate::BitReader;
 #[doc = "Field `EOICIE` writer - Interrupt enable for EOIC"]
-pub type EOICIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EOICIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SM` reader - Scan mode"]
 pub type SM_R = crate::BitReader;
 #[doc = "Field `SM` writer - Scan mode"]
-pub type SM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDSC` reader - When in scan mode, analog watchdog is effective on a single channel"]
 pub type WDSC_R = crate::BitReader;
 #[doc = "Field `WDSC` writer - When in scan mode, analog watchdog is effective on a single channel"]
-pub type WDSC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDSC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ICA` reader - Inserted channel group convert automatically"]
 pub type ICA_R = crate::BitReader;
 #[doc = "Field `ICA` writer - Inserted channel group convert automatically"]
-pub type ICA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DISRC` reader - Discontinuous mode on regular channels"]
 pub type DISRC_R = crate::BitReader;
 #[doc = "Field `DISRC` writer - Discontinuous mode on regular channels"]
-pub type DISRC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DISRC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DISIC` reader - Discontinuous mode on inserted channels"]
 pub type DISIC_R = crate::BitReader;
 #[doc = "Field `DISIC` writer - Discontinuous mode on inserted channels"]
-pub type DISIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DISIC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DISNUM` reader - Number of conversions in discontinuous mode"]
 pub type DISNUM_R = crate::FieldReader;
 #[doc = "Field `DISNUM` writer - Number of conversions in discontinuous mode"]
-pub type DISNUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type DISNUM_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `IWDEN` reader - Inserted channel analog watchdog enable"]
 pub type IWDEN_R = crate::BitReader;
 #[doc = "Field `IWDEN` writer - Inserted channel analog watchdog enable"]
-pub type IWDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IWDEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RWDEN` reader - Regular channel analog watchdog enable"]
 pub type RWDEN_R = crate::BitReader;
 #[doc = "Field `RWDEN` writer - Regular channel analog watchdog enable"]
-pub type RWDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RWDEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:4 - Analog watchdog channel select"]
     #[inline(always)]
@@ -116,74 +116,74 @@ impl W {
     #[doc = "Bits 0:4 - Analog watchdog channel select"]
     #[inline(always)]
     #[must_use]
-    pub fn wdchsel(&mut self) -> WDCHSEL_W<CTL0_SPEC, 0> {
-        WDCHSEL_W::new(self)
+    pub fn wdchsel(&mut self) -> WDCHSEL_W<CTL0_SPEC> {
+        WDCHSEL_W::new(self, 0)
     }
     #[doc = "Bit 5 - Interrupt enable for EOC"]
     #[inline(always)]
     #[must_use]
-    pub fn eocie(&mut self) -> EOCIE_W<CTL0_SPEC, 5> {
-        EOCIE_W::new(self)
+    pub fn eocie(&mut self) -> EOCIE_W<CTL0_SPEC> {
+        EOCIE_W::new(self, 5)
     }
     #[doc = "Bit 6 - Interrupt enable for WDE"]
     #[inline(always)]
     #[must_use]
-    pub fn wdeie(&mut self) -> WDEIE_W<CTL0_SPEC, 6> {
-        WDEIE_W::new(self)
+    pub fn wdeie(&mut self) -> WDEIE_W<CTL0_SPEC> {
+        WDEIE_W::new(self, 6)
     }
     #[doc = "Bit 7 - Interrupt enable for EOIC"]
     #[inline(always)]
     #[must_use]
-    pub fn eoicie(&mut self) -> EOICIE_W<CTL0_SPEC, 7> {
-        EOICIE_W::new(self)
+    pub fn eoicie(&mut self) -> EOICIE_W<CTL0_SPEC> {
+        EOICIE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Scan mode"]
     #[inline(always)]
     #[must_use]
-    pub fn sm(&mut self) -> SM_W<CTL0_SPEC, 8> {
-        SM_W::new(self)
+    pub fn sm(&mut self) -> SM_W<CTL0_SPEC> {
+        SM_W::new(self, 8)
     }
     #[doc = "Bit 9 - When in scan mode, analog watchdog is effective on a single channel"]
     #[inline(always)]
     #[must_use]
-    pub fn wdsc(&mut self) -> WDSC_W<CTL0_SPEC, 9> {
-        WDSC_W::new(self)
+    pub fn wdsc(&mut self) -> WDSC_W<CTL0_SPEC> {
+        WDSC_W::new(self, 9)
     }
     #[doc = "Bit 10 - Inserted channel group convert automatically"]
     #[inline(always)]
     #[must_use]
-    pub fn ica(&mut self) -> ICA_W<CTL0_SPEC, 10> {
-        ICA_W::new(self)
+    pub fn ica(&mut self) -> ICA_W<CTL0_SPEC> {
+        ICA_W::new(self, 10)
     }
     #[doc = "Bit 11 - Discontinuous mode on regular channels"]
     #[inline(always)]
     #[must_use]
-    pub fn disrc(&mut self) -> DISRC_W<CTL0_SPEC, 11> {
-        DISRC_W::new(self)
+    pub fn disrc(&mut self) -> DISRC_W<CTL0_SPEC> {
+        DISRC_W::new(self, 11)
     }
     #[doc = "Bit 12 - Discontinuous mode on inserted channels"]
     #[inline(always)]
     #[must_use]
-    pub fn disic(&mut self) -> DISIC_W<CTL0_SPEC, 12> {
-        DISIC_W::new(self)
+    pub fn disic(&mut self) -> DISIC_W<CTL0_SPEC> {
+        DISIC_W::new(self, 12)
     }
     #[doc = "Bits 13:15 - Number of conversions in discontinuous mode"]
     #[inline(always)]
     #[must_use]
-    pub fn disnum(&mut self) -> DISNUM_W<CTL0_SPEC, 13> {
-        DISNUM_W::new(self)
+    pub fn disnum(&mut self) -> DISNUM_W<CTL0_SPEC> {
+        DISNUM_W::new(self, 13)
     }
     #[doc = "Bit 22 - Inserted channel analog watchdog enable"]
     #[inline(always)]
     #[must_use]
-    pub fn iwden(&mut self) -> IWDEN_W<CTL0_SPEC, 22> {
-        IWDEN_W::new(self)
+    pub fn iwden(&mut self) -> IWDEN_W<CTL0_SPEC> {
+        IWDEN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Regular channel analog watchdog enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rwden(&mut self) -> RWDEN_W<CTL0_SPEC, 23> {
-        RWDEN_W::new(self)
+    pub fn rwden(&mut self) -> RWDEN_W<CTL0_SPEC> {
+        RWDEN_W::new(self, 23)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -205,10 +205,10 @@ impl crate::RegisterSpec for CTL0_SPEC {
 impl crate::Readable for CTL0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctl0::W`](W) writer structure"]
 impl crate::Writable for CTL0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTL0 to value 0"]
 impl crate::Resettable for CTL0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

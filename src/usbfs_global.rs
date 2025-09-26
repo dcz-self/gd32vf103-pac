@@ -1,72 +1,132 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - Global OTG control and status register (USBFS_GOTGCS)"]
-    pub gotgcs: GOTGCS,
-    #[doc = "0x04 - Global OTG interrupt flag register (USBFS_GOTGINTF)"]
-    pub gotgintf: GOTGINTF,
-    #[doc = "0x08 - Global AHB control and status register (USBFS_GAHBCS)"]
-    pub gahbcs: GAHBCS,
-    #[doc = "0x0c - Global USB control and status register (USBFS_GUSBCSR)"]
-    pub gusbcs: GUSBCS,
-    #[doc = "0x10 - Global reset control register (USBFS_GRSTCTL)"]
-    pub grstctl: GRSTCTL,
-    #[doc = "0x14 - Global interrupt flag register (USBFS_GINTF)"]
-    pub gintf: GINTF,
-    #[doc = "0x18 - Global interrupt enable register (USBFS_GINTEN)"]
-    pub ginten: GINTEN,
+    gotgcs: GOTGCS,
+    gotgintf: GOTGINTF,
+    gahbcs: GAHBCS,
+    gusbcs: GUSBCS,
+    grstctl: GRSTCTL,
+    gintf: GINTF,
+    ginten: GINTEN,
     _reserved_7_grstatr: [u8; 0x04],
     _reserved_8_grstatp: [u8; 0x04],
-    #[doc = "0x24 - Global Receive FIFO size register (USBFS_GRFLEN)"]
-    pub grflen: GRFLEN,
+    grflen: GRFLEN,
     _reserved_10_hnptflen: [u8; 0x04],
-    #[doc = "0x2c - Host non-periodic transmit FIFO/queue status register (HNPTFQSTAT)"]
-    pub hnptfqstat: HNPTFQSTAT,
+    hnptfqstat: HNPTFQSTAT,
     _reserved12: [u8; 0x08],
-    #[doc = "0x38 - Global core configuration register (USBFS_GCCFG)"]
-    pub gccfg: GCCFG,
-    #[doc = "0x3c - core ID register"]
-    pub cid: CID,
+    gccfg: GCCFG,
+    cid: CID,
     _reserved14: [u8; 0xc0],
-    #[doc = "0x100 - Host periodic transmit FIFO length register (HPTFLEN)"]
-    pub hptflen: HPTFLEN,
-    #[doc = "0x104 - device IN endpoint transmit FIFO size register (DIEP1TFLEN)"]
-    pub diep1tflen: DIEP1TFLEN,
-    #[doc = "0x108 - device IN endpoint transmit FIFO size register (DIEP2TFLEN)"]
-    pub diep2tflen: DIEP2TFLEN,
-    #[doc = "0x10c - device IN endpoint transmit FIFO size register (FS_DIEP3TXFLEN)"]
-    pub diep3tflen: DIEP3TFLEN,
+    hptflen: HPTFLEN,
+    diep1tflen: DIEP1TFLEN,
+    diep2tflen: DIEP2TFLEN,
+    diep3tflen: DIEP3TFLEN,
 }
 impl RegisterBlock {
+    #[doc = "0x00 - Global OTG control and status register (USBFS_GOTGCS)"]
+    #[inline(always)]
+    pub const fn gotgcs(&self) -> &GOTGCS {
+        &self.gotgcs
+    }
+    #[doc = "0x04 - Global OTG interrupt flag register (USBFS_GOTGINTF)"]
+    #[inline(always)]
+    pub const fn gotgintf(&self) -> &GOTGINTF {
+        &self.gotgintf
+    }
+    #[doc = "0x08 - Global AHB control and status register (USBFS_GAHBCS)"]
+    #[inline(always)]
+    pub const fn gahbcs(&self) -> &GAHBCS {
+        &self.gahbcs
+    }
+    #[doc = "0x0c - Global USB control and status register (USBFS_GUSBCSR)"]
+    #[inline(always)]
+    pub const fn gusbcs(&self) -> &GUSBCS {
+        &self.gusbcs
+    }
+    #[doc = "0x10 - Global reset control register (USBFS_GRSTCTL)"]
+    #[inline(always)]
+    pub const fn grstctl(&self) -> &GRSTCTL {
+        &self.grstctl
+    }
+    #[doc = "0x14 - Global interrupt flag register (USBFS_GINTF)"]
+    #[inline(always)]
+    pub const fn gintf(&self) -> &GINTF {
+        &self.gintf
+    }
+    #[doc = "0x18 - Global interrupt enable register (USBFS_GINTEN)"]
+    #[inline(always)]
+    pub const fn ginten(&self) -> &GINTEN {
+        &self.ginten
+    }
     #[doc = "0x1c - Global Receive status read(Host mode)"]
     #[inline(always)]
     pub const fn grstatr_host(&self) -> &GRSTATR_HOST {
-        unsafe { &*(self as *const Self).cast::<u8>().add(28usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(28).cast() }
     }
     #[doc = "0x1c - Global Receive status read(Device mode)"]
     #[inline(always)]
     pub const fn grstatr_device(&self) -> &GRSTATR_DEVICE {
-        unsafe { &*(self as *const Self).cast::<u8>().add(28usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(28).cast() }
     }
     #[doc = "0x20 - Global Receive status pop(Host mode)"]
     #[inline(always)]
     pub const fn grstatp_host(&self) -> &GRSTATP_HOST {
-        unsafe { &*(self as *const Self).cast::<u8>().add(32usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(32).cast() }
     }
     #[doc = "0x20 - Global Receive status pop(Device mode)"]
     #[inline(always)]
     pub const fn grstatp_device(&self) -> &GRSTATP_DEVICE {
-        unsafe { &*(self as *const Self).cast::<u8>().add(32usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(32).cast() }
+    }
+    #[doc = "0x24 - Global Receive FIFO size register (USBFS_GRFLEN)"]
+    #[inline(always)]
+    pub const fn grflen(&self) -> &GRFLEN {
+        &self.grflen
     }
     #[doc = "0x28 - Device IN endpoint 0 transmit FIFO length (Device mode)"]
     #[inline(always)]
     pub const fn diep0tflen(&self) -> &DIEP0TFLEN {
-        unsafe { &*(self as *const Self).cast::<u8>().add(40usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(40).cast() }
     }
     #[doc = "0x28 - Host non-periodic transmit FIFO length register (Host mode)"]
     #[inline(always)]
     pub const fn hnptflen(&self) -> &HNPTFLEN {
-        unsafe { &*(self as *const Self).cast::<u8>().add(40usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(40).cast() }
+    }
+    #[doc = "0x2c - Host non-periodic transmit FIFO/queue status register (HNPTFQSTAT)"]
+    #[inline(always)]
+    pub const fn hnptfqstat(&self) -> &HNPTFQSTAT {
+        &self.hnptfqstat
+    }
+    #[doc = "0x38 - Global core configuration register (USBFS_GCCFG)"]
+    #[inline(always)]
+    pub const fn gccfg(&self) -> &GCCFG {
+        &self.gccfg
+    }
+    #[doc = "0x3c - core ID register"]
+    #[inline(always)]
+    pub const fn cid(&self) -> &CID {
+        &self.cid
+    }
+    #[doc = "0x100 - Host periodic transmit FIFO length register (HPTFLEN)"]
+    #[inline(always)]
+    pub const fn hptflen(&self) -> &HPTFLEN {
+        &self.hptflen
+    }
+    #[doc = "0x104 - device IN endpoint transmit FIFO size register (DIEP1TFLEN)"]
+    #[inline(always)]
+    pub const fn diep1tflen(&self) -> &DIEP1TFLEN {
+        &self.diep1tflen
+    }
+    #[doc = "0x108 - device IN endpoint transmit FIFO size register (DIEP2TFLEN)"]
+    #[inline(always)]
+    pub const fn diep2tflen(&self) -> &DIEP2TFLEN {
+        &self.diep2tflen
+    }
+    #[doc = "0x10c - device IN endpoint transmit FIFO size register (FS_DIEP3TXFLEN)"]
+    #[inline(always)]
+    pub const fn diep3tflen(&self) -> &DIEP3TFLEN {
+        &self.diep3tflen
     }
 }
 #[doc = "GOTGCS (rw) register accessor: Global OTG control and status register (USBFS_GOTGCS)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gotgcs::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gotgcs::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gotgcs`]

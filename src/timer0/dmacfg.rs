@@ -5,11 +5,11 @@ pub type W = crate::W<DMACFG_SPEC>;
 #[doc = "Field `DMATA` reader - DMA transfer access start address"]
 pub type DMATA_R = crate::FieldReader;
 #[doc = "Field `DMATA` writer - DMA transfer access start address"]
-pub type DMATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type DMATA_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `DMATC` reader - DMA transfer count"]
 pub type DMATC_R = crate::FieldReader;
 #[doc = "Field `DMATC` writer - DMA transfer count"]
-pub type DMATC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type DMATC_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - DMA transfer access start address"]
     #[inline(always)]
@@ -26,14 +26,14 @@ impl W {
     #[doc = "Bits 0:4 - DMA transfer access start address"]
     #[inline(always)]
     #[must_use]
-    pub fn dmata(&mut self) -> DMATA_W<DMACFG_SPEC, 0> {
-        DMATA_W::new(self)
+    pub fn dmata(&mut self) -> DMATA_W<DMACFG_SPEC> {
+        DMATA_W::new(self, 0)
     }
     #[doc = "Bits 8:12 - DMA transfer count"]
     #[inline(always)]
     #[must_use]
-    pub fn dmatc(&mut self) -> DMATC_W<DMACFG_SPEC, 8> {
-        DMATC_W::new(self)
+    pub fn dmatc(&mut self) -> DMATC_W<DMACFG_SPEC> {
+        DMATC_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -55,10 +55,10 @@ impl crate::RegisterSpec for DMACFG_SPEC {
 impl crate::Readable for DMACFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dmacfg::W`](W) writer structure"]
 impl crate::Writable for DMACFG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets DMACFG to value 0"]
 impl crate::Resettable for DMACFG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

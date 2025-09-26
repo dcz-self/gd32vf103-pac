@@ -5,11 +5,11 @@ pub type W = crate::W<DIEP0TFLEN_SPEC>;
 #[doc = "Field `IEP0TXRSAR` reader - in endpoint 0 Tx RAM start address"]
 pub type IEP0TXRSAR_R = crate::FieldReader<u16>;
 #[doc = "Field `IEP0TXRSAR` writer - in endpoint 0 Tx RAM start address"]
-pub type IEP0TXRSAR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type IEP0TXRSAR_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `IEP0TXFD` reader - in endpoint 0 Tx FIFO depth"]
 pub type IEP0TXFD_R = crate::FieldReader<u16>;
 #[doc = "Field `IEP0TXFD` writer - in endpoint 0 Tx FIFO depth"]
-pub type IEP0TXFD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type IEP0TXFD_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - in endpoint 0 Tx RAM start address"]
     #[inline(always)]
@@ -26,14 +26,14 @@ impl W {
     #[doc = "Bits 0:15 - in endpoint 0 Tx RAM start address"]
     #[inline(always)]
     #[must_use]
-    pub fn iep0txrsar(&mut self) -> IEP0TXRSAR_W<DIEP0TFLEN_SPEC, 0> {
-        IEP0TXRSAR_W::new(self)
+    pub fn iep0txrsar(&mut self) -> IEP0TXRSAR_W<DIEP0TFLEN_SPEC> {
+        IEP0TXRSAR_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - in endpoint 0 Tx FIFO depth"]
     #[inline(always)]
     #[must_use]
-    pub fn iep0txfd(&mut self) -> IEP0TXFD_W<DIEP0TFLEN_SPEC, 16> {
-        IEP0TXFD_W::new(self)
+    pub fn iep0txfd(&mut self) -> IEP0TXFD_W<DIEP0TFLEN_SPEC> {
+        IEP0TXFD_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -55,10 +55,10 @@ impl crate::RegisterSpec for DIEP0TFLEN_SPEC {
 impl crate::Readable for DIEP0TFLEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`diep0tflen::W`](W) writer structure"]
 impl crate::Writable for DIEP0TFLEN_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIEP0TFLEN to value 0x0200_0200"]
 impl crate::Resettable for DIEP0TFLEN_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0200_0200;
+    const RESET_VALUE: u32 = 0x0200_0200;
 }

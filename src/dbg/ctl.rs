@@ -5,67 +5,67 @@ pub type W = crate::W<CTL_SPEC>;
 #[doc = "Field `SLP_HOLD` reader - Sleep mode hold register"]
 pub type SLP_HOLD_R = crate::BitReader;
 #[doc = "Field `SLP_HOLD` writer - Sleep mode hold register"]
-pub type SLP_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLP_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DSLP_HOLD` reader - Deep-sleep mode hold register"]
 pub type DSLP_HOLD_R = crate::BitReader;
 #[doc = "Field `DSLP_HOLD` writer - Deep-sleep mode hold register"]
-pub type DSLP_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DSLP_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STB_HOLD` reader - Standby mode hold register"]
 pub type STB_HOLD_R = crate::BitReader;
 #[doc = "Field `STB_HOLD` writer - Standby mode hold register"]
-pub type STB_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STB_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FWDGT_HOLD` reader - FWDGT hold bit"]
 pub type FWDGT_HOLD_R = crate::BitReader;
 #[doc = "Field `FWDGT_HOLD` writer - FWDGT hold bit"]
-pub type FWDGT_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FWDGT_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WWDGT_HOLD` reader - WWDGT hold bit"]
 pub type WWDGT_HOLD_R = crate::BitReader;
 #[doc = "Field `WWDGT_HOLD` writer - WWDGT hold bit"]
-pub type WWDGT_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WWDGT_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMER0_HOLD` reader - TIMER 0 hold bit"]
 pub type TIMER0_HOLD_R = crate::BitReader;
 #[doc = "Field `TIMER0_HOLD` writer - TIMER 0 hold bit"]
-pub type TIMER0_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMER0_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMER1_HOLD` reader - TIMER 1 hold bit"]
 pub type TIMER1_HOLD_R = crate::BitReader;
 #[doc = "Field `TIMER1_HOLD` writer - TIMER 1 hold bit"]
-pub type TIMER1_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMER1_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMER2_HOLD` reader - TIMER 2 hold bit"]
 pub type TIMER2_HOLD_R = crate::BitReader;
 #[doc = "Field `TIMER2_HOLD` writer - TIMER 2 hold bit"]
-pub type TIMER2_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMER2_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMER3_HOLD` reader - TIMER 23 hold bit"]
 pub type TIMER3_HOLD_R = crate::BitReader;
 #[doc = "Field `TIMER3_HOLD` writer - TIMER 23 hold bit"]
-pub type TIMER3_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMER3_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAN0_HOLD` reader - CAN0 hold bit"]
 pub type CAN0_HOLD_R = crate::BitReader;
 #[doc = "Field `CAN0_HOLD` writer - CAN0 hold bit"]
-pub type CAN0_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CAN0_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C0_HOLD` reader - I2C0 hold bit"]
 pub type I2C0_HOLD_R = crate::BitReader;
 #[doc = "Field `I2C0_HOLD` writer - I2C0 hold bit"]
-pub type I2C0_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C0_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C1_HOLD` reader - I2C1 hold bit"]
 pub type I2C1_HOLD_R = crate::BitReader;
 #[doc = "Field `I2C1_HOLD` writer - I2C1 hold bit"]
-pub type I2C1_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C1_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMER4_HOLD` reader - TIMER4_HOLD"]
 pub type TIMER4_HOLD_R = crate::BitReader;
 #[doc = "Field `TIMER4_HOLD` writer - TIMER4_HOLD"]
-pub type TIMER4_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMER4_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMER5_HOLD` reader - TIMER 5 hold bit"]
 pub type TIMER5_HOLD_R = crate::BitReader;
 #[doc = "Field `TIMER5_HOLD` writer - TIMER 5 hold bit"]
-pub type TIMER5_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMER5_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMER6_HOLD` reader - TIMER 6 hold bit"]
 pub type TIMER6_HOLD_R = crate::BitReader;
 #[doc = "Field `TIMER6_HOLD` writer - TIMER 6 hold bit"]
-pub type TIMER6_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMER6_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAN1_HOLD` reader - CAN1 hold bit"]
 pub type CAN1_HOLD_R = crate::BitReader;
 #[doc = "Field `CAN1_HOLD` writer - CAN1 hold bit"]
-pub type CAN1_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CAN1_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Sleep mode hold register"]
     #[inline(always)]
@@ -152,98 +152,98 @@ impl W {
     #[doc = "Bit 0 - Sleep mode hold register"]
     #[inline(always)]
     #[must_use]
-    pub fn slp_hold(&mut self) -> SLP_HOLD_W<CTL_SPEC, 0> {
-        SLP_HOLD_W::new(self)
+    pub fn slp_hold(&mut self) -> SLP_HOLD_W<CTL_SPEC> {
+        SLP_HOLD_W::new(self, 0)
     }
     #[doc = "Bit 1 - Deep-sleep mode hold register"]
     #[inline(always)]
     #[must_use]
-    pub fn dslp_hold(&mut self) -> DSLP_HOLD_W<CTL_SPEC, 1> {
-        DSLP_HOLD_W::new(self)
+    pub fn dslp_hold(&mut self) -> DSLP_HOLD_W<CTL_SPEC> {
+        DSLP_HOLD_W::new(self, 1)
     }
     #[doc = "Bit 2 - Standby mode hold register"]
     #[inline(always)]
     #[must_use]
-    pub fn stb_hold(&mut self) -> STB_HOLD_W<CTL_SPEC, 2> {
-        STB_HOLD_W::new(self)
+    pub fn stb_hold(&mut self) -> STB_HOLD_W<CTL_SPEC> {
+        STB_HOLD_W::new(self, 2)
     }
     #[doc = "Bit 8 - FWDGT hold bit"]
     #[inline(always)]
     #[must_use]
-    pub fn fwdgt_hold(&mut self) -> FWDGT_HOLD_W<CTL_SPEC, 8> {
-        FWDGT_HOLD_W::new(self)
+    pub fn fwdgt_hold(&mut self) -> FWDGT_HOLD_W<CTL_SPEC> {
+        FWDGT_HOLD_W::new(self, 8)
     }
     #[doc = "Bit 9 - WWDGT hold bit"]
     #[inline(always)]
     #[must_use]
-    pub fn wwdgt_hold(&mut self) -> WWDGT_HOLD_W<CTL_SPEC, 9> {
-        WWDGT_HOLD_W::new(self)
+    pub fn wwdgt_hold(&mut self) -> WWDGT_HOLD_W<CTL_SPEC> {
+        WWDGT_HOLD_W::new(self, 9)
     }
     #[doc = "Bit 10 - TIMER 0 hold bit"]
     #[inline(always)]
     #[must_use]
-    pub fn timer0_hold(&mut self) -> TIMER0_HOLD_W<CTL_SPEC, 10> {
-        TIMER0_HOLD_W::new(self)
+    pub fn timer0_hold(&mut self) -> TIMER0_HOLD_W<CTL_SPEC> {
+        TIMER0_HOLD_W::new(self, 10)
     }
     #[doc = "Bit 11 - TIMER 1 hold bit"]
     #[inline(always)]
     #[must_use]
-    pub fn timer1_hold(&mut self) -> TIMER1_HOLD_W<CTL_SPEC, 11> {
-        TIMER1_HOLD_W::new(self)
+    pub fn timer1_hold(&mut self) -> TIMER1_HOLD_W<CTL_SPEC> {
+        TIMER1_HOLD_W::new(self, 11)
     }
     #[doc = "Bit 12 - TIMER 2 hold bit"]
     #[inline(always)]
     #[must_use]
-    pub fn timer2_hold(&mut self) -> TIMER2_HOLD_W<CTL_SPEC, 12> {
-        TIMER2_HOLD_W::new(self)
+    pub fn timer2_hold(&mut self) -> TIMER2_HOLD_W<CTL_SPEC> {
+        TIMER2_HOLD_W::new(self, 12)
     }
     #[doc = "Bit 13 - TIMER 23 hold bit"]
     #[inline(always)]
     #[must_use]
-    pub fn timer3_hold(&mut self) -> TIMER3_HOLD_W<CTL_SPEC, 13> {
-        TIMER3_HOLD_W::new(self)
+    pub fn timer3_hold(&mut self) -> TIMER3_HOLD_W<CTL_SPEC> {
+        TIMER3_HOLD_W::new(self, 13)
     }
     #[doc = "Bit 14 - CAN0 hold bit"]
     #[inline(always)]
     #[must_use]
-    pub fn can0_hold(&mut self) -> CAN0_HOLD_W<CTL_SPEC, 14> {
-        CAN0_HOLD_W::new(self)
+    pub fn can0_hold(&mut self) -> CAN0_HOLD_W<CTL_SPEC> {
+        CAN0_HOLD_W::new(self, 14)
     }
     #[doc = "Bit 15 - I2C0 hold bit"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c0_hold(&mut self) -> I2C0_HOLD_W<CTL_SPEC, 15> {
-        I2C0_HOLD_W::new(self)
+    pub fn i2c0_hold(&mut self) -> I2C0_HOLD_W<CTL_SPEC> {
+        I2C0_HOLD_W::new(self, 15)
     }
     #[doc = "Bit 16 - I2C1 hold bit"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c1_hold(&mut self) -> I2C1_HOLD_W<CTL_SPEC, 16> {
-        I2C1_HOLD_W::new(self)
+    pub fn i2c1_hold(&mut self) -> I2C1_HOLD_W<CTL_SPEC> {
+        I2C1_HOLD_W::new(self, 16)
     }
     #[doc = "Bit 18 - TIMER4_HOLD"]
     #[inline(always)]
     #[must_use]
-    pub fn timer4_hold(&mut self) -> TIMER4_HOLD_W<CTL_SPEC, 18> {
-        TIMER4_HOLD_W::new(self)
+    pub fn timer4_hold(&mut self) -> TIMER4_HOLD_W<CTL_SPEC> {
+        TIMER4_HOLD_W::new(self, 18)
     }
     #[doc = "Bit 19 - TIMER 5 hold bit"]
     #[inline(always)]
     #[must_use]
-    pub fn timer5_hold(&mut self) -> TIMER5_HOLD_W<CTL_SPEC, 19> {
-        TIMER5_HOLD_W::new(self)
+    pub fn timer5_hold(&mut self) -> TIMER5_HOLD_W<CTL_SPEC> {
+        TIMER5_HOLD_W::new(self, 19)
     }
     #[doc = "Bit 20 - TIMER 6 hold bit"]
     #[inline(always)]
     #[must_use]
-    pub fn timer6_hold(&mut self) -> TIMER6_HOLD_W<CTL_SPEC, 20> {
-        TIMER6_HOLD_W::new(self)
+    pub fn timer6_hold(&mut self) -> TIMER6_HOLD_W<CTL_SPEC> {
+        TIMER6_HOLD_W::new(self, 20)
     }
     #[doc = "Bit 21 - CAN1 hold bit"]
     #[inline(always)]
     #[must_use]
-    pub fn can1_hold(&mut self) -> CAN1_HOLD_W<CTL_SPEC, 21> {
-        CAN1_HOLD_W::new(self)
+    pub fn can1_hold(&mut self) -> CAN1_HOLD_W<CTL_SPEC> {
+        CAN1_HOLD_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -265,10 +265,10 @@ impl crate::RegisterSpec for CTL_SPEC {
 impl crate::Readable for CTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctl::W`](W) writer structure"]
 impl crate::Writable for CTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTL to value 0"]
 impl crate::Resettable for CTL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

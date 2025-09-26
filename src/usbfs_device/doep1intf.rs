@@ -5,23 +5,23 @@ pub type W = crate::W<DOEP1INTF_SPEC>;
 #[doc = "Field `TF` reader - Transfer finished"]
 pub type TF_R = crate::BitReader;
 #[doc = "Field `TF` writer - Transfer finished"]
-pub type TF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPDIS` reader - Endpoint disabled"]
 pub type EPDIS_R = crate::BitReader;
 #[doc = "Field `EPDIS` writer - Endpoint disabled"]
-pub type EPDIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPDIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STPF` reader - Setup phase finished"]
 pub type STPF_R = crate::BitReader;
 #[doc = "Field `STPF` writer - Setup phase finished"]
-pub type STPF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STPF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPRXFOVR` reader - Endpoint Rx FIFO overrun"]
 pub type EPRXFOVR_R = crate::BitReader;
 #[doc = "Field `EPRXFOVR` writer - Endpoint Rx FIFO overrun"]
-pub type EPRXFOVR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPRXFOVR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BTBSTP` reader - Back-to-back SETUP packets"]
 pub type BTBSTP_R = crate::BitReader;
 #[doc = "Field `BTBSTP` writer - Back-to-back SETUP packets"]
-pub type BTBSTP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BTBSTP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Transfer finished"]
     #[inline(always)]
@@ -53,32 +53,32 @@ impl W {
     #[doc = "Bit 0 - Transfer finished"]
     #[inline(always)]
     #[must_use]
-    pub fn tf(&mut self) -> TF_W<DOEP1INTF_SPEC, 0> {
-        TF_W::new(self)
+    pub fn tf(&mut self) -> TF_W<DOEP1INTF_SPEC> {
+        TF_W::new(self, 0)
     }
     #[doc = "Bit 1 - Endpoint disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn epdis(&mut self) -> EPDIS_W<DOEP1INTF_SPEC, 1> {
-        EPDIS_W::new(self)
+    pub fn epdis(&mut self) -> EPDIS_W<DOEP1INTF_SPEC> {
+        EPDIS_W::new(self, 1)
     }
     #[doc = "Bit 3 - Setup phase finished"]
     #[inline(always)]
     #[must_use]
-    pub fn stpf(&mut self) -> STPF_W<DOEP1INTF_SPEC, 3> {
-        STPF_W::new(self)
+    pub fn stpf(&mut self) -> STPF_W<DOEP1INTF_SPEC> {
+        STPF_W::new(self, 3)
     }
     #[doc = "Bit 4 - Endpoint Rx FIFO overrun"]
     #[inline(always)]
     #[must_use]
-    pub fn eprxfovr(&mut self) -> EPRXFOVR_W<DOEP1INTF_SPEC, 4> {
-        EPRXFOVR_W::new(self)
+    pub fn eprxfovr(&mut self) -> EPRXFOVR_W<DOEP1INTF_SPEC> {
+        EPRXFOVR_W::new(self, 4)
     }
     #[doc = "Bit 6 - Back-to-back SETUP packets"]
     #[inline(always)]
     #[must_use]
-    pub fn btbstp(&mut self) -> BTBSTP_W<DOEP1INTF_SPEC, 6> {
-        BTBSTP_W::new(self)
+    pub fn btbstp(&mut self) -> BTBSTP_W<DOEP1INTF_SPEC> {
+        BTBSTP_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -100,10 +100,10 @@ impl crate::RegisterSpec for DOEP1INTF_SPEC {
 impl crate::Readable for DOEP1INTF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`doep1intf::W`](W) writer structure"]
 impl crate::Writable for DOEP1INTF_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DOEP1INTF to value 0"]
 impl crate::Resettable for DOEP1INTF_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

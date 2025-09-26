@@ -5,23 +5,23 @@ pub type W = crate::W<CTL0_SPEC>;
 #[doc = "Field `CEN` reader - Counter enable"]
 pub type CEN_R = crate::BitReader;
 #[doc = "Field `CEN` writer - Counter enable"]
-pub type CEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UPDIS` reader - Update disable"]
 pub type UPDIS_R = crate::BitReader;
 #[doc = "Field `UPDIS` writer - Update disable"]
-pub type UPDIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UPDIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UPS` reader - Update source"]
 pub type UPS_R = crate::BitReader;
 #[doc = "Field `UPS` writer - Update source"]
-pub type UPS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UPS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPM` reader - Single pulse mode"]
 pub type SPM_R = crate::BitReader;
 #[doc = "Field `SPM` writer - Single pulse mode"]
-pub type SPM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ARSE` reader - Auto-reload shadow enable"]
 pub type ARSE_R = crate::BitReader;
 #[doc = "Field `ARSE` writer - Auto-reload shadow enable"]
-pub type ARSE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ARSE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Counter enable"]
     #[inline(always)]
@@ -53,32 +53,32 @@ impl W {
     #[doc = "Bit 0 - Counter enable"]
     #[inline(always)]
     #[must_use]
-    pub fn cen(&mut self) -> CEN_W<CTL0_SPEC, 0> {
-        CEN_W::new(self)
+    pub fn cen(&mut self) -> CEN_W<CTL0_SPEC> {
+        CEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Update disable"]
     #[inline(always)]
     #[must_use]
-    pub fn updis(&mut self) -> UPDIS_W<CTL0_SPEC, 1> {
-        UPDIS_W::new(self)
+    pub fn updis(&mut self) -> UPDIS_W<CTL0_SPEC> {
+        UPDIS_W::new(self, 1)
     }
     #[doc = "Bit 2 - Update source"]
     #[inline(always)]
     #[must_use]
-    pub fn ups(&mut self) -> UPS_W<CTL0_SPEC, 2> {
-        UPS_W::new(self)
+    pub fn ups(&mut self) -> UPS_W<CTL0_SPEC> {
+        UPS_W::new(self, 2)
     }
     #[doc = "Bit 3 - Single pulse mode"]
     #[inline(always)]
     #[must_use]
-    pub fn spm(&mut self) -> SPM_W<CTL0_SPEC, 3> {
-        SPM_W::new(self)
+    pub fn spm(&mut self) -> SPM_W<CTL0_SPEC> {
+        SPM_W::new(self, 3)
     }
     #[doc = "Bit 7 - Auto-reload shadow enable"]
     #[inline(always)]
     #[must_use]
-    pub fn arse(&mut self) -> ARSE_W<CTL0_SPEC, 7> {
-        ARSE_W::new(self)
+    pub fn arse(&mut self) -> ARSE_W<CTL0_SPEC> {
+        ARSE_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -100,10 +100,10 @@ impl crate::RegisterSpec for CTL0_SPEC {
 impl crate::Readable for CTL0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctl0::W`](W) writer structure"]
 impl crate::Writable for CTL0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets CTL0 to value 0"]
 impl crate::Resettable for CTL0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

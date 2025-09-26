@@ -18,5 +18,5 @@ impl crate::RegisterSpec for DIVH_SPEC {
 impl crate::Readable for DIVH_SPEC {}
 #[doc = "`reset()` method sets DIVH to value 0"]
 impl crate::Resettable for DIVH_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

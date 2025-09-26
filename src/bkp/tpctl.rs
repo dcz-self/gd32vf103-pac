@@ -5,11 +5,11 @@ pub type W = crate::W<TPCTL_SPEC>;
 #[doc = "Field `TPEN` reader - TAMPER detection enable"]
 pub type TPEN_R = crate::BitReader;
 #[doc = "Field `TPEN` writer - TAMPER detection enable"]
-pub type TPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TPAL` reader - TAMPER pin active level"]
 pub type TPAL_R = crate::BitReader;
 #[doc = "Field `TPAL` writer - TAMPER pin active level"]
-pub type TPAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TPAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - TAMPER detection enable"]
     #[inline(always)]
@@ -26,14 +26,14 @@ impl W {
     #[doc = "Bit 0 - TAMPER detection enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tpen(&mut self) -> TPEN_W<TPCTL_SPEC, 0> {
-        TPEN_W::new(self)
+    pub fn tpen(&mut self) -> TPEN_W<TPCTL_SPEC> {
+        TPEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - TAMPER pin active level"]
     #[inline(always)]
     #[must_use]
-    pub fn tpal(&mut self) -> TPAL_W<TPCTL_SPEC, 1> {
-        TPAL_W::new(self)
+    pub fn tpal(&mut self) -> TPAL_W<TPCTL_SPEC> {
+        TPAL_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -55,10 +55,10 @@ impl crate::RegisterSpec for TPCTL_SPEC {
 impl crate::Readable for TPCTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tpctl::W`](W) writer structure"]
 impl crate::Writable for TPCTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets TPCTL to value 0"]
 impl crate::Resettable for TPCTL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

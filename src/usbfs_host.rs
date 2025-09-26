@@ -1,102 +1,260 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - host configuration register (HCTL)"]
-    pub hctl: HCTL,
-    #[doc = "0x04 - Host frame interval register"]
-    pub hft: HFT,
-    #[doc = "0x08 - FS host frame number/frame time remaining register (HFINFR)"]
-    pub hfinfr: HFINFR,
+    hctl: HCTL,
+    hft: HFT,
+    hfinfr: HFINFR,
     _reserved3: [u8; 0x04],
-    #[doc = "0x10 - Host periodic transmit FIFO/queue status register (HPTFQSTAT)"]
-    pub hptfqstat: HPTFQSTAT,
-    #[doc = "0x14 - Host all channels interrupt register"]
-    pub hachint: HACHINT,
-    #[doc = "0x18 - host all channels interrupt mask register"]
-    pub hachinten: HACHINTEN,
+    hptfqstat: HPTFQSTAT,
+    hachint: HACHINT,
+    hachinten: HACHINTEN,
     _reserved6: [u8; 0x24],
-    #[doc = "0x40 - Host port control and status register (USBFS_HPCS)"]
-    pub hpcs: HPCS,
+    hpcs: HPCS,
     _reserved7: [u8; 0xbc],
-    #[doc = "0x100 - host channel-0 characteristics register (HCH0CTL)"]
-    pub hch0ctl: HCH0CTL,
+    hch0ctl: HCH0CTL,
     _reserved8: [u8; 0x04],
-    #[doc = "0x108 - host channel-0 interrupt register (USBFS_HCHxINTF)"]
-    pub hch0intf: HCH0INTF,
-    #[doc = "0x10c - host channel-0 interrupt enable register (HCH0INTEN)"]
-    pub hch0inten: HCH0INTEN,
-    #[doc = "0x110 - host channel-0 transfer length register"]
-    pub hch0len: HCH0LEN,
+    hch0intf: HCH0INTF,
+    hch0inten: HCH0INTEN,
+    hch0len: HCH0LEN,
     _reserved11: [u8; 0x0c],
-    #[doc = "0x120 - host channel-1 characteristics register (HCH1CTL)"]
-    pub hch1ctl: HCH1CTL,
+    hch1ctl: HCH1CTL,
     _reserved12: [u8; 0x04],
-    #[doc = "0x128 - host channel-1 interrupt register (HCH1INTF)"]
-    pub hch1intf: HCH1INTF,
-    #[doc = "0x12c - host channel-1 interrupt enable register (HCH1INTEN)"]
-    pub hch1inten: HCH1INTEN,
-    #[doc = "0x130 - host channel-1 transfer length register"]
-    pub hch1len: HCH1LEN,
+    hch1intf: HCH1INTF,
+    hch1inten: HCH1INTEN,
+    hch1len: HCH1LEN,
     _reserved15: [u8; 0x0c],
-    #[doc = "0x140 - host channel-2 characteristics register (HCH2CTL)"]
-    pub hch2ctl: HCH2CTL,
+    hch2ctl: HCH2CTL,
     _reserved16: [u8; 0x04],
-    #[doc = "0x148 - host channel-2 interrupt register (HCH2INTF)"]
-    pub hch2intf: HCH2INTF,
-    #[doc = "0x14c - host channel-2 interrupt enable register (HCH2INTEN)"]
-    pub hch2inten: HCH2INTEN,
-    #[doc = "0x150 - host channel-2 transfer length register"]
-    pub hch2len: HCH2LEN,
+    hch2intf: HCH2INTF,
+    hch2inten: HCH2INTEN,
+    hch2len: HCH2LEN,
     _reserved19: [u8; 0x0c],
-    #[doc = "0x160 - host channel-3 characteristics register (HCH3CTL)"]
-    pub hch3ctl: HCH3CTL,
+    hch3ctl: HCH3CTL,
     _reserved20: [u8; 0x04],
-    #[doc = "0x168 - host channel-3 interrupt register (HCH3INTF)"]
-    pub hch3intf: HCH3INTF,
-    #[doc = "0x16c - host channel-3 interrupt enable register (HCH3INTEN)"]
-    pub hch3inten: HCH3INTEN,
-    #[doc = "0x170 - host channel-3 transfer length register"]
-    pub hch3len: HCH3LEN,
+    hch3intf: HCH3INTF,
+    hch3inten: HCH3INTEN,
+    hch3len: HCH3LEN,
     _reserved23: [u8; 0x0c],
-    #[doc = "0x180 - host channel-4 characteristics register (HCH4CTL)"]
-    pub hch4ctl: HCH4CTL,
+    hch4ctl: HCH4CTL,
     _reserved24: [u8; 0x04],
-    #[doc = "0x188 - host channel-4 interrupt register (HCH4INTF)"]
-    pub hch4intf: HCH4INTF,
-    #[doc = "0x18c - host channel-4 interrupt enable register (HCH4INTEN)"]
-    pub hch4inten: HCH4INTEN,
-    #[doc = "0x190 - host channel-4 transfer length register"]
-    pub hch4len: HCH4LEN,
+    hch4intf: HCH4INTF,
+    hch4inten: HCH4INTEN,
+    hch4len: HCH4LEN,
     _reserved27: [u8; 0x0c],
-    #[doc = "0x1a0 - host channel-5 characteristics register (HCH5CTL)"]
-    pub hch5ctl: HCH5CTL,
+    hch5ctl: HCH5CTL,
     _reserved28: [u8; 0x04],
-    #[doc = "0x1a8 - host channel-5 interrupt register (HCH5INTF)"]
-    pub hch5intf: HCH5INTF,
-    #[doc = "0x1ac - host channel-5 interrupt enable register (HCH5INTEN)"]
-    pub hch5inten: HCH5INTEN,
-    #[doc = "0x1b0 - host channel-5 transfer length register"]
-    pub hch5len: HCH5LEN,
+    hch5intf: HCH5INTF,
+    hch5inten: HCH5INTEN,
+    hch5len: HCH5LEN,
     _reserved31: [u8; 0x0c],
-    #[doc = "0x1c0 - host channel-6 characteristics register (HCH6CTL)"]
-    pub hch6ctl: HCH6CTL,
+    hch6ctl: HCH6CTL,
     _reserved32: [u8; 0x04],
-    #[doc = "0x1c8 - host channel-6 interrupt register (HCH6INTF)"]
-    pub hch6intf: HCH6INTF,
-    #[doc = "0x1cc - host channel-6 interrupt enable register (HCH6INTEN)"]
-    pub hch6inten: HCH6INTEN,
-    #[doc = "0x1d0 - host channel-6 transfer length register"]
-    pub hch6len: HCH6LEN,
+    hch6intf: HCH6INTF,
+    hch6inten: HCH6INTEN,
+    hch6len: HCH6LEN,
     _reserved35: [u8; 0x0c],
-    #[doc = "0x1e0 - host channel-7 characteristics register (HCH7CTL)"]
-    pub hch7ctl: HCH7CTL,
+    hch7ctl: HCH7CTL,
     _reserved36: [u8; 0x04],
+    hch7intf: HCH7INTF,
+    hch7inten: HCH7INTEN,
+    hch7len: HCH7LEN,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - host configuration register (HCTL)"]
+    #[inline(always)]
+    pub const fn hctl(&self) -> &HCTL {
+        &self.hctl
+    }
+    #[doc = "0x04 - Host frame interval register"]
+    #[inline(always)]
+    pub const fn hft(&self) -> &HFT {
+        &self.hft
+    }
+    #[doc = "0x08 - FS host frame number/frame time remaining register (HFINFR)"]
+    #[inline(always)]
+    pub const fn hfinfr(&self) -> &HFINFR {
+        &self.hfinfr
+    }
+    #[doc = "0x10 - Host periodic transmit FIFO/queue status register (HPTFQSTAT)"]
+    #[inline(always)]
+    pub const fn hptfqstat(&self) -> &HPTFQSTAT {
+        &self.hptfqstat
+    }
+    #[doc = "0x14 - Host all channels interrupt register"]
+    #[inline(always)]
+    pub const fn hachint(&self) -> &HACHINT {
+        &self.hachint
+    }
+    #[doc = "0x18 - host all channels interrupt mask register"]
+    #[inline(always)]
+    pub const fn hachinten(&self) -> &HACHINTEN {
+        &self.hachinten
+    }
+    #[doc = "0x40 - Host port control and status register (USBFS_HPCS)"]
+    #[inline(always)]
+    pub const fn hpcs(&self) -> &HPCS {
+        &self.hpcs
+    }
+    #[doc = "0x100 - host channel-0 characteristics register (HCH0CTL)"]
+    #[inline(always)]
+    pub const fn hch0ctl(&self) -> &HCH0CTL {
+        &self.hch0ctl
+    }
+    #[doc = "0x108 - host channel-0 interrupt register (USBFS_HCHxINTF)"]
+    #[inline(always)]
+    pub const fn hch0intf(&self) -> &HCH0INTF {
+        &self.hch0intf
+    }
+    #[doc = "0x10c - host channel-0 interrupt enable register (HCH0INTEN)"]
+    #[inline(always)]
+    pub const fn hch0inten(&self) -> &HCH0INTEN {
+        &self.hch0inten
+    }
+    #[doc = "0x110 - host channel-0 transfer length register"]
+    #[inline(always)]
+    pub const fn hch0len(&self) -> &HCH0LEN {
+        &self.hch0len
+    }
+    #[doc = "0x120 - host channel-1 characteristics register (HCH1CTL)"]
+    #[inline(always)]
+    pub const fn hch1ctl(&self) -> &HCH1CTL {
+        &self.hch1ctl
+    }
+    #[doc = "0x128 - host channel-1 interrupt register (HCH1INTF)"]
+    #[inline(always)]
+    pub const fn hch1intf(&self) -> &HCH1INTF {
+        &self.hch1intf
+    }
+    #[doc = "0x12c - host channel-1 interrupt enable register (HCH1INTEN)"]
+    #[inline(always)]
+    pub const fn hch1inten(&self) -> &HCH1INTEN {
+        &self.hch1inten
+    }
+    #[doc = "0x130 - host channel-1 transfer length register"]
+    #[inline(always)]
+    pub const fn hch1len(&self) -> &HCH1LEN {
+        &self.hch1len
+    }
+    #[doc = "0x140 - host channel-2 characteristics register (HCH2CTL)"]
+    #[inline(always)]
+    pub const fn hch2ctl(&self) -> &HCH2CTL {
+        &self.hch2ctl
+    }
+    #[doc = "0x148 - host channel-2 interrupt register (HCH2INTF)"]
+    #[inline(always)]
+    pub const fn hch2intf(&self) -> &HCH2INTF {
+        &self.hch2intf
+    }
+    #[doc = "0x14c - host channel-2 interrupt enable register (HCH2INTEN)"]
+    #[inline(always)]
+    pub const fn hch2inten(&self) -> &HCH2INTEN {
+        &self.hch2inten
+    }
+    #[doc = "0x150 - host channel-2 transfer length register"]
+    #[inline(always)]
+    pub const fn hch2len(&self) -> &HCH2LEN {
+        &self.hch2len
+    }
+    #[doc = "0x160 - host channel-3 characteristics register (HCH3CTL)"]
+    #[inline(always)]
+    pub const fn hch3ctl(&self) -> &HCH3CTL {
+        &self.hch3ctl
+    }
+    #[doc = "0x168 - host channel-3 interrupt register (HCH3INTF)"]
+    #[inline(always)]
+    pub const fn hch3intf(&self) -> &HCH3INTF {
+        &self.hch3intf
+    }
+    #[doc = "0x16c - host channel-3 interrupt enable register (HCH3INTEN)"]
+    #[inline(always)]
+    pub const fn hch3inten(&self) -> &HCH3INTEN {
+        &self.hch3inten
+    }
+    #[doc = "0x170 - host channel-3 transfer length register"]
+    #[inline(always)]
+    pub const fn hch3len(&self) -> &HCH3LEN {
+        &self.hch3len
+    }
+    #[doc = "0x180 - host channel-4 characteristics register (HCH4CTL)"]
+    #[inline(always)]
+    pub const fn hch4ctl(&self) -> &HCH4CTL {
+        &self.hch4ctl
+    }
+    #[doc = "0x188 - host channel-4 interrupt register (HCH4INTF)"]
+    #[inline(always)]
+    pub const fn hch4intf(&self) -> &HCH4INTF {
+        &self.hch4intf
+    }
+    #[doc = "0x18c - host channel-4 interrupt enable register (HCH4INTEN)"]
+    #[inline(always)]
+    pub const fn hch4inten(&self) -> &HCH4INTEN {
+        &self.hch4inten
+    }
+    #[doc = "0x190 - host channel-4 transfer length register"]
+    #[inline(always)]
+    pub const fn hch4len(&self) -> &HCH4LEN {
+        &self.hch4len
+    }
+    #[doc = "0x1a0 - host channel-5 characteristics register (HCH5CTL)"]
+    #[inline(always)]
+    pub const fn hch5ctl(&self) -> &HCH5CTL {
+        &self.hch5ctl
+    }
+    #[doc = "0x1a8 - host channel-5 interrupt register (HCH5INTF)"]
+    #[inline(always)]
+    pub const fn hch5intf(&self) -> &HCH5INTF {
+        &self.hch5intf
+    }
+    #[doc = "0x1ac - host channel-5 interrupt enable register (HCH5INTEN)"]
+    #[inline(always)]
+    pub const fn hch5inten(&self) -> &HCH5INTEN {
+        &self.hch5inten
+    }
+    #[doc = "0x1b0 - host channel-5 transfer length register"]
+    #[inline(always)]
+    pub const fn hch5len(&self) -> &HCH5LEN {
+        &self.hch5len
+    }
+    #[doc = "0x1c0 - host channel-6 characteristics register (HCH6CTL)"]
+    #[inline(always)]
+    pub const fn hch6ctl(&self) -> &HCH6CTL {
+        &self.hch6ctl
+    }
+    #[doc = "0x1c8 - host channel-6 interrupt register (HCH6INTF)"]
+    #[inline(always)]
+    pub const fn hch6intf(&self) -> &HCH6INTF {
+        &self.hch6intf
+    }
+    #[doc = "0x1cc - host channel-6 interrupt enable register (HCH6INTEN)"]
+    #[inline(always)]
+    pub const fn hch6inten(&self) -> &HCH6INTEN {
+        &self.hch6inten
+    }
+    #[doc = "0x1d0 - host channel-6 transfer length register"]
+    #[inline(always)]
+    pub const fn hch6len(&self) -> &HCH6LEN {
+        &self.hch6len
+    }
+    #[doc = "0x1e0 - host channel-7 characteristics register (HCH7CTL)"]
+    #[inline(always)]
+    pub const fn hch7ctl(&self) -> &HCH7CTL {
+        &self.hch7ctl
+    }
     #[doc = "0x1e8 - host channel-7 interrupt register (HCH7INTF)"]
-    pub hch7intf: HCH7INTF,
+    #[inline(always)]
+    pub const fn hch7intf(&self) -> &HCH7INTF {
+        &self.hch7intf
+    }
     #[doc = "0x1ec - host channel-7 interrupt enable register (HCH7INTEN)"]
-    pub hch7inten: HCH7INTEN,
+    #[inline(always)]
+    pub const fn hch7inten(&self) -> &HCH7INTEN {
+        &self.hch7inten
+    }
     #[doc = "0x1f0 - host channel-7 transfer length register"]
-    pub hch7len: HCH7LEN,
+    #[inline(always)]
+    pub const fn hch7len(&self) -> &HCH7LEN {
+        &self.hch7len
+    }
 }
 #[doc = "HCTL (rw) register accessor: host configuration register (HCTL)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hctl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hctl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hctl`]
 module"]

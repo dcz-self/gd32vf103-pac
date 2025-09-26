@@ -5,39 +5,39 @@ pub type W = crate::W<HCH0INTF_SPEC>;
 #[doc = "Field `TF` reader - Transfer finished"]
 pub type TF_R = crate::BitReader;
 #[doc = "Field `TF` writer - Transfer finished"]
-pub type TF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH` reader - Channel halted"]
 pub type CH_R = crate::BitReader;
 #[doc = "Field `CH` writer - Channel halted"]
-pub type CH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STALL` reader - STALL response received interrupt"]
 pub type STALL_R = crate::BitReader;
 #[doc = "Field `STALL` writer - STALL response received interrupt"]
-pub type STALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NAK` reader - NAK response received interrupt"]
 pub type NAK_R = crate::BitReader;
 #[doc = "Field `NAK` writer - NAK response received interrupt"]
-pub type NAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ACK` reader - ACK response received/transmitted interrupt"]
 pub type ACK_R = crate::BitReader;
 #[doc = "Field `ACK` writer - ACK response received/transmitted interrupt"]
-pub type ACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ACK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USBER` reader - USB bus error"]
 pub type USBER_R = crate::BitReader;
 #[doc = "Field `USBER` writer - USB bus error"]
-pub type USBER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USBER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BBER` reader - Babble error"]
 pub type BBER_R = crate::BitReader;
 #[doc = "Field `BBER` writer - Babble error"]
-pub type BBER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BBER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REQOVR` reader - Request queue overrun"]
 pub type REQOVR_R = crate::BitReader;
 #[doc = "Field `REQOVR` writer - Request queue overrun"]
-pub type REQOVR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REQOVR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTER` reader - Data toggle error"]
 pub type DTER_R = crate::BitReader;
 #[doc = "Field `DTER` writer - Data toggle error"]
-pub type DTER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTER_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Transfer finished"]
     #[inline(always)]
@@ -89,56 +89,56 @@ impl W {
     #[doc = "Bit 0 - Transfer finished"]
     #[inline(always)]
     #[must_use]
-    pub fn tf(&mut self) -> TF_W<HCH0INTF_SPEC, 0> {
-        TF_W::new(self)
+    pub fn tf(&mut self) -> TF_W<HCH0INTF_SPEC> {
+        TF_W::new(self, 0)
     }
     #[doc = "Bit 1 - Channel halted"]
     #[inline(always)]
     #[must_use]
-    pub fn ch(&mut self) -> CH_W<HCH0INTF_SPEC, 1> {
-        CH_W::new(self)
+    pub fn ch(&mut self) -> CH_W<HCH0INTF_SPEC> {
+        CH_W::new(self, 1)
     }
     #[doc = "Bit 3 - STALL response received interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn stall(&mut self) -> STALL_W<HCH0INTF_SPEC, 3> {
-        STALL_W::new(self)
+    pub fn stall(&mut self) -> STALL_W<HCH0INTF_SPEC> {
+        STALL_W::new(self, 3)
     }
     #[doc = "Bit 4 - NAK response received interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn nak(&mut self) -> NAK_W<HCH0INTF_SPEC, 4> {
-        NAK_W::new(self)
+    pub fn nak(&mut self) -> NAK_W<HCH0INTF_SPEC> {
+        NAK_W::new(self, 4)
     }
     #[doc = "Bit 5 - ACK response received/transmitted interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn ack(&mut self) -> ACK_W<HCH0INTF_SPEC, 5> {
-        ACK_W::new(self)
+    pub fn ack(&mut self) -> ACK_W<HCH0INTF_SPEC> {
+        ACK_W::new(self, 5)
     }
     #[doc = "Bit 7 - USB bus error"]
     #[inline(always)]
     #[must_use]
-    pub fn usber(&mut self) -> USBER_W<HCH0INTF_SPEC, 7> {
-        USBER_W::new(self)
+    pub fn usber(&mut self) -> USBER_W<HCH0INTF_SPEC> {
+        USBER_W::new(self, 7)
     }
     #[doc = "Bit 8 - Babble error"]
     #[inline(always)]
     #[must_use]
-    pub fn bber(&mut self) -> BBER_W<HCH0INTF_SPEC, 8> {
-        BBER_W::new(self)
+    pub fn bber(&mut self) -> BBER_W<HCH0INTF_SPEC> {
+        BBER_W::new(self, 8)
     }
     #[doc = "Bit 9 - Request queue overrun"]
     #[inline(always)]
     #[must_use]
-    pub fn reqovr(&mut self) -> REQOVR_W<HCH0INTF_SPEC, 9> {
-        REQOVR_W::new(self)
+    pub fn reqovr(&mut self) -> REQOVR_W<HCH0INTF_SPEC> {
+        REQOVR_W::new(self, 9)
     }
     #[doc = "Bit 10 - Data toggle error"]
     #[inline(always)]
     #[must_use]
-    pub fn dter(&mut self) -> DTER_W<HCH0INTF_SPEC, 10> {
-        DTER_W::new(self)
+    pub fn dter(&mut self) -> DTER_W<HCH0INTF_SPEC> {
+        DTER_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -160,10 +160,10 @@ impl crate::RegisterSpec for HCH0INTF_SPEC {
 impl crate::Readable for HCH0INTF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hch0intf::W`](W) writer structure"]
 impl crate::Writable for HCH0INTF_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HCH0INTF to value 0"]
 impl crate::Resettable for HCH0INTF_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

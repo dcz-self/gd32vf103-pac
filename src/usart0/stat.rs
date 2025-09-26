@@ -15,21 +15,21 @@ pub type IDLEF_R = crate::BitReader;
 #[doc = "Field `RBNE` reader - Read data buffer not empty"]
 pub type RBNE_R = crate::BitReader;
 #[doc = "Field `RBNE` writer - Read data buffer not empty"]
-pub type RBNE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RBNE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TC` reader - Transmission complete"]
 pub type TC_R = crate::BitReader;
 #[doc = "Field `TC` writer - Transmission complete"]
-pub type TC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TBE` reader - Transmit data buffer empty"]
 pub type TBE_R = crate::BitReader;
 #[doc = "Field `LBDF` reader - LIN break detection flag"]
 pub type LBDF_R = crate::BitReader;
 #[doc = "Field `LBDF` writer - LIN break detection flag"]
-pub type LBDF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LBDF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CTSF` reader - CTS change flag"]
 pub type CTSF_R = crate::BitReader;
 #[doc = "Field `CTSF` writer - CTS change flag"]
-pub type CTSF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CTSF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Parity error flag"]
     #[inline(always)]
@@ -86,26 +86,26 @@ impl W {
     #[doc = "Bit 5 - Read data buffer not empty"]
     #[inline(always)]
     #[must_use]
-    pub fn rbne(&mut self) -> RBNE_W<STAT_SPEC, 5> {
-        RBNE_W::new(self)
+    pub fn rbne(&mut self) -> RBNE_W<STAT_SPEC> {
+        RBNE_W::new(self, 5)
     }
     #[doc = "Bit 6 - Transmission complete"]
     #[inline(always)]
     #[must_use]
-    pub fn tc(&mut self) -> TC_W<STAT_SPEC, 6> {
-        TC_W::new(self)
+    pub fn tc(&mut self) -> TC_W<STAT_SPEC> {
+        TC_W::new(self, 6)
     }
     #[doc = "Bit 8 - LIN break detection flag"]
     #[inline(always)]
     #[must_use]
-    pub fn lbdf(&mut self) -> LBDF_W<STAT_SPEC, 8> {
-        LBDF_W::new(self)
+    pub fn lbdf(&mut self) -> LBDF_W<STAT_SPEC> {
+        LBDF_W::new(self, 8)
     }
     #[doc = "Bit 9 - CTS change flag"]
     #[inline(always)]
     #[must_use]
-    pub fn ctsf(&mut self) -> CTSF_W<STAT_SPEC, 9> {
-        CTSF_W::new(self)
+    pub fn ctsf(&mut self) -> CTSF_W<STAT_SPEC> {
+        CTSF_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -127,10 +127,10 @@ impl crate::RegisterSpec for STAT_SPEC {
 impl crate::Readable for STAT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`stat::W`](W) writer structure"]
 impl crate::Writable for STAT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STAT to value 0xc0"]
 impl crate::Resettable for STAT_SPEC {
-    const RESET_VALUE: Self::Ux = 0xc0;
+    const RESET_VALUE: u32 = 0xc0;
 }

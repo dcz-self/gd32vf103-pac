@@ -1,33 +1,87 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - Control register"]
-    pub ctl: CTL,
-    #[doc = "0x04 - Clock configuration register 0 (RCU_CFG0)"]
-    pub cfg0: CFG0,
-    #[doc = "0x08 - Clock interrupt register (RCU_INT)"]
-    pub int: INT,
-    #[doc = "0x0c - APB2 reset register (RCU_APB2RST)"]
-    pub apb2rst: APB2RST,
-    #[doc = "0x10 - APB1 reset register (RCU_APB1RST)"]
-    pub apb1rst: APB1RST,
-    #[doc = "0x14 - AHB enable register"]
-    pub ahben: AHBEN,
-    #[doc = "0x18 - APB2 clock enable register (RCU_APB2EN)"]
-    pub apb2en: APB2EN,
-    #[doc = "0x1c - APB1 clock enable register (RCU_APB1EN)"]
-    pub apb1en: APB1EN,
-    #[doc = "0x20 - Backup domain control register (RCU_BDCTL)"]
-    pub bdctl: BDCTL,
-    #[doc = "0x24 - Reset source /clock register (RCU_RSTSCK)"]
-    pub rstsck: RSTSCK,
-    #[doc = "0x28 - AHB reset register"]
-    pub ahbrst: AHBRST,
-    #[doc = "0x2c - Clock Configuration register 1"]
-    pub cfg1: CFG1,
+    ctl: CTL,
+    cfg0: CFG0,
+    int: INT,
+    apb2rst: APB2RST,
+    apb1rst: APB1RST,
+    ahben: AHBEN,
+    apb2en: APB2EN,
+    apb1en: APB1EN,
+    bdctl: BDCTL,
+    rstsck: RSTSCK,
+    ahbrst: AHBRST,
+    cfg1: CFG1,
     _reserved12: [u8; 0x04],
+    dsv: DSV,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - Control register"]
+    #[inline(always)]
+    pub const fn ctl(&self) -> &CTL {
+        &self.ctl
+    }
+    #[doc = "0x04 - Clock configuration register 0 (RCU_CFG0)"]
+    #[inline(always)]
+    pub const fn cfg0(&self) -> &CFG0 {
+        &self.cfg0
+    }
+    #[doc = "0x08 - Clock interrupt register (RCU_INT)"]
+    #[inline(always)]
+    pub const fn int(&self) -> &INT {
+        &self.int
+    }
+    #[doc = "0x0c - APB2 reset register (RCU_APB2RST)"]
+    #[inline(always)]
+    pub const fn apb2rst(&self) -> &APB2RST {
+        &self.apb2rst
+    }
+    #[doc = "0x10 - APB1 reset register (RCU_APB1RST)"]
+    #[inline(always)]
+    pub const fn apb1rst(&self) -> &APB1RST {
+        &self.apb1rst
+    }
+    #[doc = "0x14 - AHB enable register"]
+    #[inline(always)]
+    pub const fn ahben(&self) -> &AHBEN {
+        &self.ahben
+    }
+    #[doc = "0x18 - APB2 clock enable register (RCU_APB2EN)"]
+    #[inline(always)]
+    pub const fn apb2en(&self) -> &APB2EN {
+        &self.apb2en
+    }
+    #[doc = "0x1c - APB1 clock enable register (RCU_APB1EN)"]
+    #[inline(always)]
+    pub const fn apb1en(&self) -> &APB1EN {
+        &self.apb1en
+    }
+    #[doc = "0x20 - Backup domain control register (RCU_BDCTL)"]
+    #[inline(always)]
+    pub const fn bdctl(&self) -> &BDCTL {
+        &self.bdctl
+    }
+    #[doc = "0x24 - Reset source /clock register (RCU_RSTSCK)"]
+    #[inline(always)]
+    pub const fn rstsck(&self) -> &RSTSCK {
+        &self.rstsck
+    }
+    #[doc = "0x28 - AHB reset register"]
+    #[inline(always)]
+    pub const fn ahbrst(&self) -> &AHBRST {
+        &self.ahbrst
+    }
+    #[doc = "0x2c - Clock Configuration register 1"]
+    #[inline(always)]
+    pub const fn cfg1(&self) -> &CFG1 {
+        &self.cfg1
+    }
     #[doc = "0x34 - Deep sleep mode Voltage register"]
-    pub dsv: DSV,
+    #[inline(always)]
+    pub const fn dsv(&self) -> &DSV {
+        &self.dsv
+    }
 }
 #[doc = "CTL (rw) register accessor: Control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctl`]
 module"]

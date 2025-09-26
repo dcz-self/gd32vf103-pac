@@ -5,7 +5,7 @@ pub type W = crate::W<CLICINTIE_SPEC>;
 #[doc = "Field `IE` reader - IE"]
 pub type IE_R = crate::BitReader;
 #[doc = "Field `IE` writer - IE"]
-pub type IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - IE"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bit 0 - IE"]
     #[inline(always)]
     #[must_use]
-    pub fn ie(&mut self) -> IE_W<CLICINTIE_SPEC, 0> {
-        IE_W::new(self)
+    pub fn ie(&mut self) -> IE_W<CLICINTIE_SPEC> {
+        IE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for CLICINTIE_SPEC {
 impl crate::Readable for CLICINTIE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clicintie::W`](W) writer structure"]
 impl crate::Writable for CLICINTIE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }
 #[doc = "`reset()` method sets CLICINTIE to value 0"]
 impl crate::Resettable for CLICINTIE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u8 = 0;
 }

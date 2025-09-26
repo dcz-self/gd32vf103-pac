@@ -1,54 +1,144 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - Interrupt flag register"]
-    pub intf: INTF,
-    #[doc = "0x04 - Interrupt flag clear register"]
-    pub intc: INTC,
-    #[doc = "0x08 - Channel 0 control register"]
-    pub ch0ctl: CH0CTL,
-    #[doc = "0x0c - Channel 0 counter register"]
-    pub ch0cnt: CH0CNT,
-    #[doc = "0x10 - Channel 0 peripheral base address register"]
-    pub ch0paddr: CH0PADDR,
-    #[doc = "0x14 - Channel 0 memory base address register"]
-    pub ch0maddr: CH0MADDR,
+    intf: INTF,
+    intc: INTC,
+    ch0ctl: CH0CTL,
+    ch0cnt: CH0CNT,
+    ch0paddr: CH0PADDR,
+    ch0maddr: CH0MADDR,
     _reserved6: [u8; 0x04],
-    #[doc = "0x1c - Channel 1 control register"]
-    pub ch1ctl: CH1CTL,
-    #[doc = "0x20 - Channel 1 counter register"]
-    pub ch1cnt: CH1CNT,
-    #[doc = "0x24 - Channel 1 peripheral base address register"]
-    pub ch1paddr: CH1PADDR,
-    #[doc = "0x28 - Channel 1 memory base address register"]
-    pub ch1maddr: CH1MADDR,
+    ch1ctl: CH1CTL,
+    ch1cnt: CH1CNT,
+    ch1paddr: CH1PADDR,
+    ch1maddr: CH1MADDR,
     _reserved10: [u8; 0x04],
-    #[doc = "0x30 - Channel 2 control register"]
-    pub ch2ctl: CH2CTL,
-    #[doc = "0x34 - Channel 2 counter register"]
-    pub ch2cnt: CH2CNT,
-    #[doc = "0x38 - Channel 2 peripheral base address register"]
-    pub ch2paddr: CH2PADDR,
-    #[doc = "0x3c - Channel 2 memory base address register"]
-    pub ch2maddr: CH2MADDR,
+    ch2ctl: CH2CTL,
+    ch2cnt: CH2CNT,
+    ch2paddr: CH2PADDR,
+    ch2maddr: CH2MADDR,
     _reserved14: [u8; 0x04],
-    #[doc = "0x44 - Channel 3 control register"]
-    pub ch3ctl: CH3CTL,
-    #[doc = "0x48 - Channel 3 counter register"]
-    pub ch3cnt: CH3CNT,
-    #[doc = "0x4c - Channel 3 peripheral base address register"]
-    pub ch3paddr: CH3PADDR,
-    #[doc = "0x50 - Channel 3 memory base address register"]
-    pub ch3maddr: CH3MADDR,
+    ch3ctl: CH3CTL,
+    ch3cnt: CH3CNT,
+    ch3paddr: CH3PADDR,
+    ch3maddr: CH3MADDR,
     _reserved18: [u8; 0x04],
+    ch4ctl: CH4CTL,
+    ch4cnt: CH4CNT,
+    ch4paddr: CH4PADDR,
+    ch4maddr: CH4MADDR,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - Interrupt flag register"]
+    #[inline(always)]
+    pub const fn intf(&self) -> &INTF {
+        &self.intf
+    }
+    #[doc = "0x04 - Interrupt flag clear register"]
+    #[inline(always)]
+    pub const fn intc(&self) -> &INTC {
+        &self.intc
+    }
+    #[doc = "0x08 - Channel 0 control register"]
+    #[inline(always)]
+    pub const fn ch0ctl(&self) -> &CH0CTL {
+        &self.ch0ctl
+    }
+    #[doc = "0x0c - Channel 0 counter register"]
+    #[inline(always)]
+    pub const fn ch0cnt(&self) -> &CH0CNT {
+        &self.ch0cnt
+    }
+    #[doc = "0x10 - Channel 0 peripheral base address register"]
+    #[inline(always)]
+    pub const fn ch0paddr(&self) -> &CH0PADDR {
+        &self.ch0paddr
+    }
+    #[doc = "0x14 - Channel 0 memory base address register"]
+    #[inline(always)]
+    pub const fn ch0maddr(&self) -> &CH0MADDR {
+        &self.ch0maddr
+    }
+    #[doc = "0x1c - Channel 1 control register"]
+    #[inline(always)]
+    pub const fn ch1ctl(&self) -> &CH1CTL {
+        &self.ch1ctl
+    }
+    #[doc = "0x20 - Channel 1 counter register"]
+    #[inline(always)]
+    pub const fn ch1cnt(&self) -> &CH1CNT {
+        &self.ch1cnt
+    }
+    #[doc = "0x24 - Channel 1 peripheral base address register"]
+    #[inline(always)]
+    pub const fn ch1paddr(&self) -> &CH1PADDR {
+        &self.ch1paddr
+    }
+    #[doc = "0x28 - Channel 1 memory base address register"]
+    #[inline(always)]
+    pub const fn ch1maddr(&self) -> &CH1MADDR {
+        &self.ch1maddr
+    }
+    #[doc = "0x30 - Channel 2 control register"]
+    #[inline(always)]
+    pub const fn ch2ctl(&self) -> &CH2CTL {
+        &self.ch2ctl
+    }
+    #[doc = "0x34 - Channel 2 counter register"]
+    #[inline(always)]
+    pub const fn ch2cnt(&self) -> &CH2CNT {
+        &self.ch2cnt
+    }
+    #[doc = "0x38 - Channel 2 peripheral base address register"]
+    #[inline(always)]
+    pub const fn ch2paddr(&self) -> &CH2PADDR {
+        &self.ch2paddr
+    }
+    #[doc = "0x3c - Channel 2 memory base address register"]
+    #[inline(always)]
+    pub const fn ch2maddr(&self) -> &CH2MADDR {
+        &self.ch2maddr
+    }
+    #[doc = "0x44 - Channel 3 control register"]
+    #[inline(always)]
+    pub const fn ch3ctl(&self) -> &CH3CTL {
+        &self.ch3ctl
+    }
+    #[doc = "0x48 - Channel 3 counter register"]
+    #[inline(always)]
+    pub const fn ch3cnt(&self) -> &CH3CNT {
+        &self.ch3cnt
+    }
+    #[doc = "0x4c - Channel 3 peripheral base address register"]
+    #[inline(always)]
+    pub const fn ch3paddr(&self) -> &CH3PADDR {
+        &self.ch3paddr
+    }
+    #[doc = "0x50 - Channel 3 memory base address register"]
+    #[inline(always)]
+    pub const fn ch3maddr(&self) -> &CH3MADDR {
+        &self.ch3maddr
+    }
     #[doc = "0x58 - Channel 4 control register"]
-    pub ch4ctl: CH4CTL,
+    #[inline(always)]
+    pub const fn ch4ctl(&self) -> &CH4CTL {
+        &self.ch4ctl
+    }
     #[doc = "0x5c - Channel 4 counter register"]
-    pub ch4cnt: CH4CNT,
+    #[inline(always)]
+    pub const fn ch4cnt(&self) -> &CH4CNT {
+        &self.ch4cnt
+    }
     #[doc = "0x60 - Channel 4 peripheral base address register"]
-    pub ch4paddr: CH4PADDR,
+    #[inline(always)]
+    pub const fn ch4paddr(&self) -> &CH4PADDR {
+        &self.ch4paddr
+    }
     #[doc = "0x64 - Channel 4 memory base address register"]
-    pub ch4maddr: CH4MADDR,
+    #[inline(always)]
+    pub const fn ch4maddr(&self) -> &CH4MADDR {
+        &self.ch4maddr
+    }
 }
 #[doc = "INTF (r) register accessor: Interrupt flag register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intf::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intf`]
 module"]

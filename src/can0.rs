@@ -1,190 +1,548 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - Control register"]
-    pub ctl: CTL,
-    #[doc = "0x04 - Status register"]
-    pub stat: STAT,
-    #[doc = "0x08 - Transmit status register"]
-    pub tstat: TSTAT,
-    #[doc = "0x0c - Receive message FIFO0 register"]
-    pub rfifo0: RFIFO0,
-    #[doc = "0x10 - Receive message FIFO1 register"]
-    pub rfifo1: RFIFO1,
-    #[doc = "0x14 - Interrupt enable register"]
-    pub inten: INTEN,
-    #[doc = "0x18 - Error register"]
-    pub err: ERR,
-    #[doc = "0x1c - Bit timing register"]
-    pub bt: BT,
+    ctl: CTL,
+    stat: STAT,
+    tstat: TSTAT,
+    rfifo0: RFIFO0,
+    rfifo1: RFIFO1,
+    inten: INTEN,
+    err: ERR,
+    bt: BT,
     _reserved8: [u8; 0x0160],
-    #[doc = "0x180 - Transmit mailbox identifier register 0"]
-    pub tmi0: TMI0,
-    #[doc = "0x184 - Transmit mailbox property register 0"]
-    pub tmp0: TMP0,
-    #[doc = "0x188 - Transmit mailbox data0 register"]
-    pub tmdata00: TMDATA00,
-    #[doc = "0x18c - Transmit mailbox data1 register"]
-    pub tmdata10: TMDATA10,
-    #[doc = "0x190 - Transmit mailbox identifier register 1"]
-    pub tmi1: TMI1,
-    #[doc = "0x194 - Transmit mailbox property register 1"]
-    pub tmp1: TMP1,
-    #[doc = "0x198 - Transmit mailbox data0 register"]
-    pub tmdata01: TMDATA01,
-    #[doc = "0x19c - Transmit mailbox data1 register"]
-    pub tmdata11: TMDATA11,
-    #[doc = "0x1a0 - Transmit mailbox identifier register 2"]
-    pub tmi2: TMI2,
-    #[doc = "0x1a4 - Transmit mailbox property register 2"]
-    pub tmp2: TMP2,
-    #[doc = "0x1a8 - Transmit mailbox data0 register"]
-    pub tmdata02: TMDATA02,
-    #[doc = "0x1ac - Transmit mailbox data1 register"]
-    pub tmdata12: TMDATA12,
-    #[doc = "0x1b0 - Receive FIFO mailbox identifier register"]
-    pub rfifomi0: RFIFOMI0,
-    #[doc = "0x1b4 - Receive FIFO0 mailbox property register"]
-    pub rfifomp0: RFIFOMP0,
-    #[doc = "0x1b8 - Receive FIFO0 mailbox data0 register"]
-    pub rfifomdata00: RFIFOMDATA00,
-    #[doc = "0x1bc - Receive FIFO0 mailbox data1 register"]
-    pub rfifomdata10: RFIFOMDATA10,
-    #[doc = "0x1c0 - Receive FIFO1 mailbox identifier register"]
-    pub rfifomi1: RFIFOMI1,
-    #[doc = "0x1c4 - Receive FIFO1 mailbox property register"]
-    pub rfifomp1: RFIFOMP1,
-    #[doc = "0x1c8 - Receive FIFO1 mailbox data0 register"]
-    pub rfifomdata01: RFIFOMDATA01,
-    #[doc = "0x1cc - Receive FIFO1 mailbox data1 register"]
-    pub rfifomdata11: RFIFOMDATA11,
+    tmi0: TMI0,
+    tmp0: TMP0,
+    tmdata00: TMDATA00,
+    tmdata10: TMDATA10,
+    tmi1: TMI1,
+    tmp1: TMP1,
+    tmdata01: TMDATA01,
+    tmdata11: TMDATA11,
+    tmi2: TMI2,
+    tmp2: TMP2,
+    tmdata02: TMDATA02,
+    tmdata12: TMDATA12,
+    rfifomi0: RFIFOMI0,
+    rfifomp0: RFIFOMP0,
+    rfifomdata00: RFIFOMDATA00,
+    rfifomdata10: RFIFOMDATA10,
+    rfifomi1: RFIFOMI1,
+    rfifomp1: RFIFOMP1,
+    rfifomdata01: RFIFOMDATA01,
+    rfifomdata11: RFIFOMDATA11,
     _reserved28: [u8; 0x30],
-    #[doc = "0x200 - Filter control register"]
-    pub fctl: FCTL,
-    #[doc = "0x204 - Filter mode configuration register"]
-    pub fmcfg: FMCFG,
+    fctl: FCTL,
+    fmcfg: FMCFG,
     _reserved30: [u8; 0x04],
-    #[doc = "0x20c - Filter scale configuration register"]
-    pub fscfg: FSCFG,
+    fscfg: FSCFG,
     _reserved31: [u8; 0x04],
-    #[doc = "0x214 - Filter associated FIFO register"]
-    pub fafifo: FAFIFO,
+    fafifo: FAFIFO,
     _reserved32: [u8; 0x04],
-    #[doc = "0x21c - Filter working register"]
-    pub fw: FW,
+    fw: FW,
     _reserved33: [u8; 0x20],
+    f0data0: F0DATA0,
+    f0data1: F0DATA1,
+    f1data0: F1DATA0,
+    f1data1: F1DATA1,
+    f2data0: F2DATA0,
+    f2data1: F2DATA1,
+    f3data0: F3DATA0,
+    f3data1: F3DATA1,
+    f4data0: F4DATA0,
+    f4data1: F4DATA1,
+    f5data0: F5DATA0,
+    f5data1: F5DATA1,
+    f6data0: F6DATA0,
+    f6data1: F6DATA1,
+    f7data0: F7DATA0,
+    f7data1: F7DATA1,
+    f8data0: F8DATA0,
+    f8data1: F8DATA1,
+    f9data0: F9DATA0,
+    f9data1: F9DATA1,
+    f10data0: F10DATA0,
+    f10data1: F10DATA1,
+    f11data0: F11DATA0,
+    f11data1: F11DATA1,
+    f12data0: F12DATA0,
+    f12data1: F12DATA1,
+    f13data0: F13DATA0,
+    f13data1: F13DATA1,
+    f14data0: F14DATA0,
+    f14data1: F14DATA1,
+    f15data0: F15DATA0,
+    f15data1: F15DATA1,
+    f16data0: F16DATA0,
+    f16data1: F16DATA1,
+    f17data0: F17DATA0,
+    f17data1: F17DATA1,
+    f18data0: F18DATA0,
+    f18data1: F18DATA1,
+    f19data0: F19DATA0,
+    f19data1: F19DATA1,
+    f20data0: F20DATA0,
+    f20data1: F20DATA1,
+    f21data0: F21DATA0,
+    f21data1: F21DATA1,
+    f22data0: F22DATA0,
+    f22data1: F22DATA1,
+    f23data0: F23DATA0,
+    f23data1: F23DATA1,
+    f24data0: F24DATA0,
+    f24data1: F24DATA1,
+    f25data0: F25DATA0,
+    f25data1: F25DATA1,
+    f26data0: F26DATA0,
+    f26data1: F26DATA1,
+    f27data0: F27DATA0,
+    f27data1: F27DATA1,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - Control register"]
+    #[inline(always)]
+    pub const fn ctl(&self) -> &CTL {
+        &self.ctl
+    }
+    #[doc = "0x04 - Status register"]
+    #[inline(always)]
+    pub const fn stat(&self) -> &STAT {
+        &self.stat
+    }
+    #[doc = "0x08 - Transmit status register"]
+    #[inline(always)]
+    pub const fn tstat(&self) -> &TSTAT {
+        &self.tstat
+    }
+    #[doc = "0x0c - Receive message FIFO0 register"]
+    #[inline(always)]
+    pub const fn rfifo0(&self) -> &RFIFO0 {
+        &self.rfifo0
+    }
+    #[doc = "0x10 - Receive message FIFO1 register"]
+    #[inline(always)]
+    pub const fn rfifo1(&self) -> &RFIFO1 {
+        &self.rfifo1
+    }
+    #[doc = "0x14 - Interrupt enable register"]
+    #[inline(always)]
+    pub const fn inten(&self) -> &INTEN {
+        &self.inten
+    }
+    #[doc = "0x18 - Error register"]
+    #[inline(always)]
+    pub const fn err(&self) -> &ERR {
+        &self.err
+    }
+    #[doc = "0x1c - Bit timing register"]
+    #[inline(always)]
+    pub const fn bt(&self) -> &BT {
+        &self.bt
+    }
+    #[doc = "0x180 - Transmit mailbox identifier register 0"]
+    #[inline(always)]
+    pub const fn tmi0(&self) -> &TMI0 {
+        &self.tmi0
+    }
+    #[doc = "0x184 - Transmit mailbox property register 0"]
+    #[inline(always)]
+    pub const fn tmp0(&self) -> &TMP0 {
+        &self.tmp0
+    }
+    #[doc = "0x188 - Transmit mailbox data0 register"]
+    #[inline(always)]
+    pub const fn tmdata00(&self) -> &TMDATA00 {
+        &self.tmdata00
+    }
+    #[doc = "0x18c - Transmit mailbox data1 register"]
+    #[inline(always)]
+    pub const fn tmdata10(&self) -> &TMDATA10 {
+        &self.tmdata10
+    }
+    #[doc = "0x190 - Transmit mailbox identifier register 1"]
+    #[inline(always)]
+    pub const fn tmi1(&self) -> &TMI1 {
+        &self.tmi1
+    }
+    #[doc = "0x194 - Transmit mailbox property register 1"]
+    #[inline(always)]
+    pub const fn tmp1(&self) -> &TMP1 {
+        &self.tmp1
+    }
+    #[doc = "0x198 - Transmit mailbox data0 register"]
+    #[inline(always)]
+    pub const fn tmdata01(&self) -> &TMDATA01 {
+        &self.tmdata01
+    }
+    #[doc = "0x19c - Transmit mailbox data1 register"]
+    #[inline(always)]
+    pub const fn tmdata11(&self) -> &TMDATA11 {
+        &self.tmdata11
+    }
+    #[doc = "0x1a0 - Transmit mailbox identifier register 2"]
+    #[inline(always)]
+    pub const fn tmi2(&self) -> &TMI2 {
+        &self.tmi2
+    }
+    #[doc = "0x1a4 - Transmit mailbox property register 2"]
+    #[inline(always)]
+    pub const fn tmp2(&self) -> &TMP2 {
+        &self.tmp2
+    }
+    #[doc = "0x1a8 - Transmit mailbox data0 register"]
+    #[inline(always)]
+    pub const fn tmdata02(&self) -> &TMDATA02 {
+        &self.tmdata02
+    }
+    #[doc = "0x1ac - Transmit mailbox data1 register"]
+    #[inline(always)]
+    pub const fn tmdata12(&self) -> &TMDATA12 {
+        &self.tmdata12
+    }
+    #[doc = "0x1b0 - Receive FIFO mailbox identifier register"]
+    #[inline(always)]
+    pub const fn rfifomi0(&self) -> &RFIFOMI0 {
+        &self.rfifomi0
+    }
+    #[doc = "0x1b4 - Receive FIFO0 mailbox property register"]
+    #[inline(always)]
+    pub const fn rfifomp0(&self) -> &RFIFOMP0 {
+        &self.rfifomp0
+    }
+    #[doc = "0x1b8 - Receive FIFO0 mailbox data0 register"]
+    #[inline(always)]
+    pub const fn rfifomdata00(&self) -> &RFIFOMDATA00 {
+        &self.rfifomdata00
+    }
+    #[doc = "0x1bc - Receive FIFO0 mailbox data1 register"]
+    #[inline(always)]
+    pub const fn rfifomdata10(&self) -> &RFIFOMDATA10 {
+        &self.rfifomdata10
+    }
+    #[doc = "0x1c0 - Receive FIFO1 mailbox identifier register"]
+    #[inline(always)]
+    pub const fn rfifomi1(&self) -> &RFIFOMI1 {
+        &self.rfifomi1
+    }
+    #[doc = "0x1c4 - Receive FIFO1 mailbox property register"]
+    #[inline(always)]
+    pub const fn rfifomp1(&self) -> &RFIFOMP1 {
+        &self.rfifomp1
+    }
+    #[doc = "0x1c8 - Receive FIFO1 mailbox data0 register"]
+    #[inline(always)]
+    pub const fn rfifomdata01(&self) -> &RFIFOMDATA01 {
+        &self.rfifomdata01
+    }
+    #[doc = "0x1cc - Receive FIFO1 mailbox data1 register"]
+    #[inline(always)]
+    pub const fn rfifomdata11(&self) -> &RFIFOMDATA11 {
+        &self.rfifomdata11
+    }
+    #[doc = "0x200 - Filter control register"]
+    #[inline(always)]
+    pub const fn fctl(&self) -> &FCTL {
+        &self.fctl
+    }
+    #[doc = "0x204 - Filter mode configuration register"]
+    #[inline(always)]
+    pub const fn fmcfg(&self) -> &FMCFG {
+        &self.fmcfg
+    }
+    #[doc = "0x20c - Filter scale configuration register"]
+    #[inline(always)]
+    pub const fn fscfg(&self) -> &FSCFG {
+        &self.fscfg
+    }
+    #[doc = "0x214 - Filter associated FIFO register"]
+    #[inline(always)]
+    pub const fn fafifo(&self) -> &FAFIFO {
+        &self.fafifo
+    }
+    #[doc = "0x21c - Filter working register"]
+    #[inline(always)]
+    pub const fn fw(&self) -> &FW {
+        &self.fw
+    }
     #[doc = "0x240 - Filter 0 data 0 register"]
-    pub f0data0: F0DATA0,
+    #[inline(always)]
+    pub const fn f0data0(&self) -> &F0DATA0 {
+        &self.f0data0
+    }
     #[doc = "0x244 - Filter 0 data 1 register"]
-    pub f0data1: F0DATA1,
+    #[inline(always)]
+    pub const fn f0data1(&self) -> &F0DATA1 {
+        &self.f0data1
+    }
     #[doc = "0x248 - Filter 1 data 0 register"]
-    pub f1data0: F1DATA0,
+    #[inline(always)]
+    pub const fn f1data0(&self) -> &F1DATA0 {
+        &self.f1data0
+    }
     #[doc = "0x24c - Filter 1 data 1 register"]
-    pub f1data1: F1DATA1,
+    #[inline(always)]
+    pub const fn f1data1(&self) -> &F1DATA1 {
+        &self.f1data1
+    }
     #[doc = "0x250 - Filter 2 data 0 register"]
-    pub f2data0: F2DATA0,
+    #[inline(always)]
+    pub const fn f2data0(&self) -> &F2DATA0 {
+        &self.f2data0
+    }
     #[doc = "0x254 - Filter 2 data 1 register"]
-    pub f2data1: F2DATA1,
+    #[inline(always)]
+    pub const fn f2data1(&self) -> &F2DATA1 {
+        &self.f2data1
+    }
     #[doc = "0x258 - Filter 3 data 0 register"]
-    pub f3data0: F3DATA0,
+    #[inline(always)]
+    pub const fn f3data0(&self) -> &F3DATA0 {
+        &self.f3data0
+    }
     #[doc = "0x25c - Filter 3 data 1 register"]
-    pub f3data1: F3DATA1,
+    #[inline(always)]
+    pub const fn f3data1(&self) -> &F3DATA1 {
+        &self.f3data1
+    }
     #[doc = "0x260 - Filter 4 data 0 register"]
-    pub f4data0: F4DATA0,
+    #[inline(always)]
+    pub const fn f4data0(&self) -> &F4DATA0 {
+        &self.f4data0
+    }
     #[doc = "0x264 - Filter 4 data 1 register"]
-    pub f4data1: F4DATA1,
+    #[inline(always)]
+    pub const fn f4data1(&self) -> &F4DATA1 {
+        &self.f4data1
+    }
     #[doc = "0x268 - Filter 5 data 0 register"]
-    pub f5data0: F5DATA0,
+    #[inline(always)]
+    pub const fn f5data0(&self) -> &F5DATA0 {
+        &self.f5data0
+    }
     #[doc = "0x26c - Filter 5 data 1 register"]
-    pub f5data1: F5DATA1,
+    #[inline(always)]
+    pub const fn f5data1(&self) -> &F5DATA1 {
+        &self.f5data1
+    }
     #[doc = "0x270 - Filter 6 data 0 register"]
-    pub f6data0: F6DATA0,
+    #[inline(always)]
+    pub const fn f6data0(&self) -> &F6DATA0 {
+        &self.f6data0
+    }
     #[doc = "0x274 - Filter 6 data 1 register"]
-    pub f6data1: F6DATA1,
+    #[inline(always)]
+    pub const fn f6data1(&self) -> &F6DATA1 {
+        &self.f6data1
+    }
     #[doc = "0x278 - Filter 7 data 0 register"]
-    pub f7data0: F7DATA0,
+    #[inline(always)]
+    pub const fn f7data0(&self) -> &F7DATA0 {
+        &self.f7data0
+    }
     #[doc = "0x27c - Filter 7 data 1 register"]
-    pub f7data1: F7DATA1,
+    #[inline(always)]
+    pub const fn f7data1(&self) -> &F7DATA1 {
+        &self.f7data1
+    }
     #[doc = "0x280 - Filter 8 data 0 register"]
-    pub f8data0: F8DATA0,
+    #[inline(always)]
+    pub const fn f8data0(&self) -> &F8DATA0 {
+        &self.f8data0
+    }
     #[doc = "0x284 - Filter 8 data 1 register"]
-    pub f8data1: F8DATA1,
+    #[inline(always)]
+    pub const fn f8data1(&self) -> &F8DATA1 {
+        &self.f8data1
+    }
     #[doc = "0x288 - Filter 9 data 0 register"]
-    pub f9data0: F9DATA0,
+    #[inline(always)]
+    pub const fn f9data0(&self) -> &F9DATA0 {
+        &self.f9data0
+    }
     #[doc = "0x28c - Filter 9 data 1 register"]
-    pub f9data1: F9DATA1,
+    #[inline(always)]
+    pub const fn f9data1(&self) -> &F9DATA1 {
+        &self.f9data1
+    }
     #[doc = "0x290 - Filter 10 data 0 register"]
-    pub f10data0: F10DATA0,
+    #[inline(always)]
+    pub const fn f10data0(&self) -> &F10DATA0 {
+        &self.f10data0
+    }
     #[doc = "0x294 - Filter 10 data 1 register"]
-    pub f10data1: F10DATA1,
+    #[inline(always)]
+    pub const fn f10data1(&self) -> &F10DATA1 {
+        &self.f10data1
+    }
     #[doc = "0x298 - Filter 11 data 0 register"]
-    pub f11data0: F11DATA0,
+    #[inline(always)]
+    pub const fn f11data0(&self) -> &F11DATA0 {
+        &self.f11data0
+    }
     #[doc = "0x29c - Filter 11 data 1 register"]
-    pub f11data1: F11DATA1,
+    #[inline(always)]
+    pub const fn f11data1(&self) -> &F11DATA1 {
+        &self.f11data1
+    }
     #[doc = "0x2a0 - Filter 12 data 0 register"]
-    pub f12data0: F12DATA0,
+    #[inline(always)]
+    pub const fn f12data0(&self) -> &F12DATA0 {
+        &self.f12data0
+    }
     #[doc = "0x2a4 - Filter 12 data 1 register"]
-    pub f12data1: F12DATA1,
+    #[inline(always)]
+    pub const fn f12data1(&self) -> &F12DATA1 {
+        &self.f12data1
+    }
     #[doc = "0x2a8 - Filter 13 data 0 register"]
-    pub f13data0: F13DATA0,
+    #[inline(always)]
+    pub const fn f13data0(&self) -> &F13DATA0 {
+        &self.f13data0
+    }
     #[doc = "0x2ac - Filter 13 data 1 register"]
-    pub f13data1: F13DATA1,
+    #[inline(always)]
+    pub const fn f13data1(&self) -> &F13DATA1 {
+        &self.f13data1
+    }
     #[doc = "0x2b0 - Filter 14 data 0 register"]
-    pub f14data0: F14DATA0,
+    #[inline(always)]
+    pub const fn f14data0(&self) -> &F14DATA0 {
+        &self.f14data0
+    }
     #[doc = "0x2b4 - Filter 14 data 1 register"]
-    pub f14data1: F14DATA1,
+    #[inline(always)]
+    pub const fn f14data1(&self) -> &F14DATA1 {
+        &self.f14data1
+    }
     #[doc = "0x2b8 - Filter 15 data 0 register"]
-    pub f15data0: F15DATA0,
+    #[inline(always)]
+    pub const fn f15data0(&self) -> &F15DATA0 {
+        &self.f15data0
+    }
     #[doc = "0x2bc - Filter 15 data 1 register"]
-    pub f15data1: F15DATA1,
+    #[inline(always)]
+    pub const fn f15data1(&self) -> &F15DATA1 {
+        &self.f15data1
+    }
     #[doc = "0x2c0 - Filter 16 data 0 register"]
-    pub f16data0: F16DATA0,
+    #[inline(always)]
+    pub const fn f16data0(&self) -> &F16DATA0 {
+        &self.f16data0
+    }
     #[doc = "0x2c4 - Filter 16 data 1 register"]
-    pub f16data1: F16DATA1,
+    #[inline(always)]
+    pub const fn f16data1(&self) -> &F16DATA1 {
+        &self.f16data1
+    }
     #[doc = "0x2c8 - Filter 17 data 0 register"]
-    pub f17data0: F17DATA0,
+    #[inline(always)]
+    pub const fn f17data0(&self) -> &F17DATA0 {
+        &self.f17data0
+    }
     #[doc = "0x2cc - Filter 17 data 1 register"]
-    pub f17data1: F17DATA1,
+    #[inline(always)]
+    pub const fn f17data1(&self) -> &F17DATA1 {
+        &self.f17data1
+    }
     #[doc = "0x2d0 - Filter 18 data 0 register"]
-    pub f18data0: F18DATA0,
+    #[inline(always)]
+    pub const fn f18data0(&self) -> &F18DATA0 {
+        &self.f18data0
+    }
     #[doc = "0x2d4 - Filter 18 data 1 register"]
-    pub f18data1: F18DATA1,
+    #[inline(always)]
+    pub const fn f18data1(&self) -> &F18DATA1 {
+        &self.f18data1
+    }
     #[doc = "0x2d8 - Filter 19 data 0 register"]
-    pub f19data0: F19DATA0,
+    #[inline(always)]
+    pub const fn f19data0(&self) -> &F19DATA0 {
+        &self.f19data0
+    }
     #[doc = "0x2dc - Filter 19 data 1 register"]
-    pub f19data1: F19DATA1,
+    #[inline(always)]
+    pub const fn f19data1(&self) -> &F19DATA1 {
+        &self.f19data1
+    }
     #[doc = "0x2e0 - Filter 20 data 0 register"]
-    pub f20data0: F20DATA0,
+    #[inline(always)]
+    pub const fn f20data0(&self) -> &F20DATA0 {
+        &self.f20data0
+    }
     #[doc = "0x2e4 - Filter 20 data 1 register"]
-    pub f20data1: F20DATA1,
+    #[inline(always)]
+    pub const fn f20data1(&self) -> &F20DATA1 {
+        &self.f20data1
+    }
     #[doc = "0x2e8 - Filter 21 data 0 register"]
-    pub f21data0: F21DATA0,
+    #[inline(always)]
+    pub const fn f21data0(&self) -> &F21DATA0 {
+        &self.f21data0
+    }
     #[doc = "0x2ec - Filter 21 data 1 register"]
-    pub f21data1: F21DATA1,
+    #[inline(always)]
+    pub const fn f21data1(&self) -> &F21DATA1 {
+        &self.f21data1
+    }
     #[doc = "0x2f0 - Filter 22 data 0 register"]
-    pub f22data0: F22DATA0,
+    #[inline(always)]
+    pub const fn f22data0(&self) -> &F22DATA0 {
+        &self.f22data0
+    }
     #[doc = "0x2f4 - Filter 22 data 1 register"]
-    pub f22data1: F22DATA1,
+    #[inline(always)]
+    pub const fn f22data1(&self) -> &F22DATA1 {
+        &self.f22data1
+    }
     #[doc = "0x2f8 - Filter 23 data 0 register"]
-    pub f23data0: F23DATA0,
+    #[inline(always)]
+    pub const fn f23data0(&self) -> &F23DATA0 {
+        &self.f23data0
+    }
     #[doc = "0x2fc - Filter 23 data 1 register"]
-    pub f23data1: F23DATA1,
+    #[inline(always)]
+    pub const fn f23data1(&self) -> &F23DATA1 {
+        &self.f23data1
+    }
     #[doc = "0x300 - Filter 24 data 0 register"]
-    pub f24data0: F24DATA0,
+    #[inline(always)]
+    pub const fn f24data0(&self) -> &F24DATA0 {
+        &self.f24data0
+    }
     #[doc = "0x304 - Filter 24 data 1 register"]
-    pub f24data1: F24DATA1,
+    #[inline(always)]
+    pub const fn f24data1(&self) -> &F24DATA1 {
+        &self.f24data1
+    }
     #[doc = "0x308 - Filter 25 data 0 register"]
-    pub f25data0: F25DATA0,
+    #[inline(always)]
+    pub const fn f25data0(&self) -> &F25DATA0 {
+        &self.f25data0
+    }
     #[doc = "0x30c - Filter 25 data 1 register"]
-    pub f25data1: F25DATA1,
+    #[inline(always)]
+    pub const fn f25data1(&self) -> &F25DATA1 {
+        &self.f25data1
+    }
     #[doc = "0x310 - Filter 26 data 0 register"]
-    pub f26data0: F26DATA0,
+    #[inline(always)]
+    pub const fn f26data0(&self) -> &F26DATA0 {
+        &self.f26data0
+    }
     #[doc = "0x314 - Filter 26 data 1 register"]
-    pub f26data1: F26DATA1,
+    #[inline(always)]
+    pub const fn f26data1(&self) -> &F26DATA1 {
+        &self.f26data1
+    }
     #[doc = "0x318 - Filter 27 data 0 register"]
-    pub f27data0: F27DATA0,
+    #[inline(always)]
+    pub const fn f27data0(&self) -> &F27DATA0 {
+        &self.f27data0
+    }
     #[doc = "0x31c - Filter 27 data 1 register"]
-    pub f27data1: F27DATA1,
+    #[inline(always)]
+    pub const fn f27data1(&self) -> &F27DATA1 {
+        &self.f27data1
+    }
 }
 #[doc = "CTL (rw) register accessor: Control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctl`]
 module"]

@@ -207,5 +207,5 @@ impl crate::RegisterSpec for INTF_SPEC {
 impl crate::Readable for INTF_SPEC {}
 #[doc = "`reset()` method sets INTF to value 0"]
 impl crate::Resettable for INTF_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

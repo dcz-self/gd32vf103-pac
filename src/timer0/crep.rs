@@ -5,7 +5,7 @@ pub type W = crate::W<CREP_SPEC>;
 #[doc = "Field `CREP` reader - Counter repetition value"]
 pub type CREP_R = crate::FieldReader;
 #[doc = "Field `CREP` writer - Counter repetition value"]
-pub type CREP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CREP_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Counter repetition value"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bits 0:7 - Counter repetition value"]
     #[inline(always)]
     #[must_use]
-    pub fn crep(&mut self) -> CREP_W<CREP_SPEC, 0> {
-        CREP_W::new(self)
+    pub fn crep(&mut self) -> CREP_W<CREP_SPEC> {
+        CREP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for CREP_SPEC {
 impl crate::Readable for CREP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`crep::W`](W) writer structure"]
 impl crate::Writable for CREP_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets CREP to value 0"]
 impl crate::Resettable for CREP_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

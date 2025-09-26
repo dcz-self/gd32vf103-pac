@@ -5,19 +5,19 @@ pub type W = crate::W<DCFG_SPEC>;
 #[doc = "Field `DS` reader - Device speed"]
 pub type DS_R = crate::FieldReader;
 #[doc = "Field `DS` writer - Device speed"]
-pub type DS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `NZLSOH` reader - Non-zero-length status OUT handshake"]
 pub type NZLSOH_R = crate::BitReader;
 #[doc = "Field `NZLSOH` writer - Non-zero-length status OUT handshake"]
-pub type NZLSOH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NZLSOH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DAR` reader - Device address"]
 pub type DAR_R = crate::FieldReader;
 #[doc = "Field `DAR` writer - Device address"]
-pub type DAR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type DAR_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `EOPFT` reader - end of periodic frame time"]
 pub type EOPFT_R = crate::FieldReader;
 #[doc = "Field `EOPFT` writer - end of periodic frame time"]
-pub type EOPFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type EOPFT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - Device speed"]
     #[inline(always)]
@@ -44,26 +44,26 @@ impl W {
     #[doc = "Bits 0:1 - Device speed"]
     #[inline(always)]
     #[must_use]
-    pub fn ds(&mut self) -> DS_W<DCFG_SPEC, 0> {
-        DS_W::new(self)
+    pub fn ds(&mut self) -> DS_W<DCFG_SPEC> {
+        DS_W::new(self, 0)
     }
     #[doc = "Bit 2 - Non-zero-length status OUT handshake"]
     #[inline(always)]
     #[must_use]
-    pub fn nzlsoh(&mut self) -> NZLSOH_W<DCFG_SPEC, 2> {
-        NZLSOH_W::new(self)
+    pub fn nzlsoh(&mut self) -> NZLSOH_W<DCFG_SPEC> {
+        NZLSOH_W::new(self, 2)
     }
     #[doc = "Bits 4:10 - Device address"]
     #[inline(always)]
     #[must_use]
-    pub fn dar(&mut self) -> DAR_W<DCFG_SPEC, 4> {
-        DAR_W::new(self)
+    pub fn dar(&mut self) -> DAR_W<DCFG_SPEC> {
+        DAR_W::new(self, 4)
     }
     #[doc = "Bits 11:12 - end of periodic frame time"]
     #[inline(always)]
     #[must_use]
-    pub fn eopft(&mut self) -> EOPFT_W<DCFG_SPEC, 11> {
-        EOPFT_W::new(self)
+    pub fn eopft(&mut self) -> EOPFT_W<DCFG_SPEC> {
+        EOPFT_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -85,10 +85,10 @@ impl crate::RegisterSpec for DCFG_SPEC {
 impl crate::Readable for DCFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dcfg::W`](W) writer structure"]
 impl crate::Writable for DCFG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DCFG to value 0"]
 impl crate::Resettable for DCFG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

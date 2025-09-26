@@ -5,7 +5,7 @@ pub type W = crate::W<DVBUSPT_SPEC>;
 #[doc = "Field `DVBUSPT` reader - Device VBUS pulsing time"]
 pub type DVBUSPT_R = crate::FieldReader<u16>;
 #[doc = "Field `DVBUSPT` writer - Device VBUS pulsing time"]
-pub type DVBUSPT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type DVBUSPT_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 impl R {
     #[doc = "Bits 0:11 - Device VBUS pulsing time"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bits 0:11 - Device VBUS pulsing time"]
     #[inline(always)]
     #[must_use]
-    pub fn dvbuspt(&mut self) -> DVBUSPT_W<DVBUSPT_SPEC, 0> {
-        DVBUSPT_W::new(self)
+    pub fn dvbuspt(&mut self) -> DVBUSPT_W<DVBUSPT_SPEC> {
+        DVBUSPT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for DVBUSPT_SPEC {
 impl crate::Readable for DVBUSPT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dvbuspt::W`](W) writer structure"]
 impl crate::Writable for DVBUSPT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DVBUSPT to value 0x05b8"]
 impl crate::Resettable for DVBUSPT_SPEC {
-    const RESET_VALUE: Self::Ux = 0x05b8;
+    const RESET_VALUE: u32 = 0x05b8;
 }

@@ -5,7 +5,7 @@ pub type W = crate::W<CNTH_SPEC>;
 #[doc = "Field `CNT` reader - RTC counter value high"]
 pub type CNT_R = crate::FieldReader<u16>;
 #[doc = "Field `CNT` writer - RTC counter value high"]
-pub type CNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type CNT_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - RTC counter value high"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bits 0:15 - RTC counter value high"]
     #[inline(always)]
     #[must_use]
-    pub fn cnt(&mut self) -> CNT_W<CNTH_SPEC, 0> {
-        CNT_W::new(self)
+    pub fn cnt(&mut self) -> CNT_W<CNTH_SPEC> {
+        CNT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for CNTH_SPEC {
 impl crate::Readable for CNTH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cnth::W`](W) writer structure"]
 impl crate::Writable for CNTH_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CNTH to value 0"]
 impl crate::Resettable for CNTH_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

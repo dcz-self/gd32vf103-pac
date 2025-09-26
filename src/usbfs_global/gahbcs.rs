@@ -5,15 +5,15 @@ pub type W = crate::W<GAHBCS_SPEC>;
 #[doc = "Field `GINTEN` reader - Global interrupt enable"]
 pub type GINTEN_R = crate::BitReader;
 #[doc = "Field `GINTEN` writer - Global interrupt enable"]
-pub type GINTEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GINTEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXFTH` reader - Tx FIFO threshold"]
 pub type TXFTH_R = crate::BitReader;
 #[doc = "Field `TXFTH` writer - Tx FIFO threshold"]
-pub type TXFTH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXFTH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PTXFTH` reader - Periodic Tx FIFO threshold"]
 pub type PTXFTH_R = crate::BitReader;
 #[doc = "Field `PTXFTH` writer - Periodic Tx FIFO threshold"]
-pub type PTXFTH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PTXFTH_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Global interrupt enable"]
     #[inline(always)]
@@ -35,20 +35,20 @@ impl W {
     #[doc = "Bit 0 - Global interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ginten(&mut self) -> GINTEN_W<GAHBCS_SPEC, 0> {
-        GINTEN_W::new(self)
+    pub fn ginten(&mut self) -> GINTEN_W<GAHBCS_SPEC> {
+        GINTEN_W::new(self, 0)
     }
     #[doc = "Bit 7 - Tx FIFO threshold"]
     #[inline(always)]
     #[must_use]
-    pub fn txfth(&mut self) -> TXFTH_W<GAHBCS_SPEC, 7> {
-        TXFTH_W::new(self)
+    pub fn txfth(&mut self) -> TXFTH_W<GAHBCS_SPEC> {
+        TXFTH_W::new(self, 7)
     }
     #[doc = "Bit 8 - Periodic Tx FIFO threshold"]
     #[inline(always)]
     #[must_use]
-    pub fn ptxfth(&mut self) -> PTXFTH_W<GAHBCS_SPEC, 8> {
-        PTXFTH_W::new(self)
+    pub fn ptxfth(&mut self) -> PTXFTH_W<GAHBCS_SPEC> {
+        PTXFTH_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -70,10 +70,10 @@ impl crate::RegisterSpec for GAHBCS_SPEC {
 impl crate::Readable for GAHBCS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gahbcs::W`](W) writer structure"]
 impl crate::Writable for GAHBCS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GAHBCS to value 0"]
 impl crate::Resettable for GAHBCS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

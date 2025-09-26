@@ -1,14 +1,32 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct CLICINTS {
+    clicintip: CLICINTIP,
+    clicintie: CLICINTIE,
+    clicintattr: CLICINTATTR,
+    clicintctl: CLICINTCTL,
+}
+impl CLICINTS {
     #[doc = "0x00 - clicintip Register"]
-    pub clicintip: CLICINTIP,
+    #[inline(always)]
+    pub const fn clicintip(&self) -> &CLICINTIP {
+        &self.clicintip
+    }
     #[doc = "0x01 - clicintie Register"]
-    pub clicintie: CLICINTIE,
+    #[inline(always)]
+    pub const fn clicintie(&self) -> &CLICINTIE {
+        &self.clicintie
+    }
     #[doc = "0x02 - clicintattr Register"]
-    pub clicintattr: CLICINTATTR,
+    #[inline(always)]
+    pub const fn clicintattr(&self) -> &CLICINTATTR {
+        &self.clicintattr
+    }
     #[doc = "0x03 - clicintctl Register"]
-    pub clicintctl: CLICINTCTL,
+    #[inline(always)]
+    pub const fn clicintctl(&self) -> &CLICINTCTL {
+        &self.clicintctl
+    }
 }
 #[doc = "CLICINTIP (rw) register accessor: clicintip Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clicintip::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clicintip::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clicintip`]
 module"]

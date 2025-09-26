@@ -19,31 +19,31 @@ pub type TBE_R = crate::BitReader;
 #[doc = "Field `BERR` reader - A bus error occurs indication a unexpected START or STOP condition on I2C bus"]
 pub type BERR_R = crate::BitReader;
 #[doc = "Field `BERR` writer - A bus error occurs indication a unexpected START or STOP condition on I2C bus"]
-pub type BERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LOSTARB` reader - Arbitration Lost in master mode"]
 pub type LOSTARB_R = crate::BitReader;
 #[doc = "Field `LOSTARB` writer - Arbitration Lost in master mode"]
-pub type LOSTARB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LOSTARB_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AERR` reader - Acknowledge error"]
 pub type AERR_R = crate::BitReader;
 #[doc = "Field `AERR` writer - Acknowledge error"]
-pub type AERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUERR` reader - Over-run or under-run situation occurs in slave mode"]
 pub type OUERR_R = crate::BitReader;
 #[doc = "Field `OUERR` writer - Over-run or under-run situation occurs in slave mode"]
-pub type OUERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PECERR` reader - PEC error when receiving data"]
 pub type PECERR_R = crate::BitReader;
 #[doc = "Field `PECERR` writer - PEC error when receiving data"]
-pub type PECERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PECERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SMBTO` reader - Timeout signal in SMBus mode"]
 pub type SMBTO_R = crate::BitReader;
 #[doc = "Field `SMBTO` writer - Timeout signal in SMBus mode"]
-pub type SMBTO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SMBTO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SMBALT` reader - SMBus Alert status"]
 pub type SMBALT_R = crate::BitReader;
 #[doc = "Field `SMBALT` writer - SMBus Alert status"]
-pub type SMBALT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SMBALT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - START condition sent out in master mode"]
     #[inline(always)]
@@ -120,44 +120,44 @@ impl W {
     #[doc = "Bit 8 - A bus error occurs indication a unexpected START or STOP condition on I2C bus"]
     #[inline(always)]
     #[must_use]
-    pub fn berr(&mut self) -> BERR_W<STAT0_SPEC, 8> {
-        BERR_W::new(self)
+    pub fn berr(&mut self) -> BERR_W<STAT0_SPEC> {
+        BERR_W::new(self, 8)
     }
     #[doc = "Bit 9 - Arbitration Lost in master mode"]
     #[inline(always)]
     #[must_use]
-    pub fn lostarb(&mut self) -> LOSTARB_W<STAT0_SPEC, 9> {
-        LOSTARB_W::new(self)
+    pub fn lostarb(&mut self) -> LOSTARB_W<STAT0_SPEC> {
+        LOSTARB_W::new(self, 9)
     }
     #[doc = "Bit 10 - Acknowledge error"]
     #[inline(always)]
     #[must_use]
-    pub fn aerr(&mut self) -> AERR_W<STAT0_SPEC, 10> {
-        AERR_W::new(self)
+    pub fn aerr(&mut self) -> AERR_W<STAT0_SPEC> {
+        AERR_W::new(self, 10)
     }
     #[doc = "Bit 11 - Over-run or under-run situation occurs in slave mode"]
     #[inline(always)]
     #[must_use]
-    pub fn ouerr(&mut self) -> OUERR_W<STAT0_SPEC, 11> {
-        OUERR_W::new(self)
+    pub fn ouerr(&mut self) -> OUERR_W<STAT0_SPEC> {
+        OUERR_W::new(self, 11)
     }
     #[doc = "Bit 12 - PEC error when receiving data"]
     #[inline(always)]
     #[must_use]
-    pub fn pecerr(&mut self) -> PECERR_W<STAT0_SPEC, 12> {
-        PECERR_W::new(self)
+    pub fn pecerr(&mut self) -> PECERR_W<STAT0_SPEC> {
+        PECERR_W::new(self, 12)
     }
     #[doc = "Bit 14 - Timeout signal in SMBus mode"]
     #[inline(always)]
     #[must_use]
-    pub fn smbto(&mut self) -> SMBTO_W<STAT0_SPEC, 14> {
-        SMBTO_W::new(self)
+    pub fn smbto(&mut self) -> SMBTO_W<STAT0_SPEC> {
+        SMBTO_W::new(self, 14)
     }
     #[doc = "Bit 15 - SMBus Alert status"]
     #[inline(always)]
     #[must_use]
-    pub fn smbalt(&mut self) -> SMBALT_W<STAT0_SPEC, 15> {
-        SMBALT_W::new(self)
+    pub fn smbalt(&mut self) -> SMBALT_W<STAT0_SPEC> {
+        SMBALT_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -179,10 +179,10 @@ impl crate::RegisterSpec for STAT0_SPEC {
 impl crate::Readable for STAT0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`stat0::W`](W) writer structure"]
 impl crate::Writable for STAT0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets STAT0 to value 0"]
 impl crate::Resettable for STAT0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

@@ -18,5 +18,5 @@ impl crate::RegisterSpec for DIVL_SPEC {
 impl crate::Readable for DIVL_SPEC {}
 #[doc = "`reset()` method sets DIVL to value 0x8000"]
 impl crate::Resettable for DIVL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x8000;
+    const RESET_VALUE: u32 = 0x8000;
 }

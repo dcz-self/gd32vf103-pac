@@ -5,7 +5,7 @@ pub type W = crate::W<MSTOP_SPEC>;
 #[doc = "Field `TIMESTOP` reader - Pause (1) or run (0) the timer"]
 pub type TIMESTOP_R = crate::BitReader;
 #[doc = "Field `TIMESTOP` writer - Pause (1) or run (0) the timer"]
-pub type TIMESTOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMESTOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Pause (1) or run (0) the timer"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bit 0 - Pause (1) or run (0) the timer"]
     #[inline(always)]
     #[must_use]
-    pub fn timestop(&mut self) -> TIMESTOP_W<MSTOP_SPEC, 0> {
-        TIMESTOP_W::new(self)
+    pub fn timestop(&mut self) -> TIMESTOP_W<MSTOP_SPEC> {
+        TIMESTOP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for MSTOP_SPEC {
 impl crate::Readable for MSTOP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mstop::W`](W) writer structure"]
 impl crate::Writable for MSTOP_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets mstop to value 0"]
 impl crate::Resettable for MSTOP_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

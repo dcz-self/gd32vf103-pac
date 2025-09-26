@@ -5,7 +5,7 @@ pub type W = crate::W<RT_SPEC>;
 #[doc = "Field `RISETIME` reader - Maximum rise time in master mode"]
 pub type RISETIME_R = crate::FieldReader;
 #[doc = "Field `RISETIME` writer - Maximum rise time in master mode"]
-pub type RISETIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type RISETIME_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5 - Maximum rise time in master mode"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bits 0:5 - Maximum rise time in master mode"]
     #[inline(always)]
     #[must_use]
-    pub fn risetime(&mut self) -> RISETIME_W<RT_SPEC, 0> {
-        RISETIME_W::new(self)
+    pub fn risetime(&mut self) -> RISETIME_W<RT_SPEC> {
+        RISETIME_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for RT_SPEC {
 impl crate::Readable for RT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rt::W`](W) writer structure"]
 impl crate::Writable for RT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets RT to value 0x02"]
 impl crate::Resettable for RT_SPEC {
-    const RESET_VALUE: Self::Ux = 0x02;
+    const RESET_VALUE: u16 = 0x02;
 }

@@ -5,27 +5,27 @@ pub type W = crate::W<CTL2_SPEC>;
 #[doc = "Field `ERRIE` reader - Error interrupt enable"]
 pub type ERRIE_R = crate::BitReader;
 #[doc = "Field `ERRIE` writer - Error interrupt enable"]
-pub type ERRIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERRIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IREN` reader - IrDA mode enable"]
 pub type IREN_R = crate::BitReader;
 #[doc = "Field `IREN` writer - IrDA mode enable"]
-pub type IREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IREN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IRLP` reader - IrDA low-power"]
 pub type IRLP_R = crate::BitReader;
 #[doc = "Field `IRLP` writer - IrDA low-power"]
-pub type IRLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IRLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDEN` reader - Half-duplex selection"]
 pub type HDEN_R = crate::BitReader;
 #[doc = "Field `HDEN` writer - Half-duplex selection"]
-pub type HDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DENR` reader - DMA request enable for reception"]
 pub type DENR_R = crate::BitReader;
 #[doc = "Field `DENR` writer - DMA request enable for reception"]
-pub type DENR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DENR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DENT` reader - DMA request enable for transmission"]
 pub type DENT_R = crate::BitReader;
 #[doc = "Field `DENT` writer - DMA request enable for transmission"]
-pub type DENT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DENT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Error interrupt enable"]
     #[inline(always)]
@@ -62,38 +62,38 @@ impl W {
     #[doc = "Bit 0 - Error interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn errie(&mut self) -> ERRIE_W<CTL2_SPEC, 0> {
-        ERRIE_W::new(self)
+    pub fn errie(&mut self) -> ERRIE_W<CTL2_SPEC> {
+        ERRIE_W::new(self, 0)
     }
     #[doc = "Bit 1 - IrDA mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn iren(&mut self) -> IREN_W<CTL2_SPEC, 1> {
-        IREN_W::new(self)
+    pub fn iren(&mut self) -> IREN_W<CTL2_SPEC> {
+        IREN_W::new(self, 1)
     }
     #[doc = "Bit 2 - IrDA low-power"]
     #[inline(always)]
     #[must_use]
-    pub fn irlp(&mut self) -> IRLP_W<CTL2_SPEC, 2> {
-        IRLP_W::new(self)
+    pub fn irlp(&mut self) -> IRLP_W<CTL2_SPEC> {
+        IRLP_W::new(self, 2)
     }
     #[doc = "Bit 3 - Half-duplex selection"]
     #[inline(always)]
     #[must_use]
-    pub fn hden(&mut self) -> HDEN_W<CTL2_SPEC, 3> {
-        HDEN_W::new(self)
+    pub fn hden(&mut self) -> HDEN_W<CTL2_SPEC> {
+        HDEN_W::new(self, 3)
     }
     #[doc = "Bit 6 - DMA request enable for reception"]
     #[inline(always)]
     #[must_use]
-    pub fn denr(&mut self) -> DENR_W<CTL2_SPEC, 6> {
-        DENR_W::new(self)
+    pub fn denr(&mut self) -> DENR_W<CTL2_SPEC> {
+        DENR_W::new(self, 6)
     }
     #[doc = "Bit 7 - DMA request enable for transmission"]
     #[inline(always)]
     #[must_use]
-    pub fn dent(&mut self) -> DENT_W<CTL2_SPEC, 7> {
-        DENT_W::new(self)
+    pub fn dent(&mut self) -> DENT_W<CTL2_SPEC> {
+        DENT_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -115,10 +115,10 @@ impl crate::RegisterSpec for CTL2_SPEC {
 impl crate::Readable for CTL2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctl2::W`](W) writer structure"]
 impl crate::Writable for CTL2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTL2 to value 0"]
 impl crate::Resettable for CTL2_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

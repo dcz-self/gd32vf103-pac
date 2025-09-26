@@ -39,5 +39,5 @@ impl crate::RegisterSpec for GRSTATP_DEVICE_SPEC {
 impl crate::Readable for GRSTATP_DEVICE_SPEC {}
 #[doc = "`reset()` method sets GRSTATP_Device to value 0"]
 impl crate::Resettable for GRSTATP_DEVICE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

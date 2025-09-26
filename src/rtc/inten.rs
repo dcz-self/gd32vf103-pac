@@ -5,15 +5,15 @@ pub type W = crate::W<INTEN_SPEC>;
 #[doc = "Field `SCIE` reader - Second interrupt"]
 pub type SCIE_R = crate::BitReader;
 #[doc = "Field `SCIE` writer - Second interrupt"]
-pub type SCIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ALRMIE` reader - Alarm interrupt enable"]
 pub type ALRMIE_R = crate::BitReader;
 #[doc = "Field `ALRMIE` writer - Alarm interrupt enable"]
-pub type ALRMIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ALRMIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OVIE` reader - Overflow interrupt enable"]
 pub type OVIE_R = crate::BitReader;
 #[doc = "Field `OVIE` writer - Overflow interrupt enable"]
-pub type OVIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Second interrupt"]
     #[inline(always)]
@@ -35,20 +35,20 @@ impl W {
     #[doc = "Bit 0 - Second interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn scie(&mut self) -> SCIE_W<INTEN_SPEC, 0> {
-        SCIE_W::new(self)
+    pub fn scie(&mut self) -> SCIE_W<INTEN_SPEC> {
+        SCIE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Alarm interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn alrmie(&mut self) -> ALRMIE_W<INTEN_SPEC, 1> {
-        ALRMIE_W::new(self)
+    pub fn alrmie(&mut self) -> ALRMIE_W<INTEN_SPEC> {
+        ALRMIE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Overflow interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ovie(&mut self) -> OVIE_W<INTEN_SPEC, 2> {
-        OVIE_W::new(self)
+    pub fn ovie(&mut self) -> OVIE_W<INTEN_SPEC> {
+        OVIE_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -70,10 +70,10 @@ impl crate::RegisterSpec for INTEN_SPEC {
 impl crate::Readable for INTEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`inten::W`](W) writer structure"]
 impl crate::Writable for INTEN_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INTEN to value 0"]
 impl crate::Resettable for INTEN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

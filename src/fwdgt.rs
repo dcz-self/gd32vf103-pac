@@ -1,14 +1,32 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
+    ctl: CTL,
+    psc: PSC,
+    rld: RLD,
+    stat: STAT,
+}
+impl RegisterBlock {
     #[doc = "0x00 - Control register"]
-    pub ctl: CTL,
+    #[inline(always)]
+    pub const fn ctl(&self) -> &CTL {
+        &self.ctl
+    }
     #[doc = "0x04 - Prescaler register"]
-    pub psc: PSC,
+    #[inline(always)]
+    pub const fn psc(&self) -> &PSC {
+        &self.psc
+    }
     #[doc = "0x08 - Reload register"]
-    pub rld: RLD,
+    #[inline(always)]
+    pub const fn rld(&self) -> &RLD {
+        &self.rld
+    }
     #[doc = "0x0c - Status register"]
-    pub stat: STAT,
+    #[inline(always)]
+    pub const fn stat(&self) -> &STAT {
+        &self.stat
+    }
 }
 #[doc = "CTL (w) register accessor: Control register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctl::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctl`]
 module"]

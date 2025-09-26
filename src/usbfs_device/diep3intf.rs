@@ -5,23 +5,23 @@ pub type W = crate::W<DIEP3INTF_SPEC>;
 #[doc = "Field `TF` reader - Transfer finished"]
 pub type TF_R = crate::BitReader;
 #[doc = "Field `TF` writer - Transfer finished"]
-pub type TF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPDIS` reader - Endpoint finished"]
 pub type EPDIS_R = crate::BitReader;
 #[doc = "Field `EPDIS` writer - Endpoint finished"]
-pub type EPDIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPDIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CITO` reader - Control in timeout interrupt"]
 pub type CITO_R = crate::BitReader;
 #[doc = "Field `CITO` writer - Control in timeout interrupt"]
-pub type CITO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CITO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPTXFUD` reader - Endpoint Tx FIFO underrun"]
 pub type EPTXFUD_R = crate::BitReader;
 #[doc = "Field `EPTXFUD` writer - Endpoint Tx FIFO underrun"]
-pub type EPTXFUD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPTXFUD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IEPNE` reader - IN endpoint NAK effective"]
 pub type IEPNE_R = crate::BitReader;
 #[doc = "Field `IEPNE` writer - IN endpoint NAK effective"]
-pub type IEPNE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IEPNE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXFE` reader - Transmit FIFO empty"]
 pub type TXFE_R = crate::BitReader;
 impl R {
@@ -60,32 +60,32 @@ impl W {
     #[doc = "Bit 0 - Transfer finished"]
     #[inline(always)]
     #[must_use]
-    pub fn tf(&mut self) -> TF_W<DIEP3INTF_SPEC, 0> {
-        TF_W::new(self)
+    pub fn tf(&mut self) -> TF_W<DIEP3INTF_SPEC> {
+        TF_W::new(self, 0)
     }
     #[doc = "Bit 1 - Endpoint finished"]
     #[inline(always)]
     #[must_use]
-    pub fn epdis(&mut self) -> EPDIS_W<DIEP3INTF_SPEC, 1> {
-        EPDIS_W::new(self)
+    pub fn epdis(&mut self) -> EPDIS_W<DIEP3INTF_SPEC> {
+        EPDIS_W::new(self, 1)
     }
     #[doc = "Bit 3 - Control in timeout interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn cito(&mut self) -> CITO_W<DIEP3INTF_SPEC, 3> {
-        CITO_W::new(self)
+    pub fn cito(&mut self) -> CITO_W<DIEP3INTF_SPEC> {
+        CITO_W::new(self, 3)
     }
     #[doc = "Bit 4 - Endpoint Tx FIFO underrun"]
     #[inline(always)]
     #[must_use]
-    pub fn eptxfud(&mut self) -> EPTXFUD_W<DIEP3INTF_SPEC, 4> {
-        EPTXFUD_W::new(self)
+    pub fn eptxfud(&mut self) -> EPTXFUD_W<DIEP3INTF_SPEC> {
+        EPTXFUD_W::new(self, 4)
     }
     #[doc = "Bit 6 - IN endpoint NAK effective"]
     #[inline(always)]
     #[must_use]
-    pub fn iepne(&mut self) -> IEPNE_W<DIEP3INTF_SPEC, 6> {
-        IEPNE_W::new(self)
+    pub fn iepne(&mut self) -> IEPNE_W<DIEP3INTF_SPEC> {
+        IEPNE_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -107,10 +107,10 @@ impl crate::RegisterSpec for DIEP3INTF_SPEC {
 impl crate::Readable for DIEP3INTF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`diep3intf::W`](W) writer structure"]
 impl crate::Writable for DIEP3INTF_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIEP3INTF to value 0x80"]
 impl crate::Resettable for DIEP3INTF_SPEC {
-    const RESET_VALUE: Self::Ux = 0x80;
+    const RESET_VALUE: u32 = 0x80;
 }

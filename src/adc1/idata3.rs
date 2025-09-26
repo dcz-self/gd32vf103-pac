@@ -18,5 +18,5 @@ impl crate::RegisterSpec for IDATA3_SPEC {
 impl crate::Readable for IDATA3_SPEC {}
 #[doc = "`reset()` method sets IDATA3 to value 0"]
 impl crate::Resettable for IDATA3_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

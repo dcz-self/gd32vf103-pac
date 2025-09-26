@@ -5,27 +5,27 @@ pub type W = crate::W<RSQ1_SPEC>;
 #[doc = "Field `RSQ6` reader - 7th conversion in regular sequence"]
 pub type RSQ6_R = crate::FieldReader;
 #[doc = "Field `RSQ6` writer - 7th conversion in regular sequence"]
-pub type RSQ6_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type RSQ6_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `RSQ7` reader - 8th conversion in regular sequence"]
 pub type RSQ7_R = crate::FieldReader;
 #[doc = "Field `RSQ7` writer - 8th conversion in regular sequence"]
-pub type RSQ7_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type RSQ7_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `RSQ8` reader - 9th conversion in regular sequence"]
 pub type RSQ8_R = crate::FieldReader;
 #[doc = "Field `RSQ8` writer - 9th conversion in regular sequence"]
-pub type RSQ8_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type RSQ8_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `RSQ9` reader - 10th conversion in regular sequence"]
 pub type RSQ9_R = crate::FieldReader;
 #[doc = "Field `RSQ9` writer - 10th conversion in regular sequence"]
-pub type RSQ9_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type RSQ9_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `RSQ10` reader - 11th conversion in regular sequence"]
 pub type RSQ10_R = crate::FieldReader;
 #[doc = "Field `RSQ10` writer - 11th conversion in regular sequence"]
-pub type RSQ10_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type RSQ10_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `RSQ11` reader - 12th conversion in regular sequence"]
 pub type RSQ11_R = crate::FieldReader;
 #[doc = "Field `RSQ11` writer - 12th conversion in regular sequence"]
-pub type RSQ11_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type RSQ11_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - 7th conversion in regular sequence"]
     #[inline(always)]
@@ -62,38 +62,38 @@ impl W {
     #[doc = "Bits 0:4 - 7th conversion in regular sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn rsq6(&mut self) -> RSQ6_W<RSQ1_SPEC, 0> {
-        RSQ6_W::new(self)
+    pub fn rsq6(&mut self) -> RSQ6_W<RSQ1_SPEC> {
+        RSQ6_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - 8th conversion in regular sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn rsq7(&mut self) -> RSQ7_W<RSQ1_SPEC, 5> {
-        RSQ7_W::new(self)
+    pub fn rsq7(&mut self) -> RSQ7_W<RSQ1_SPEC> {
+        RSQ7_W::new(self, 5)
     }
     #[doc = "Bits 10:14 - 9th conversion in regular sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn rsq8(&mut self) -> RSQ8_W<RSQ1_SPEC, 10> {
-        RSQ8_W::new(self)
+    pub fn rsq8(&mut self) -> RSQ8_W<RSQ1_SPEC> {
+        RSQ8_W::new(self, 10)
     }
     #[doc = "Bits 15:19 - 10th conversion in regular sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn rsq9(&mut self) -> RSQ9_W<RSQ1_SPEC, 15> {
-        RSQ9_W::new(self)
+    pub fn rsq9(&mut self) -> RSQ9_W<RSQ1_SPEC> {
+        RSQ9_W::new(self, 15)
     }
     #[doc = "Bits 20:24 - 11th conversion in regular sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn rsq10(&mut self) -> RSQ10_W<RSQ1_SPEC, 20> {
-        RSQ10_W::new(self)
+    pub fn rsq10(&mut self) -> RSQ10_W<RSQ1_SPEC> {
+        RSQ10_W::new(self, 20)
     }
     #[doc = "Bits 25:29 - 12th conversion in regular sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn rsq11(&mut self) -> RSQ11_W<RSQ1_SPEC, 25> {
-        RSQ11_W::new(self)
+    pub fn rsq11(&mut self) -> RSQ11_W<RSQ1_SPEC> {
+        RSQ11_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -115,10 +115,10 @@ impl crate::RegisterSpec for RSQ1_SPEC {
 impl crate::Readable for RSQ1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rsq1::W`](W) writer structure"]
 impl crate::Writable for RSQ1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RSQ1 to value 0"]
 impl crate::Resettable for RSQ1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

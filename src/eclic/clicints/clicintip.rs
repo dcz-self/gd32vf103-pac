@@ -5,7 +5,7 @@ pub type W = crate::W<CLICINTIP_SPEC>;
 #[doc = "Field `IP` reader - IP"]
 pub type IP_R = crate::BitReader;
 #[doc = "Field `IP` writer - IP"]
-pub type IP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - IP"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bit 0 - IP"]
     #[inline(always)]
     #[must_use]
-    pub fn ip(&mut self) -> IP_W<CLICINTIP_SPEC, 0> {
-        IP_W::new(self)
+    pub fn ip(&mut self) -> IP_W<CLICINTIP_SPEC> {
+        IP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for CLICINTIP_SPEC {
 impl crate::Readable for CLICINTIP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clicintip::W`](W) writer structure"]
 impl crate::Writable for CLICINTIP_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }
 #[doc = "`reset()` method sets CLICINTIP to value 0"]
 impl crate::Resettable for CLICINTIP_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u8 = 0;
 }

@@ -18,5 +18,5 @@ impl crate::RegisterSpec for DIEP1TFSTAT_SPEC {
 impl crate::Readable for DIEP1TFSTAT_SPEC {}
 #[doc = "`reset()` method sets DIEP1TFSTAT to value 0x0200"]
 impl crate::Resettable for DIEP1TFSTAT_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0200;
+    const RESET_VALUE: u32 = 0x0200;
 }

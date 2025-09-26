@@ -11,7 +11,7 @@ pub type LVDF_R = crate::BitReader;
 #[doc = "Field `WUPEN` reader - Enable WKUP pin"]
 pub type WUPEN_R = crate::BitReader;
 #[doc = "Field `WUPEN` writer - Enable WKUP pin"]
-pub type WUPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WUPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Wakeup flag"]
     #[inline(always)]
@@ -38,8 +38,8 @@ impl W {
     #[doc = "Bit 8 - Enable WKUP pin"]
     #[inline(always)]
     #[must_use]
-    pub fn wupen(&mut self) -> WUPEN_W<CS_SPEC, 8> {
-        WUPEN_W::new(self)
+    pub fn wupen(&mut self) -> WUPEN_W<CS_SPEC> {
+        WUPEN_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -61,10 +61,10 @@ impl crate::RegisterSpec for CS_SPEC {
 impl crate::Readable for CS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cs::W`](W) writer structure"]
 impl crate::Writable for CS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CS to value 0"]
 impl crate::Resettable for CS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

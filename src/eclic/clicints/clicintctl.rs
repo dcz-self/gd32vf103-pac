@@ -5,7 +5,7 @@ pub type W = crate::W<CLICINTCTL_SPEC>;
 #[doc = "Field `LEVEL_PRIORITY` reader - LEVEL_PRIORITY"]
 pub type LEVEL_PRIORITY_R = crate::FieldReader;
 #[doc = "Field `LEVEL_PRIORITY` writer - LEVEL_PRIORITY"]
-pub type LEVEL_PRIORITY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type LEVEL_PRIORITY_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - LEVEL_PRIORITY"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bits 0:7 - LEVEL_PRIORITY"]
     #[inline(always)]
     #[must_use]
-    pub fn level_priority(&mut self) -> LEVEL_PRIORITY_W<CLICINTCTL_SPEC, 0> {
-        LEVEL_PRIORITY_W::new(self)
+    pub fn level_priority(&mut self) -> LEVEL_PRIORITY_W<CLICINTCTL_SPEC> {
+        LEVEL_PRIORITY_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for CLICINTCTL_SPEC {
 impl crate::Readable for CLICINTCTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clicintctl::W`](W) writer structure"]
 impl crate::Writable for CLICINTCTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }
 #[doc = "`reset()` method sets CLICINTCTL to value 0"]
 impl crate::Resettable for CLICINTCTL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u8 = 0;
 }

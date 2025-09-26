@@ -5,43 +5,43 @@ pub type W = crate::W<SAMPT1_SPEC>;
 #[doc = "Field `SPT0` reader - Channel 0 sample time selection"]
 pub type SPT0_R = crate::FieldReader;
 #[doc = "Field `SPT0` writer - Channel 0 sample time selection"]
-pub type SPT0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SPT0_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SPT1` reader - Channel 1 sample time selection"]
 pub type SPT1_R = crate::FieldReader;
 #[doc = "Field `SPT1` writer - Channel 1 sample time selection"]
-pub type SPT1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SPT1_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SPT2` reader - Channel 2 sample time selection"]
 pub type SPT2_R = crate::FieldReader;
 #[doc = "Field `SPT2` writer - Channel 2 sample time selection"]
-pub type SPT2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SPT2_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SPT3` reader - Channel 3 sample time selection"]
 pub type SPT3_R = crate::FieldReader;
 #[doc = "Field `SPT3` writer - Channel 3 sample time selection"]
-pub type SPT3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SPT3_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SPT4` reader - Channel 4 sample time selection"]
 pub type SPT4_R = crate::FieldReader;
 #[doc = "Field `SPT4` writer - Channel 4 sample time selection"]
-pub type SPT4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SPT4_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SPT5` reader - Channel 5 sample time selection"]
 pub type SPT5_R = crate::FieldReader;
 #[doc = "Field `SPT5` writer - Channel 5 sample time selection"]
-pub type SPT5_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SPT5_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SPT6` reader - Channel 6 sample time selection"]
 pub type SPT6_R = crate::FieldReader;
 #[doc = "Field `SPT6` writer - Channel 6 sample time selection"]
-pub type SPT6_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SPT6_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SPT7` reader - Channel 7 sample time selection"]
 pub type SPT7_R = crate::FieldReader;
 #[doc = "Field `SPT7` writer - Channel 7 sample time selection"]
-pub type SPT7_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SPT7_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SPT8` reader - Channel 8 sample time selection"]
 pub type SPT8_R = crate::FieldReader;
 #[doc = "Field `SPT8` writer - Channel 8 sample time selection"]
-pub type SPT8_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SPT8_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SPT9` reader - Channel 9 sample time selection"]
 pub type SPT9_R = crate::FieldReader;
 #[doc = "Field `SPT9` writer - Channel 9 sample time selection"]
-pub type SPT9_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SPT9_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2 - Channel 0 sample time selection"]
     #[inline(always)]
@@ -98,62 +98,62 @@ impl W {
     #[doc = "Bits 0:2 - Channel 0 sample time selection"]
     #[inline(always)]
     #[must_use]
-    pub fn spt0(&mut self) -> SPT0_W<SAMPT1_SPEC, 0> {
-        SPT0_W::new(self)
+    pub fn spt0(&mut self) -> SPT0_W<SAMPT1_SPEC> {
+        SPT0_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - Channel 1 sample time selection"]
     #[inline(always)]
     #[must_use]
-    pub fn spt1(&mut self) -> SPT1_W<SAMPT1_SPEC, 3> {
-        SPT1_W::new(self)
+    pub fn spt1(&mut self) -> SPT1_W<SAMPT1_SPEC> {
+        SPT1_W::new(self, 3)
     }
     #[doc = "Bits 6:8 - Channel 2 sample time selection"]
     #[inline(always)]
     #[must_use]
-    pub fn spt2(&mut self) -> SPT2_W<SAMPT1_SPEC, 6> {
-        SPT2_W::new(self)
+    pub fn spt2(&mut self) -> SPT2_W<SAMPT1_SPEC> {
+        SPT2_W::new(self, 6)
     }
     #[doc = "Bits 9:11 - Channel 3 sample time selection"]
     #[inline(always)]
     #[must_use]
-    pub fn spt3(&mut self) -> SPT3_W<SAMPT1_SPEC, 9> {
-        SPT3_W::new(self)
+    pub fn spt3(&mut self) -> SPT3_W<SAMPT1_SPEC> {
+        SPT3_W::new(self, 9)
     }
     #[doc = "Bits 12:14 - Channel 4 sample time selection"]
     #[inline(always)]
     #[must_use]
-    pub fn spt4(&mut self) -> SPT4_W<SAMPT1_SPEC, 12> {
-        SPT4_W::new(self)
+    pub fn spt4(&mut self) -> SPT4_W<SAMPT1_SPEC> {
+        SPT4_W::new(self, 12)
     }
     #[doc = "Bits 15:17 - Channel 5 sample time selection"]
     #[inline(always)]
     #[must_use]
-    pub fn spt5(&mut self) -> SPT5_W<SAMPT1_SPEC, 15> {
-        SPT5_W::new(self)
+    pub fn spt5(&mut self) -> SPT5_W<SAMPT1_SPEC> {
+        SPT5_W::new(self, 15)
     }
     #[doc = "Bits 18:20 - Channel 6 sample time selection"]
     #[inline(always)]
     #[must_use]
-    pub fn spt6(&mut self) -> SPT6_W<SAMPT1_SPEC, 18> {
-        SPT6_W::new(self)
+    pub fn spt6(&mut self) -> SPT6_W<SAMPT1_SPEC> {
+        SPT6_W::new(self, 18)
     }
     #[doc = "Bits 21:23 - Channel 7 sample time selection"]
     #[inline(always)]
     #[must_use]
-    pub fn spt7(&mut self) -> SPT7_W<SAMPT1_SPEC, 21> {
-        SPT7_W::new(self)
+    pub fn spt7(&mut self) -> SPT7_W<SAMPT1_SPEC> {
+        SPT7_W::new(self, 21)
     }
     #[doc = "Bits 24:26 - Channel 8 sample time selection"]
     #[inline(always)]
     #[must_use]
-    pub fn spt8(&mut self) -> SPT8_W<SAMPT1_SPEC, 24> {
-        SPT8_W::new(self)
+    pub fn spt8(&mut self) -> SPT8_W<SAMPT1_SPEC> {
+        SPT8_W::new(self, 24)
     }
     #[doc = "Bits 27:29 - Channel 9 sample time selection"]
     #[inline(always)]
     #[must_use]
-    pub fn spt9(&mut self) -> SPT9_W<SAMPT1_SPEC, 27> {
-        SPT9_W::new(self)
+    pub fn spt9(&mut self) -> SPT9_W<SAMPT1_SPEC> {
+        SPT9_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -175,10 +175,10 @@ impl crate::RegisterSpec for SAMPT1_SPEC {
 impl crate::Readable for SAMPT1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sampt1::W`](W) writer structure"]
 impl crate::Writable for SAMPT1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SAMPT1 to value 0"]
 impl crate::Resettable for SAMPT1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

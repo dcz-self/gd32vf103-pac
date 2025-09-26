@@ -5,23 +5,23 @@ pub type W = crate::W<DOEPINTEN_SPEC>;
 #[doc = "Field `TFEN` reader - Transfer finished interrupt enable"]
 pub type TFEN_R = crate::BitReader;
 #[doc = "Field `TFEN` writer - Transfer finished interrupt enable"]
-pub type TFEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TFEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPDISEN` reader - Endpoint disabled interrupt enable"]
 pub type EPDISEN_R = crate::BitReader;
 #[doc = "Field `EPDISEN` writer - Endpoint disabled interrupt enable"]
-pub type EPDISEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPDISEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STPFEN` reader - SETUP phase finished interrupt enable"]
 pub type STPFEN_R = crate::BitReader;
 #[doc = "Field `STPFEN` writer - SETUP phase finished interrupt enable"]
-pub type STPFEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STPFEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPRXFOVREN` reader - Endpoint Rx FIFO overrun interrupt enable"]
 pub type EPRXFOVREN_R = crate::BitReader;
 #[doc = "Field `EPRXFOVREN` writer - Endpoint Rx FIFO overrun interrupt enable"]
-pub type EPRXFOVREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPRXFOVREN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BTBSTPEN` reader - Back-to-back SETUP packets interrupt enable"]
 pub type BTBSTPEN_R = crate::BitReader;
 #[doc = "Field `BTBSTPEN` writer - Back-to-back SETUP packets interrupt enable"]
-pub type BTBSTPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BTBSTPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Transfer finished interrupt enable"]
     #[inline(always)]
@@ -53,32 +53,32 @@ impl W {
     #[doc = "Bit 0 - Transfer finished interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tfen(&mut self) -> TFEN_W<DOEPINTEN_SPEC, 0> {
-        TFEN_W::new(self)
+    pub fn tfen(&mut self) -> TFEN_W<DOEPINTEN_SPEC> {
+        TFEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Endpoint disabled interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn epdisen(&mut self) -> EPDISEN_W<DOEPINTEN_SPEC, 1> {
-        EPDISEN_W::new(self)
+    pub fn epdisen(&mut self) -> EPDISEN_W<DOEPINTEN_SPEC> {
+        EPDISEN_W::new(self, 1)
     }
     #[doc = "Bit 3 - SETUP phase finished interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn stpfen(&mut self) -> STPFEN_W<DOEPINTEN_SPEC, 3> {
-        STPFEN_W::new(self)
+    pub fn stpfen(&mut self) -> STPFEN_W<DOEPINTEN_SPEC> {
+        STPFEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Endpoint Rx FIFO overrun interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn eprxfovren(&mut self) -> EPRXFOVREN_W<DOEPINTEN_SPEC, 4> {
-        EPRXFOVREN_W::new(self)
+    pub fn eprxfovren(&mut self) -> EPRXFOVREN_W<DOEPINTEN_SPEC> {
+        EPRXFOVREN_W::new(self, 4)
     }
     #[doc = "Bit 6 - Back-to-back SETUP packets interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn btbstpen(&mut self) -> BTBSTPEN_W<DOEPINTEN_SPEC, 6> {
-        BTBSTPEN_W::new(self)
+    pub fn btbstpen(&mut self) -> BTBSTPEN_W<DOEPINTEN_SPEC> {
+        BTBSTPEN_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -100,10 +100,10 @@ impl crate::RegisterSpec for DOEPINTEN_SPEC {
 impl crate::Readable for DOEPINTEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`doepinten::W`](W) writer structure"]
 impl crate::Writable for DOEPINTEN_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DOEPINTEN to value 0"]
 impl crate::Resettable for DOEPINTEN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

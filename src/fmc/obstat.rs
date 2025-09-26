@@ -41,5 +41,5 @@ impl crate::RegisterSpec for OBSTAT_SPEC {
 impl crate::Readable for OBSTAT_SPEC {}
 #[doc = "`reset()` method sets OBSTAT to value 0"]
 impl crate::Resettable for OBSTAT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

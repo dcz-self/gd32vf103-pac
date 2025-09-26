@@ -5,35 +5,35 @@ pub type W = crate::W<CTL1_SPEC>;
 #[doc = "Field `DMAREN` reader - Rx buffer DMA enable"]
 pub type DMAREN_R = crate::BitReader;
 #[doc = "Field `DMAREN` writer - Rx buffer DMA enable"]
-pub type DMAREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMAREN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMATEN` reader - Transmit Buffer DMA Enable"]
 pub type DMATEN_R = crate::BitReader;
 #[doc = "Field `DMATEN` writer - Transmit Buffer DMA Enable"]
-pub type DMATEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMATEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NSSDRV` reader - Drive NSS Output"]
 pub type NSSDRV_R = crate::BitReader;
 #[doc = "Field `NSSDRV` writer - Drive NSS Output"]
-pub type NSSDRV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NSSDRV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NSSP` reader - SPI NSS pulse mode enable"]
 pub type NSSP_R = crate::BitReader;
 #[doc = "Field `NSSP` writer - SPI NSS pulse mode enable"]
-pub type NSSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NSSP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMOD` reader - SPI TI mode enable"]
 pub type TMOD_R = crate::BitReader;
 #[doc = "Field `TMOD` writer - SPI TI mode enable"]
-pub type TMOD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMOD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERRIE` reader - Error interrupt enable"]
 pub type ERRIE_R = crate::BitReader;
 #[doc = "Field `ERRIE` writer - Error interrupt enable"]
-pub type ERRIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERRIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RBNEIE` reader - RX buffer not empty interrupt enable"]
 pub type RBNEIE_R = crate::BitReader;
 #[doc = "Field `RBNEIE` writer - RX buffer not empty interrupt enable"]
-pub type RBNEIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RBNEIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TBEIE` reader - Tx buffer empty interrupt enable"]
 pub type TBEIE_R = crate::BitReader;
 #[doc = "Field `TBEIE` writer - Tx buffer empty interrupt enable"]
-pub type TBEIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TBEIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Rx buffer DMA enable"]
     #[inline(always)]
@@ -80,50 +80,50 @@ impl W {
     #[doc = "Bit 0 - Rx buffer DMA enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dmaren(&mut self) -> DMAREN_W<CTL1_SPEC, 0> {
-        DMAREN_W::new(self)
+    pub fn dmaren(&mut self) -> DMAREN_W<CTL1_SPEC> {
+        DMAREN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Transmit Buffer DMA Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dmaten(&mut self) -> DMATEN_W<CTL1_SPEC, 1> {
-        DMATEN_W::new(self)
+    pub fn dmaten(&mut self) -> DMATEN_W<CTL1_SPEC> {
+        DMATEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Drive NSS Output"]
     #[inline(always)]
     #[must_use]
-    pub fn nssdrv(&mut self) -> NSSDRV_W<CTL1_SPEC, 2> {
-        NSSDRV_W::new(self)
+    pub fn nssdrv(&mut self) -> NSSDRV_W<CTL1_SPEC> {
+        NSSDRV_W::new(self, 2)
     }
     #[doc = "Bit 3 - SPI NSS pulse mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn nssp(&mut self) -> NSSP_W<CTL1_SPEC, 3> {
-        NSSP_W::new(self)
+    pub fn nssp(&mut self) -> NSSP_W<CTL1_SPEC> {
+        NSSP_W::new(self, 3)
     }
     #[doc = "Bit 4 - SPI TI mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tmod(&mut self) -> TMOD_W<CTL1_SPEC, 4> {
-        TMOD_W::new(self)
+    pub fn tmod(&mut self) -> TMOD_W<CTL1_SPEC> {
+        TMOD_W::new(self, 4)
     }
     #[doc = "Bit 5 - Error interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn errie(&mut self) -> ERRIE_W<CTL1_SPEC, 5> {
-        ERRIE_W::new(self)
+    pub fn errie(&mut self) -> ERRIE_W<CTL1_SPEC> {
+        ERRIE_W::new(self, 5)
     }
     #[doc = "Bit 6 - RX buffer not empty interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rbneie(&mut self) -> RBNEIE_W<CTL1_SPEC, 6> {
-        RBNEIE_W::new(self)
+    pub fn rbneie(&mut self) -> RBNEIE_W<CTL1_SPEC> {
+        RBNEIE_W::new(self, 6)
     }
     #[doc = "Bit 7 - Tx buffer empty interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tbeie(&mut self) -> TBEIE_W<CTL1_SPEC, 7> {
-        TBEIE_W::new(self)
+    pub fn tbeie(&mut self) -> TBEIE_W<CTL1_SPEC> {
+        TBEIE_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -145,10 +145,10 @@ impl crate::RegisterSpec for CTL1_SPEC {
 impl crate::Readable for CTL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctl1::W`](W) writer structure"]
 impl crate::Writable for CTL1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets CTL1 to value 0"]
 impl crate::Resettable for CTL1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

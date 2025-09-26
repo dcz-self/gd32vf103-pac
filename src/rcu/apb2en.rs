@@ -5,47 +5,47 @@ pub type W = crate::W<APB2EN_SPEC>;
 #[doc = "Field `AFEN` reader - Alternate function IO clock enable"]
 pub type AFEN_R = crate::BitReader;
 #[doc = "Field `AFEN` writer - Alternate function IO clock enable"]
-pub type AFEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAEN` reader - GPIO port A clock enable"]
 pub type PAEN_R = crate::BitReader;
 #[doc = "Field `PAEN` writer - GPIO port A clock enable"]
-pub type PAEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBEN` reader - GPIO port B clock enable"]
 pub type PBEN_R = crate::BitReader;
 #[doc = "Field `PBEN` writer - GPIO port B clock enable"]
-pub type PBEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PBEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCEN` reader - GPIO port C clock enable"]
 pub type PCEN_R = crate::BitReader;
 #[doc = "Field `PCEN` writer - GPIO port C clock enable"]
-pub type PCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDEN` reader - GPIO port D clock enable"]
 pub type PDEN_R = crate::BitReader;
 #[doc = "Field `PDEN` writer - GPIO port D clock enable"]
-pub type PDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PEEN` reader - GPIO port E clock enable"]
 pub type PEEN_R = crate::BitReader;
 #[doc = "Field `PEEN` writer - GPIO port E clock enable"]
-pub type PEEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PEEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC0EN` reader - ADC0 clock enable"]
 pub type ADC0EN_R = crate::BitReader;
 #[doc = "Field `ADC0EN` writer - ADC0 clock enable"]
-pub type ADC0EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC0EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC1EN` reader - ADC1 clock enable"]
 pub type ADC1EN_R = crate::BitReader;
 #[doc = "Field `ADC1EN` writer - ADC1 clock enable"]
-pub type ADC1EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC1EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMER0EN` reader - TIMER0 clock enable"]
 pub type TIMER0EN_R = crate::BitReader;
 #[doc = "Field `TIMER0EN` writer - TIMER0 clock enable"]
-pub type TIMER0EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMER0EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI0EN` reader - SPI0 clock enable"]
 pub type SPI0EN_R = crate::BitReader;
 #[doc = "Field `SPI0EN` writer - SPI0 clock enable"]
-pub type SPI0EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI0EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USART0EN` reader - USART0 clock enable"]
 pub type USART0EN_R = crate::BitReader;
 #[doc = "Field `USART0EN` writer - USART0 clock enable"]
-pub type USART0EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USART0EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Alternate function IO clock enable"]
     #[inline(always)]
@@ -107,68 +107,68 @@ impl W {
     #[doc = "Bit 0 - Alternate function IO clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn afen(&mut self) -> AFEN_W<APB2EN_SPEC, 0> {
-        AFEN_W::new(self)
+    pub fn afen(&mut self) -> AFEN_W<APB2EN_SPEC> {
+        AFEN_W::new(self, 0)
     }
     #[doc = "Bit 2 - GPIO port A clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn paen(&mut self) -> PAEN_W<APB2EN_SPEC, 2> {
-        PAEN_W::new(self)
+    pub fn paen(&mut self) -> PAEN_W<APB2EN_SPEC> {
+        PAEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - GPIO port B clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pben(&mut self) -> PBEN_W<APB2EN_SPEC, 3> {
-        PBEN_W::new(self)
+    pub fn pben(&mut self) -> PBEN_W<APB2EN_SPEC> {
+        PBEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - GPIO port C clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pcen(&mut self) -> PCEN_W<APB2EN_SPEC, 4> {
-        PCEN_W::new(self)
+    pub fn pcen(&mut self) -> PCEN_W<APB2EN_SPEC> {
+        PCEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - GPIO port D clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pden(&mut self) -> PDEN_W<APB2EN_SPEC, 5> {
-        PDEN_W::new(self)
+    pub fn pden(&mut self) -> PDEN_W<APB2EN_SPEC> {
+        PDEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - GPIO port E clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn peen(&mut self) -> PEEN_W<APB2EN_SPEC, 6> {
-        PEEN_W::new(self)
+    pub fn peen(&mut self) -> PEEN_W<APB2EN_SPEC> {
+        PEEN_W::new(self, 6)
     }
     #[doc = "Bit 9 - ADC0 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn adc0en(&mut self) -> ADC0EN_W<APB2EN_SPEC, 9> {
-        ADC0EN_W::new(self)
+    pub fn adc0en(&mut self) -> ADC0EN_W<APB2EN_SPEC> {
+        ADC0EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - ADC1 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn adc1en(&mut self) -> ADC1EN_W<APB2EN_SPEC, 10> {
-        ADC1EN_W::new(self)
+    pub fn adc1en(&mut self) -> ADC1EN_W<APB2EN_SPEC> {
+        ADC1EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - TIMER0 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn timer0en(&mut self) -> TIMER0EN_W<APB2EN_SPEC, 11> {
-        TIMER0EN_W::new(self)
+    pub fn timer0en(&mut self) -> TIMER0EN_W<APB2EN_SPEC> {
+        TIMER0EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - SPI0 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn spi0en(&mut self) -> SPI0EN_W<APB2EN_SPEC, 12> {
-        SPI0EN_W::new(self)
+    pub fn spi0en(&mut self) -> SPI0EN_W<APB2EN_SPEC> {
+        SPI0EN_W::new(self, 12)
     }
     #[doc = "Bit 14 - USART0 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn usart0en(&mut self) -> USART0EN_W<APB2EN_SPEC, 14> {
-        USART0EN_W::new(self)
+    pub fn usart0en(&mut self) -> USART0EN_W<APB2EN_SPEC> {
+        USART0EN_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -190,10 +190,10 @@ impl crate::RegisterSpec for APB2EN_SPEC {
 impl crate::Readable for APB2EN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`apb2en::W`](W) writer structure"]
 impl crate::Writable for APB2EN_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APB2EN to value 0"]
 impl crate::Resettable for APB2EN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

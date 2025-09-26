@@ -5,23 +5,23 @@ pub type W = crate::W<STAT_SPEC>;
 #[doc = "Field `WDE` reader - Analog watchdog event flag"]
 pub type WDE_R = crate::BitReader;
 #[doc = "Field `WDE` writer - Analog watchdog event flag"]
-pub type WDE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EOC` reader - End of group conversion flag"]
 pub type EOC_R = crate::BitReader;
 #[doc = "Field `EOC` writer - End of group conversion flag"]
-pub type EOC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EOC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EOIC` reader - End of inserted group conversion flag"]
 pub type EOIC_R = crate::BitReader;
 #[doc = "Field `EOIC` writer - End of inserted group conversion flag"]
-pub type EOIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EOIC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STIC` reader - Start flag of inserted channel group"]
 pub type STIC_R = crate::BitReader;
 #[doc = "Field `STIC` writer - Start flag of inserted channel group"]
-pub type STIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STIC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STRC` reader - Start flag of regular channel group"]
 pub type STRC_R = crate::BitReader;
 #[doc = "Field `STRC` writer - Start flag of regular channel group"]
-pub type STRC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STRC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Analog watchdog event flag"]
     #[inline(always)]
@@ -53,32 +53,32 @@ impl W {
     #[doc = "Bit 0 - Analog watchdog event flag"]
     #[inline(always)]
     #[must_use]
-    pub fn wde(&mut self) -> WDE_W<STAT_SPEC, 0> {
-        WDE_W::new(self)
+    pub fn wde(&mut self) -> WDE_W<STAT_SPEC> {
+        WDE_W::new(self, 0)
     }
     #[doc = "Bit 1 - End of group conversion flag"]
     #[inline(always)]
     #[must_use]
-    pub fn eoc(&mut self) -> EOC_W<STAT_SPEC, 1> {
-        EOC_W::new(self)
+    pub fn eoc(&mut self) -> EOC_W<STAT_SPEC> {
+        EOC_W::new(self, 1)
     }
     #[doc = "Bit 2 - End of inserted group conversion flag"]
     #[inline(always)]
     #[must_use]
-    pub fn eoic(&mut self) -> EOIC_W<STAT_SPEC, 2> {
-        EOIC_W::new(self)
+    pub fn eoic(&mut self) -> EOIC_W<STAT_SPEC> {
+        EOIC_W::new(self, 2)
     }
     #[doc = "Bit 3 - Start flag of inserted channel group"]
     #[inline(always)]
     #[must_use]
-    pub fn stic(&mut self) -> STIC_W<STAT_SPEC, 3> {
-        STIC_W::new(self)
+    pub fn stic(&mut self) -> STIC_W<STAT_SPEC> {
+        STIC_W::new(self, 3)
     }
     #[doc = "Bit 4 - Start flag of regular channel group"]
     #[inline(always)]
     #[must_use]
-    pub fn strc(&mut self) -> STRC_W<STAT_SPEC, 4> {
-        STRC_W::new(self)
+    pub fn strc(&mut self) -> STRC_W<STAT_SPEC> {
+        STRC_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -100,10 +100,10 @@ impl crate::RegisterSpec for STAT_SPEC {
 impl crate::Readable for STAT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`stat::W`](W) writer structure"]
 impl crate::Writable for STAT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STAT to value 0"]
 impl crate::Resettable for STAT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

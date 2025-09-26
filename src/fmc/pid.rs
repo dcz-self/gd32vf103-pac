@@ -18,5 +18,5 @@ impl crate::RegisterSpec for PID_SPEC {
 impl crate::Readable for PID_SPEC {}
 #[doc = "`reset()` method sets PID to value 0"]
 impl crate::Resettable for PID_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

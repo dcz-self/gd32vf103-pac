@@ -1,21 +1,51 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - Event control register"]
-    pub ec: EC,
-    #[doc = "0x04 - AFIO port configuration register 0"]
-    pub pcf0: PCF0,
-    #[doc = "0x08 - EXTI sources selection register 0"]
-    pub extiss0: EXTISS0,
-    #[doc = "0x0c - EXTI sources selection register 1"]
-    pub extiss1: EXTISS1,
-    #[doc = "0x10 - EXTI sources selection register 2"]
-    pub extiss2: EXTISS2,
-    #[doc = "0x14 - EXTI sources selection register 3"]
-    pub extiss3: EXTISS3,
+    ec: EC,
+    pcf0: PCF0,
+    extiss0: EXTISS0,
+    extiss1: EXTISS1,
+    extiss2: EXTISS2,
+    extiss3: EXTISS3,
     _reserved6: [u8; 0x04],
+    pcf1: PCF1,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - Event control register"]
+    #[inline(always)]
+    pub const fn ec(&self) -> &EC {
+        &self.ec
+    }
+    #[doc = "0x04 - AFIO port configuration register 0"]
+    #[inline(always)]
+    pub const fn pcf0(&self) -> &PCF0 {
+        &self.pcf0
+    }
+    #[doc = "0x08 - EXTI sources selection register 0"]
+    #[inline(always)]
+    pub const fn extiss0(&self) -> &EXTISS0 {
+        &self.extiss0
+    }
+    #[doc = "0x0c - EXTI sources selection register 1"]
+    #[inline(always)]
+    pub const fn extiss1(&self) -> &EXTISS1 {
+        &self.extiss1
+    }
+    #[doc = "0x10 - EXTI sources selection register 2"]
+    #[inline(always)]
+    pub const fn extiss2(&self) -> &EXTISS2 {
+        &self.extiss2
+    }
+    #[doc = "0x14 - EXTI sources selection register 3"]
+    #[inline(always)]
+    pub const fn extiss3(&self) -> &EXTISS3 {
+        &self.extiss3
+    }
     #[doc = "0x1c - AFIO port configuration register 1"]
-    pub pcf1: PCF1,
+    #[inline(always)]
+    pub const fn pcf1(&self) -> &PCF1 {
+        &self.pcf1
+    }
 }
 #[doc = "EC (rw) register accessor: Event control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ec::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ec::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ec`]
 module"]

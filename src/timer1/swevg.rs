@@ -1,53 +1,53 @@
 #[doc = "Register `SWEVG` writer"]
 pub type W = crate::W<SWEVG_SPEC>;
 #[doc = "Field `UPG` writer - Update generation"]
-pub type UPG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UPG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH0G` writer - Channel 0 capture or compare event generation"]
-pub type CH0G_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH0G_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH1G` writer - Channel 1 capture or compare event generation"]
-pub type CH1G_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH1G_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH2G` writer - Channel 2 capture or compare event generation"]
-pub type CH2G_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH2G_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH3G` writer - Channel 3 capture or compare event generation"]
-pub type CH3G_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH3G_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRGG` writer - Trigger event generation"]
-pub type TRGG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRGG_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl W {
     #[doc = "Bit 0 - Update generation"]
     #[inline(always)]
     #[must_use]
-    pub fn upg(&mut self) -> UPG_W<SWEVG_SPEC, 0> {
-        UPG_W::new(self)
+    pub fn upg(&mut self) -> UPG_W<SWEVG_SPEC> {
+        UPG_W::new(self, 0)
     }
     #[doc = "Bit 1 - Channel 0 capture or compare event generation"]
     #[inline(always)]
     #[must_use]
-    pub fn ch0g(&mut self) -> CH0G_W<SWEVG_SPEC, 1> {
-        CH0G_W::new(self)
+    pub fn ch0g(&mut self) -> CH0G_W<SWEVG_SPEC> {
+        CH0G_W::new(self, 1)
     }
     #[doc = "Bit 2 - Channel 1 capture or compare event generation"]
     #[inline(always)]
     #[must_use]
-    pub fn ch1g(&mut self) -> CH1G_W<SWEVG_SPEC, 2> {
-        CH1G_W::new(self)
+    pub fn ch1g(&mut self) -> CH1G_W<SWEVG_SPEC> {
+        CH1G_W::new(self, 2)
     }
     #[doc = "Bit 3 - Channel 2 capture or compare event generation"]
     #[inline(always)]
     #[must_use]
-    pub fn ch2g(&mut self) -> CH2G_W<SWEVG_SPEC, 3> {
-        CH2G_W::new(self)
+    pub fn ch2g(&mut self) -> CH2G_W<SWEVG_SPEC> {
+        CH2G_W::new(self, 3)
     }
     #[doc = "Bit 4 - Channel 3 capture or compare event generation"]
     #[inline(always)]
     #[must_use]
-    pub fn ch3g(&mut self) -> CH3G_W<SWEVG_SPEC, 4> {
-        CH3G_W::new(self)
+    pub fn ch3g(&mut self) -> CH3G_W<SWEVG_SPEC> {
+        CH3G_W::new(self, 4)
     }
     #[doc = "Bit 6 - Trigger event generation"]
     #[inline(always)]
     #[must_use]
-    pub fn trgg(&mut self) -> TRGG_W<SWEVG_SPEC, 6> {
-        TRGG_W::new(self)
+    pub fn trgg(&mut self) -> TRGG_W<SWEVG_SPEC> {
+        TRGG_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -67,10 +67,10 @@ impl crate::RegisterSpec for SWEVG_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`swevg::W`](W) writer structure"]
 impl crate::Writable for SWEVG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets SWEVG to value 0"]
 impl crate::Resettable for SWEVG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

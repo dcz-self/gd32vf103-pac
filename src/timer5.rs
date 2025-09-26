@@ -1,29 +1,63 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - control register 0"]
-    pub ctl0: CTL0,
+    ctl0: CTL0,
     _reserved1: [u8; 0x02],
-    #[doc = "0x04 - control register 1"]
-    pub ctl1: CTL1,
+    ctl1: CTL1,
     _reserved2: [u8; 0x06],
-    #[doc = "0x0c - DMA/Interrupt enable register"]
-    pub dmainten: DMAINTEN,
+    dmainten: DMAINTEN,
     _reserved3: [u8; 0x02],
-    #[doc = "0x10 - Interrupt flag register"]
-    pub intf: INTF,
+    intf: INTF,
     _reserved4: [u8; 0x02],
-    #[doc = "0x14 - event generation register"]
-    pub swevg: SWEVG,
+    swevg: SWEVG,
     _reserved5: [u8; 0x0e],
-    #[doc = "0x24 - Counter register"]
-    pub cnt: CNT,
+    cnt: CNT,
     _reserved6: [u8; 0x02],
-    #[doc = "0x28 - Prescaler register"]
-    pub psc: PSC,
+    psc: PSC,
     _reserved7: [u8; 0x02],
+    car: CAR,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - control register 0"]
+    #[inline(always)]
+    pub const fn ctl0(&self) -> &CTL0 {
+        &self.ctl0
+    }
+    #[doc = "0x04 - control register 1"]
+    #[inline(always)]
+    pub const fn ctl1(&self) -> &CTL1 {
+        &self.ctl1
+    }
+    #[doc = "0x0c - DMA/Interrupt enable register"]
+    #[inline(always)]
+    pub const fn dmainten(&self) -> &DMAINTEN {
+        &self.dmainten
+    }
+    #[doc = "0x10 - Interrupt flag register"]
+    #[inline(always)]
+    pub const fn intf(&self) -> &INTF {
+        &self.intf
+    }
+    #[doc = "0x14 - event generation register"]
+    #[inline(always)]
+    pub const fn swevg(&self) -> &SWEVG {
+        &self.swevg
+    }
+    #[doc = "0x24 - Counter register"]
+    #[inline(always)]
+    pub const fn cnt(&self) -> &CNT {
+        &self.cnt
+    }
+    #[doc = "0x28 - Prescaler register"]
+    #[inline(always)]
+    pub const fn psc(&self) -> &PSC {
+        &self.psc
+    }
     #[doc = "0x2c - Counter auto reload register"]
-    pub car: CAR,
+    #[inline(always)]
+    pub const fn car(&self) -> &CAR {
+        &self.car
+    }
 }
 #[doc = "CTL0 (rw) register accessor: control register 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctl0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctl0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctl0`]
 module"]

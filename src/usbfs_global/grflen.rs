@@ -5,7 +5,7 @@ pub type W = crate::W<GRFLEN_SPEC>;
 #[doc = "Field `RXFD` reader - Rx FIFO depth"]
 pub type RXFD_R = crate::FieldReader<u16>;
 #[doc = "Field `RXFD` writer - Rx FIFO depth"]
-pub type RXFD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type RXFD_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Rx FIFO depth"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bits 0:15 - Rx FIFO depth"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfd(&mut self) -> RXFD_W<GRFLEN_SPEC, 0> {
-        RXFD_W::new(self)
+    pub fn rxfd(&mut self) -> RXFD_W<GRFLEN_SPEC> {
+        RXFD_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for GRFLEN_SPEC {
 impl crate::Readable for GRFLEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`grflen::W`](W) writer structure"]
 impl crate::Writable for GRFLEN_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GRFLEN to value 0x0200"]
 impl crate::Resettable for GRFLEN_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0200;
+    const RESET_VALUE: u32 = 0x0200;
 }

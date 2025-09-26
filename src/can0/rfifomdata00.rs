@@ -39,5 +39,5 @@ impl crate::RegisterSpec for RFIFOMDATA00_SPEC {
 impl crate::Readable for RFIFOMDATA00_SPEC {}
 #[doc = "`reset()` method sets RFIFOMDATA00 to value 0"]
 impl crate::Resettable for RFIFOMDATA00_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

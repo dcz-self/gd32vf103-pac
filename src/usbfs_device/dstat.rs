@@ -32,5 +32,5 @@ impl crate::RegisterSpec for DSTAT_SPEC {
 impl crate::Readable for DSTAT_SPEC {}
 #[doc = "`reset()` method sets DSTAT to value 0"]
 impl crate::Resettable for DSTAT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

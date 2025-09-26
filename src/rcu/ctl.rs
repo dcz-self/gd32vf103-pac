@@ -5,45 +5,45 @@ pub type W = crate::W<CTL_SPEC>;
 #[doc = "Field `IRC8MEN` reader - Internal 8MHz RC oscillator Enable"]
 pub type IRC8MEN_R = crate::BitReader;
 #[doc = "Field `IRC8MEN` writer - Internal 8MHz RC oscillator Enable"]
-pub type IRC8MEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IRC8MEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IRC8MSTB` reader - IRC8M Internal 8MHz RC Oscillator stabilization Flag"]
 pub type IRC8MSTB_R = crate::BitReader;
 #[doc = "Field `IRC8MADJ` reader - Internal 8MHz RC Oscillator clock trim adjust value"]
 pub type IRC8MADJ_R = crate::FieldReader;
 #[doc = "Field `IRC8MADJ` writer - Internal 8MHz RC Oscillator clock trim adjust value"]
-pub type IRC8MADJ_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type IRC8MADJ_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `IRC8MCALIB` reader - Internal 8MHz RC Oscillator calibration value register"]
 pub type IRC8MCALIB_R = crate::FieldReader;
 #[doc = "Field `HXTALEN` reader - External High Speed oscillator Enable"]
 pub type HXTALEN_R = crate::BitReader;
 #[doc = "Field `HXTALEN` writer - External High Speed oscillator Enable"]
-pub type HXTALEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HXTALEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HXTALSTB` reader - External crystal oscillator (HXTAL) clock stabilization flag"]
 pub type HXTALSTB_R = crate::BitReader;
 #[doc = "Field `HXTALBPS` reader - External crystal oscillator (HXTAL) clock bypass mode enable"]
 pub type HXTALBPS_R = crate::BitReader;
 #[doc = "Field `HXTALBPS` writer - External crystal oscillator (HXTAL) clock bypass mode enable"]
-pub type HXTALBPS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HXTALBPS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CKMEN` reader - HXTAL Clock Monitor Enable"]
 pub type CKMEN_R = crate::BitReader;
 #[doc = "Field `CKMEN` writer - HXTAL Clock Monitor Enable"]
-pub type CKMEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CKMEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PLLEN` reader - PLL enable"]
 pub type PLLEN_R = crate::BitReader;
 #[doc = "Field `PLLEN` writer - PLL enable"]
-pub type PLLEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PLLEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PLLSTB` reader - PLL Clock Stabilization Flag"]
 pub type PLLSTB_R = crate::BitReader;
 #[doc = "Field `PLL1EN` reader - PLL1 enable"]
 pub type PLL1EN_R = crate::BitReader;
 #[doc = "Field `PLL1EN` writer - PLL1 enable"]
-pub type PLL1EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PLL1EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PLL1STB` reader - PLL1 Clock Stabilization Flag"]
 pub type PLL1STB_R = crate::BitReader;
 #[doc = "Field `PLL2EN` reader - PLL2 enable"]
 pub type PLL2EN_R = crate::BitReader;
 #[doc = "Field `PLL2EN` writer - PLL2 enable"]
-pub type PLL2EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PLL2EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PLL2STB` reader - PLL2 Clock Stabilization Flag"]
 pub type PLL2STB_R = crate::BitReader;
 impl R {
@@ -122,50 +122,50 @@ impl W {
     #[doc = "Bit 0 - Internal 8MHz RC oscillator Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn irc8men(&mut self) -> IRC8MEN_W<CTL_SPEC, 0> {
-        IRC8MEN_W::new(self)
+    pub fn irc8men(&mut self) -> IRC8MEN_W<CTL_SPEC> {
+        IRC8MEN_W::new(self, 0)
     }
     #[doc = "Bits 3:7 - Internal 8MHz RC Oscillator clock trim adjust value"]
     #[inline(always)]
     #[must_use]
-    pub fn irc8madj(&mut self) -> IRC8MADJ_W<CTL_SPEC, 3> {
-        IRC8MADJ_W::new(self)
+    pub fn irc8madj(&mut self) -> IRC8MADJ_W<CTL_SPEC> {
+        IRC8MADJ_W::new(self, 3)
     }
     #[doc = "Bit 16 - External High Speed oscillator Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hxtalen(&mut self) -> HXTALEN_W<CTL_SPEC, 16> {
-        HXTALEN_W::new(self)
+    pub fn hxtalen(&mut self) -> HXTALEN_W<CTL_SPEC> {
+        HXTALEN_W::new(self, 16)
     }
     #[doc = "Bit 18 - External crystal oscillator (HXTAL) clock bypass mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hxtalbps(&mut self) -> HXTALBPS_W<CTL_SPEC, 18> {
-        HXTALBPS_W::new(self)
+    pub fn hxtalbps(&mut self) -> HXTALBPS_W<CTL_SPEC> {
+        HXTALBPS_W::new(self, 18)
     }
     #[doc = "Bit 19 - HXTAL Clock Monitor Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ckmen(&mut self) -> CKMEN_W<CTL_SPEC, 19> {
-        CKMEN_W::new(self)
+    pub fn ckmen(&mut self) -> CKMEN_W<CTL_SPEC> {
+        CKMEN_W::new(self, 19)
     }
     #[doc = "Bit 24 - PLL enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pllen(&mut self) -> PLLEN_W<CTL_SPEC, 24> {
-        PLLEN_W::new(self)
+    pub fn pllen(&mut self) -> PLLEN_W<CTL_SPEC> {
+        PLLEN_W::new(self, 24)
     }
     #[doc = "Bit 26 - PLL1 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pll1en(&mut self) -> PLL1EN_W<CTL_SPEC, 26> {
-        PLL1EN_W::new(self)
+    pub fn pll1en(&mut self) -> PLL1EN_W<CTL_SPEC> {
+        PLL1EN_W::new(self, 26)
     }
     #[doc = "Bit 28 - PLL2 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pll2en(&mut self) -> PLL2EN_W<CTL_SPEC, 28> {
-        PLL2EN_W::new(self)
+    pub fn pll2en(&mut self) -> PLL2EN_W<CTL_SPEC> {
+        PLL2EN_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -187,10 +187,10 @@ impl crate::RegisterSpec for CTL_SPEC {
 impl crate::Readable for CTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctl::W`](W) writer structure"]
 impl crate::Writable for CTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTL to value 0x83"]
 impl crate::Resettable for CTL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x83;
+    const RESET_VALUE: u32 = 0x83;
 }

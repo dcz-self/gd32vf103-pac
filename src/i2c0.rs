@@ -1,35 +1,77 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - Control register 0"]
-    pub ctl0: CTL0,
+    ctl0: CTL0,
     _reserved1: [u8; 0x02],
-    #[doc = "0x04 - Control register 1"]
-    pub ctl1: CTL1,
+    ctl1: CTL1,
     _reserved2: [u8; 0x02],
-    #[doc = "0x08 - Slave address register 0"]
-    pub saddr0: SADDR0,
+    saddr0: SADDR0,
     _reserved3: [u8; 0x02],
-    #[doc = "0x0c - Slave address register 1"]
-    pub saddr1: SADDR1,
+    saddr1: SADDR1,
     _reserved4: [u8; 0x02],
-    #[doc = "0x10 - Transfer buffer register"]
-    pub data: DATA,
+    data: DATA,
     _reserved5: [u8; 0x02],
-    #[doc = "0x14 - Transfer status register 0"]
-    pub stat0: STAT0,
+    stat0: STAT0,
     _reserved6: [u8; 0x02],
-    #[doc = "0x18 - Transfer status register 1"]
-    pub stat1: STAT1,
+    stat1: STAT1,
     _reserved7: [u8; 0x02],
-    #[doc = "0x1c - Clock configure register"]
-    pub ckcfg: CKCFG,
+    ckcfg: CKCFG,
     _reserved8: [u8; 0x02],
-    #[doc = "0x20 - Rise time register"]
-    pub rt: RT,
+    rt: RT,
     _reserved9: [u8; 0x6e],
+    fmpcfg: FMPCFG,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - Control register 0"]
+    #[inline(always)]
+    pub const fn ctl0(&self) -> &CTL0 {
+        &self.ctl0
+    }
+    #[doc = "0x04 - Control register 1"]
+    #[inline(always)]
+    pub const fn ctl1(&self) -> &CTL1 {
+        &self.ctl1
+    }
+    #[doc = "0x08 - Slave address register 0"]
+    #[inline(always)]
+    pub const fn saddr0(&self) -> &SADDR0 {
+        &self.saddr0
+    }
+    #[doc = "0x0c - Slave address register 1"]
+    #[inline(always)]
+    pub const fn saddr1(&self) -> &SADDR1 {
+        &self.saddr1
+    }
+    #[doc = "0x10 - Transfer buffer register"]
+    #[inline(always)]
+    pub const fn data(&self) -> &DATA {
+        &self.data
+    }
+    #[doc = "0x14 - Transfer status register 0"]
+    #[inline(always)]
+    pub const fn stat0(&self) -> &STAT0 {
+        &self.stat0
+    }
+    #[doc = "0x18 - Transfer status register 1"]
+    #[inline(always)]
+    pub const fn stat1(&self) -> &STAT1 {
+        &self.stat1
+    }
+    #[doc = "0x1c - Clock configure register"]
+    #[inline(always)]
+    pub const fn ckcfg(&self) -> &CKCFG {
+        &self.ckcfg
+    }
+    #[doc = "0x20 - Rise time register"]
+    #[inline(always)]
+    pub const fn rt(&self) -> &RT {
+        &self.rt
+    }
     #[doc = "0x90 - Fast mode plus configure register"]
-    pub fmpcfg: FMPCFG,
+    #[inline(always)]
+    pub const fn fmpcfg(&self) -> &FMPCFG {
+        &self.fmpcfg
+    }
 }
 #[doc = "CTL0 (rw) register accessor: Control register 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctl0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctl0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctl0`]
 module"]

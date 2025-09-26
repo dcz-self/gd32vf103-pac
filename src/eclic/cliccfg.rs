@@ -5,7 +5,7 @@ pub type W = crate::W<CLICCFG_SPEC>;
 #[doc = "Field `NLBITS` reader - NLBITS"]
 pub type NLBITS_R = crate::FieldReader;
 #[doc = "Field `NLBITS` writer - NLBITS"]
-pub type NLBITS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type NLBITS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 1:4 - NLBITS"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bits 1:4 - NLBITS"]
     #[inline(always)]
     #[must_use]
-    pub fn nlbits(&mut self) -> NLBITS_W<CLICCFG_SPEC, 1> {
-        NLBITS_W::new(self)
+    pub fn nlbits(&mut self) -> NLBITS_W<CLICCFG_SPEC> {
+        NLBITS_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for CLICCFG_SPEC {
 impl crate::Readable for CLICCFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cliccfg::W`](W) writer structure"]
 impl crate::Writable for CLICCFG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }
 #[doc = "`reset()` method sets CLICCFG to value 0"]
 impl crate::Resettable for CLICCFG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u8 = 0;
 }

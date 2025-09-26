@@ -5,15 +5,15 @@ pub type W = crate::W<EC_SPEC>;
 #[doc = "Field `PIN` reader - Event output pin selection"]
 pub type PIN_R = crate::FieldReader;
 #[doc = "Field `PIN` writer - Event output pin selection"]
-pub type PIN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type PIN_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `PORT` reader - Event output port selection"]
 pub type PORT_R = crate::FieldReader;
 #[doc = "Field `PORT` writer - Event output port selection"]
-pub type PORT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type PORT_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `EOE` reader - Event output enable"]
 pub type EOE_R = crate::BitReader;
 #[doc = "Field `EOE` writer - Event output enable"]
-pub type EOE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EOE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:3 - Event output pin selection"]
     #[inline(always)]
@@ -35,20 +35,20 @@ impl W {
     #[doc = "Bits 0:3 - Event output pin selection"]
     #[inline(always)]
     #[must_use]
-    pub fn pin(&mut self) -> PIN_W<EC_SPEC, 0> {
-        PIN_W::new(self)
+    pub fn pin(&mut self) -> PIN_W<EC_SPEC> {
+        PIN_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - Event output port selection"]
     #[inline(always)]
     #[must_use]
-    pub fn port(&mut self) -> PORT_W<EC_SPEC, 4> {
-        PORT_W::new(self)
+    pub fn port(&mut self) -> PORT_W<EC_SPEC> {
+        PORT_W::new(self, 4)
     }
     #[doc = "Bit 7 - Event output enable"]
     #[inline(always)]
     #[must_use]
-    pub fn eoe(&mut self) -> EOE_W<EC_SPEC, 7> {
-        EOE_W::new(self)
+    pub fn eoe(&mut self) -> EOE_W<EC_SPEC> {
+        EOE_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -70,10 +70,10 @@ impl crate::RegisterSpec for EC_SPEC {
 impl crate::Readable for EC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ec::W`](W) writer structure"]
 impl crate::Writable for EC_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EC to value 0"]
 impl crate::Resettable for EC_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -5,7 +5,7 @@ pub type W = crate::W<FMPCFG_SPEC>;
 #[doc = "Field `FMPEN` reader - Fast mode plus enable"]
 pub type FMPEN_R = crate::BitReader;
 #[doc = "Field `FMPEN` writer - Fast mode plus enable"]
-pub type FMPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FMPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Fast mode plus enable"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bit 0 - Fast mode plus enable"]
     #[inline(always)]
     #[must_use]
-    pub fn fmpen(&mut self) -> FMPEN_W<FMPCFG_SPEC, 0> {
-        FMPEN_W::new(self)
+    pub fn fmpen(&mut self) -> FMPEN_W<FMPCFG_SPEC> {
+        FMPEN_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for FMPCFG_SPEC {
 impl crate::Readable for FMPCFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fmpcfg::W`](W) writer structure"]
 impl crate::Writable for FMPCFG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets FMPCFG to value 0"]
 impl crate::Resettable for FMPCFG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

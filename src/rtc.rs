@@ -1,26 +1,68 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
+    inten: INTEN,
+    ctl: CTL,
+    psch: PSCH,
+    pscl: PSCL,
+    divh: DIVH,
+    divl: DIVL,
+    cnth: CNTH,
+    cntl: CNTL,
+    alrmh: ALRMH,
+    alrml: ALRML,
+}
+impl RegisterBlock {
     #[doc = "0x00 - RTC interrupt enable register"]
-    pub inten: INTEN,
+    #[inline(always)]
+    pub const fn inten(&self) -> &INTEN {
+        &self.inten
+    }
     #[doc = "0x04 - control register"]
-    pub ctl: CTL,
+    #[inline(always)]
+    pub const fn ctl(&self) -> &CTL {
+        &self.ctl
+    }
     #[doc = "0x08 - RTC prescaler high register"]
-    pub psch: PSCH,
+    #[inline(always)]
+    pub const fn psch(&self) -> &PSCH {
+        &self.psch
+    }
     #[doc = "0x0c - RTC prescaler low register"]
-    pub pscl: PSCL,
+    #[inline(always)]
+    pub const fn pscl(&self) -> &PSCL {
+        &self.pscl
+    }
     #[doc = "0x10 - RTC divider high register"]
-    pub divh: DIVH,
+    #[inline(always)]
+    pub const fn divh(&self) -> &DIVH {
+        &self.divh
+    }
     #[doc = "0x14 - RTC divider low register"]
-    pub divl: DIVL,
+    #[inline(always)]
+    pub const fn divl(&self) -> &DIVL {
+        &self.divl
+    }
     #[doc = "0x18 - RTC counter high register"]
-    pub cnth: CNTH,
+    #[inline(always)]
+    pub const fn cnth(&self) -> &CNTH {
+        &self.cnth
+    }
     #[doc = "0x1c - RTC counter low register"]
-    pub cntl: CNTL,
+    #[inline(always)]
+    pub const fn cntl(&self) -> &CNTL {
+        &self.cntl
+    }
     #[doc = "0x20 - Alarm high register"]
-    pub alrmh: ALRMH,
+    #[inline(always)]
+    pub const fn alrmh(&self) -> &ALRMH {
+        &self.alrmh
+    }
     #[doc = "0x24 - RTC alarm low register"]
-    pub alrml: ALRML,
+    #[inline(always)]
+    pub const fn alrml(&self) -> &ALRML {
+        &self.alrml
+    }
 }
 #[doc = "INTEN (rw) register accessor: RTC interrupt enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`inten::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`inten::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inten`]
 module"]

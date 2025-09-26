@@ -7,33 +7,33 @@ pub type PCST_R = crate::BitReader;
 #[doc = "Field `PCD` reader - Port connect detected"]
 pub type PCD_R = crate::BitReader;
 #[doc = "Field `PCD` writer - Port connect detected"]
-pub type PCD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PE` reader - Port enable"]
 pub type PE_R = crate::BitReader;
 #[doc = "Field `PE` writer - Port enable"]
-pub type PE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PEDC` reader - Port enable/disable change"]
 pub type PEDC_R = crate::BitReader;
 #[doc = "Field `PEDC` writer - Port enable/disable change"]
-pub type PEDC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PEDC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PREM` reader - Port resume"]
 pub type PREM_R = crate::BitReader;
 #[doc = "Field `PREM` writer - Port resume"]
-pub type PREM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PREM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PSP` reader - Port suspend"]
 pub type PSP_R = crate::BitReader;
 #[doc = "Field `PSP` writer - Port suspend"]
-pub type PSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PSP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRST` reader - Port reset"]
 pub type PRST_R = crate::BitReader;
 #[doc = "Field `PRST` writer - Port reset"]
-pub type PRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PLST` reader - Port line status"]
 pub type PLST_R = crate::FieldReader;
 #[doc = "Field `PP` reader - Port power"]
 pub type PP_R = crate::BitReader;
 #[doc = "Field `PP` writer - Port power"]
-pub type PP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PS` reader - Port speed"]
 pub type PS_R = crate::FieldReader;
 impl R {
@@ -92,44 +92,44 @@ impl W {
     #[doc = "Bit 1 - Port connect detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pcd(&mut self) -> PCD_W<HPCS_SPEC, 1> {
-        PCD_W::new(self)
+    pub fn pcd(&mut self) -> PCD_W<HPCS_SPEC> {
+        PCD_W::new(self, 1)
     }
     #[doc = "Bit 2 - Port enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pe(&mut self) -> PE_W<HPCS_SPEC, 2> {
-        PE_W::new(self)
+    pub fn pe(&mut self) -> PE_W<HPCS_SPEC> {
+        PE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Port enable/disable change"]
     #[inline(always)]
     #[must_use]
-    pub fn pedc(&mut self) -> PEDC_W<HPCS_SPEC, 3> {
-        PEDC_W::new(self)
+    pub fn pedc(&mut self) -> PEDC_W<HPCS_SPEC> {
+        PEDC_W::new(self, 3)
     }
     #[doc = "Bit 6 - Port resume"]
     #[inline(always)]
     #[must_use]
-    pub fn prem(&mut self) -> PREM_W<HPCS_SPEC, 6> {
-        PREM_W::new(self)
+    pub fn prem(&mut self) -> PREM_W<HPCS_SPEC> {
+        PREM_W::new(self, 6)
     }
     #[doc = "Bit 7 - Port suspend"]
     #[inline(always)]
     #[must_use]
-    pub fn psp(&mut self) -> PSP_W<HPCS_SPEC, 7> {
-        PSP_W::new(self)
+    pub fn psp(&mut self) -> PSP_W<HPCS_SPEC> {
+        PSP_W::new(self, 7)
     }
     #[doc = "Bit 8 - Port reset"]
     #[inline(always)]
     #[must_use]
-    pub fn prst(&mut self) -> PRST_W<HPCS_SPEC, 8> {
-        PRST_W::new(self)
+    pub fn prst(&mut self) -> PRST_W<HPCS_SPEC> {
+        PRST_W::new(self, 8)
     }
     #[doc = "Bit 12 - Port power"]
     #[inline(always)]
     #[must_use]
-    pub fn pp(&mut self) -> PP_W<HPCS_SPEC, 12> {
-        PP_W::new(self)
+    pub fn pp(&mut self) -> PP_W<HPCS_SPEC> {
+        PP_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -151,10 +151,10 @@ impl crate::RegisterSpec for HPCS_SPEC {
 impl crate::Readable for HPCS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hpcs::W`](W) writer structure"]
 impl crate::Writable for HPCS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HPCS to value 0"]
 impl crate::Resettable for HPCS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

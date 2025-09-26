@@ -1,17 +1,41 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - cliccfg Register"]
-    pub cliccfg: CLICCFG,
+    cliccfg: CLICCFG,
     _reserved1: [u8; 0x03],
-    #[doc = "0x04 - clicinfo Register"]
-    pub clicinfo: CLICINFO,
+    clicinfo: CLICINFO,
     _reserved2: [u8; 0x03],
-    #[doc = "0x0b - MTH Register"]
-    pub mth: MTH,
+    mth: MTH,
     _reserved3: [u8; 0x0ff4],
+    clicints: [CLICINTS; 87],
+}
+impl RegisterBlock {
+    #[doc = "0x00 - cliccfg Register"]
+    #[inline(always)]
+    pub const fn cliccfg(&self) -> &CLICCFG {
+        &self.cliccfg
+    }
+    #[doc = "0x04 - clicinfo Register"]
+    #[inline(always)]
+    pub const fn clicinfo(&self) -> &CLICINFO {
+        &self.clicinfo
+    }
+    #[doc = "0x0b - MTH Register"]
+    #[inline(always)]
+    pub const fn mth(&self) -> &MTH {
+        &self.mth
+    }
     #[doc = "0x1000..0x115c - Core-local Interrupt Controller Interrupt Registers"]
-    pub clicints: [CLICINTS; 87],
+    #[inline(always)]
+    pub const fn clicints(&self, n: usize) -> &CLICINTS {
+        &self.clicints[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x1000..0x115c - Core-local Interrupt Controller Interrupt Registers"]
+    #[inline(always)]
+    pub fn clicints_iter(&self) -> impl Iterator<Item = &CLICINTS> {
+        self.clicints.iter()
+    }
 }
 #[doc = "Core-local Interrupt Controller Interrupt Registers"]
 pub use self::clicints::CLICINTS;

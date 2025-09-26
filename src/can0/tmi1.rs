@@ -5,23 +5,23 @@ pub type W = crate::W<TMI1_SPEC>;
 #[doc = "Field `TEN` reader - Transmit enable"]
 pub type TEN_R = crate::BitReader;
 #[doc = "Field `TEN` writer - Transmit enable"]
-pub type TEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FT` reader - Frame type"]
 pub type FT_R = crate::BitReader;
 #[doc = "Field `FT` writer - Frame type"]
-pub type FT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FF` reader - Frame format"]
 pub type FF_R = crate::BitReader;
 #[doc = "Field `FF` writer - Frame format"]
-pub type FF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EFID` reader - The frame identifier"]
 pub type EFID_R = crate::FieldReader<u32>;
 #[doc = "Field `EFID` writer - The frame identifier"]
-pub type EFID_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 18, O, u32>;
+pub type EFID_W<'a, REG> = crate::FieldWriter<'a, REG, 18, u32>;
 #[doc = "Field `SFID_EFID` reader - The frame identifier"]
 pub type SFID_EFID_R = crate::FieldReader<u16>;
 #[doc = "Field `SFID_EFID` writer - The frame identifier"]
-pub type SFID_EFID_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type SFID_EFID_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 impl R {
     #[doc = "Bit 0 - Transmit enable"]
     #[inline(always)]
@@ -53,32 +53,32 @@ impl W {
     #[doc = "Bit 0 - Transmit enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ten(&mut self) -> TEN_W<TMI1_SPEC, 0> {
-        TEN_W::new(self)
+    pub fn ten(&mut self) -> TEN_W<TMI1_SPEC> {
+        TEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Frame type"]
     #[inline(always)]
     #[must_use]
-    pub fn ft(&mut self) -> FT_W<TMI1_SPEC, 1> {
-        FT_W::new(self)
+    pub fn ft(&mut self) -> FT_W<TMI1_SPEC> {
+        FT_W::new(self, 1)
     }
     #[doc = "Bit 2 - Frame format"]
     #[inline(always)]
     #[must_use]
-    pub fn ff(&mut self) -> FF_W<TMI1_SPEC, 2> {
-        FF_W::new(self)
+    pub fn ff(&mut self) -> FF_W<TMI1_SPEC> {
+        FF_W::new(self, 2)
     }
     #[doc = "Bits 3:20 - The frame identifier"]
     #[inline(always)]
     #[must_use]
-    pub fn efid(&mut self) -> EFID_W<TMI1_SPEC, 3> {
-        EFID_W::new(self)
+    pub fn efid(&mut self) -> EFID_W<TMI1_SPEC> {
+        EFID_W::new(self, 3)
     }
     #[doc = "Bits 21:31 - The frame identifier"]
     #[inline(always)]
     #[must_use]
-    pub fn sfid_efid(&mut self) -> SFID_EFID_W<TMI1_SPEC, 21> {
-        SFID_EFID_W::new(self)
+    pub fn sfid_efid(&mut self) -> SFID_EFID_W<TMI1_SPEC> {
+        SFID_EFID_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -100,10 +100,10 @@ impl crate::RegisterSpec for TMI1_SPEC {
 impl crate::Readable for TMI1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tmi1::W`](W) writer structure"]
 impl crate::Writable for TMI1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TMI1 to value 0"]
 impl crate::Resettable for TMI1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

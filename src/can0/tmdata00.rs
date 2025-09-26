@@ -5,19 +5,19 @@ pub type W = crate::W<TMDATA00_SPEC>;
 #[doc = "Field `DB0` reader - Data byte 0"]
 pub type DB0_R = crate::FieldReader;
 #[doc = "Field `DB0` writer - Data byte 0"]
-pub type DB0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DB0_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DB1` reader - Data byte 1"]
 pub type DB1_R = crate::FieldReader;
 #[doc = "Field `DB1` writer - Data byte 1"]
-pub type DB1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DB1_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DB2` reader - Data byte 2"]
 pub type DB2_R = crate::FieldReader;
 #[doc = "Field `DB2` writer - Data byte 2"]
-pub type DB2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DB2_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DB3` reader - Data byte 3"]
 pub type DB3_R = crate::FieldReader;
 #[doc = "Field `DB3` writer - Data byte 3"]
-pub type DB3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DB3_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Data byte 0"]
     #[inline(always)]
@@ -44,26 +44,26 @@ impl W {
     #[doc = "Bits 0:7 - Data byte 0"]
     #[inline(always)]
     #[must_use]
-    pub fn db0(&mut self) -> DB0_W<TMDATA00_SPEC, 0> {
-        DB0_W::new(self)
+    pub fn db0(&mut self) -> DB0_W<TMDATA00_SPEC> {
+        DB0_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Data byte 1"]
     #[inline(always)]
     #[must_use]
-    pub fn db1(&mut self) -> DB1_W<TMDATA00_SPEC, 8> {
-        DB1_W::new(self)
+    pub fn db1(&mut self) -> DB1_W<TMDATA00_SPEC> {
+        DB1_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Data byte 2"]
     #[inline(always)]
     #[must_use]
-    pub fn db2(&mut self) -> DB2_W<TMDATA00_SPEC, 16> {
-        DB2_W::new(self)
+    pub fn db2(&mut self) -> DB2_W<TMDATA00_SPEC> {
+        DB2_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Data byte 3"]
     #[inline(always)]
     #[must_use]
-    pub fn db3(&mut self) -> DB3_W<TMDATA00_SPEC, 24> {
-        DB3_W::new(self)
+    pub fn db3(&mut self) -> DB3_W<TMDATA00_SPEC> {
+        DB3_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -85,10 +85,10 @@ impl crate::RegisterSpec for TMDATA00_SPEC {
 impl crate::Readable for TMDATA00_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tmdata00::W`](W) writer structure"]
 impl crate::Writable for TMDATA00_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TMDATA00 to value 0"]
 impl crate::Resettable for TMDATA00_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

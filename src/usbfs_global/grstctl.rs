@@ -5,27 +5,27 @@ pub type W = crate::W<GRSTCTL_SPEC>;
 #[doc = "Field `CSRST` reader - Core soft reset"]
 pub type CSRST_R = crate::BitReader;
 #[doc = "Field `CSRST` writer - Core soft reset"]
-pub type CSRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CSRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HCSRST` reader - HCLK soft reset"]
 pub type HCSRST_R = crate::BitReader;
 #[doc = "Field `HCSRST` writer - HCLK soft reset"]
-pub type HCSRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HCSRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HFCRST` reader - Host frame counter reset"]
 pub type HFCRST_R = crate::BitReader;
 #[doc = "Field `HFCRST` writer - Host frame counter reset"]
-pub type HFCRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HFCRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXFF` reader - RxFIFO flush"]
 pub type RXFF_R = crate::BitReader;
 #[doc = "Field `RXFF` writer - RxFIFO flush"]
-pub type RXFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXFF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXFF` reader - TxFIFO flush"]
 pub type TXFF_R = crate::BitReader;
 #[doc = "Field `TXFF` writer - TxFIFO flush"]
-pub type TXFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXFF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXFNUM` reader - TxFIFO number"]
 pub type TXFNUM_R = crate::FieldReader;
 #[doc = "Field `TXFNUM` writer - TxFIFO number"]
-pub type TXFNUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type TXFNUM_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bit 0 - Core soft reset"]
     #[inline(always)]
@@ -62,38 +62,38 @@ impl W {
     #[doc = "Bit 0 - Core soft reset"]
     #[inline(always)]
     #[must_use]
-    pub fn csrst(&mut self) -> CSRST_W<GRSTCTL_SPEC, 0> {
-        CSRST_W::new(self)
+    pub fn csrst(&mut self) -> CSRST_W<GRSTCTL_SPEC> {
+        CSRST_W::new(self, 0)
     }
     #[doc = "Bit 1 - HCLK soft reset"]
     #[inline(always)]
     #[must_use]
-    pub fn hcsrst(&mut self) -> HCSRST_W<GRSTCTL_SPEC, 1> {
-        HCSRST_W::new(self)
+    pub fn hcsrst(&mut self) -> HCSRST_W<GRSTCTL_SPEC> {
+        HCSRST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Host frame counter reset"]
     #[inline(always)]
     #[must_use]
-    pub fn hfcrst(&mut self) -> HFCRST_W<GRSTCTL_SPEC, 2> {
-        HFCRST_W::new(self)
+    pub fn hfcrst(&mut self) -> HFCRST_W<GRSTCTL_SPEC> {
+        HFCRST_W::new(self, 2)
     }
     #[doc = "Bit 4 - RxFIFO flush"]
     #[inline(always)]
     #[must_use]
-    pub fn rxff(&mut self) -> RXFF_W<GRSTCTL_SPEC, 4> {
-        RXFF_W::new(self)
+    pub fn rxff(&mut self) -> RXFF_W<GRSTCTL_SPEC> {
+        RXFF_W::new(self, 4)
     }
     #[doc = "Bit 5 - TxFIFO flush"]
     #[inline(always)]
     #[must_use]
-    pub fn txff(&mut self) -> TXFF_W<GRSTCTL_SPEC, 5> {
-        TXFF_W::new(self)
+    pub fn txff(&mut self) -> TXFF_W<GRSTCTL_SPEC> {
+        TXFF_W::new(self, 5)
     }
     #[doc = "Bits 6:10 - TxFIFO number"]
     #[inline(always)]
     #[must_use]
-    pub fn txfnum(&mut self) -> TXFNUM_W<GRSTCTL_SPEC, 6> {
-        TXFNUM_W::new(self)
+    pub fn txfnum(&mut self) -> TXFNUM_W<GRSTCTL_SPEC> {
+        TXFNUM_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -115,10 +115,10 @@ impl crate::RegisterSpec for GRSTCTL_SPEC {
 impl crate::Readable for GRSTCTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`grstctl::W`](W) writer structure"]
 impl crate::Writable for GRSTCTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GRSTCTL to value 0x8000_0000"]
 impl crate::Resettable for GRSTCTL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x8000_0000;
+    const RESET_VALUE: u32 = 0x8000_0000;
 }

@@ -18,5 +18,5 @@ impl crate::RegisterSpec for HACHINT_SPEC {
 impl crate::Readable for HACHINT_SPEC {}
 #[doc = "`reset()` method sets HACHINT to value 0"]
 impl crate::Resettable for HACHINT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

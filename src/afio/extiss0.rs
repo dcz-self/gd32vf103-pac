@@ -5,19 +5,19 @@ pub type W = crate::W<EXTISS0_SPEC>;
 #[doc = "Field `EXTI0_SS` reader - EXTI 0 sources selection"]
 pub type EXTI0_SS_R = crate::FieldReader;
 #[doc = "Field `EXTI0_SS` writer - EXTI 0 sources selection"]
-pub type EXTI0_SS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type EXTI0_SS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `EXTI1_SS` reader - EXTI 1 sources selection"]
 pub type EXTI1_SS_R = crate::FieldReader;
 #[doc = "Field `EXTI1_SS` writer - EXTI 1 sources selection"]
-pub type EXTI1_SS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type EXTI1_SS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `EXTI2_SS` reader - EXTI 2 sources selection"]
 pub type EXTI2_SS_R = crate::FieldReader;
 #[doc = "Field `EXTI2_SS` writer - EXTI 2 sources selection"]
-pub type EXTI2_SS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type EXTI2_SS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `EXTI3_SS` reader - EXTI 3 sources selection"]
 pub type EXTI3_SS_R = crate::FieldReader;
 #[doc = "Field `EXTI3_SS` writer - EXTI 3 sources selection"]
-pub type EXTI3_SS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type EXTI3_SS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - EXTI 0 sources selection"]
     #[inline(always)]
@@ -44,26 +44,26 @@ impl W {
     #[doc = "Bits 0:3 - EXTI 0 sources selection"]
     #[inline(always)]
     #[must_use]
-    pub fn exti0_ss(&mut self) -> EXTI0_SS_W<EXTISS0_SPEC, 0> {
-        EXTI0_SS_W::new(self)
+    pub fn exti0_ss(&mut self) -> EXTI0_SS_W<EXTISS0_SPEC> {
+        EXTI0_SS_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - EXTI 1 sources selection"]
     #[inline(always)]
     #[must_use]
-    pub fn exti1_ss(&mut self) -> EXTI1_SS_W<EXTISS0_SPEC, 4> {
-        EXTI1_SS_W::new(self)
+    pub fn exti1_ss(&mut self) -> EXTI1_SS_W<EXTISS0_SPEC> {
+        EXTI1_SS_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - EXTI 2 sources selection"]
     #[inline(always)]
     #[must_use]
-    pub fn exti2_ss(&mut self) -> EXTI2_SS_W<EXTISS0_SPEC, 8> {
-        EXTI2_SS_W::new(self)
+    pub fn exti2_ss(&mut self) -> EXTI2_SS_W<EXTISS0_SPEC> {
+        EXTI2_SS_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - EXTI 3 sources selection"]
     #[inline(always)]
     #[must_use]
-    pub fn exti3_ss(&mut self) -> EXTI3_SS_W<EXTISS0_SPEC, 12> {
-        EXTI3_SS_W::new(self)
+    pub fn exti3_ss(&mut self) -> EXTI3_SS_W<EXTISS0_SPEC> {
+        EXTI3_SS_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -85,10 +85,10 @@ impl crate::RegisterSpec for EXTISS0_SPEC {
 impl crate::Readable for EXTISS0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`extiss0::W`](W) writer structure"]
 impl crate::Writable for EXTISS0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EXTISS0 to value 0"]
 impl crate::Resettable for EXTISS0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

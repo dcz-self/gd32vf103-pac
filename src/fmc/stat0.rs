@@ -7,15 +7,15 @@ pub type BUSY_R = crate::BitReader;
 #[doc = "Field `PGERR` reader - Program error flag bit"]
 pub type PGERR_R = crate::BitReader;
 #[doc = "Field `PGERR` writer - Program error flag bit"]
-pub type PGERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PGERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WPERR` reader - Erase/Program protection error flag bit"]
 pub type WPERR_R = crate::BitReader;
 #[doc = "Field `WPERR` writer - Erase/Program protection error flag bit"]
-pub type WPERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WPERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ENDF` reader - End of operation flag bit"]
 pub type ENDF_R = crate::BitReader;
 #[doc = "Field `ENDF` writer - End of operation flag bit"]
-pub type ENDF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENDF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The flash is busy bit"]
     #[inline(always)]
@@ -42,20 +42,20 @@ impl W {
     #[doc = "Bit 2 - Program error flag bit"]
     #[inline(always)]
     #[must_use]
-    pub fn pgerr(&mut self) -> PGERR_W<STAT0_SPEC, 2> {
-        PGERR_W::new(self)
+    pub fn pgerr(&mut self) -> PGERR_W<STAT0_SPEC> {
+        PGERR_W::new(self, 2)
     }
     #[doc = "Bit 4 - Erase/Program protection error flag bit"]
     #[inline(always)]
     #[must_use]
-    pub fn wperr(&mut self) -> WPERR_W<STAT0_SPEC, 4> {
-        WPERR_W::new(self)
+    pub fn wperr(&mut self) -> WPERR_W<STAT0_SPEC> {
+        WPERR_W::new(self, 4)
     }
     #[doc = "Bit 5 - End of operation flag bit"]
     #[inline(always)]
     #[must_use]
-    pub fn endf(&mut self) -> ENDF_W<STAT0_SPEC, 5> {
-        ENDF_W::new(self)
+    pub fn endf(&mut self) -> ENDF_W<STAT0_SPEC> {
+        ENDF_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -77,10 +77,10 @@ impl crate::RegisterSpec for STAT0_SPEC {
 impl crate::Readable for STAT0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`stat0::W`](W) writer structure"]
 impl crate::Writable for STAT0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STAT0 to value 0"]
 impl crate::Resettable for STAT0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

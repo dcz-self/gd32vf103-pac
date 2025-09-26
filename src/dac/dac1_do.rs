@@ -18,5 +18,5 @@ impl crate::RegisterSpec for DAC1_DO_SPEC {
 impl crate::Readable for DAC1_DO_SPEC {}
 #[doc = "`reset()` method sets DAC1_DO to value 0"]
 impl crate::Resettable for DAC1_DO_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -7,21 +7,21 @@ pub type SRPS_R = crate::BitReader;
 #[doc = "Field `SRPREQ` reader - SRP request"]
 pub type SRPREQ_R = crate::BitReader;
 #[doc = "Field `SRPREQ` writer - SRP request"]
-pub type SRPREQ_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SRPREQ_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HNPS` reader - Host success"]
 pub type HNPS_R = crate::BitReader;
 #[doc = "Field `HNPREQ` reader - HNP request"]
 pub type HNPREQ_R = crate::BitReader;
 #[doc = "Field `HNPREQ` writer - HNP request"]
-pub type HNPREQ_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HNPREQ_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HHNPEN` reader - Host HNP enable"]
 pub type HHNPEN_R = crate::BitReader;
 #[doc = "Field `HHNPEN` writer - Host HNP enable"]
-pub type HHNPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HHNPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DHNPEN` reader - Device HNP enabled"]
 pub type DHNPEN_R = crate::BitReader;
 #[doc = "Field `DHNPEN` writer - Device HNP enabled"]
-pub type DHNPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DHNPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IDPS` reader - ID pin status"]
 pub type IDPS_R = crate::BitReader;
 #[doc = "Field `DI` reader - Debounce interval"]
@@ -86,26 +86,26 @@ impl W {
     #[doc = "Bit 1 - SRP request"]
     #[inline(always)]
     #[must_use]
-    pub fn srpreq(&mut self) -> SRPREQ_W<GOTGCS_SPEC, 1> {
-        SRPREQ_W::new(self)
+    pub fn srpreq(&mut self) -> SRPREQ_W<GOTGCS_SPEC> {
+        SRPREQ_W::new(self, 1)
     }
     #[doc = "Bit 9 - HNP request"]
     #[inline(always)]
     #[must_use]
-    pub fn hnpreq(&mut self) -> HNPREQ_W<GOTGCS_SPEC, 9> {
-        HNPREQ_W::new(self)
+    pub fn hnpreq(&mut self) -> HNPREQ_W<GOTGCS_SPEC> {
+        HNPREQ_W::new(self, 9)
     }
     #[doc = "Bit 10 - Host HNP enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hhnpen(&mut self) -> HHNPEN_W<GOTGCS_SPEC, 10> {
-        HHNPEN_W::new(self)
+    pub fn hhnpen(&mut self) -> HHNPEN_W<GOTGCS_SPEC> {
+        HHNPEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Device HNP enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn dhnpen(&mut self) -> DHNPEN_W<GOTGCS_SPEC, 11> {
-        DHNPEN_W::new(self)
+    pub fn dhnpen(&mut self) -> DHNPEN_W<GOTGCS_SPEC> {
+        DHNPEN_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -127,10 +127,10 @@ impl crate::RegisterSpec for GOTGCS_SPEC {
 impl crate::Readable for GOTGCS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gotgcs::W`](W) writer structure"]
 impl crate::Writable for GOTGCS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GOTGCS to value 0x0800"]
 impl crate::Resettable for GOTGCS_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0800;
+    const RESET_VALUE: u32 = 0x0800;
 }

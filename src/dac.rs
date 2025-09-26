@@ -1,32 +1,86 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
+    ctl: CTL,
+    swt: SWT,
+    dac0_r12dh: DAC0_R12DH,
+    dac0_l12dh: DAC0_L12DH,
+    dac0_r8dh: DAC0_R8DH,
+    dac1_r12dh: DAC1_R12DH,
+    dac1_l12dh: DAC1_L12DH,
+    dac1_r8dh: DAC1_R8DH,
+    dacc_r12dh: DACC_R12DH,
+    dacc_l12dh: DACC_L12DH,
+    dacc_r8dh: DACC_R8DH,
+    dac0_do: DAC0_DO,
+    dac1_do: DAC1_DO,
+}
+impl RegisterBlock {
     #[doc = "0x00 - control register"]
-    pub ctl: CTL,
+    #[inline(always)]
+    pub const fn ctl(&self) -> &CTL {
+        &self.ctl
+    }
     #[doc = "0x04 - software trigger register"]
-    pub swt: SWT,
+    #[inline(always)]
+    pub const fn swt(&self) -> &SWT {
+        &self.swt
+    }
     #[doc = "0x08 - DAC0 12-bit right-aligned data holding register"]
-    pub dac0_r12dh: DAC0_R12DH,
+    #[inline(always)]
+    pub const fn dac0_r12dh(&self) -> &DAC0_R12DH {
+        &self.dac0_r12dh
+    }
     #[doc = "0x0c - DAC0 12-bit left-aligned data holding register"]
-    pub dac0_l12dh: DAC0_L12DH,
+    #[inline(always)]
+    pub const fn dac0_l12dh(&self) -> &DAC0_L12DH {
+        &self.dac0_l12dh
+    }
     #[doc = "0x10 - DAC0 8-bit right aligned data holding register"]
-    pub dac0_r8dh: DAC0_R8DH,
+    #[inline(always)]
+    pub const fn dac0_r8dh(&self) -> &DAC0_R8DH {
+        &self.dac0_r8dh
+    }
     #[doc = "0x14 - DAC1 12-bit right-aligned data holding register"]
-    pub dac1_r12dh: DAC1_R12DH,
+    #[inline(always)]
+    pub const fn dac1_r12dh(&self) -> &DAC1_R12DH {
+        &self.dac1_r12dh
+    }
     #[doc = "0x18 - DAC1 12-bit left aligned data holding register"]
-    pub dac1_l12dh: DAC1_L12DH,
+    #[inline(always)]
+    pub const fn dac1_l12dh(&self) -> &DAC1_L12DH {
+        &self.dac1_l12dh
+    }
     #[doc = "0x1c - DAC1 8-bit right aligned data holding register"]
-    pub dac1_r8dh: DAC1_R8DH,
+    #[inline(always)]
+    pub const fn dac1_r8dh(&self) -> &DAC1_R8DH {
+        &self.dac1_r8dh
+    }
     #[doc = "0x20 - DAC concurrent mode 12-bit right-aligned data holding register"]
-    pub dacc_r12dh: DACC_R12DH,
+    #[inline(always)]
+    pub const fn dacc_r12dh(&self) -> &DACC_R12DH {
+        &self.dacc_r12dh
+    }
     #[doc = "0x24 - DAC concurrent mode 12-bit left aligned data holding register"]
-    pub dacc_l12dh: DACC_L12DH,
+    #[inline(always)]
+    pub const fn dacc_l12dh(&self) -> &DACC_L12DH {
+        &self.dacc_l12dh
+    }
     #[doc = "0x28 - DAC concurrent mode 8-bit right aligned data holding register"]
-    pub dacc_r8dh: DACC_R8DH,
+    #[inline(always)]
+    pub const fn dacc_r8dh(&self) -> &DACC_R8DH {
+        &self.dacc_r8dh
+    }
     #[doc = "0x2c - DAC0 data output register"]
-    pub dac0_do: DAC0_DO,
+    #[inline(always)]
+    pub const fn dac0_do(&self) -> &DAC0_DO {
+        &self.dac0_do
+    }
     #[doc = "0x30 - DAC1 data output register"]
-    pub dac1_do: DAC1_DO,
+    #[inline(always)]
+    pub const fn dac1_do(&self) -> &DAC1_DO {
+        &self.dac1_do
+    }
 }
 #[doc = "CTL (rw) register accessor: control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctl`]
 module"]

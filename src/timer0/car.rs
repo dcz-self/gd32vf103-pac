@@ -5,7 +5,7 @@ pub type W = crate::W<CAR_SPEC>;
 #[doc = "Field `CARL` reader - Counter auto reload value"]
 pub type CARL_R = crate::FieldReader<u16>;
 #[doc = "Field `CARL` writer - Counter auto reload value"]
-pub type CARL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type CARL_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Counter auto reload value"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bits 0:15 - Counter auto reload value"]
     #[inline(always)]
     #[must_use]
-    pub fn carl(&mut self) -> CARL_W<CAR_SPEC, 0> {
-        CARL_W::new(self)
+    pub fn carl(&mut self) -> CARL_W<CAR_SPEC> {
+        CARL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for CAR_SPEC {
 impl crate::Readable for CAR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`car::W`](W) writer structure"]
 impl crate::Writable for CAR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets CAR to value 0"]
 impl crate::Resettable for CAR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

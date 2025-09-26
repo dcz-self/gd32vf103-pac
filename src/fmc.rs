@@ -1,26 +1,64 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - wait state counter register"]
-    pub ws: WS,
-    #[doc = "0x04 - Unlock key register 0"]
-    pub key0: KEY0,
-    #[doc = "0x08 - Option byte unlock key register"]
-    pub obkey: OBKEY,
-    #[doc = "0x0c - Status register 0"]
-    pub stat0: STAT0,
-    #[doc = "0x10 - Control register 0"]
-    pub ctl0: CTL0,
-    #[doc = "0x14 - Address register 0"]
-    pub addr0: ADDR0,
+    ws: WS,
+    key0: KEY0,
+    obkey: OBKEY,
+    stat0: STAT0,
+    ctl0: CTL0,
+    addr0: ADDR0,
     _reserved6: [u8; 0x04],
-    #[doc = "0x1c - Option byte status register"]
-    pub obstat: OBSTAT,
-    #[doc = "0x20 - Erase/Program Protection register"]
-    pub wp: WP,
+    obstat: OBSTAT,
+    wp: WP,
     _reserved8: [u8; 0xdc],
+    pid: PID,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - wait state counter register"]
+    #[inline(always)]
+    pub const fn ws(&self) -> &WS {
+        &self.ws
+    }
+    #[doc = "0x04 - Unlock key register 0"]
+    #[inline(always)]
+    pub const fn key0(&self) -> &KEY0 {
+        &self.key0
+    }
+    #[doc = "0x08 - Option byte unlock key register"]
+    #[inline(always)]
+    pub const fn obkey(&self) -> &OBKEY {
+        &self.obkey
+    }
+    #[doc = "0x0c - Status register 0"]
+    #[inline(always)]
+    pub const fn stat0(&self) -> &STAT0 {
+        &self.stat0
+    }
+    #[doc = "0x10 - Control register 0"]
+    #[inline(always)]
+    pub const fn ctl0(&self) -> &CTL0 {
+        &self.ctl0
+    }
+    #[doc = "0x14 - Address register 0"]
+    #[inline(always)]
+    pub const fn addr0(&self) -> &ADDR0 {
+        &self.addr0
+    }
+    #[doc = "0x1c - Option byte status register"]
+    #[inline(always)]
+    pub const fn obstat(&self) -> &OBSTAT {
+        &self.obstat
+    }
+    #[doc = "0x20 - Erase/Program Protection register"]
+    #[inline(always)]
+    pub const fn wp(&self) -> &WP {
+        &self.wp
+    }
     #[doc = "0x100 - Product ID register"]
-    pub pid: PID,
+    #[inline(always)]
+    pub const fn pid(&self) -> &PID {
+        &self.pid
+    }
 }
 #[doc = "WS (rw) register accessor: wait state counter register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ws::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ws::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ws`]
 module"]

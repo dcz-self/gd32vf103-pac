@@ -5,23 +5,23 @@ pub type W = crate::W<DIEPINTEN_SPEC>;
 #[doc = "Field `TFEN` reader - Transfer finished interrupt enable"]
 pub type TFEN_R = crate::BitReader;
 #[doc = "Field `TFEN` writer - Transfer finished interrupt enable"]
-pub type TFEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TFEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPDISEN` reader - Endpoint disabled interrupt enable"]
 pub type EPDISEN_R = crate::BitReader;
 #[doc = "Field `EPDISEN` writer - Endpoint disabled interrupt enable"]
-pub type EPDISEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPDISEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CITOEN` reader - Control IN timeout condition interrupt enable (Non-isochronous endpoints)"]
 pub type CITOEN_R = crate::BitReader;
 #[doc = "Field `CITOEN` writer - Control IN timeout condition interrupt enable (Non-isochronous endpoints)"]
-pub type CITOEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CITOEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPTXFUDEN` reader - Endpoint Tx FIFO underrun interrupt enable bit"]
 pub type EPTXFUDEN_R = crate::BitReader;
 #[doc = "Field `EPTXFUDEN` writer - Endpoint Tx FIFO underrun interrupt enable bit"]
-pub type EPTXFUDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPTXFUDEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IEPNEEN` reader - IN endpoint NAK effective interrupt enable"]
 pub type IEPNEEN_R = crate::BitReader;
 #[doc = "Field `IEPNEEN` writer - IN endpoint NAK effective interrupt enable"]
-pub type IEPNEEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IEPNEEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Transfer finished interrupt enable"]
     #[inline(always)]
@@ -53,32 +53,32 @@ impl W {
     #[doc = "Bit 0 - Transfer finished interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tfen(&mut self) -> TFEN_W<DIEPINTEN_SPEC, 0> {
-        TFEN_W::new(self)
+    pub fn tfen(&mut self) -> TFEN_W<DIEPINTEN_SPEC> {
+        TFEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Endpoint disabled interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn epdisen(&mut self) -> EPDISEN_W<DIEPINTEN_SPEC, 1> {
-        EPDISEN_W::new(self)
+    pub fn epdisen(&mut self) -> EPDISEN_W<DIEPINTEN_SPEC> {
+        EPDISEN_W::new(self, 1)
     }
     #[doc = "Bit 3 - Control IN timeout condition interrupt enable (Non-isochronous endpoints)"]
     #[inline(always)]
     #[must_use]
-    pub fn citoen(&mut self) -> CITOEN_W<DIEPINTEN_SPEC, 3> {
-        CITOEN_W::new(self)
+    pub fn citoen(&mut self) -> CITOEN_W<DIEPINTEN_SPEC> {
+        CITOEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Endpoint Tx FIFO underrun interrupt enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn eptxfuden(&mut self) -> EPTXFUDEN_W<DIEPINTEN_SPEC, 4> {
-        EPTXFUDEN_W::new(self)
+    pub fn eptxfuden(&mut self) -> EPTXFUDEN_W<DIEPINTEN_SPEC> {
+        EPTXFUDEN_W::new(self, 4)
     }
     #[doc = "Bit 6 - IN endpoint NAK effective interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn iepneen(&mut self) -> IEPNEEN_W<DIEPINTEN_SPEC, 6> {
-        IEPNEEN_W::new(self)
+    pub fn iepneen(&mut self) -> IEPNEEN_W<DIEPINTEN_SPEC> {
+        IEPNEEN_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -100,10 +100,10 @@ impl crate::RegisterSpec for DIEPINTEN_SPEC {
 impl crate::Readable for DIEPINTEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`diepinten::W`](W) writer structure"]
 impl crate::Writable for DIEPINTEN_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIEPINTEN to value 0"]
 impl crate::Resettable for DIEPINTEN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

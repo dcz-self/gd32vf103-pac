@@ -5,63 +5,63 @@ pub type W = crate::W<DMAINTEN_SPEC>;
 #[doc = "Field `UPIE` reader - Update interrupt enable"]
 pub type UPIE_R = crate::BitReader;
 #[doc = "Field `UPIE` writer - Update interrupt enable"]
-pub type UPIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UPIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH0IE` reader - Channel 0 capture/compare interrupt enable"]
 pub type CH0IE_R = crate::BitReader;
 #[doc = "Field `CH0IE` writer - Channel 0 capture/compare interrupt enable"]
-pub type CH0IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH0IE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH1IE` reader - Channel 1 capture/compare interrupt enable"]
 pub type CH1IE_R = crate::BitReader;
 #[doc = "Field `CH1IE` writer - Channel 1 capture/compare interrupt enable"]
-pub type CH1IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH1IE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH2IE` reader - Channel 2 capture/compare interrupt enable"]
 pub type CH2IE_R = crate::BitReader;
 #[doc = "Field `CH2IE` writer - Channel 2 capture/compare interrupt enable"]
-pub type CH2IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH2IE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH3IE` reader - Channel 3 capture/compare interrupt enable"]
 pub type CH3IE_R = crate::BitReader;
 #[doc = "Field `CH3IE` writer - Channel 3 capture/compare interrupt enable"]
-pub type CH3IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH3IE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMTIE` reader - commutation interrupt enable"]
 pub type CMTIE_R = crate::BitReader;
 #[doc = "Field `CMTIE` writer - commutation interrupt enable"]
-pub type CMTIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMTIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRGIE` reader - Trigger interrupt enable"]
 pub type TRGIE_R = crate::BitReader;
 #[doc = "Field `TRGIE` writer - Trigger interrupt enable"]
-pub type TRGIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRGIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BRKIE` reader - Break interrupt enable"]
 pub type BRKIE_R = crate::BitReader;
 #[doc = "Field `BRKIE` writer - Break interrupt enable"]
-pub type BRKIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BRKIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UPDEN` reader - Update DMA request enable"]
 pub type UPDEN_R = crate::BitReader;
 #[doc = "Field `UPDEN` writer - Update DMA request enable"]
-pub type UPDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UPDEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH0DEN` reader - Channel 0 capture/compare DMA request enable"]
 pub type CH0DEN_R = crate::BitReader;
 #[doc = "Field `CH0DEN` writer - Channel 0 capture/compare DMA request enable"]
-pub type CH0DEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH0DEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH1DEN` reader - Channel 1 capture/compare DMA request enable"]
 pub type CH1DEN_R = crate::BitReader;
 #[doc = "Field `CH1DEN` writer - Channel 1 capture/compare DMA request enable"]
-pub type CH1DEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH1DEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH2DEN` reader - Channel 2 capture/compare DMA request enable"]
 pub type CH2DEN_R = crate::BitReader;
 #[doc = "Field `CH2DEN` writer - Channel 2 capture/compare DMA request enable"]
-pub type CH2DEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH2DEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH3DEN` reader - Channel 3 capture/compare DMA request enable"]
 pub type CH3DEN_R = crate::BitReader;
 #[doc = "Field `CH3DEN` writer - Channel 3 capture/compare DMA request enable"]
-pub type CH3DEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH3DEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMTDEN` reader - Commutation DMA request enable"]
 pub type CMTDEN_R = crate::BitReader;
 #[doc = "Field `CMTDEN` writer - Commutation DMA request enable"]
-pub type CMTDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMTDEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRGDEN` reader - Trigger DMA request enable"]
 pub type TRGDEN_R = crate::BitReader;
 #[doc = "Field `TRGDEN` writer - Trigger DMA request enable"]
-pub type TRGDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRGDEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Update interrupt enable"]
     #[inline(always)]
@@ -143,92 +143,92 @@ impl W {
     #[doc = "Bit 0 - Update interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn upie(&mut self) -> UPIE_W<DMAINTEN_SPEC, 0> {
-        UPIE_W::new(self)
+    pub fn upie(&mut self) -> UPIE_W<DMAINTEN_SPEC> {
+        UPIE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Channel 0 capture/compare interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch0ie(&mut self) -> CH0IE_W<DMAINTEN_SPEC, 1> {
-        CH0IE_W::new(self)
+    pub fn ch0ie(&mut self) -> CH0IE_W<DMAINTEN_SPEC> {
+        CH0IE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Channel 1 capture/compare interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch1ie(&mut self) -> CH1IE_W<DMAINTEN_SPEC, 2> {
-        CH1IE_W::new(self)
+    pub fn ch1ie(&mut self) -> CH1IE_W<DMAINTEN_SPEC> {
+        CH1IE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Channel 2 capture/compare interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch2ie(&mut self) -> CH2IE_W<DMAINTEN_SPEC, 3> {
-        CH2IE_W::new(self)
+    pub fn ch2ie(&mut self) -> CH2IE_W<DMAINTEN_SPEC> {
+        CH2IE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Channel 3 capture/compare interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch3ie(&mut self) -> CH3IE_W<DMAINTEN_SPEC, 4> {
-        CH3IE_W::new(self)
+    pub fn ch3ie(&mut self) -> CH3IE_W<DMAINTEN_SPEC> {
+        CH3IE_W::new(self, 4)
     }
     #[doc = "Bit 5 - commutation interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn cmtie(&mut self) -> CMTIE_W<DMAINTEN_SPEC, 5> {
-        CMTIE_W::new(self)
+    pub fn cmtie(&mut self) -> CMTIE_W<DMAINTEN_SPEC> {
+        CMTIE_W::new(self, 5)
     }
     #[doc = "Bit 6 - Trigger interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn trgie(&mut self) -> TRGIE_W<DMAINTEN_SPEC, 6> {
-        TRGIE_W::new(self)
+    pub fn trgie(&mut self) -> TRGIE_W<DMAINTEN_SPEC> {
+        TRGIE_W::new(self, 6)
     }
     #[doc = "Bit 7 - Break interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn brkie(&mut self) -> BRKIE_W<DMAINTEN_SPEC, 7> {
-        BRKIE_W::new(self)
+    pub fn brkie(&mut self) -> BRKIE_W<DMAINTEN_SPEC> {
+        BRKIE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Update DMA request enable"]
     #[inline(always)]
     #[must_use]
-    pub fn upden(&mut self) -> UPDEN_W<DMAINTEN_SPEC, 8> {
-        UPDEN_W::new(self)
+    pub fn upden(&mut self) -> UPDEN_W<DMAINTEN_SPEC> {
+        UPDEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Channel 0 capture/compare DMA request enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch0den(&mut self) -> CH0DEN_W<DMAINTEN_SPEC, 9> {
-        CH0DEN_W::new(self)
+    pub fn ch0den(&mut self) -> CH0DEN_W<DMAINTEN_SPEC> {
+        CH0DEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Channel 1 capture/compare DMA request enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch1den(&mut self) -> CH1DEN_W<DMAINTEN_SPEC, 10> {
-        CH1DEN_W::new(self)
+    pub fn ch1den(&mut self) -> CH1DEN_W<DMAINTEN_SPEC> {
+        CH1DEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Channel 2 capture/compare DMA request enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch2den(&mut self) -> CH2DEN_W<DMAINTEN_SPEC, 11> {
-        CH2DEN_W::new(self)
+    pub fn ch2den(&mut self) -> CH2DEN_W<DMAINTEN_SPEC> {
+        CH2DEN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Channel 3 capture/compare DMA request enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch3den(&mut self) -> CH3DEN_W<DMAINTEN_SPEC, 12> {
-        CH3DEN_W::new(self)
+    pub fn ch3den(&mut self) -> CH3DEN_W<DMAINTEN_SPEC> {
+        CH3DEN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Commutation DMA request enable"]
     #[inline(always)]
     #[must_use]
-    pub fn cmtden(&mut self) -> CMTDEN_W<DMAINTEN_SPEC, 13> {
-        CMTDEN_W::new(self)
+    pub fn cmtden(&mut self) -> CMTDEN_W<DMAINTEN_SPEC> {
+        CMTDEN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Trigger DMA request enable"]
     #[inline(always)]
     #[must_use]
-    pub fn trgden(&mut self) -> TRGDEN_W<DMAINTEN_SPEC, 14> {
-        TRGDEN_W::new(self)
+    pub fn trgden(&mut self) -> TRGDEN_W<DMAINTEN_SPEC> {
+        TRGDEN_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -250,10 +250,10 @@ impl crate::RegisterSpec for DMAINTEN_SPEC {
 impl crate::Readable for DMAINTEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dmainten::W`](W) writer structure"]
 impl crate::Writable for DMAINTEN_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets DMAINTEN to value 0"]
 impl crate::Resettable for DMAINTEN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

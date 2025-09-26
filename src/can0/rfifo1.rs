@@ -7,15 +7,15 @@ pub type RFL1_R = crate::FieldReader;
 #[doc = "Field `RFF1` reader - Receive FIFO1 full"]
 pub type RFF1_R = crate::BitReader;
 #[doc = "Field `RFF1` writer - Receive FIFO1 full"]
-pub type RFF1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RFF1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RFO1` reader - Receive FIFO1 overfull"]
 pub type RFO1_R = crate::BitReader;
 #[doc = "Field `RFO1` writer - Receive FIFO1 overfull"]
-pub type RFO1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RFO1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RFD1` reader - Receive FIFO1 dequeue"]
 pub type RFD1_R = crate::BitReader;
 #[doc = "Field `RFD1` writer - Receive FIFO1 dequeue"]
-pub type RFD1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RFD1_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - Receive FIFO1 length"]
     #[inline(always)]
@@ -42,20 +42,20 @@ impl W {
     #[doc = "Bit 3 - Receive FIFO1 full"]
     #[inline(always)]
     #[must_use]
-    pub fn rff1(&mut self) -> RFF1_W<RFIFO1_SPEC, 3> {
-        RFF1_W::new(self)
+    pub fn rff1(&mut self) -> RFF1_W<RFIFO1_SPEC> {
+        RFF1_W::new(self, 3)
     }
     #[doc = "Bit 4 - Receive FIFO1 overfull"]
     #[inline(always)]
     #[must_use]
-    pub fn rfo1(&mut self) -> RFO1_W<RFIFO1_SPEC, 4> {
-        RFO1_W::new(self)
+    pub fn rfo1(&mut self) -> RFO1_W<RFIFO1_SPEC> {
+        RFO1_W::new(self, 4)
     }
     #[doc = "Bit 5 - Receive FIFO1 dequeue"]
     #[inline(always)]
     #[must_use]
-    pub fn rfd1(&mut self) -> RFD1_W<RFIFO1_SPEC, 5> {
-        RFD1_W::new(self)
+    pub fn rfd1(&mut self) -> RFD1_W<RFIFO1_SPEC> {
+        RFD1_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -77,10 +77,10 @@ impl crate::RegisterSpec for RFIFO1_SPEC {
 impl crate::Readable for RFIFO1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rfifo1::W`](W) writer structure"]
 impl crate::Writable for RFIFO1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RFIFO1 to value 0"]
 impl crate::Resettable for RFIFO1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

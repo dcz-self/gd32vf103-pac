@@ -11,7 +11,7 @@ pub type BOERR_R = crate::BitReader;
 #[doc = "Field `ERRN` reader - Error number"]
 pub type ERRN_R = crate::FieldReader;
 #[doc = "Field `ERRN` writer - Error number"]
-pub type ERRN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type ERRN_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TECNT` reader - Transmit Error Count defined by the CAN standard"]
 pub type TECNT_R = crate::FieldReader;
 #[doc = "Field `RECNT` reader - Receive Error Count defined by the CAN standard"]
@@ -52,8 +52,8 @@ impl W {
     #[doc = "Bits 4:6 - Error number"]
     #[inline(always)]
     #[must_use]
-    pub fn errn(&mut self) -> ERRN_W<ERR_SPEC, 4> {
-        ERRN_W::new(self)
+    pub fn errn(&mut self) -> ERRN_W<ERR_SPEC> {
+        ERRN_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -75,10 +75,10 @@ impl crate::RegisterSpec for ERR_SPEC {
 impl crate::Readable for ERR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`err::W`](W) writer structure"]
 impl crate::Writable for ERR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ERR to value 0"]
 impl crate::Resettable for ERR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

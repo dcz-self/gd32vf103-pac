@@ -5,15 +5,15 @@ pub type W = crate::W<CFG_SPEC>;
 #[doc = "Field `WIN` reader - 7-bit window value"]
 pub type WIN_R = crate::FieldReader;
 #[doc = "Field `WIN` writer - 7-bit window value"]
-pub type WIN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type WIN_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `PSC` reader - Prescaler"]
 pub type PSC_R = crate::FieldReader;
 #[doc = "Field `PSC` writer - Prescaler"]
-pub type PSC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PSC_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `EWIE` reader - Early wakeup interrupt"]
 pub type EWIE_R = crate::BitReader;
 #[doc = "Field `EWIE` writer - Early wakeup interrupt"]
-pub type EWIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EWIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:6 - 7-bit window value"]
     #[inline(always)]
@@ -35,20 +35,20 @@ impl W {
     #[doc = "Bits 0:6 - 7-bit window value"]
     #[inline(always)]
     #[must_use]
-    pub fn win(&mut self) -> WIN_W<CFG_SPEC, 0> {
-        WIN_W::new(self)
+    pub fn win(&mut self) -> WIN_W<CFG_SPEC> {
+        WIN_W::new(self, 0)
     }
     #[doc = "Bits 7:8 - Prescaler"]
     #[inline(always)]
     #[must_use]
-    pub fn psc(&mut self) -> PSC_W<CFG_SPEC, 7> {
-        PSC_W::new(self)
+    pub fn psc(&mut self) -> PSC_W<CFG_SPEC> {
+        PSC_W::new(self, 7)
     }
     #[doc = "Bit 9 - Early wakeup interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn ewie(&mut self) -> EWIE_W<CFG_SPEC, 9> {
-        EWIE_W::new(self)
+    pub fn ewie(&mut self) -> EWIE_W<CFG_SPEC> {
+        EWIE_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -70,10 +70,10 @@ impl crate::RegisterSpec for CFG_SPEC {
 impl crate::Readable for CFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfg::W`](W) writer structure"]
 impl crate::Writable for CFG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFG to value 0x7f"]
 impl crate::Resettable for CFG_SPEC {
-    const RESET_VALUE: Self::Ux = 0x7f;
+    const RESET_VALUE: u32 = 0x7f;
 }

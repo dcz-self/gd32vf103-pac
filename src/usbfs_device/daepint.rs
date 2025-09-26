@@ -25,5 +25,5 @@ impl crate::RegisterSpec for DAEPINT_SPEC {
 impl crate::Readable for DAEPINT_SPEC {}
 #[doc = "`reset()` method sets DAEPINT to value 0"]
 impl crate::Resettable for DAEPINT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

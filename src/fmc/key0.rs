@@ -1,13 +1,13 @@
 #[doc = "Register `KEY0` writer"]
 pub type W = crate::W<KEY0_SPEC>;
 #[doc = "Field `KEY` writer - FMC_CTL0 unlock key"]
-pub type KEY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type KEY_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl W {
     #[doc = "Bits 0:31 - FMC_CTL0 unlock key"]
     #[inline(always)]
     #[must_use]
-    pub fn key(&mut self) -> KEY_W<KEY0_SPEC, 0> {
-        KEY_W::new(self)
+    pub fn key(&mut self) -> KEY_W<KEY0_SPEC> {
+        KEY_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -27,10 +27,10 @@ impl crate::RegisterSpec for KEY0_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`key0::W`](W) writer structure"]
 impl crate::Writable for KEY0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets KEY0 to value 0"]
 impl crate::Resettable for KEY0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

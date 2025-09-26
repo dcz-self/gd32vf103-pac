@@ -5,11 +5,11 @@ pub type W = crate::W<HPTFLEN_SPEC>;
 #[doc = "Field `HPTXFSAR` reader - Host periodic TxFIFO start address"]
 pub type HPTXFSAR_R = crate::FieldReader<u16>;
 #[doc = "Field `HPTXFSAR` writer - Host periodic TxFIFO start address"]
-pub type HPTXFSAR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type HPTXFSAR_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `HPTXFD` reader - Host periodic TxFIFO depth"]
 pub type HPTXFD_R = crate::FieldReader<u16>;
 #[doc = "Field `HPTXFD` writer - Host periodic TxFIFO depth"]
-pub type HPTXFD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type HPTXFD_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Host periodic TxFIFO start address"]
     #[inline(always)]
@@ -26,14 +26,14 @@ impl W {
     #[doc = "Bits 0:15 - Host periodic TxFIFO start address"]
     #[inline(always)]
     #[must_use]
-    pub fn hptxfsar(&mut self) -> HPTXFSAR_W<HPTFLEN_SPEC, 0> {
-        HPTXFSAR_W::new(self)
+    pub fn hptxfsar(&mut self) -> HPTXFSAR_W<HPTFLEN_SPEC> {
+        HPTXFSAR_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - Host periodic TxFIFO depth"]
     #[inline(always)]
     #[must_use]
-    pub fn hptxfd(&mut self) -> HPTXFD_W<HPTFLEN_SPEC, 16> {
-        HPTXFD_W::new(self)
+    pub fn hptxfd(&mut self) -> HPTXFD_W<HPTFLEN_SPEC> {
+        HPTXFD_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -55,10 +55,10 @@ impl crate::RegisterSpec for HPTFLEN_SPEC {
 impl crate::Readable for HPTFLEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hptflen::W`](W) writer structure"]
 impl crate::Writable for HPTFLEN_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HPTFLEN to value 0x0200_0600"]
 impl crate::Resettable for HPTFLEN_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0200_0600;
+    const RESET_VALUE: u32 = 0x0200_0600;
 }

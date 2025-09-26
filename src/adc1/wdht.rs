@@ -5,7 +5,7 @@ pub type W = crate::W<WDHT_SPEC>;
 #[doc = "Field `WDHT` reader - Analog watchdog higher threshold"]
 pub type WDHT_R = crate::FieldReader<u16>;
 #[doc = "Field `WDHT` writer - Analog watchdog higher threshold"]
-pub type WDHT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type WDHT_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 impl R {
     #[doc = "Bits 0:11 - Analog watchdog higher threshold"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bits 0:11 - Analog watchdog higher threshold"]
     #[inline(always)]
     #[must_use]
-    pub fn wdht(&mut self) -> WDHT_W<WDHT_SPEC, 0> {
-        WDHT_W::new(self)
+    pub fn wdht(&mut self) -> WDHT_W<WDHT_SPEC> {
+        WDHT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for WDHT_SPEC {
 impl crate::Readable for WDHT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`wdht::W`](W) writer structure"]
 impl crate::Writable for WDHT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets WDHT to value 0x0fff"]
 impl crate::Resettable for WDHT_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0fff;
+    const RESET_VALUE: u32 = 0x0fff;
 }

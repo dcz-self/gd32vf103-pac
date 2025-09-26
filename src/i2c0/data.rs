@@ -5,7 +5,7 @@ pub type W = crate::W<DATA_SPEC>;
 #[doc = "Field `TRB` reader - Transmission or reception data buffer register"]
 pub type TRB_R = crate::FieldReader;
 #[doc = "Field `TRB` writer - Transmission or reception data buffer register"]
-pub type TRB_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TRB_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Transmission or reception data buffer register"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bits 0:7 - Transmission or reception data buffer register"]
     #[inline(always)]
     #[must_use]
-    pub fn trb(&mut self) -> TRB_W<DATA_SPEC, 0> {
-        TRB_W::new(self)
+    pub fn trb(&mut self) -> TRB_W<DATA_SPEC> {
+        TRB_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
@@ -40,10 +40,10 @@ impl crate::RegisterSpec for DATA_SPEC {
 impl crate::Readable for DATA_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`data::W`](W) writer structure"]
 impl crate::Writable for DATA_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets DATA to value 0"]
 impl crate::Resettable for DATA_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

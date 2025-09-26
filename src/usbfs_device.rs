@@ -1,113 +1,267 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - device configuration register (DCFG)"]
-    pub dcfg: DCFG,
-    #[doc = "0x04 - device control register (DCTL)"]
-    pub dctl: DCTL,
-    #[doc = "0x08 - device status register (DSTAT)"]
-    pub dstat: DSTAT,
+    dcfg: DCFG,
+    dctl: DCTL,
+    dstat: DSTAT,
     _reserved3: [u8; 0x04],
-    #[doc = "0x10 - device IN endpoint common interrupt mask register (DIEPINTEN)"]
-    pub diepinten: DIEPINTEN,
-    #[doc = "0x14 - device OUT endpoint common interrupt enable register (DOEPINTEN)"]
-    pub doepinten: DOEPINTEN,
-    #[doc = "0x18 - device all endpoints interrupt register (DAEPINT)"]
-    pub daepint: DAEPINT,
-    #[doc = "0x1c - Device all endpoints interrupt enable register (DAEPINTEN)"]
-    pub daepinten: DAEPINTEN,
+    diepinten: DIEPINTEN,
+    doepinten: DOEPINTEN,
+    daepint: DAEPINT,
+    daepinten: DAEPINTEN,
     _reserved7: [u8; 0x08],
-    #[doc = "0x28 - device VBUS discharge time register"]
-    pub dvbusdt: DVBUSDT,
-    #[doc = "0x2c - device VBUS pulsing time register"]
-    pub dvbuspt: DVBUSPT,
+    dvbusdt: DVBUSDT,
+    dvbuspt: DVBUSPT,
     _reserved9: [u8; 0x04],
-    #[doc = "0x34 - device IN endpoint FIFO empty interrupt enable register"]
-    pub diepfeinten: DIEPFEINTEN,
+    diepfeinten: DIEPFEINTEN,
     _reserved10: [u8; 0xc8],
-    #[doc = "0x100 - device IN endpoint 0 control register (DIEP0CTL)"]
-    pub diep0ctl: DIEP0CTL,
+    diep0ctl: DIEP0CTL,
     _reserved11: [u8; 0x04],
-    #[doc = "0x108 - device endpoint-0 interrupt register"]
-    pub diep0intf: DIEP0INTF,
+    diep0intf: DIEP0INTF,
     _reserved12: [u8; 0x04],
-    #[doc = "0x110 - device IN endpoint-0 transfer length register"]
-    pub diep0len: DIEP0LEN,
+    diep0len: DIEP0LEN,
     _reserved13: [u8; 0x04],
-    #[doc = "0x118 - device IN endpoint 0 transmit FIFO status register"]
-    pub diep0tfstat: DIEP0TFSTAT,
+    diep0tfstat: DIEP0TFSTAT,
     _reserved14: [u8; 0x04],
-    #[doc = "0x120 - device in endpoint-1 control register"]
-    pub diep1ctl: DIEP1CTL,
+    diep1ctl: DIEP1CTL,
     _reserved15: [u8; 0x04],
-    #[doc = "0x128 - device endpoint-1 interrupt register"]
-    pub diep1intf: DIEP1INTF,
+    diep1intf: DIEP1INTF,
     _reserved16: [u8; 0x04],
-    #[doc = "0x130 - device IN endpoint-1 transfer length register"]
-    pub diep1len: DIEP1LEN,
+    diep1len: DIEP1LEN,
     _reserved17: [u8; 0x04],
-    #[doc = "0x138 - device IN endpoint 1 transmit FIFO status register"]
-    pub diep1tfstat: DIEP1TFSTAT,
+    diep1tfstat: DIEP1TFSTAT,
     _reserved18: [u8; 0x04],
-    #[doc = "0x140 - device endpoint-2 control register"]
-    pub diep2ctl: DIEP2CTL,
+    diep2ctl: DIEP2CTL,
     _reserved19: [u8; 0x04],
-    #[doc = "0x148 - device endpoint-2 interrupt register"]
-    pub diep2intf: DIEP2INTF,
+    diep2intf: DIEP2INTF,
     _reserved20: [u8; 0x04],
-    #[doc = "0x150 - device IN endpoint-2 transfer length register"]
-    pub diep2len: DIEP2LEN,
+    diep2len: DIEP2LEN,
     _reserved21: [u8; 0x04],
-    #[doc = "0x158 - device IN endpoint 2 transmit FIFO status register"]
-    pub diep2tfstat: DIEP2TFSTAT,
+    diep2tfstat: DIEP2TFSTAT,
     _reserved22: [u8; 0x04],
-    #[doc = "0x160 - device endpoint-3 control register"]
-    pub diep3ctl: DIEP3CTL,
+    diep3ctl: DIEP3CTL,
     _reserved23: [u8; 0x04],
-    #[doc = "0x168 - device endpoint-3 interrupt register"]
-    pub diep3intf: DIEP3INTF,
+    diep3intf: DIEP3INTF,
     _reserved24: [u8; 0x04],
-    #[doc = "0x170 - device IN endpoint-3 transfer length register"]
-    pub diep3len: DIEP3LEN,
+    diep3len: DIEP3LEN,
     _reserved25: [u8; 0x04],
-    #[doc = "0x178 - device IN endpoint 3 transmit FIFO status register"]
-    pub diep3tfstat: DIEP3TFSTAT,
+    diep3tfstat: DIEP3TFSTAT,
     _reserved26: [u8; 0x0184],
-    #[doc = "0x300 - device endpoint-0 control register"]
-    pub doep0ctl: DOEP0CTL,
+    doep0ctl: DOEP0CTL,
     _reserved27: [u8; 0x04],
-    #[doc = "0x308 - device out endpoint-0 interrupt flag register"]
-    pub doep0intf: DOEP0INTF,
+    doep0intf: DOEP0INTF,
     _reserved28: [u8; 0x04],
-    #[doc = "0x310 - device OUT endpoint-0 transfer length register"]
-    pub doep0len: DOEP0LEN,
+    doep0len: DOEP0LEN,
     _reserved29: [u8; 0x0c],
-    #[doc = "0x320 - device endpoint-1 control register"]
-    pub doep1ctl: DOEP1CTL,
+    doep1ctl: DOEP1CTL,
     _reserved30: [u8; 0x04],
-    #[doc = "0x328 - device out endpoint-1 interrupt flag register"]
-    pub doep1intf: DOEP1INTF,
+    doep1intf: DOEP1INTF,
     _reserved31: [u8; 0x04],
-    #[doc = "0x330 - device OUT endpoint-1 transfer length register"]
-    pub doep1len: DOEP1LEN,
+    doep1len: DOEP1LEN,
     _reserved32: [u8; 0x0c],
-    #[doc = "0x340 - device endpoint-2 control register"]
-    pub doep2ctl: DOEP2CTL,
+    doep2ctl: DOEP2CTL,
     _reserved33: [u8; 0x04],
-    #[doc = "0x348 - device out endpoint-2 interrupt flag register"]
-    pub doep2intf: DOEP2INTF,
+    doep2intf: DOEP2INTF,
     _reserved34: [u8; 0x04],
-    #[doc = "0x350 - device OUT endpoint-2 transfer length register"]
-    pub doep2len: DOEP2LEN,
+    doep2len: DOEP2LEN,
     _reserved35: [u8; 0x0c],
-    #[doc = "0x360 - device endpoint-3 control register"]
-    pub doep3ctl: DOEP3CTL,
+    doep3ctl: DOEP3CTL,
     _reserved36: [u8; 0x04],
-    #[doc = "0x368 - device out endpoint-3 interrupt flag register"]
-    pub doep3intf: DOEP3INTF,
+    doep3intf: DOEP3INTF,
     _reserved37: [u8; 0x04],
+    doep3len: DOEP3LEN,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - device configuration register (DCFG)"]
+    #[inline(always)]
+    pub const fn dcfg(&self) -> &DCFG {
+        &self.dcfg
+    }
+    #[doc = "0x04 - device control register (DCTL)"]
+    #[inline(always)]
+    pub const fn dctl(&self) -> &DCTL {
+        &self.dctl
+    }
+    #[doc = "0x08 - device status register (DSTAT)"]
+    #[inline(always)]
+    pub const fn dstat(&self) -> &DSTAT {
+        &self.dstat
+    }
+    #[doc = "0x10 - device IN endpoint common interrupt mask register (DIEPINTEN)"]
+    #[inline(always)]
+    pub const fn diepinten(&self) -> &DIEPINTEN {
+        &self.diepinten
+    }
+    #[doc = "0x14 - device OUT endpoint common interrupt enable register (DOEPINTEN)"]
+    #[inline(always)]
+    pub const fn doepinten(&self) -> &DOEPINTEN {
+        &self.doepinten
+    }
+    #[doc = "0x18 - device all endpoints interrupt register (DAEPINT)"]
+    #[inline(always)]
+    pub const fn daepint(&self) -> &DAEPINT {
+        &self.daepint
+    }
+    #[doc = "0x1c - Device all endpoints interrupt enable register (DAEPINTEN)"]
+    #[inline(always)]
+    pub const fn daepinten(&self) -> &DAEPINTEN {
+        &self.daepinten
+    }
+    #[doc = "0x28 - device VBUS discharge time register"]
+    #[inline(always)]
+    pub const fn dvbusdt(&self) -> &DVBUSDT {
+        &self.dvbusdt
+    }
+    #[doc = "0x2c - device VBUS pulsing time register"]
+    #[inline(always)]
+    pub const fn dvbuspt(&self) -> &DVBUSPT {
+        &self.dvbuspt
+    }
+    #[doc = "0x34 - device IN endpoint FIFO empty interrupt enable register"]
+    #[inline(always)]
+    pub const fn diepfeinten(&self) -> &DIEPFEINTEN {
+        &self.diepfeinten
+    }
+    #[doc = "0x100 - device IN endpoint 0 control register (DIEP0CTL)"]
+    #[inline(always)]
+    pub const fn diep0ctl(&self) -> &DIEP0CTL {
+        &self.diep0ctl
+    }
+    #[doc = "0x108 - device endpoint-0 interrupt register"]
+    #[inline(always)]
+    pub const fn diep0intf(&self) -> &DIEP0INTF {
+        &self.diep0intf
+    }
+    #[doc = "0x110 - device IN endpoint-0 transfer length register"]
+    #[inline(always)]
+    pub const fn diep0len(&self) -> &DIEP0LEN {
+        &self.diep0len
+    }
+    #[doc = "0x118 - device IN endpoint 0 transmit FIFO status register"]
+    #[inline(always)]
+    pub const fn diep0tfstat(&self) -> &DIEP0TFSTAT {
+        &self.diep0tfstat
+    }
+    #[doc = "0x120 - device in endpoint-1 control register"]
+    #[inline(always)]
+    pub const fn diep1ctl(&self) -> &DIEP1CTL {
+        &self.diep1ctl
+    }
+    #[doc = "0x128 - device endpoint-1 interrupt register"]
+    #[inline(always)]
+    pub const fn diep1intf(&self) -> &DIEP1INTF {
+        &self.diep1intf
+    }
+    #[doc = "0x130 - device IN endpoint-1 transfer length register"]
+    #[inline(always)]
+    pub const fn diep1len(&self) -> &DIEP1LEN {
+        &self.diep1len
+    }
+    #[doc = "0x138 - device IN endpoint 1 transmit FIFO status register"]
+    #[inline(always)]
+    pub const fn diep1tfstat(&self) -> &DIEP1TFSTAT {
+        &self.diep1tfstat
+    }
+    #[doc = "0x140 - device endpoint-2 control register"]
+    #[inline(always)]
+    pub const fn diep2ctl(&self) -> &DIEP2CTL {
+        &self.diep2ctl
+    }
+    #[doc = "0x148 - device endpoint-2 interrupt register"]
+    #[inline(always)]
+    pub const fn diep2intf(&self) -> &DIEP2INTF {
+        &self.diep2intf
+    }
+    #[doc = "0x150 - device IN endpoint-2 transfer length register"]
+    #[inline(always)]
+    pub const fn diep2len(&self) -> &DIEP2LEN {
+        &self.diep2len
+    }
+    #[doc = "0x158 - device IN endpoint 2 transmit FIFO status register"]
+    #[inline(always)]
+    pub const fn diep2tfstat(&self) -> &DIEP2TFSTAT {
+        &self.diep2tfstat
+    }
+    #[doc = "0x160 - device endpoint-3 control register"]
+    #[inline(always)]
+    pub const fn diep3ctl(&self) -> &DIEP3CTL {
+        &self.diep3ctl
+    }
+    #[doc = "0x168 - device endpoint-3 interrupt register"]
+    #[inline(always)]
+    pub const fn diep3intf(&self) -> &DIEP3INTF {
+        &self.diep3intf
+    }
+    #[doc = "0x170 - device IN endpoint-3 transfer length register"]
+    #[inline(always)]
+    pub const fn diep3len(&self) -> &DIEP3LEN {
+        &self.diep3len
+    }
+    #[doc = "0x178 - device IN endpoint 3 transmit FIFO status register"]
+    #[inline(always)]
+    pub const fn diep3tfstat(&self) -> &DIEP3TFSTAT {
+        &self.diep3tfstat
+    }
+    #[doc = "0x300 - device endpoint-0 control register"]
+    #[inline(always)]
+    pub const fn doep0ctl(&self) -> &DOEP0CTL {
+        &self.doep0ctl
+    }
+    #[doc = "0x308 - device out endpoint-0 interrupt flag register"]
+    #[inline(always)]
+    pub const fn doep0intf(&self) -> &DOEP0INTF {
+        &self.doep0intf
+    }
+    #[doc = "0x310 - device OUT endpoint-0 transfer length register"]
+    #[inline(always)]
+    pub const fn doep0len(&self) -> &DOEP0LEN {
+        &self.doep0len
+    }
+    #[doc = "0x320 - device endpoint-1 control register"]
+    #[inline(always)]
+    pub const fn doep1ctl(&self) -> &DOEP1CTL {
+        &self.doep1ctl
+    }
+    #[doc = "0x328 - device out endpoint-1 interrupt flag register"]
+    #[inline(always)]
+    pub const fn doep1intf(&self) -> &DOEP1INTF {
+        &self.doep1intf
+    }
+    #[doc = "0x330 - device OUT endpoint-1 transfer length register"]
+    #[inline(always)]
+    pub const fn doep1len(&self) -> &DOEP1LEN {
+        &self.doep1len
+    }
+    #[doc = "0x340 - device endpoint-2 control register"]
+    #[inline(always)]
+    pub const fn doep2ctl(&self) -> &DOEP2CTL {
+        &self.doep2ctl
+    }
+    #[doc = "0x348 - device out endpoint-2 interrupt flag register"]
+    #[inline(always)]
+    pub const fn doep2intf(&self) -> &DOEP2INTF {
+        &self.doep2intf
+    }
+    #[doc = "0x350 - device OUT endpoint-2 transfer length register"]
+    #[inline(always)]
+    pub const fn doep2len(&self) -> &DOEP2LEN {
+        &self.doep2len
+    }
+    #[doc = "0x360 - device endpoint-3 control register"]
+    #[inline(always)]
+    pub const fn doep3ctl(&self) -> &DOEP3CTL {
+        &self.doep3ctl
+    }
+    #[doc = "0x368 - device out endpoint-3 interrupt flag register"]
+    #[inline(always)]
+    pub const fn doep3intf(&self) -> &DOEP3INTF {
+        &self.doep3intf
+    }
     #[doc = "0x370 - device OUT endpoint-3 transfer length register"]
-    pub doep3len: DOEP3LEN,
+    #[inline(always)]
+    pub const fn doep3len(&self) -> &DOEP3LEN {
+        &self.doep3len
+    }
 }
 #[doc = "DCFG (rw) register accessor: device configuration register (DCFG)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dcfg::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dcfg::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dcfg`]
 module"]
