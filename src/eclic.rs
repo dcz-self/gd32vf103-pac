@@ -1,5 +1,5 @@
-#[doc = r"Register block"]
 #[repr(C)]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     cliccfg: CLICCFG,
     _reserved1: [u8; 0x03],

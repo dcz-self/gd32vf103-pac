@@ -1,5 +1,5 @@
-#[doc = r"Register block"]
 #[repr(C)]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     ctl0: CTL0,
     _reserved1: [u8; 0x02],
@@ -185,21 +185,25 @@ pub type SWEVG = crate::Reg<swevg::SWEVG_SPEC>;
 pub mod swevg;
 #[doc = "CHCTL0_Output (rw) register accessor: Channel control register 0 (output mode)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`chctl0_output::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`chctl0_output::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@chctl0_output`]
 module"]
+#[doc(alias = "CHCTL0_Output")]
 pub type CHCTL0_OUTPUT = crate::Reg<chctl0_output::CHCTL0_OUTPUT_SPEC>;
 #[doc = "Channel control register 0 (output mode)"]
 pub mod chctl0_output;
 #[doc = "CHCTL0_Input (rw) register accessor: Channel control register 0 (input mode)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`chctl0_input::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`chctl0_input::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@chctl0_input`]
 module"]
+#[doc(alias = "CHCTL0_Input")]
 pub type CHCTL0_INPUT = crate::Reg<chctl0_input::CHCTL0_INPUT_SPEC>;
 #[doc = "Channel control register 0 (input mode)"]
 pub mod chctl0_input;
 #[doc = "CHCTL1_Output (rw) register accessor: Channel control register 1 (output mode)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`chctl1_output::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`chctl1_output::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@chctl1_output`]
 module"]
+#[doc(alias = "CHCTL1_Output")]
 pub type CHCTL1_OUTPUT = crate::Reg<chctl1_output::CHCTL1_OUTPUT_SPEC>;
 #[doc = "Channel control register 1 (output mode)"]
 pub mod chctl1_output;
 #[doc = "CHCTL1_Input (rw) register accessor: Channel control register 1 (input mode)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`chctl1_input::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`chctl1_input::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@chctl1_input`]
 module"]
+#[doc(alias = "CHCTL1_Input")]
 pub type CHCTL1_INPUT = crate::Reg<chctl1_input::CHCTL1_INPUT_SPEC>;
 #[doc = "Channel control register 1 (input mode)"]
 pub mod chctl1_input;

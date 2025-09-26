@@ -1,5 +1,5 @@
-#[doc = r"Register block"]
 #[repr(C)]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     gotgcs: GOTGCS,
     gotgintf: GOTGINTF,
@@ -166,21 +166,25 @@ pub type GINTEN = crate::Reg<ginten::GINTEN_SPEC>;
 pub mod ginten;
 #[doc = "GRSTATR_Device (r) register accessor: Global Receive status read(Device mode)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`grstatr_device::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@grstatr_device`]
 module"]
+#[doc(alias = "GRSTATR_Device")]
 pub type GRSTATR_DEVICE = crate::Reg<grstatr_device::GRSTATR_DEVICE_SPEC>;
 #[doc = "Global Receive status read(Device mode)"]
 pub mod grstatr_device;
 #[doc = "GRSTATR_Host (r) register accessor: Global Receive status read(Host mode)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`grstatr_host::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@grstatr_host`]
 module"]
+#[doc(alias = "GRSTATR_Host")]
 pub type GRSTATR_HOST = crate::Reg<grstatr_host::GRSTATR_HOST_SPEC>;
 #[doc = "Global Receive status read(Host mode)"]
 pub mod grstatr_host;
 #[doc = "GRSTATP_Device (r) register accessor: Global Receive status pop(Device mode)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`grstatp_device::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@grstatp_device`]
 module"]
+#[doc(alias = "GRSTATP_Device")]
 pub type GRSTATP_DEVICE = crate::Reg<grstatp_device::GRSTATP_DEVICE_SPEC>;
 #[doc = "Global Receive status pop(Device mode)"]
 pub mod grstatp_device;
 #[doc = "GRSTATP_Host (r) register accessor: Global Receive status pop(Host mode)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`grstatp_host::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@grstatp_host`]
 module"]
+#[doc(alias = "GRSTATP_Host")]
 pub type GRSTATP_HOST = crate::Reg<grstatp_host::GRSTATP_HOST_SPEC>;
 #[doc = "Global Receive status pop(Host mode)"]
 pub mod grstatp_host;

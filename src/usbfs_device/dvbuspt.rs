@@ -20,16 +20,6 @@ impl W {
     pub fn dvbuspt(&mut self) -> DVBUSPT_W<DVBUSPT_SPEC> {
         DVBUSPT_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "device VBUS pulsing time register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dvbuspt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dvbuspt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DVBUSPT_SPEC;
@@ -40,6 +30,7 @@ impl crate::RegisterSpec for DVBUSPT_SPEC {
 impl crate::Readable for DVBUSPT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dvbuspt::W`](W) writer structure"]
 impl crate::Writable for DVBUSPT_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

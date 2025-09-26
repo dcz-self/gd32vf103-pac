@@ -20,16 +20,6 @@ impl W {
     pub fn level_priority(&mut self) -> LEVEL_PRIORITY_W<CLICINTCTL_SPEC> {
         LEVEL_PRIORITY_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "clicintctl Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clicintctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clicintctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLICINTCTL_SPEC;
@@ -40,6 +30,7 @@ impl crate::RegisterSpec for CLICINTCTL_SPEC {
 impl crate::Readable for CLICINTCTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clicintctl::W`](W) writer structure"]
 impl crate::Writable for CLICINTCTL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }

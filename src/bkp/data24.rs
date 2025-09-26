@@ -20,16 +20,6 @@ impl W {
     pub fn data(&mut self) -> DATA_W<DATA24_SPEC> {
         DATA_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Backup data register 24\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`data24::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`data24::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DATA24_SPEC;
@@ -40,6 +30,7 @@ impl crate::RegisterSpec for DATA24_SPEC {
 impl crate::Readable for DATA24_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`data24::W`](W) writer structure"]
 impl crate::Writable for DATA24_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }

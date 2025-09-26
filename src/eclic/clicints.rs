@@ -1,5 +1,5 @@
-#[doc = r"Register block"]
 #[repr(C)]
+#[doc = "Core-local Interrupt Controller Interrupt Registers"]
 pub struct CLICINTS {
     clicintip: CLICINTIP,
     clicintie: CLICINTIE,

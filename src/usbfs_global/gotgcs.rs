@@ -107,16 +107,6 @@ impl W {
     pub fn dhnpen(&mut self) -> DHNPEN_W<GOTGCS_SPEC> {
         DHNPEN_W::new(self, 11)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Global OTG control and status register (USBFS_GOTGCS)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gotgcs::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gotgcs::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GOTGCS_SPEC;
@@ -127,6 +117,7 @@ impl crate::RegisterSpec for GOTGCS_SPEC {
 impl crate::Readable for GOTGCS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gotgcs::W`](W) writer structure"]
 impl crate::Writable for GOTGCS_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

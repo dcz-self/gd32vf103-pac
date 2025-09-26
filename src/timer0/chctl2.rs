@@ -215,16 +215,6 @@ impl W {
     pub fn ch3p(&mut self) -> CH3P_W<CHCTL2_SPEC> {
         CH3P_W::new(self, 13)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Channel control register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`chctl2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`chctl2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CHCTL2_SPEC;
@@ -235,6 +225,7 @@ impl crate::RegisterSpec for CHCTL2_SPEC {
 impl crate::Readable for CHCTL2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`chctl2::W`](W) writer structure"]
 impl crate::Writable for CHCTL2_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
