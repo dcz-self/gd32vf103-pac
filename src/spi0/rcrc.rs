@@ -9,7 +9,7 @@ impl R {
         RCRC_R::new(self.bits)
     }
 }
-#[doc = "RX CRC register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rcrc::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RX CRC register\n\nYou can [`read`](crate::Reg::read) this register and get [`rcrc::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RCRC_SPEC;
 impl crate::RegisterSpec for RCRC_SPEC {
     type Ux = u16;

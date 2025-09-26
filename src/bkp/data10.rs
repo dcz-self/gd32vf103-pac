@@ -21,7 +21,7 @@ impl W {
         DATA_W::new(self, 0)
     }
 }
-#[doc = "Backup data register 10\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`data10::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`data10::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Backup data register 10\n\nYou can [`read`](crate::Reg::read) this register and get [`data10::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`data10::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DATA10_SPEC;
 impl crate::RegisterSpec for DATA10_SPEC {
     type Ux = u16;

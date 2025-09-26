@@ -9,7 +9,7 @@ impl R {
         RDATA_R::new((self.bits & 0xffff) as u16)
     }
 }
-#[doc = "regular data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rdata::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "regular data register\n\nYou can [`read`](crate::Reg::read) this register and get [`rdata::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RDATA_SPEC;
 impl crate::RegisterSpec for RDATA_SPEC {
     type Ux = u32;

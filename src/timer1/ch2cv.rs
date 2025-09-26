@@ -21,7 +21,7 @@ impl W {
         CH2VAL_W::new(self, 0)
     }
 }
-#[doc = "Channel 2 capture/compare value register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch2cv::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch2cv::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Channel 2 capture/compare value register\n\nYou can [`read`](crate::Reg::read) this register and get [`ch2cv::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch2cv::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CH2CV_SPEC;
 impl crate::RegisterSpec for CH2CV_SPEC {
     type Ux = u16;

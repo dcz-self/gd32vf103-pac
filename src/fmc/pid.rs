@@ -9,7 +9,7 @@ impl R {
         PID_R::new(self.bits)
     }
 }
-#[doc = "Product ID register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pid::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Product ID register\n\nYou can [`read`](crate::Reg::read) this register and get [`pid::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PID_SPEC;
 impl crate::RegisterSpec for PID_SPEC {
     type Ux = u32;

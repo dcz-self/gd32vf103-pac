@@ -9,7 +9,7 @@ impl R {
         HACHINT_R::new((self.bits & 0xff) as u8)
     }
 }
-#[doc = "Host all channels interrupt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hachint::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Host all channels interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`hachint::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HACHINT_SPEC;
 impl crate::RegisterSpec for HACHINT_SPEC {
     type Ux = u32;

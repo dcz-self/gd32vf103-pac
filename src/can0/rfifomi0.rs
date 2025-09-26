@@ -30,7 +30,7 @@ impl R {
         SFID_EFID_R::new(((self.bits >> 21) & 0x07ff) as u16)
     }
 }
-#[doc = "Receive FIFO mailbox identifier register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rfifomi0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Receive FIFO mailbox identifier register\n\nYou can [`read`](crate::Reg::read) this register and get [`rfifomi0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RFIFOMI0_SPEC;
 impl crate::RegisterSpec for RFIFOMI0_SPEC {
     type Ux = u32;

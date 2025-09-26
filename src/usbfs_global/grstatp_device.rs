@@ -30,7 +30,7 @@ impl R {
         RPCKST_R::new(((self.bits >> 17) & 0x0f) as u8)
     }
 }
-#[doc = "Global Receive status pop(Device mode)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`grstatp_device::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Global Receive status pop(Device mode)\n\nYou can [`read`](crate::Reg::read) this register and get [`grstatp_device::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GRSTATP_DEVICE_SPEC;
 impl crate::RegisterSpec for GRSTATP_DEVICE_SPEC {
     type Ux = u32;

@@ -9,7 +9,7 @@ impl R {
         DAC1_DO_R::new((self.bits & 0x0fff) as u16)
     }
 }
-#[doc = "DAC1 data output register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dac1_do::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DAC1 data output register\n\nYou can [`read`](crate::Reg::read) this register and get [`dac1_do::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DAC1_DO_SPEC;
 impl crate::RegisterSpec for DAC1_DO_SPEC {
     type Ux = u32;

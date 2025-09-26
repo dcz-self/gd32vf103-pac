@@ -11,7 +11,7 @@ of option bytes block after system reset"]
         WP_R::new(self.bits)
     }
 }
-#[doc = "Erase/Program Protection register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wp::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Erase/Program Protection register\n\nYou can [`read`](crate::Reg::read) this register and get [`wp::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct WP_SPEC;
 impl crate::RegisterSpec for WP_SPEC {
     type Ux = u32;

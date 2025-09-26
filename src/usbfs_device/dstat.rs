@@ -23,7 +23,7 @@ impl R {
         FNRSOF_R::new(((self.bits >> 8) & 0x3fff) as u16)
     }
 }
-#[doc = "device status register (DSTAT)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dstat::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "device status register (DSTAT)\n\nYou can [`read`](crate::Reg::read) this register and get [`dstat::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DSTAT_SPEC;
 impl crate::RegisterSpec for DSTAT_SPEC {
     type Ux = u32;

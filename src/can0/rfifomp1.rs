@@ -23,7 +23,7 @@ impl R {
         TS_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
-#[doc = "Receive FIFO1 mailbox property register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rfifomp1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Receive FIFO1 mailbox property register\n\nYou can [`read`](crate::Reg::read) this register and get [`rfifomp1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RFIFOMP1_SPEC;
 impl crate::RegisterSpec for RFIFOMP1_SPEC {
     type Ux = u32;

@@ -9,7 +9,7 @@ impl R {
         IDATAN_R::new((self.bits & 0xffff) as u16)
     }
 }
-#[doc = "Inserted data register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`idata1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Inserted data register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`idata1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IDATA1_SPEC;
 impl crate::RegisterSpec for IDATA1_SPEC {
     type Ux = u32;

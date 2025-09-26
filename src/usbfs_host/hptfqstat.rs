@@ -23,7 +23,7 @@ impl R {
         PTXREQT_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
-#[doc = "Host periodic transmit FIFO/queue status register (HPTFQSTAT)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hptfqstat::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Host periodic transmit FIFO/queue status register (HPTFQSTAT)\n\nYou can [`read`](crate::Reg::read) this register and get [`hptfqstat::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HPTFQSTAT_SPEC;
 impl crate::RegisterSpec for HPTFQSTAT_SPEC {
     type Ux = u32;

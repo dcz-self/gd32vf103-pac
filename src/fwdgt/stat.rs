@@ -16,7 +16,7 @@ impl R {
         RUD_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
-#[doc = "Status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`stat::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Status register\n\nYou can [`read`](crate::Reg::read) this register and get [`stat::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STAT_SPEC;
 impl crate::RegisterSpec for STAT_SPEC {
     type Ux = u32;

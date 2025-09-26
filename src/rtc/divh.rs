@@ -9,7 +9,7 @@ impl R {
         DIV_R::new((self.bits & 0x0f) as u8)
     }
 }
-#[doc = "RTC divider high register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`divh::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RTC divider high register\n\nYou can [`read`](crate::Reg::read) this register and get [`divh::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIVH_SPEC;
 impl crate::RegisterSpec for DIVH_SPEC {
     type Ux = u32;

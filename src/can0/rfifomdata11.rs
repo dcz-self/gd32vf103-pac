@@ -30,7 +30,7 @@ impl R {
         DB7_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
-#[doc = "Receive FIFO1 mailbox data1 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rfifomdata11::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Receive FIFO1 mailbox data1 register\n\nYou can [`read`](crate::Reg::read) this register and get [`rfifomdata11::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RFIFOMDATA11_SPEC;
 impl crate::RegisterSpec for RFIFOMDATA11_SPEC {
     type Ux = u32;

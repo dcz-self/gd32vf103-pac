@@ -16,7 +16,7 @@ impl R {
         FRT_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
-#[doc = "FS host frame number/frame time remaining register (HFINFR)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hfinfr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "FS host frame number/frame time remaining register (HFINFR)\n\nYou can [`read`](crate::Reg::read) this register and get [`hfinfr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HFINFR_SPEC;
 impl crate::RegisterSpec for HFINFR_SPEC {
     type Ux = u32;

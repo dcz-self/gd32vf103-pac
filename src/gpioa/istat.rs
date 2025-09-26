@@ -114,7 +114,7 @@ impl R {
         ISTAT15_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
-#[doc = "Port input status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`istat::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Port input status register\n\nYou can [`read`](crate::Reg::read) this register and get [`istat::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ISTAT_SPEC;
 impl crate::RegisterSpec for ISTAT_SPEC {
     type Ux = u32;

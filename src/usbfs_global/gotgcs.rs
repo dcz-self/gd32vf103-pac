@@ -108,7 +108,7 @@ impl W {
         DHNPEN_W::new(self, 11)
     }
 }
-#[doc = "Global OTG control and status register (USBFS_GOTGCS)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gotgcs::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gotgcs::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Global OTG control and status register (USBFS_GOTGCS)\n\nYou can [`read`](crate::Reg::read) this register and get [`gotgcs::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gotgcs::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GOTGCS_SPEC;
 impl crate::RegisterSpec for GOTGCS_SPEC {
     type Ux = u32;

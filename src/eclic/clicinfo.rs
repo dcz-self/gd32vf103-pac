@@ -23,7 +23,7 @@ impl R {
         CLICINTCTLBITS_R::new(((self.bits >> 21) & 0x0f) as u8)
     }
 }
-#[doc = "clicinfo Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clicinfo::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "clicinfo Register\n\nYou can [`read`](crate::Reg::read) this register and get [`clicinfo::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLICINFO_SPEC;
 impl crate::RegisterSpec for CLICINFO_SPEC {
     type Ux = u32;

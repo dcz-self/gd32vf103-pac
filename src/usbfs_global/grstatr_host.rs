@@ -30,7 +30,7 @@ impl R {
         RPCKST_R::new(((self.bits >> 17) & 0x0f) as u8)
     }
 }
-#[doc = "Global Receive status read(Host mode)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`grstatr_host::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Global Receive status read(Host mode)\n\nYou can [`read`](crate::Reg::read) this register and get [`grstatr_host::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GRSTATR_HOST_SPEC;
 impl crate::RegisterSpec for GRSTATR_HOST_SPEC {
     type Ux = u32;

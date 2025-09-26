@@ -16,7 +16,7 @@ impl R {
         OEPITB_R::new(((self.bits >> 16) & 0x0f) as u8)
     }
 }
-#[doc = "device all endpoints interrupt register (DAEPINT)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`daepint::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "device all endpoints interrupt register (DAEPINT)\n\nYou can [`read`](crate::Reg::read) this register and get [`daepint::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DAEPINT_SPEC;
 impl crate::RegisterSpec for DAEPINT_SPEC {
     type Ux = u32;

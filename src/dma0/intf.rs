@@ -198,7 +198,7 @@ impl R {
         ERRIF6_R::new(((self.bits >> 27) & 1) != 0)
     }
 }
-#[doc = "Interrupt flag register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt flag register\n\nYou can [`read`](crate::Reg::read) this register and get [`intf::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTF_SPEC;
 impl crate::RegisterSpec for INTF_SPEC {
     type Ux = u32;

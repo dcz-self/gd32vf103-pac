@@ -58,7 +58,7 @@ impl R {
         PECV_R::new(((self.bits >> 8) & 0xff) as u8)
     }
 }
-#[doc = "Transfer status register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`stat1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Transfer status register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`stat1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STAT1_SPEC;
 impl crate::RegisterSpec for STAT1_SPEC {
     type Ux = u16;
